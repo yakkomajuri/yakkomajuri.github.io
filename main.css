@@ -1,0 +1,336 @@
+*
+{
+    outline: none;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: URL('./nunito/Nunito-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Nunito Light';
+    src: URL('./nunito/Nunito-Light.ttf') format('truetype');
+  }
+
+
+html, body
+{
+    height: 100%;
+    min-height: 100%;
+}
+
+#header-txt 
+{
+    font-family: 'Nunito';
+    justify-self: center;
+    text-align: center;
+    margin-top: 12%;
+    margin-left: 20%;
+    margin-right: 20%
+}
+#secondary-txt 
+{
+    font-family: 'Nunito Light';
+    justify-self: center;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 20px;
+    
+}
+
+#predictions {
+    margin-top: 10%;
+}
+body
+{
+    margin: 0;
+    background-color: #f7fdf3;
+}
+
+.tb
+{
+    display: table;
+    width: 100%;
+}
+
+.td
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+input, button
+{
+    color: #fff;
+    font-family: Nunito;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+#cover
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 550px;
+    padding: 35px;
+    margin: -83px auto 0 auto;
+    background-color: #85e4b0;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #39f067, 0 0 0 20px #ffffffeb;
+    transform: scale(0.6);
+    width: 80%;
+    
+}
+
+form
+{
+    height: 96px;
+}
+
+input[type="text"]
+{
+    width: 100%;
+    height: 96px;
+    font-size: 60px;
+    line-height: 1;
+}
+
+input[type="text"]::placeholder
+{
+    color: #5d7a66;
+}
+
+#s-cover
+{
+    width: 1px;
+    padding-left: 35px;
+}
+
+.display-set {
+    display: block;
+}
+
+#predictions {
+    text-align: center !important;
+    justify-self: center !important;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 15%;
+
+}
+
+.reply-title {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center !important;
+    justify-self: center !important;
+    font-family: "Nunito Light";
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.reply-txt {
+    font-size: 18px;
+    text-align: center !important;
+    justify-self: center !important;
+    font-family: "Nunito Light";
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.predictions:hover {
+    cursor: pointer;
+    color: rgb(104, 127, 202);
+}
+
+.prediction-txt {
+    color: rgb(42, 80, 202) ;
+    font-family: 'Nunito Light';
+    font-size: 20px;
+}
+
+button
+{
+    position: relative;
+    display: block;
+    width: 84px;
+    height: 96px;
+    cursor: pointer;
+}
+
+#s-circle
+{
+    position: relative; 
+    top: -8px;
+    left: 0;
+    width: 43px;
+    height: 43px;
+    margin-top: 0;
+    border-width: 15px;
+    border: 15px solid #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.5s ease all;
+}
+
+button span
+{
+    position: absolute;
+    top: 68px;
+    left: 43px;
+    display: block;
+    width: 45px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 10px;
+    transform: rotateZ(52deg);
+    transition: 0.5s ease all;
+}
+
+button span:before, button span:after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+}
+
+#s-cover:hover #s-circle
+{
+    top: -1px;
+    width: 67px;
+    height: 15px;
+    border-width: 0;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+#s-cover:hover span
+{
+    top: 50%;
+    left: 56px;
+    width: 25px;
+    margin-top: -9px;
+    transform: rotateZ(0);
+}
+
+#s-cover:hover button span:before
+{
+    bottom: 11px;
+    transform: rotateZ(52deg);
+}
+
+#s-cover:hover button span:after
+{
+    bottom: -11px;
+    transform: rotateZ(-52deg);
+}
+#s-cover:hover button span:before, #s-cover:hover button span:after
+{
+    right: -6px;
+    width: 40px;
+    background-color: #fff;
+}
+
+@media only screen and (max-width: 850px) {
+    #cover {
+        width: 120%;
+        margin-left: -20%;
+        margin-top: 0%;
+        position: relative;
+        align-items: center;
+        align-self: center;
+        transform: scale(0.6);
+    }
+
+    #header-txt 
+    {
+        font-size: 20px;
+        margin-top: 20%;
+        margin-left: 5%;
+        margin-right: 5%
+    }
+    #secondary-txt 
+    {
+        font-size: 15px;
+        margin-left: 3%;
+        margin-right: 3%;
+        
+    }
+    #mainInput {
+        font-size: 30px;
+    }
+    #predictions {
+        margin-top: 0%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .predictions {
+        margin-top: 0%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 375px) {
+
+    #mainInput {
+        font-size: 25px !important;
+    }
+ 
+
+}
+
+@media only screen and (max-width: 321px) {
+
+    #mainInput {
+        font-size: 20px !important;
+    }
+    #cover {
+        padding: 20px;
+        margin-left: -15%;
+    }
+    .reply-title {
+        font-size: 20px !important;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    
+    .reply-txt {
+        font-size: 15px !important;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    .predictions {
+   
+        font-size: 15px;
+    }
+    #header-txt 
+    {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    #secondary-txt 
+    {
+        margin-left: 6%;
+        margin-right: 6%;
+        
+    }
+
+}
