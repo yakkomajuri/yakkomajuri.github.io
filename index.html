@@ -428,9 +428,9 @@
     const favicon = document.getElementById('page-favicon');
     let darkSwitch = document.getElementById('myonoffswitch');
 
-    let pref = Boolean(window.localStorage.getItem('darkMode'));
+    let pref = window.localStorage.getItem('darkMode');
 
-    let darkMode = pref !== null ? pref : true;
+    let darkMode = pref !== null ? Boolean(pref) : true;
 
     if (darkMode) {
       modeImport.setAttribute("href", darkPath);
