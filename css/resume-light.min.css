@@ -198,6 +198,12 @@ a {
     font-size: 12px;
 }
 
+#contact {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 a:active,
 a:focus,
 a:hover {

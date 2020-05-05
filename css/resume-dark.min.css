@@ -206,6 +206,7 @@ p, .text-p {
 #contact {
     display: flex;
     justify-content: center;
+    align-content: center;
 }
 
 
