@@ -437,6 +437,7 @@
     }
 
     function processModeChange() {
+      $('.navbar-collapse').collapse('hide');
       if (darkMode) {
         modeImport.setAttribute("href", lightPath);
         favicon.setAttribute("href", lightFavicon);
