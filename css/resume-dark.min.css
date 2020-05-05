@@ -203,6 +203,11 @@ p, .text-p {
     color: #23d43b;
 }
 
+#contact {
+    display: flex;
+    justify-content: center;
+}
+
 
 a:active,
 a:focus,

@@ -10,18 +10,14 @@
 
   <title>Yakko Majuri</title>
 
-  <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link id="page-favicon" rel="shortcut icon" type="image/png" href="img/fav-light.png" />
 
-
-  <!-- Custom styles for this template -->
-  <link id="style-mode" href="css/resume-light.min.css" rel="stylesheet">
+  <link id="page-favicon" rel="shortcut icon" type="image/png" href="img/fav-dark.png" />
+  <link id="style-mode" href="css/resume-dark.min.css" rel="stylesheet">
 
 </head>
 
@@ -65,7 +61,7 @@
             <small id="dark-mode-txt">DARK MODE</small>
             <div class="onoffswitch">
               <input type="checkbox" name="onoffswitch" onchange="processModeChange()" class="onoffswitch-checkbox"
-                id="myonoffswitch">
+                id="myonoffswitch" checked>
               <label class="onoffswitch-label" for="myonoffswitch">
                 <span class="onoffswitch-inner"></span>
                 <span class="onoffswitch-switch"></span>
@@ -85,6 +81,8 @@
           <span id="last-name" class="text-primary">Majuri</span>
         </h1>
         <div class="subheading mb-5 employer">Fullstack and Blockchain developer</div>
+           <p class="juice">
+          If this intro is too boring, <a>click here for the juice 🧃</a></p>
         <p class="lead mb-5">
           I am a London-based Solutions Architect and Software Developer with
           international experience as a consultant and public speaker.
@@ -396,10 +394,10 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
       <div class="w-100">
-        <center>
+        <span id="contact">
           <h3>Contact me on <a href="https://linkedin.com/in/yakko-majuri">LinkedIn</a> or via email: <a
               href="mailto:yakko@dvision.tech">yakko@dvision.tech</a>.</h3>
-        </center>
+      </span>
       </div>
     </section>
 
@@ -432,10 +430,10 @@
 
     let darkMode = pref !== null ? Boolean(pref) : true;
 
-    if (darkMode) {
-      modeImport.setAttribute("href", darkPath);
-      favicon.setAttribute("href", darkFavicon);
-      darkSwitch.checked = true;
+    if (!darkMode) {
+      modeImport.setAttribute("href", lightPath);
+      favicon.setAttribute("href", lightFavicon);
+      darkSwitch.checked = false;
     }
 
     function processModeChange() {
