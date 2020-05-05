@@ -1,38 +1,460 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/main.css">
-    <title>Dvision Tech</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="public/css/main.css" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Yakko Majuri</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link id="page-favicon" rel="shortcut icon" type="image/png" href="img/fav-light.png" />
+
+
+  <!-- Custom styles for this template -->
+  <link id="style-mode" href="css/resume-light.min.css" rel="stylesheet">
 
 </head>
 
-<body>
-    <div id="container">
-        <div class="spacer"></div>
-        <div class="cont" style="color: white; letter-spacing: 10px;">
-            <b>TECHNOLOGY</b>
-            <b>MADE SIMPLE</b>
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Yakko Majuri</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/prof.jpeg" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#skills">Software</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#interests">Specialties</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#awards">Accompishments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <center>
             <br>
-            <hr size="10px" width="30%" color="white">
-        </div>
-        <br>
-        <div class="button-sec">
-            <span class="left-column">
-                <button type="button" class="btn btn-info" onclick="window.location.href='en.html'">ENGLISH</button>
-            </span>
-            <span class="right-column">
-                <button type="button" class="btn btn-info" onclick="window.location.href='pt.html'">PORTUGUÊS</button>
-                <div class="spacer1"></div>
-            </span>
-        </div>
+            <br>
+            <small id="dark-mode-txt">DARK MODE</small>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" onchange="processModeChange()" class="onoffswitch-checkbox"
+                id="myonoffswitch">
+              <label class="onoffswitch-label" for="myonoffswitch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </center>
+        </li>
+      </ul>
     </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+      <div class="w-100">
+        <h1 class="mb-0">Yakko
+          <span id="last-name" class="text-primary">Majuri</span>
+        </h1>
+        <div class="subheading mb-5 employer"> &nbsp; Fullstack and Blockchain developer</div>
+        <p class="lead mb-5">
+          I am a London-based Solutions Architect and Software Developer with
+          international experience as a consultant and public speaker.
+          I have hosted lectures in six different countries, as well as provided 
+          technical consultancy and development services
+          for various clients both in Europe and Latin America.
+          My most recent research project has been published and presented
+          at the European Central Bank, and my current areas of focus are 
+          privacy-preserving protocols, Distributed Ledger Technology, and
+          social impact-oriented tools.
+        </p>
+        <div class="social-icons">
+          <a target="_blank" href="https://www.linkedin.com/in/yakko-majuri/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a target="_blank" href="https://github.com/yakkomajuri">
+            <i class="fab fa-github"></i>
+          </a>
+          <a target="_blank" href="https://medium.com/@yakko.majuri">
+            <i class="fab fa-medium"></i>
+          </a>
+          <a target="_blank" href="https://www.meetup.com/BlockchainBH-Meetup/">
+            <i class="fab fa-meetup"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+      <div class="w-100">
+        <h2 class="mb-5 page-header">Software Development</h2>
+
+        <div class="subheading mb-3 employer">Programming Languages &amp; Tools</div>
+        <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <i class="fab fa-js"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-node-js"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-react"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-python"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-ethereum"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-java"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-linux"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-html5"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-css3-alt"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-git"></i>
+          </li>
+        </ul>
+
+        <div class="subheading mb-3 employer"></div>
+        <ul class="fa-ul mb-0">
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Languages</b> </li>
+          <li class="text-p">&nbsp;&nbsp;JavaScript / Node.js <b> &nbsp;|&nbsp;</b> Solidity <b> &nbsp;|&nbsp;</b>
+            Python <b> &nbsp;|&nbsp;</b> Golang* <b> &nbsp;|&nbsp;</b> Java* <b> &nbsp;|&nbsp;</b> Arduino (C++)*</li>
+          <br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Frameworks</b></li>
+          <li class="text-p">&nbsp;&nbsp;Express <b> &nbsp;|&nbsp;</b> React Native <b> &nbsp;|&nbsp;</b> Mocha / Chai
+            <b> &nbsp;|&nbsp;</b> Open Zeppelin <b> &nbsp;|&nbsp;</b> Django* </li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Databases</b></li>
+          <li class="text-p">&nbsp;&nbsp;MongoDB <b> &nbsp;|&nbsp;</b> MySQL </li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Tools</b></li>
+          <li class="text-p">&nbsp;&nbsp;Linux (Ubuntu) <b> &nbsp;|&nbsp;</b> Git <b> &nbsp;|&nbsp;</b> BASH <b>
+              &nbsp;|&nbsp;</b> ZSH </li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Blockchain</b></li>
+          <li class="text-p">&nbsp;&nbsp;Solidity <b> &nbsp;|&nbsp;</b> Geth <b> &nbsp;|&nbsp;</b> web3js <b>
+              &nbsp;|&nbsp;</b> IPFS <b> &nbsp;|&nbsp;</b> 3Box <b>
+              &nbsp;|&nbsp;</b> Ganache </li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Frontend</b></li>
+          <li class="text-p">&nbsp;&nbsp;HTML5 <b> &nbsp;|&nbsp;</b> CSS3 <b> &nbsp;|&nbsp;</b> EJS <b>
+              &nbsp;|&nbsp;</b> Pug </li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>White Hat Hacking*</b></li>
+          <!--           <li class="text-p">&nbsp;&nbsp;XSS <b> &nbsp;|&nbsp;</b> SQL Injections <b> &nbsp;|&nbsp;</b> Exposed .git <b> &nbsp;|&nbsp;</b> Path traversal  </li><br>
+ -->
+          <li>
+            <br>
+            <small class="text-p"><i>*Currently learning or limited experience</i></small>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
+      <div class="w-100">
+        <h2 class="mb-5 page-header">Specialities &amp; Skills</h2>
+        <ul class="fa-ul mb-0">
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Languages</b> </li>
+          <li class="text-p">&nbsp;&nbsp;English (Fluent) <b> &nbsp;|&nbsp;</b> Portuguese (Fluent) <b>
+              &nbsp;|&nbsp;</b> Spanish (B2) <b> &nbsp;|&nbsp;</b> Finnish (B2) <b> &nbsp;|&nbsp;</b>
+            Mandarin (Beginner)</li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Technical Writing</b></li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Developer Evangelism</b></li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Public Speaking</b></li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Web Architecture Design</b></li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Photography</b></li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Project Management</b></li><br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Design</b></li><br>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+      <div class="w-100">
+        <h2 class="mb-5 page-header">Experience</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Solutions Architect</h3>
+            <div class="subheading mb-3 employer">DVision Tech</div>
+            <p id="dvision"></p>
+            <a id="dvision-btn" class="read-desc" href="javascript: readMore('dvision-btn', 'dvision')">Read Description
+              ▼</a>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">June 2019 - Present</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Fullstack Developer (Consultant)</h3>
+            <div class="subheading mb-3 employer">Sanofi Pasteur</div>
+            <p id="sanofi"></p>
+            <a id="sanofi-btn" class="read-desc" href="javascript: readMore('sanofi-btn', 'sanofi')">Read Description
+              ▼</a>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">July 2019 - November 2019</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Co-Founder / Mobile Developer</h3>
+            <div class="subheading mb-3 employer">JustPoint Universal Translator</div>
+            <p id="justpoint"></p>
+            <a id="justpoint-btn" class="read-desc" href="javascript: readMore('justpoint-btn', 'justpoint')">Read
+              Description ▼</a>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">October 2019 - January 2019</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Technical Advisor</h3>
+            <div class="subheading mb-3 employer">BlockchainBH</div>
+            <p id="blockchainbh"></p>
+            <a id="blockchainbh-btn" class="read-desc"
+              href="javascript: readMore('blockchainbh-btn', 'blockchainbh')">Read Description ▼</a>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">July 2019 - November 2019</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Visiting Scholar</h3>
+            <div class="subheading mb-3 employer">IGTI</div>
+            <p id="igti"></p>
+            <a id="igti-btn" class="read-desc" href="javascript: readMore('igti-btn', 'igti')">Read Description ▼</a>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">October 2019 - January 2019</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Project Manager / Blockchain Developer</h3>
+            <div class="subheading mb-3 employer">London Blockchain Labs</div>
+            <p id="lbl"></p>
+            <a id="lbl-btn" class="read-desc" href="javascript: readMore('lbl-btn', 'lbl')">Read Description ▼</a>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">October 2019 - January 2019</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Military Police</h3>
+            <div class="subheading mb-3 employer">Finnish Defence Forces</div>
+            <p id="military"></p>
+            <a id="military-btn" class="read-desc" href="javascript: readMore('military-btn', 'military')">Read
+              Description ▼</a>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">July 2019 - November 2019</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Head of Operations (Finland)</h3>
+            <div class="subheading mb-3 employer">Hautomo</div>
+            <p id="hautomo"></p>
+            <a id="hautomo-btn" class="read-desc" href="javascript: readMore('hautomo-btn', 'hautomo')">Read Description
+              ▼</a>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">March 2016 - July 2017</span>
+          </div>
+        </div>
+
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
+      <div class="w-100">
+        <h2 class="mb-5 page-header">Projects &amp; Accompishments</h2>
+        <ul class="fa-ul mb-0">
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Publication: "Overcoming Economic Stagnation in Low-Income Communities with Programmable Money"</b> </li>
+          <li class="text-p">&nbsp;&nbsp;Research presented at the European Central Bank in Frankfurt and published on
+            The Journal of Risk Finance (ISSN: 1526-5943).</li>
+          <br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>'Warm Up' Campaign</b> </li>
+          <li class="text-p">&nbsp;&nbsp;I lead the yearly 'Warm Up' Campaign which started in 2017 and raises
+            cryptocurrency donations worldwide to help the homeless in Brazil.</li>
+          <br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>ConsenSys Ethereum Developer Bootcamp</b> </li>
+          <li class="text-p">&nbsp;&nbsp;Completed ConsenSys Bootcamp, the top course for developers working with the
+            Ethereum blockchain. I was awarded a full scholarship for the course and
+            achieved a grade of 100% in my final project. </li>
+          <br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Certfy: Blockchain-Based Digital Notary</b> </li>
+          <li class="text-p">&nbsp;&nbsp;I built a full-scale program for authenticating documents on the blockchain.
+            Currently used in BlockchainBH's education programs.</li>
+          <br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>"Why I registered my vaccines on the blockchain"</b> </li>
+          <li class="text-p">&nbsp;&nbsp;Article explaining how to register one's vaccines on Ethereum. Topped at #2 for
+            Blockchain and #3 for JS articles worldwide on Medium.</li>
+          <br>
+          <li class="text-p">
+            <i class="fa-li fa fa-angle-right text-terminal"></i>
+            <b>Open Source Contributions</b> </li>
+          <li class="text-p">&nbsp;&nbsp;Minor help provided sporadically to open-source projects on GitHub. </li>
+          <br>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
+      <div class="w-100">
+        <center>
+          <h3>Contact me on <a href="https://linkedin.com/in/yakko-majuri">LinkedIn</a> or via email: <a
+              href="mailto:yakko@dvision.tech">yakko@dvision.tech</a>.</h3>
+        </center>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+  <script src="js/fun.js"></script>
+  <script src="js/descriptions.js"></script>
+
+  <script>
+
+    const darkPath = "css/resume-dark.min.css";
+    const lightPath = "css/resume-light.min.css";
+    const darkFavicon = "img/fav-dark.png";
+    const lightFavicon = "img/fav-light.png";
+
+    const modeImport = document.getElementById('style-mode');
+    const favicon = document.getElementById('page-favicon');
+    let darkSwitch = document.getElementById('myonoffswitch');
+
+    let pref = Boolean(window.localStorage.getItem('darkMode'));
+
+    let darkMode = pref !== null ? pref : true;
+
+    if (darkMode) {
+      modeImport.setAttribute("href", darkPath);
+      favicon.setAttribute("href", darkFavicon);
+      darkSwitch.checked = true;
+    }
+
+    function processModeChange() {
+      if (darkMode) {
+        modeImport.setAttribute("href", lightPath);
+        favicon.setAttribute("href", lightFavicon);
+        window.localStorage.setItem('darkMode', 'false');
+      } else {
+        modeImport.setAttribute("href", darkPath);
+        favicon.setAttribute("href", darkFavicon);
+        window.localStorage.setItem('darkMode', 'true');
+      }
+      darkMode = !darkMode;
+    }
+
+
+  </script>
+
+
 </body>
 
 </html>
