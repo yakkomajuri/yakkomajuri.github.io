@@ -195,8 +195,14 @@ p, .text-p {
 }
 
 .read-desc {
+    color: #25f040 !important;
+    font-size: 15px;
+    text-decoration: none !important;
+}
+
+.read-desc:hover {
     color: #8ef38a !important;
-    font-size: 12px;
+    text-decoration: none !important;
 }
 
 .text-terminal {
@@ -209,11 +215,21 @@ p, .text-p {
     align-content: center;
 }
 
+#juice-loader, #juice-loader:active {
+    text-decoration: none;
+    color: #7e7e7e;
+    font-size: 14px;
+}
+
+#juice-loader:hover {
+    color: #23d43b;
+}
+
 
 a:active,
 a:focus,
 a:hover {
-    color: #23d43b
+    color: #23d43b;
 }
 
 .onoffswitch {

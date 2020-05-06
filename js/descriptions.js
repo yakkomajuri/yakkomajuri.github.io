@@ -23,10 +23,10 @@ const readMore = (btnId, sectionId) => {
     let btn = document.getElementById(btnId);
     if (roles[sectionId][1]) {
         section.innerHTML = "";
-        btn.innerHTML = "Read Description ▼";
+        btn.innerHTML = "[+]";
     } else {
         section.innerHTML = roles[sectionId][0];
-        btn.innerHTML = "Close Description ▲";
+        btn.innerHTML = "[-]";
     }
     roles[sectionId][1] = !roles[sectionId][1];
 }
