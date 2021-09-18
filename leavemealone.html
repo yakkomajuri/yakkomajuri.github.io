@@ -1,152 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Leave Me Alone Browser extension" />
+    <meta name="author" content="Yakko Majuri" />
+    <meta property="og:title" content="Leave Me Alone Browser Extension" />
+    <meta property="og:image" content="./img/lma-icon.png" />
 
-<head>
+    <title>Leave Me Alone Extension</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Leave Me Alone Browser extension">
-  <meta name="author" content="Yakko Majuri">
-  <meta property="og:title" content="Leave Me Alone Browser Extension" />
-  <meta property="og:image" content="./img/lma-icon.png" />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-  <title>Leave Me Alone Extension</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
+      rel="stylesheet"
+    />
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      id="page-favicon"
+      rel="shortcut icon"
+      type="image/png"
+      href="img/fav-dark.png"
+    />
+    <link id="style-mode" href="css/resume-dark.min.css" rel="stylesheet" />
+  </head>
 
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
-  <link id="page-favicon" rel="shortcut icon" type="image/png" href="img/fav-dark.png" />
-  <link id="style-mode" href="css/resume-dark.min.css" rel="stylesheet">
-
-</head>
-
-<body id="page-top">
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">DVision Tech</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="index.html">Go Back Home &nbsp;↩</a>
-        </li>
-        <li class="nav-item">
-          <center>
-            <br>
-            <br>
-            <small id="dark-mode-txt">DARK MODE</small>
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" onchange="processModeChange()" class="onoffswitch-checkbox"
-                id="myonoffswitch" checked>
-              <label class="onoffswitch-label" for="myonoffswitch">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-              </label>
-            </div>
-          </center>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="container-fluid p-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-      <div class="w-100">
-        <h1 class="mb-0">Leave Me
-          <span id="last-name" class="text-primary">Alone</span>
-        </h1>
-        <div class="subheading mb-5 employer">Browser Extension</div>
-        <p id="juice" class="lead mb-5">
-          "Leave Me Alone" is a lightweight browser extension that will alert you if you are entering a website marked
-          as
-          potentially malicious by the <a href="https://www.cyberthreatcoalition.org/">Cyber Threat Coalition</a>. The
-          extension
-          will not do anything at all if you never visit a website on the list, and will simply warn you to stay away if
-          you
-          happen to enter one of these websites. 
-        </p>
-        <p id="juice" class="lead mb-5">
-          In fact, the best case scenario is that you download this extension and never
-          hear from it again. However, it is there, never bothering you, never creating any problems,
-          ready to help that one time when you really need it. Because one mistake is enough: if you share your data
-          with <b>just one</b> malicious website, that could lead to headaches for a lifetime. Stay safe and
-          happy browsing!
-        </p>
-        <p><i>Please excuse the messy Chrome Web Store page. I'm working on it. This was all built over the course of an
-            evening.</i></p>
-        <br>
-        <center>
-          <a href="https://chrome.google.com/webstore/detail/leave-me-alone/fihgejepaadbenpobilinbooflbmphoh/"><button
-              class="btn btn-success">Download</button></a>
-          <a href="https://github.com/yakkomajuri/leavemealone-extension" target="_blank"><button
-              class="btn btn-info">View Code</button></a>
-        </center>
+  <body id="page-top">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      id="sideNav"
+    >
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">DVision Tech</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html"
+              >Go Back Home &nbsp;↩</a
+            >
+          </li>
+          <li class="nav-item">
+            <center>
+              <br />
+              <br />
+              <small id="dark-mode-txt">DARK MODE</small>
+              <div class="onoffswitch">
+                <input
+                  type="checkbox"
+                  name="onoffswitch"
+                  onchange="processModeChange()"
+                  class="onoffswitch-checkbox"
+                  id="myonoffswitch"
+                  checked
+                />
+                <label class="onoffswitch-label" for="myonoffswitch">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                </label>
+              </div>
+            </center>
+          </li>
+        </ul>
       </div>
-    </section>
+    </nav>
 
+    <div class="container-fluid p-0">
+      <section
+        class="resume-section p-3 p-lg-5 d-flex align-items-center"
+        id="about"
+      >
+        <div class="w-100">
+          <h1 class="mb-0">
+            Leave Me
+            <span id="last-name" class="text-primary">Alone</span>
+          </h1>
+          <div class="subheading mb-5 employer">Browser Extension</div>
+          <p id="juice" class="lead mb-5">
+            "Leave Me Alone" is a lightweight browser extension that will alert
+            you if you are entering a website marked as potentially malicious by
+            the
+            <a href="https://www.cyberthreatcoalition.org/"
+              >Cyber Threat Coalition</a
+            >. The extension will not do anything at all if you never visit a
+            website on the list, and will simply warn you to stay away if you
+            happen to enter one of these websites.
+          </p>
+          <p id="juice" class="lead mb-5">
+            In fact, the best case scenario is that you download this extension
+            and never hear from it again. However, it is there, never bothering
+            you, never creating any problems, ready to help that one time when
+            you really need it. Because one mistake is enough: if you share your
+            data with <b>just one</b> malicious website, that could lead to
+            headaches for a lifetime. Stay safe and happy browsing!
+          </p>
+          <p>
+            <i
+              >Please excuse the messy Chrome Web Store page. I'm working on it.
+              This was all built over the course of an evening.</i
+            >
+          </p>
+          <br />
+          <center>
+            <a
+              href="https://chrome.google.com/webstore/detail/leave-me-alone/fihgejepaadbenpobilinbooflbmphoh/"
+              ><button class="btn btn-success">Download</button></a
+            >
+            <a
+              href="https://github.com/yakkomajuri/leavemealone-extension"
+              target="_blank"
+              ><button class="btn btn-info">View Code</button></a
+            >
+          </center>
+        </div>
+      </section>
+    </div>
 
-  </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
+    <script>
+      const darkPath = "css/resume-dark.min.css";
+      const lightPath = "css/resume-light.min.css";
+      const darkFavicon = "img/fav-dark.png";
+      const lightFavicon = "img/fav-light.png";
 
-  <script>
+      const modeImport = document.getElementById("style-mode");
+      const favicon = document.getElementById("page-favicon");
+      let darkSwitch = document.getElementById("myonoffswitch");
 
-    const darkPath = "css/resume-dark.min.css";
-    const lightPath = "css/resume-light.min.css";
-    const darkFavicon = "img/fav-dark.png";
-    const lightFavicon = "img/fav-light.png";
+      let pref = window.localStorage.getItem("darkMode");
 
-    const modeImport = document.getElementById('style-mode');
-    const favicon = document.getElementById('page-favicon');
-    let darkSwitch = document.getElementById('myonoffswitch');
+      let darkMode = pref !== null ? Boolean(pref) : true;
 
-    let pref = window.localStorage.getItem('darkMode');
-
-    let darkMode = pref !== null ? Boolean(pref) : true;
-
-    if (!darkMode) {
-      modeImport.setAttribute("href", lightPath);
-      favicon.setAttribute("href", lightFavicon);
-      darkSwitch.checked = false;
-    }
-
-    function processModeChange() {
-      $('.navbar-collapse').collapse('hide');
-      if (darkMode) {
+      if (!darkMode) {
         modeImport.setAttribute("href", lightPath);
         favicon.setAttribute("href", lightFavicon);
-        window.localStorage.setItem('darkMode', 'false');
-      } else {
-        modeImport.setAttribute("href", darkPath);
-        favicon.setAttribute("href", darkFavicon);
-        window.localStorage.setItem('darkMode', 'true');
+        darkSwitch.checked = false;
       }
-      darkMode = !darkMode;
-    }
 
-
-
-
-  </script>
-
-
-</body>
-
+      function processModeChange() {
+        $(".navbar-collapse").collapse("hide");
+        if (darkMode) {
+          modeImport.setAttribute("href", lightPath);
+          favicon.setAttribute("href", lightFavicon);
+          window.localStorage.setItem("darkMode", "false");
+        } else {
+          modeImport.setAttribute("href", darkPath);
+          favicon.setAttribute("href", darkFavicon);
+          window.localStorage.setItem("darkMode", "true");
+        }
+        darkMode = !darkMode;
+      }
+    </script>
+  </body>
 </html>
