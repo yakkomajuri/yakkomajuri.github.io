@@ -1,0 +1,37 @@
+img {
+    width: 100%;
+    vertical-align: middle;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+
+  .modal-content > img {
+    text-align: center;
+    margin: auto;
+    max-height: 85vh;
+    max-width: 75vw;
+    width: auto;
+    height: auto;
+  }
+
+  .internal-pics {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .col {
+    flex: 33%;
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+
+  p {
+    margin-top: -10px;
+  }
