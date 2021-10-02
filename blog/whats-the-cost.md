@@ -2,6 +2,8 @@
 title: What's the cost?
 ---
 
+<small><i>23/09/2021</i></small>
+
 "You look like you've lived a lot", she said.
 
 We were around 2500m above sea level, and it was day 3 up in the Andorran Pyrenees. 
