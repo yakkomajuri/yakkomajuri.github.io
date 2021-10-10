@@ -1,1 +1,0 @@
-# yakkomajuri.github.io
