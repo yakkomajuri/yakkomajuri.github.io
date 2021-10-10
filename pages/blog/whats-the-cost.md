@@ -1,8 +1,6 @@
----
-title: What's the cost?
----
+<!-- template: blog -->
 
-<small><i>23/09/2021</i></small>
+# What's the cost?
 
 "You look like you've lived a lot", she said.
 
