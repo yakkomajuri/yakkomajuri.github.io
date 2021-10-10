@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "deploy": "teeny build && gh-pages -d public"
+    "deploy": "teeny build && gh-pages -d public/"
   },
   "repository": {
     "type": "git",
