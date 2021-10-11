@@ -171,8 +171,12 @@ It listens for changes to the files and updates the static files on the fly (nai
 
 Once I finished building Teeny, it took me very little time to get this blog up and running. 
 
-I slapped [Pico.css](https://picocss.com/docs/) on my templates, making the site instantly look 100x better (big shoutout to them, I love it), and to deploy a new version I just run `teeny build && gh-pages -d public/`.
+I slapped [Pico.css](https://picocss.com/docs/) on my templates, making the site instantly look 100x better (big shoutout to them, I love it), and to deploy a new version I just run:
 
-And that's all - that's how I got this blog all sorted in about half a day. 
+```
+teeny build && gh-pages -d public/
+```
+
+And that's all - that's how I got this blog all sorted out in about half a day. 
 
 </details>
