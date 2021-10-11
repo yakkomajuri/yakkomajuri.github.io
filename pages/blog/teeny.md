@@ -14,7 +14,7 @@ As a result, I built [Teeny](https://github.com/yakkomajuri/teeny).
 It took me a couple hours, so it certainly isn't anything amazing, but if you want to try it, you can do:
 
 ```
-npm i -g teeny
+npm i -g teeny-cli
 teeny init && teeny develop
 ```
 
@@ -118,7 +118,7 @@ In the above example, Teeny will look for a template called `blog.html`. If no t
 
 Here's an example of Teeny at work.
 
-> **Side note:** Teeny is made of poorly-tested code I wrote in between a trip to the movies and a basketball game. **But**, if you want to try it, you can install it with `npm i -g teeny` or `yarn global add teeny`. The code is available [here](https://github.com/yakkomajuri/teeny).
+> **Side note:** Teeny is made of poorly-tested code I wrote in between a trip to the movies and a basketball game. **But**, if you want to try it, you can install it with `npm i -g teeny-cli` or `yarn global add teeny-cli`. The code is available [here](https://github.com/yakkomajuri/teeny).
 
 To start a Teeny project, run `teeny init`. This will create the following in your current directory:
 
