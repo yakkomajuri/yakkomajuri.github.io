@@ -6,7 +6,7 @@ I saw a tweet the other day that said YCombinator "dominates the product analyti
 
 This is indeed true. YC has invested in all the top players in the product analytics space: Mixpanel (S09), Amplitude (W12), and Heap (W13). 
 
-Not only that, it continues to invest in companies in this space like PostHog (W20) - disclaimer: I work here -, and June (W21).
+Not only that, it continues to invest in companies in this space like PostHog (W20) - disclaimer: I work here - and June (W21).
 
 But the interesting thing to me is that YC is not just betting on this trend/industry. It's creating the market as well, and that's where the dominance lies.
 
