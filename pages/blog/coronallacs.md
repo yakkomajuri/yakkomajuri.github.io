@@ -1,6 +1,6 @@
 ---
 template: blog
-title: Hiking Around Andorra in 5 Days
+title: Hiking around Andorra in 5 days
 ---
 
 # Hiking around Andorra in 5 days
@@ -199,11 +199,85 @@ Juclar is more "old school", but was a very nice stay nevertheless. Showers also
 
 Here, my personal highlight was a 3am walk to the "ecological toilet", located outside. I've seen breathtaking night skies a few times in my life, in places like Finland and Indonesia, and the sky I saw on my groggy toilet run at Juclar goes head-to-head with those. Fantastic.
 
-
 ## Day 3
 
+<details>
 
+<summary><b>Listed specs</b></summary>
+
+<br />
+
+- **Length:** 16.9km
+- **Altitude difference:** 1.425/-1.771m
+- **Duration:** 10h18
+- **Difficulty:** Medium-high
+
+<a href='https://coronallacs.com/en/from-jucla-refuge-to-sorteny-refuge' target='_blank'><i>Source</i></a>
+
+</details>
+
+Having made a South to North (almost) traverse of Andorra the day before, we were now going East to West.
+
+Following a comparatively light Day 1, days 2, 3, and 4 are all good challenges, with **a lot** of ascending and descending. 
+
+And that's what Day 3 was. For some reason, I don't remember a lot of details about this day. 
+
+This stage does not pass by any villages, and is done completely in the wilderness. There are a lot of streams along the way though, including one where you can reach its source. I had studied the area well and made a decision to carry less water than I normally would, refilling at the streams.
+
+> **Note:** Drinking water from lakes and rivers isn't always recommended in Andorra. I did carry water purification tablets with me and made sure to use them. 
+
+We passed by a few lakes and streams, and bumped into beautiful horses on the way.
+
+Our lunch break was at a phenomenal spot, with views like this:
+
+<div class='img-gallery-2'>
+<div class="row">
+  <div class="column">
+    <img src="../img/coronallacs/6.jpg" alt="Stage 3 lunch spot horses" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../img/coronallacs/7.jpg" alt="Stage 3 lunch spot lake" style="width:100%">
+  </div>
+</div>
+</div>
+
+<!-- Treated water, unmanned shelters -->
+
+I made sure to jump in, enjoying what would be the last stretch of nice weather we'd have for the whole trip (we just didn't know it yet).
+
+Following a lunch break that featured some shirtless sunbathing, we caught a storm of the latter half of the day.
+
+The terrain was much better for walking than the previous day, and we completed the stage in around 10h40. During the final descent of the day, my left knee started to hurt, and it would continue to do so until after the end of the trail.
+
+Maybe the reason I don't remember too much about Day 3 is because the highlight was the shelter (_Refugi Borda de Sorteny_). Expecting another typical mountain shelter, we found ourselves alone in what could be called "a nice hostel". Blankets were provided, and showers didn't need tokens.
+
+But above all, we were hosted by Marisa, an elderly lady who was taking care of the shelter by herself. She was extremely kind and helpful, and prepared the best dinner (and breakfast) we had during the whole trip.
+
+We were all wet and tired, so this shelter was a blessing before what was listed to be the hardest day of the trip.
+
+If you bump into Marisa here, say hello from me.
 
 ## Day 4
+
+<details>
+
+<summary><b>Listed specs</b></summary>
+
+<br />
+
+- **Length:** 21.9km
+- **Altitude difference:** 1.904/-1.608m
+- **Duration:** 11h13
+- **Difficulty:** High
+
+<a href='https://coronallacs.com/en/from-borda-de-sorteny-refuge-to-comapedrosa-refuge' target='_blank'><i>Source</i></a>
+
+</details>
+
+Following a good night of sleep, we left early for the longest day of the trail. Stage 4 would be a challenging day hike by itself, and is certainly tougher as the 4th day on a multi-day hike.
+
+You first descend to some villages, where you might find a restaurant or two. You **will not**, however, find a shop or pharmacy. Someone in our group would have needed some bandages but we didn't manage to find a place to buy them.
+
+
 
 ## Day 5

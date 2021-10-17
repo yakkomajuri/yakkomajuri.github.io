@@ -55,3 +55,4 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Hitchhiking around all of Taiwan
 - What's in my backpack?
 - Coronallacs
+- The hiker's goal

@@ -46,6 +46,21 @@
         margin: auto;
         display: block;
       }
+
+      .column {
+        float: left;
+        padding: 5px;
+      }
+
+      .img-gallery-2 .column {
+        width: 50%;
+      }
+      
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
     </style>
 
     <script>
