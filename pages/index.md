@@ -29,6 +29,7 @@ template: index
 
 ### Blog
 
+- [Hiking around Andorra in 5 days](blog/coronallacs)
 - [YC owns the product analytics space](blog/yc-product-analytics)
 - [Why I built my own static site generator](blog/teeny)
 - [Building a modern React app from scratch](blog/react-from-scratch)

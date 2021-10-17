@@ -5,6 +5,8 @@ title: Hiking around Andorra in 5 days
 
 # Hiking around Andorra in 5 days
 
+> For photos of this trip, check out this [photo gallery](/pics/coronallacs).
+
 About a month ago I ticked off the top item on my "European Countries I'd Still Like To Visit" list: Andorra.
 
 The little mountainous country squeezed between Spain and France was staring at me every time I opened a map of Europe, so when a work trip took me back to the Iberian Peninsula, I wasn't going to waste the opportunity.
@@ -151,7 +153,7 @@ The shelter was quite empty, and the seven of us had dinner together. A German a
 <br />
 
 - **Length:** 19.4km
-- **Altitude difference:** 1.350/-1.527m
+- **Altitude difference:** 1,350/-1,527m
 - **Duration:** 10h35
 - **Difficulty:** Medium-high
 
@@ -208,7 +210,7 @@ Here, my personal highlight was a 3am walk to the "ecological toilet", located o
 <br />
 
 - **Length:** 16.9km
-- **Altitude difference:** 1.425/-1.771m
+- **Altitude difference:** 1,425/-1,771m
 - **Duration:** 10h18
 - **Difficulty:** Medium-high
 
@@ -241,8 +243,6 @@ Our lunch break was at a phenomenal spot, with views like this:
 </div>
 </div>
 
-<!-- Treated water, unmanned shelters -->
-
 I made sure to jump in, enjoying what would be the last stretch of nice weather we'd have for the whole trip (we just didn't know it yet).
 
 Following a lunch break that featured some shirtless sunbathing, we caught a storm of the latter half of the day.
@@ -266,7 +266,7 @@ If you bump into Marisa here, say hello from me.
 <br />
 
 - **Length:** 21.9km
-- **Altitude difference:** 1.904/-1.608m
+- **Altitude difference:** 1,904/-1,608m
 - **Duration:** 11h13
 - **Difficulty:** High
 
@@ -278,6 +278,85 @@ Following a good night of sleep, we left early for the longest day of the trail.
 
 You first descend to some villages, where you might find a restaurant or two. You **will not**, however, find a shop or pharmacy. Someone in our group would have needed some bandages but we didn't manage to find a place to buy them.
 
+On this day, we also ran into a hiker's dilemma. It boiled down to: what's our goal with this trip? 
 
+The reason this came about is that we had two routes to choose from: the official listed route, and a route downloaded from a user on AllTrails. 
+
+The AllTrails route followed down the valley for longer until it reached a larger village/town, from where it ascended to the shelter.
+
+The "official" route, however, was a lot less "efficient" but spent very little time in urban environments, leaving the valley early and ascending beyond the altitude of the shelter before descending (with some ups and downs) to it.
+
+The alternative route would have been faster, and put less of a strain on our knees. But somehow it didn't _feel right_ - particularly walking for longer in urban environments.
+
+Utimately, the question we briefly considered was: what is the Coronallacs? The website states it is a trail around the 4 manned shelters of Andorra. Does it matter how one reaches those shelters? Can one only claim they completed the Coronallacs if they follow the "official route"?
+
+More deeply, the question considers the goals of a hiker. "What are you in this trail for?" sort of thing. But I'll leave this dicussion for another piece.
+
+Ultimately, we went with the "official", more difficult route. It wasn't much of a debate really, just a topic I found interesting.
+
+> **Note:** If you're worn down by Day 4 but would still like to make a push for finishing the trail, this alternative route is a good option. Instead of leaving the valley and ascending West from Llorts, you should continue down to Arans, cut over to Arinsal using the GR routes, and ascend from there to Comapedrosa.
+
+Day 4 was a day of rain. Sometimes a few drops with a cloudy sky, other times a full-on storm. We were wet all day. 
+
+Not a lot of pictures were taken, we were all just focused on arriving. We had lunch inside an unmanned shelter (you will go past two or three each day - they're just stone houses you can use for shelter)
+
+Particularly the final two hours of the trail were tough. We ascended to the shelter in pouring rain, not stopping a single time. The arrival selfie looked like this:
+
+![Arriving at Comapedrosa](./img/coronallacs/comapedrosa-selfie.jpeg)
+
+To top off a long day (~12h), this was the worst of the shelters. It wasn't so bad by itself, but we were very poorly-treated by the one man who was taking care of things there.
+
+Nevertheless, it had everything we needed. Showers weren't great and also token-based, but we just got given two one-minute tokens each without having to pay. Dinner was OK, and there was a Wi-Fi signal but it didn't actually work. I got enough cell reception at a specific spot to send a quick message and that's about it.
 
 ## Day 5
+
+<details>
+
+<summary><b>Listed specs</b></summary>
+
+<br />
+
+- **Length:** 21.4km
+- **Altitude difference:** 716/-1,922m
+- **Duration:** 9h17
+- **Difficulty:** Medium
+
+<a href='https://coronallacs.com/en/from-comapedrosa-refuge-to-escaldes-engordany' target='_blank'><i>Source</i></a>
+
+</details>
+
+Day 5 started like Day 4: wet. 
+
+We left our clothes next to the fireplace in hopes they'd dry a bit, but ultimately we all set off with a little extra water weight to finish the trail.
+
+Side note: you can't even imagine what our rooms smelled like at each of the shelters. The smell was getting progressively worse too.
+
+Once again, we started in the rain. There was a bit of a steep ascent to start the day, after which we crossed over to Spain for around 20 minutes. Here we saw a herd of wild [Pyrenean Chamois](https://en.wikipedia.org/wiki/Pyrenean_Chamois). I was told these could be spotted, but felt quite lucky to actually see some!
+
+Day 5 is mostly just about descending back to Escaldes, so one might think it's a chill day. Wrong! My knees were yearning for some ascents, yet you actually have to descend almost 2,000m of altitude on this day.
+
+Following our brief visit to spain, we descended to a ski station. There were no signs of the rain stopping. Here, my group asked a driver what the forecast looked like, and he replied a storm was coming. 
+
+At this point, a bit over 2h into the last day, all my walking companions quit. They took a ride down to the cable car station and I finished the trail how I started: alone.
+
+From the moment they quit, I said to myself: "Well, it's just downhill from here". 
+
+There were some pretty nasty descents for my knees in bad terrain, but after a few hours I was mostly walking on countryside roads with smoother slopes.
+
+I did catch the storm towards the end of the trail, but at that point it didn't matter any longer.
+
+Freed from having to walk in a group and eager to arrive, I took few breaks, skipped lunch, and did the whole thing in a bit over 7h, much faster than the listed time.
+
+I passed by the tourism office to get my "prize" (an ugly buff) and that was that - Coronallacs was behind me.
+
+## Closing thoughts
+
+All in all, I had a great time doing the Coronallacs trail. It's a trail that's not for inexperienced hikers, and provides a good challenge with amazing views (weather permitting) that you can do without taking too much time off work.
+
+Andorra is a beautiful country and a perfect place to explore the Pyrenees.
+
+There's a lot more I'd like to write, but if I don't finish this now I might end up never doing so. I'll update this piece as I'm reminded of more things about the trail.
+
+If you're planning on doing the Coronallacs and have some questions, I'd be happy to _try_ and help. Feel free to reach out to me at `yakkomajuri [at] protonmail [dot] com`.
+
+Oh, and the final thing I just remembered and forgot to include in the main body of text. I saw some marmots on the trail a few times. They're pretty cute.
