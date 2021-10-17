@@ -53,3 +53,5 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - On becoming lazy
 - Synchronization is hard
 - Hitchhiking around all of Taiwan
+- What's in my backpack?
+- Coronallacs
