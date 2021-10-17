@@ -52,3 +52,4 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - What I learned from doing hundreds of product demos
 - On becoming lazy
 - Synchronization is hard
+- Hitchhiking around all of Taiwan
