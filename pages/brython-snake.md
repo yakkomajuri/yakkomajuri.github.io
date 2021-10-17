@@ -1,1 +1,3 @@
-<!-- template: brython-snake -->
+---
+template: brython-snake
+---

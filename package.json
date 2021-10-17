@@ -17,6 +17,6 @@
   "homepage": "https://github.com/yakkomajuri/yakkomajuri.github.io#readme",
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "teeny-cli": "0.0.4"
+    "teeny-cli": "0.1.0-beta"
   }
 }

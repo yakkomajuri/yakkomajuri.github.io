@@ -1,1 +1,3 @@
-<!-- template: js-snake -->
+---
+template: js-snake
+---

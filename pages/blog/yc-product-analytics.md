@@ -1,5 +1,6 @@
-<!-- template: blog -->
-
+---
+template: blog
+---
 # YC owns the product analytics space
 
 I saw a tweet the other day that said YCombinator "dominates the product analytics category".

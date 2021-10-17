@@ -1,4 +1,6 @@
-<!-- template: blog -->
+---
+template: blog
+---
 
 # What's the cost?
 

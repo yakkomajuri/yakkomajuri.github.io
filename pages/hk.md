@@ -1,1 +1,3 @@
-<!-- template: hk -->
+---
+template: hk
+---

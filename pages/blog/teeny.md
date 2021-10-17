@@ -1,4 +1,8 @@
-<!-- template: blog -->
+---
+template: blog
+date: 10-10-2021
+---
+
 # Why I built my own static site generator
 
 <details>
@@ -106,7 +110,7 @@ Markdown is a first-class citizen in Teeny, so all of your website's pages are d
 
 The file need not have any actual content though, so if you want a page to be defined purely in HTML you just need to create a template that is referenced from a page file.
 
-To specify what template a page should use, you add an HTML comment on the first line of the page file, like so:
+To specify what template a page should use, you add an HTML comment on the first line of the page file¹, like so:
 
 ```
 <!-- template: blog -->
@@ -178,5 +182,17 @@ teeny build && gh-pages -d public/
 ```
 
 And that's all - that's how I got this blog all sorted out in about half a day. 
+
+</details>
+
+</details>
+
+<details>
+
+<summary><b>Footnotes</b></summary>
+
+<br />
+
+**[1]:** This has since changed. Teeny now uses a frontmatter to specify page templates. Check out [Teeny's README](https://github.com/yakkomajuri/teeny#readme) for more details. And shoutout to HackerNews user [franciscop](https://news.ycombinator.com/user?id=franciscop) for the suggestion.
 
 </details>

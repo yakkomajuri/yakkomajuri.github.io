@@ -1,1 +1,3 @@
-<!-- template: coronallacs -->
+---
+template: coronallacs
+---

@@ -1,5 +1,6 @@
-<!-- template: blog -->
-
+---
+template: blog
+---
 # Building a modern react app from scratch
 
 > This article was originally published on GitHub on the repo [yakkomajuri/react-from-scratch](https://github.com/yakkomajuri/react-from-scratch) under the name _"Building a modern React app from scratch in 2021"_.

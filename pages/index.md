@@ -1,1 +1,3 @@
-<!-- template: index -->
+---
+template: index
+---
