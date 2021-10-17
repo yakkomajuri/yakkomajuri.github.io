@@ -103,8 +103,8 @@ Andorra only has one telecom provider, and that's [Andorra Telecom](https://www.
 <br />
 
 - **Length:** 12.6km
-- **Altitude difference:** 1.473/-40 m
-- **Duration:** 6 h and 38 m
+- **Altitude difference:** 1.473/-40m
+- **Duration:** 6h38
 - **Difficulty:** Medium
 
 <a href='https://coronallacs.com/en/from-escaldes-engordany-to-the-illa-refuge' target='_blank'><i>Source</i></a>
@@ -144,10 +144,65 @@ Blankets or not, you should probably always carry a sleeping bag with you, which
 The shelter was quite empty, and the seven of us had dinner together. A German and a Spaniard were doing a 30+ day trail, whereas the others (2 Brazilians, 2 Basques) were also doing the Coronallacs. One Brazilian had already decided to quit, and the rest of us decided to start the next stage together. 
 ## Day 2
 
+<details>
+
+<summary><b>Listed specs</b></summary>
+
+<br />
+
+- **Length:** 19.4km
+- **Altitude difference:** 1.350/-1.527m
+- **Duration:** 10h35
+- **Difficulty:** Medium-high
+
+<a href='https://coronallacs.com/en/from-illa-refuge-to-jucla-refuge' target='_blank'><i>Source</i></a>
+
+</details>
+
 The Brazilian who had "quit" woke up feeling fresh and decided to set off with us.
 
 Thus, after having a good breakfast, the five of us set off for stage 2 at around 8am.
+
+The day started with around 350m of ascent in pretty rugged terrain. We soon reached the highest point of the trail, at a bit over 2,800m.
+
+From here we could see the lakes we'd be walking past for the coming hours.
+
+![Stage 2 lakes](../img/coronallacs/3.jpg)
+
+The turn to go down the mountain was an easy-to-miss one, and the descent was both steep and slippery, setting the tone for the rest of the day.
+
+We walked around the lakes until we reached a little restaurant. This is one of two opportunities during the second day to buy food (and potentially water). We didn't stop here though.
+
+We continued on through a ski station and then descended quite a bit to reach a little ski town.
+
+They had a market where we bought some food and we had a lunch break sitting out on the street. 
+
+Here, with a tough ascent lurking, the Brazilian who had quit the day before quit once and for all, taking a bus back to Andorra la Vella. We were now four people.
+
+> **Note:** This is the best "exit route" until Day 4. The ski town is around the halfway mark of Stage 2, but, in reality, you still have a tough day ahead of you. If someone is already struggling at this point, this is a good opportunity to call it off.
+
+Having descended from one side of the valley, you now have to ascend the other. You'll be going up for a while. 
+
+We kept a good pace here, and the views were very nice, particularly once we left the town behind.
+
+Once more, as you gain altitude, the terrain becomes more and more rugged. As a result, the final stretch to the shelter was a bit tricky and even involved a bit of scrambling. From the time we could first see the refuge to the time the boots were off, we were walking for around an hour. 
+
+All in all, we took about 11h on this stage. We did "aim" for the time listed in the specs though, trying not to be too fast. We made sure to take good breaks and stretch, and arrived in a good shape at _Refugi de Juclar_. 
+
+Our trackers all showed that we walked around 22km, instead of the listed 19.4. The man at the shelter also said the walk is around 21km or so. Just FYI.
+
+While we arrived in a good shape, this was a tough stage. We found it to be one of the toughest. One can attribute it to the fact that it was the first actually challenging stage, but ultimately it was just a bit more "technical" than the others. With a bit of scrambling and ascents and descents over slippery and tricky terrain, it requires a bit of caution.
+
+Like I'lla, Juclar is also located next to a lake. Once again, I made sure to go for a little recovery dip.
+
+Juclar is more "old school", but was a very nice stay nevertheless. Showers also work with tokens, although here you get 3 minutes. Dinner was amazing and once again accompanied by wine.
+
+Here, my personal highlight was a 3am walk to the "ecological toilet", located outside. I've seen breathtaking night skies a few times in my life, in places like Finland and Indonesia, and the sky I saw on my groggy toilet run at Juclar goes head-to-head with those. Fantastic.
+
+
 ## Day 3
+
+
 
 ## Day 4
 
