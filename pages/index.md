@@ -46,6 +46,14 @@ As someone who does not have a social media presence, I'll be using this blog to
 
 Ideas for posts that I may or may not write. It feels like having them here would make me more likely to write them at some point.
 
+
+
+<div>
+<details>
+    <summary>Full list</summary>
+
+<br />
+
 - Thinking in tables
 - I don't own anything
 - Flexitarianism actually makes sense
@@ -55,8 +63,10 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Synchronization is hard
 - Hitchhiking around all of Taiwan
 - What's in my backpack?
-- Coronallacs
 - The hiker's goal
 - Growing up too fast
 - Lessons for small town engineers
 - Understanding your audience
+
+</details>
+</div>
