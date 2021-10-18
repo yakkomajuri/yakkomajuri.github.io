@@ -70,6 +70,7 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Thinking in FAANG
 - What's your price?
 - Crossing lines
+- Don't do the thing you have a competitive advantage in
 
 </details>
 </div>
