@@ -67,6 +67,7 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Growing up too fast
 - Lessons for small town engineers
 - Understanding your audience
+- Thinking in FAANG
 
 </details>
 </div>
