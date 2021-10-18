@@ -68,6 +68,8 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Lessons for small town engineers
 - Understanding your audience
 - Thinking in FAANG
+- What's your price?
+- Crossing lines
 
 </details>
 </div>
