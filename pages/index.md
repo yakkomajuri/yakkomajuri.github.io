@@ -29,6 +29,7 @@ template: index
 
 ### Blog
 
+- [The hiker's goal](blog/the-hikers-goal)
 - [Hiking around Andorra in 5 days](blog/coronallacs)
 - [YC owns the product analytics space](blog/yc-product-analytics)
 - [Why I built my own static site generator](blog/teeny)
@@ -63,7 +64,6 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Synchronization is hard
 - Hitchhiking around all of Taiwan
 - What's in my backpack?
-- The hiker's goal
 - Growing up too fast
 - Lessons for small town engineers
 - Understanding your audience
