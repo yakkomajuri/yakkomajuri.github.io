@@ -76,6 +76,7 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - The most difficult question I have to answer
 - Is hypocrisy a real thing
 - You don't understand
-
+- I'm no better
+  
 </details>
 </div>
