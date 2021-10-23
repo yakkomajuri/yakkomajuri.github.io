@@ -73,6 +73,9 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - What's your price?
 - Crossing lines
 - Don't do the thing you have a competitive advantage in
+- The most difficult question I have to answer
+- Is hypocrisy a real thing
+- You don't understand
 
 </details>
 </div>
