@@ -29,6 +29,8 @@ template: index
 
 ### Blog
 
+Raw pieces comprising what I'm thinking about at a given point in time. Barely edited, often written quickly in one go. 
+
 - [The hiker's goal](blog/the-hikers-goal)
 - [Hiking around Andorra in 5 days](blog/coronallacs)
 - [YC owns the product analytics space](blog/yc-product-analytics)
