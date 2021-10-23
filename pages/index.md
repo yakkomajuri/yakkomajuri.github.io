@@ -74,9 +74,10 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Crossing lines
 - Don't do the thing you have a competitive advantage in
 - The most difficult question I have to answer
-- Is hypocrisy a real thing
+- Is hypocrisy a real thing?
 - You don't understand
 - I'm no better
+- Don't put me on another podcast
   
 </details>
 </div>
