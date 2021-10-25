@@ -79,6 +79,7 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - You don't understand
 - I'm no better
 - Don't put me on another podcast
+- Damn these values
   
 </details>
 </div>
