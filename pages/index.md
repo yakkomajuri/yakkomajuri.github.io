@@ -36,7 +36,6 @@ Raw pieces comprising what I'm thinking about at a given point in time. Barely e
 - [Hiking around Andorra in 5 days](blog/coronallacs)
 - [YC owns the product analytics space](blog/yc-product-analytics)
 - [Why I built my own static site generator](blog/teeny)
-- [Building a modern React app from scratch](blog/react-from-scratch)
 - [What's the cost?](blog/whats-the-cost)
 
 ### Pictures
@@ -82,6 +81,8 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Damn these values
 - Making my job obsolete
 - ORMs
+- Toilet UX
+- Heart attack prevention
   
 </details>
 </div>
