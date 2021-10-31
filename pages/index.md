@@ -83,6 +83,10 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - ORMs
 - Toilet UX
 - Heart attack prevention
+- How free soloists die
+- Why I no longer keep books
+- No more audiobooks
+- Age analytics
   
 </details>
 </div>
