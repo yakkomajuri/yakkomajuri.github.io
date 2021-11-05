@@ -29,4 +29,14 @@ Plus, at the end of the day, you might only feel you need product analytics beca
 
 So that's it for this piece. I just wanted to quickly jot down some thoughts about what a great investment strategy looks like.
 
-Final note: with [Segment's acquistion](https://www.twilio.com/blog/twilio-acquires-segment) and [Amplitude's recent IPO](https://www.cnbc.com/2021/09/28/amplitude-starts-trading-on-nasdaq-in-direct-listing.html), it seems like the bets in this space are starting to pay off.
+Final note: with [Segment's acquisition](https://www.twilio.com/blog/twilio-acquires-segment) and [Amplitude's recent IPO](https://www.cnbc.com/2021/09/28/amplitude-starts-trading-on-nasdaq-in-direct-listing.html), it seems like the bets in this space are starting to pay off.
+
+<details>
+
+<summary><b>Edits</b></summary>
+
+<br />
+
+**05/11/2021:** Was just browsing HN today and saw [this](https://news.ycombinator.com/item?id=29106082). Another one for the list. 
+
+</details>
