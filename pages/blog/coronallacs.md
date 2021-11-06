@@ -98,7 +98,7 @@ Andorra only has one telecom provider, and that's [Andorra Telecom](https://www.
 ## Day 1
 
 
-<details>
+<details open>
 
 <summary><b>Listed specs</b></summary>
 
@@ -144,9 +144,10 @@ As for the rest of the facilities, you can take a warm shower here, but you need
 Blankets or not, you should probably always carry a sleeping bag with you, which would allow you to do an emergency bivouac if necessary.
 
 The shelter was quite empty, and the seven of us had dinner together. A German and a Spaniard were doing a 30+ day trail, whereas the others (2 Brazilians, 2 Basques) were also doing the Coronallacs. One Brazilian had already decided to quit, and the rest of us decided to start the next stage together. 
+
 ## Day 2
 
-<details>
+<details open>
 
 <summary><b>Listed specs</b></summary>
 
@@ -203,7 +204,7 @@ Here, my personal highlight was a 3am walk to the "ecological toilet", located o
 
 ## Day 3
 
-<details>
+<details open>
 
 <summary><b>Listed specs</b></summary>
 
@@ -259,7 +260,7 @@ If you bump into Marisa here, say hello from me.
 
 ## Day 4
 
-<details>
+<details open>
 
 <summary><b>Listed specs</b></summary>
 
@@ -310,7 +311,7 @@ Nevertheless, it had everything we needed. Showers weren't great and also token-
 
 ## Day 5
 
-<details>
+<details open>
 
 <summary><b>Listed specs</b></summary>
 
