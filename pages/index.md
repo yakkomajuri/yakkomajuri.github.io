@@ -87,6 +87,7 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Why I no longer keep books
 - No more audiobooks
 - Age analytics
-  
+- Debugging writeups  
+
 </details>
 </div>
