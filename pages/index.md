@@ -88,6 +88,7 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - No more audiobooks
 - Age analytics
 - Debugging writeups  
+- A skill I admire but don't want to develop
 
 </details>
 </div>
