@@ -31,6 +31,7 @@ template: index
 
 Raw pieces comprising what I'm thinking about at a given point in time. Barely edited, often written quickly in one go. 
 
+- [Debugging Debrief #1: Recovering a customer's events](blog/dd1-recovering-events)
 - [Be careful with Heroku Postgres](blog/heroku-postgres)
 - [The hiker's goal](blog/the-hikers-goal)
 - [Hiking around Andorra in 5 days](blog/coronallacs)
@@ -89,6 +90,8 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Age analytics
 - Debugging writeups  
 - A skill I admire but don't want to develop
+- DD2: Disappearing persons
+- DD3: Deep into the pool 
 
 </details>
 </div>
