@@ -92,6 +92,7 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - A skill I admire but don't want to develop
 - DD2: Disappearing persons
 - DD3: Deep into the pool 
+- I have something to add 
 
 </details>
 </div>
