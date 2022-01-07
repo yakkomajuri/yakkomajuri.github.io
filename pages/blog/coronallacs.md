@@ -19,7 +19,7 @@ Here's how that went.
 
 While reading up on Andorra online, I stumbled upon a trail called _Coronallacs_. 
 
-Coronallacs is a new trail (2017) that goes around the 4 existing staffed shelters in Andorra. These are aptly placed in the "corners" of the country, meaning if you visit all of them, starting and finish around Andorra la Vella, you essentially complete a loop around Andorra (somewhat).
+Coronallacs is a new trail (2017) that goes around the 4 existing staffed shelters in Andorra. These are aptly placed in the "corners" of the country, meaning if you visit all of them, starting and finishing around Andorra la Vella, you essentially complete a loop around Andorra (somewhat).
 
 ![Coronallacs Map](../img/blog/coronallacs/map.jpeg)
 
@@ -289,7 +289,7 @@ The "official" route, however, was a lot less "efficient" but spent very little 
 
 The alternative route would have been faster, and put less of a strain on our knees. But somehow it didn't _feel right_ - particularly walking for longer in urban environments.
 
-Utimately, the question we briefly considered was: what is the Coronallacs? The website states it is a trail around the 4 manned shelters of Andorra. Does it matter how one reaches those shelters? Can one only claim they completed the Coronallacs if they follow the "official route"?
+Ultimately, the question we briefly considered was: what is the Coronallacs? The website states it is a trail around the 4 manned shelters of Andorra. Does it matter how one reaches those shelters? Can one only claim they completed the Coronallacs if they follow the "official route"?
 
 More deeply, the question considers the goals of a hiker. "What are you in this trail for?" sort of thing. But I'll leave this dicussion for another piece.
 
@@ -299,7 +299,7 @@ Ultimately, we went with the "official", more difficult route. It wasn't much of
 
 Day 4 was a day of rain. Sometimes a few drops with a cloudy sky, other times a full-on storm. We were wet all day. 
 
-Not a lot of pictures were taken, we were all just focused on arriving. We had lunch inside an unmanned shelter (you will go past two or three each day - they're just stone houses you can use for shelter)
+We had lunch inside an unmanned shelter (you will go past two or three each day - they're just stone houses you can use for shelter), and not a lot of pictures were taken, we were all just focused on arriving. 
 
 Particularly the final two hours of the trail were tough. We ascended to the shelter in pouring rain, not stopping a single time. The arrival selfie looked like this:
 
@@ -336,7 +336,7 @@ Once again, we started in the rain. There was a bit of a steep ascent to start t
 
 Day 5 is mostly just about descending back to Escaldes, so one might think it's a chill day. Wrong! My knees were yearning for some ascents, yet you actually have to descend almost 2,000m of altitude on this day.
 
-Following our brief visit to spain, we descended to a ski station. There were no signs of the rain stopping. Here, my group asked a driver what the forecast looked like, and he replied a storm was coming. 
+Following our brief visit to Spain, we descended to a ski station. There were no signs of the rain stopping. Here, my group asked a driver what the forecast looked like, and he replied a storm was coming. 
 
 At this point, a bit over 2h into the last day, all my walking companions quit. They took a ride down to the cable car station and I finished the trail how I started: alone.
 
