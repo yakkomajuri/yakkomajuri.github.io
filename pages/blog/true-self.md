@@ -87,3 +87,13 @@ On occasion, I can sense pieces of my true self creeping to the surface as I ref
 Yet simply allowing my mind explore them is a difficult task, so that often the choice I make is to leave them alone. Accepting them might mean breaking down a lot of what I thought I knew about who I am, a scary proposition.
 
 But perhaps, if I just got myself to look at that mirror for a brief moment...
+
+<hr />
+
+<blockquote>
+
+"...struggling to be himself, yet deathly afraid of being himself - striving to see his experience as it is, wanting to _be_ that experience, yet deeply fearful of the prospect."
+
+- Carl Rogers, _On Becoming a Person_
+- 
+</blockquote>
