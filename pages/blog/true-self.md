@@ -88,7 +88,7 @@ Yet simply allowing my mind explore them is a difficult task, so that often the 
 
 But perhaps, if I just got myself to look at that mirror for a brief moment...
 
-<hr />
+-----
 
 <blockquote>
 
