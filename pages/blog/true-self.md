@@ -95,5 +95,5 @@ But perhaps, if I just got myself to look at that mirror for a brief moment...
 "...struggling to be himself, yet deathly afraid of being himself - striving to see his experience as it is, wanting to _be_ that experience, yet deeply fearful of the prospect."
 
 - Carl Rogers, _On Becoming a Person_
-- 
+  
 </blockquote>
