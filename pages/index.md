@@ -31,9 +31,9 @@ template: index
 
 Raw pieces comprising what I'm thinking about at a given point in time. Barely edited, often written quickly in one go. 
 
-- [Debugging Debrief #2: Deep diving into the thread pool](blog/dd2-thread-pool)
+- [Deep diving into the thread pool](blog/dd2-thread-pool)
 - [Finding your true self](blog/true-self)
-- [Debugging Debrief #1: Recovering a customer's events](blog/dd1-recovering-events)
+- [Recovering a customer's events](blog/dd1-recovering-events)
 - [Be careful with Heroku Postgres](blog/heroku-postgres)
 - [The hiker's goal](blog/the-hikers-goal)
 - [Hiking around Andorra in 5 days](blog/coronallacs)

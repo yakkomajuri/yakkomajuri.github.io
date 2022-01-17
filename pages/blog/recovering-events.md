@@ -2,11 +2,9 @@
 template: blog
 ---
 
-# Debugging Debrief #1: Recovering a customer's events
+# Recovering a customer's events
 
-> <small>This piece is a part of my _Debugging Debrief_ series, which includes writeups of tracking down and fixing bugs. My goal is that this series motivates me to write about software more often, so I can kick back into the habit, reinforce my learnings through the writing, and refer back to these posts in the future.</small>
-
-Here's a short post of a recent occurence just to get things started. Hopefully I'll cover some nastier stuff in upcoming pieces.
+Here's a short post of a recent occurence just to get kickback into the habit about documenting debugging sessions and writing about software in general. Hopefully I'll cover some nastier stuff in upcoming pieces.
 
 Just the other day I had a session booked in my calendar that was gearing up to be painful.
 
