@@ -2,7 +2,7 @@
 template: blog
 ---
 
-# Deep diving into the thread pool
+# Deep diving into the thread pool: a debugging story
 
 Some months ago I found myself with the following issue in my sprint priorities:
 

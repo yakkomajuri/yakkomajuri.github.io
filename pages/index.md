@@ -31,7 +31,7 @@ template: index
 
 Raw pieces comprising what I'm thinking about at a given point in time. Barely edited, often written quickly in one go. 
 
-- [Deep diving into the thread pool](blog/dd2-thread-pool)
+- [Deep diving into the thread pool: a debugging story](blog/dd2-thread-pool)
 - [Finding your true self](blog/true-self)
 - [Recovering a customer's events](blog/dd1-recovering-events)
 - [Be careful with Heroku Postgres](blog/heroku-postgres)
