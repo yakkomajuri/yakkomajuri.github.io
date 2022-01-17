@@ -174,6 +174,9 @@ However, on self-hosted instances processing low volumes, if workers are already
 And so, that's how we kept our performance intact without touching the voided promises.
 
 
+-----
+
+_[Here's the original ticket](https://github.com/PostHog/plugin-server/issues/487) where this was explained and a discussion about possibilities took place_.
 
 
 
