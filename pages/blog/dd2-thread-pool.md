@@ -40,7 +40,7 @@ Bingo! The buffer.
 
 Our plugins have a few options when it comes to asynchronous processing, primarily the jobs API and the buffer util.
 
-The BigQuery plugin used the buffer on the first insert attempt, but leveraged jobs to process retries.
+The BigQuery plugin used the buffer on the first insert attempt, but leveraged jobs (another API) to process retries.
 
 Given that the problem seemed to only occur on the first run, it seemed that the buffer was to blame. 
 
@@ -101,7 +101,7 @@ Oh.
 
 That's exactly what the buffer does!
 
-So we were doing something our thread pool recommended against. That probably was it. But we did this across the board! How come this error didn't happen on Cloud but happened on self-hosted.
+So we were doing something our thread pool recommended against. That probably was it. But we did this across the board! How come this error didn't happen on Cloud but happened on self-hosted instances?
 
 As it turns out, the error _did_ happen on Cloud, but very infrequently. It was also merged in with other legitimate timeouts on Sentry, which made it hard to spot.
 
@@ -127,23 +127,24 @@ Concretely, here's an example scenario:
 
 1. PostHog receives an event
 2. This event is passed to a plugin for processing
-3. This plugin voids a promise aimed at sending it to BigQuery
+3. This plugin voids a promise sending a POST request to BigQuery with the event
 4. The worker marks the task as complete and goes on to look for new tasks
 5. The event loop is blocked for 45 seconds
 6. A new event comes in, and a new task is picked up
 7. When it gets a chance, the event loop tries to handle the callback from the voided promise
-8. As it goes to handle the callback, our wrapper forces a timeout and the plugin errors
+8. As it goes to handle the callback from the request, our wrapper forces a timeout and the plugin errors (despite the request having completed successfully)
+9. Our retry logic was triggered and the event was exported twice
 
 
 ## When the lack of load is the problem
 
 Now, the reason this affected our clients' instances more than our Cloud instance is because the Piscina worker will only block the event loop when it is looking for new tasks. If it is processing a task, it will be able to handle the background callbacks and such normally.
 
-So, while Cloud we process hundreds of thousands of events per minute, with each event potentially triggering multiple tasks, some of our clients could feasibly go 30 seconds without a worker receiving a task, thus triggering this issue.
+So, while on Cloud we process hundreds of thousands of events per minute, with each event potentially triggering multiple tasks, some of our clients could feasibly go 30 seconds without a worker receiving a task, thus triggering this issue.
 
-This is tricky, because upon seeing something a timeout error, you might think you should scale _up_, as is the solution for other similar issues we have faced that cause timeouts. 
+This is tricky, because upon seeing something like a timeout error, you might think you should scale _up_, as is the solution for other similar issues we have faced that cause timeouts. 
 
-However, if you scale vertically, we'll add more threads to the plugin server (`n(threads) == n(cpus)`), and if you scale horizontally, we'll also be running more worker threads. 
+However, if you scale vertically, we'll add more threads to the plugin server - the default setting is `n(threads) == n(cpus)` - and if you scale horizontally, we'll also be running more worker threads. 
 
 As such, you're increasing the chance that a given worker will have to wait 30 or more seconds for a task. 
 
@@ -151,7 +152,7 @@ The (temporary) answer here would actually be to scale _down_.
 
 ## The solution
 
-So, a given Client could scale down to potentially mitigate this problem, but that's certainly not a good solution.
+So, the client could scale down to potentially mitigate this problem, but that's certainly not a good solution.
 
 But how did we _fix_ this?
 
