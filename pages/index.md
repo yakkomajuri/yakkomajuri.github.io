@@ -6,7 +6,7 @@ template: index
 <details>
     <summary>What is this website?</summary>
     <p>
-    This <s>is</s> hopefuly will be where I host my "stream of
+    This is <s>hopefuly will be</s> where I host my "stream of
     consciousness" blog. My more structured and education-focused
     technical writing can still be found
     <a href="https://yakkomajuri.medium.com/">here</a>.
@@ -21,7 +21,7 @@ template: index
     Sunday afternoons are often when I'm most contemplative, as well as
     when I generally have the most time to spare. They have
     traditionally been when I develop my best concepts for writing, so
-    the blog name felt appropriate. The bulk of the time I spend on this
+    the blog name felt appropriate. THe bulk of the writing for this
     blog will also probably happen on sunday afternoons.
     </p>
 </details>
@@ -40,6 +40,7 @@ Raw pieces comprising what I'm thinking about at a given point in time. Barely e
 - [YC owns the product analytics space](blog/yc-product-analytics)
 - [Why I built my own static site generator](blog/teeny)
 - [What's the cost?](blog/whats-the-cost)
+- [So many thoughts](blog/so-many-thoughts)
 
 ### Pictures
 
@@ -53,10 +54,9 @@ As someone who does not have a social media presence, I'll be using this blog to
 Ideas for posts that I may or may not write. It feels like having them here would make me more likely to write them at some point.
 
 
-
 <div>
 <details>
-    <summary>Full list</summary>
+    <summary>List</summary>
 
 <br />
 
@@ -92,9 +92,11 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Age analytics
 - Debugging writeups  
 - A skill I admire but don't want to develop
-- DD2: Disappearing persons
-- DD3: Deep into the pool 
+- DD3: Disappearing persons
 - I have something to add 
+- Why I'm choosing to write for free
 
+<p>Note to self (17/01/2022): you should have been striking through ideas you wrote rather than deleting them.</p>
+  
 </details>
 </div>
