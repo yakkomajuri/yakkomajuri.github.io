@@ -164,7 +164,11 @@ Upon benchmarking this with our system, however, I found that our event ingestio
 
 Thus, after toying with a few other ideas, we landed on the following (note that we were already running a _fork_ of Piscina):
 
-**Introduce a setting denoting a maximum amount of time a worker should block the event loop while looking for tasks before falling back into the slower mechanism, defaulting it to 5 seconds. ([Implementation](https://github.com/PostHog/piscina/pull/4))** 
+**Introduce a setting denoting a maximum amount of time a worker should block the event loop while looking for tasks before falling back into the slower mechanism. ([Implementation](https://github.com/PostHog/piscina/pull/4))** 
+
+Sensible defaults were then set for our Cloud and self-hosted instances (originally 1s and 5s respectively).
+
+> _Note that we've forked Piscina in order to tailor it to our very specific needs. This isn't a general solution but was a good fit for us._
 
 The reason this works is because on our Cloud instance, where performance is paramount, most of the time workers will get a new task in fractions of a second, so the absolute vast majority of tasks will be picked up using the fast mechanism.
 
