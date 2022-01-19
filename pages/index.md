@@ -31,6 +31,7 @@ template: index
 
 Raw pieces comprising what I'm thinking about at a given point in time. Barely edited, often written quickly in one go. 
 
+- [Can you tell me the age of my users?](blog/age-analytics)
 - [Deep diving into the thread pool: a debugging story](blog/thread-pool)
 - [Finding your true self](blog/true-self)
 - [Recovering a customer's events](blog/recovering-events)
