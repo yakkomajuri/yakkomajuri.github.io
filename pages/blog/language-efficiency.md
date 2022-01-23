@@ -248,7 +248,7 @@ The biggest disparity within a language group happened with Spanish, with Spanis
 
 </details>
 
-You can find the full results in a table format on this website [here](blog/language-information-density-results) and the CSV results [here](https://github.com/yakkomajuri/lang/blob/main/results.csv). These results also include the sentence in each language.
+You can find the full results in a table format on this website [here](blog/language-efficiency-results) and the CSV results [here](https://github.com/yakkomajuri/lang/blob/main/results.csv). These results also include the sentence in each language.
 
 ## Limitations
 
