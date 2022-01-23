@@ -4,6 +4,8 @@ template: blog
 
 # Why I'm comfortable publishing foolishness
 
+> _...duly flagged as such, of course._
+
 When I started, I was very insecure.
 
 Well, still am.
