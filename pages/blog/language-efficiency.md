@@ -4,6 +4,8 @@ template: blog
 
 # What's the world's most efficient language?
 
+> **Edit:** This has now made it to the front page of HackerNews. I'm sure a lot of valid criticism will come from it. Do note that I'm more curious in the discussion than the experiment itself (I'm already learning from the comments). I consistently claim here to not be qualified for an analysis. The "Deriving information" section ends with _"...the only thing I'm really measuring is efficiency from the perspective of printer ink. But so be it, I'll measure that.". Also check out [Limitations](#limitations).
+
 A while ago I was sitting on a plane and in a moment of boredom picked up the in-flight magazine.
 
 The magazine had a little travel article, and it was written in English on one page and Thai on the other.
