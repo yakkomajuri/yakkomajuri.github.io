@@ -53,7 +53,7 @@ Characters, however, are not very uniform - they vary widely within and across l
 
 If we're counting characters, Mandarin blows Finnish out of the water in efficiency.
 
-But most people looking at this will immediately notice that Mandarin characters are much more condensed. They make up for in "complexity" what they're missing in length.
+But most people looking at this will immediately notice that Mandarin characters are much more condensed. They make up for in "complexity" what they sentence is missing in length.
 
 And that "complexity" is what we're looking to measure.
 
