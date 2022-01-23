@@ -166,7 +166,7 @@ Consider the `r` in ca**r**t for instance. Without that `r` the word would clash
 
 **The Chinese Language Group**
 
-This was a surprising one to me. Simplified Chinese was unexpectedly more efficient than Traditional Chinese, but both were beaten out by Cantonese (which also uses traditional characters).
+This was a surprising one to me. Simplified Chinese was expectedly more efficient than Traditional Chinese, but both were beaten out by Cantonese (which also uses traditional characters).
 
 Also, if you ever wanted to put a number to the complexity of Chinese characters, they are around 3x more "complex" (pixels/char ratio) than the average of the dataset.
 

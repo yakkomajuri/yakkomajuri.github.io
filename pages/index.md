@@ -97,7 +97,7 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - DD3: Disappearing persons
 - I have something to add 
 - Why I'm choosing to write for free
-- Why I'm (somewhat) comfortable looking foolish
+- Why I'm (somewhat) comfortable publishing foolish posts
 
 <p>Note to self (17/01/2022): you should have been striking through ideas you wrote rather than deleting them.</p>
   
