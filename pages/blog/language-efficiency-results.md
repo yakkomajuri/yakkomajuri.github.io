@@ -4,6 +4,8 @@ template: blog
 
 # Full Results: What's the world's least efficient language?
 
+_23/01/2022_
+
 > **Note:** Language names are determined by the locales list
 
 | Language                                         | Locale        | Total Pixels | Total Chars | Avg. (Mean) Pixels Per Char | Total Spaces | Text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
