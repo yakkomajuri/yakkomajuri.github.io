@@ -1,6 +1,7 @@
 ---
 template: blog
 ---
+
 # Building a modern react app from scratch
 
 > This article was originally published on GitHub on the repo [yakkomajuri/react-from-scratch](https://github.com/yakkomajuri/react-from-scratch) under the name _"Building a modern React app from scratch in 2021"_.
@@ -18,7 +19,7 @@ yarn start
 
 The app will be available on `localhost:3000`.
 
-## 💪 Motivation 
+## 💪 Motivation
 
 The main objective of this tutorial for me was to get myself to better understand the multiple moving parts that make a React app work, rather than just accepting the "magic" of the many templates/boilerplates out there, like [create-react-app](https://create-react-app.dev/), and [react-boilerplate](https://www.reactboilerplate.com/).
 
@@ -39,52 +40,51 @@ However, beyond setting up a React app that just works, I also had a few more re
 
 So what exactly do I need to make this work?
 
-To find the answer, I started with the React Docs. 
+To find the answer, I started with the React Docs.
 
-Reading <i>[Creating a Toolchain from Scratch](https://reactjs.org/docs/create-a-new-react-app.html#creating-a-toolchain-from-scratch
-)</i> tells me the following about what I need:
+Reading <i>[Creating a Toolchain from Scratch](https://reactjs.org/docs/create-a-new-react-app.html#creating-a-toolchain-from-scratch)</i> tells me the following about what I need:
 
 <blockquote>
 
-* A **package manager**, such as Yarn or npm. It lets you take advantage of a vast ecosystem of third-party packages, and easily install or update them.
-* A **bundler**, such as webpack or Parcel. It lets you write modular code and bundle it together into small packages to optimize load time.
-* A **compiler** such as Babel. It lets you write modern JavaScript code that still works in older browsers.
+- A **package manager**, such as Yarn or npm. It lets you take advantage of a vast ecosystem of third-party packages, and easily install or update them.
+- A **bundler**, such as webpack or Parcel. It lets you write modular code and bundle it together into small packages to optimize load time.
+- A **compiler** such as Babel. It lets you write modern JavaScript code that still works in older browsers.
 
 </blockquote>
 
 This short snippet tells me quite a bit about what I need and why I need it. So I made my picks:
 
-* **Package manager:** [Yarn](https://yarnpkg.com/)
-* **Bundler:** [Webpack](https://webpack.js.org/)
-* **Compiler:** [Babel](https://babeljs.io/)
+- **Package manager:** [Yarn](https://yarnpkg.com/)
+- **Bundler:** [Webpack](https://webpack.js.org/)
+- **Compiler:** [Babel](https://babeljs.io/)
 
-These are pretty standard choices. Even if you haven't set these up yourself before, you've probably dealt with them, or at least heard about them at some point. 
+These are pretty standard choices. Even if you haven't set these up yourself before, you've probably dealt with them, or at least heard about them at some point.
 
 However, based on my requirements, I still have one thing missing - a state management library.
 
-[Redux](https://redux.js.org/) would have been the straightforward choice, but I went with [Kea](https://kea.js.org/). Kea is in fact built _on top of_ Redux, so I'll effectively be using Redux under the hood, but it makes state management significantly easier. 
+[Redux](https://redux.js.org/) would have been the straightforward choice, but I went with [Kea](https://kea.js.org/). Kea is in fact built _on top of_ Redux, so I'll effectively be using Redux under the hood, but it makes state management significantly easier.
 
-For full disclosure, I am definitely biased - the reason for choosing Kea is simply that I use it [at work](https://github.com/PostHog/posthog), and its [author](https://github.com/mariusandra) is my co-worker. 
+For full disclosure, I am definitely biased - the reason for choosing Kea is simply that I use it [at work](https://github.com/PostHog/posthog), and its [author](https://github.com/mariusandra) is my co-worker.
 
 ## ⏯️ Getting Started
 
 The first thing we need is a new directory. Set that up and then run `yarn init` inside of it to get started.
 
-When it asks you for the "entry point", use `src/index.tsx`. You'll know why in a second. 
+When it asks you for the "entry point", use `src/index.tsx`. You'll know why in a second.
 
-Inside your directory, create 2 more: `src` and `public`. 
+Inside your directory, create 2 more: `src` and `public`.
 
-`src` will host the entire source code for our project, while `public` will be where we put the static assets. 
+`src` will host the entire source code for our project, while `public` will be where we put the static assets.
 
 ## ⚙️ Setup
 
-Rather than being a one-size-fits-all tutorial, this is meant to be a learning process, and dealing with issues that arise is inevitably an important part of it. 
+Rather than being a one-size-fits-all tutorial, this is meant to be a learning process, and dealing with issues that arise is inevitably an important part of it.
 
 Hence, I won't be tagging version numbers on installations. You can check the versions being used in `package.json` if you want to use this as a boilerplate.
 
 As an example, I decided to use Webpack v5 for this tutorial, which brought me some compatibility issues with configs I was originally using from Webpack v4 projects. As always, with enough docs, articles, and StackOverflow posts, I got through it, and learned more in the process.
 
-### Babel 
+### Babel
 
 Getting Babel to work requires quite a few packages, you can install them like this:
 
@@ -108,8 +108,12 @@ Finally, we need to set up a `babel.config.js` file, specifying to the compiler 
 ```js
 // babel.config.js
 module.exports = {
-    presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
-}
+  presets: [
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript",
+  ],
+};
 ```
 
 ### TypeScript
@@ -205,41 +209,40 @@ And, like with Babel, we need a `webpack.config.js` file:
 
 ```js
 // webpack.config.js
-const path = require('path')
-const webpack = require('webpack')
+const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
-    entry: './src/index.tsx', // our entry point, as mentioned earlier
-    mode: 'development',
-    module: {
-        rules: [
-            {
-                test: /\.[jt]sx?$/, // matches .js, .ts, and .tsx files
-                loader: 'babel-loader', // uses babel-loader for the specified file types (no ts-loader needed)
-                exclude: /node_modules/, 
-            },
-            {
-                test: /\.css$/, // matches .css files only (i.e. not .scss, etc)
-                use: ['style-loader', 'css-loader'], 
-            },
-        ],
-    },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
-    },
-    output: {
-        filename: 'bundle.js', // our output bundle
-    },
-    devServer: {
-        contentBase: path.join(__dirname, 'public/'),
-        port: 3000,
-        publicPath: 'http://localhost:3000/dist/',
-        hotOnly: true,
-    },
-    plugins: [new webpack.HotModuleReplacementPlugin()], // used for hot reloading when developing
-    devtool: 'eval-source-map', // builds high quality source maps
-}
-
+  entry: "./src/index.tsx", // our entry point, as mentioned earlier
+  mode: "development",
+  module: {
+    rules: [
+      {
+        test: /\.[jt]sx?$/, // matches .js, .ts, and .tsx files
+        loader: "babel-loader", // uses babel-loader for the specified file types (no ts-loader needed)
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/, // matches .css files only (i.e. not .scss, etc)
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
+  output: {
+    filename: "bundle.js", // our output bundle
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "public/"),
+    port: 3000,
+    publicPath: "http://localhost:3000/dist/",
+    hotOnly: true,
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()], // used for hot reloading when developing
+  devtool: "eval-source-map", // builds high quality source maps
+};
 ```
 
 ### React
@@ -300,55 +303,60 @@ Here's my `index.html`:
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>React from Scratch</title>
-    </head>
-    <body>
-        <div id="root"></div>
-        <noscript> You need to enable JavaScript to access this website. </noscript>
-        <script src="../dist/bundle.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>React from Scratch</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript> You need to enable JavaScript to access this website. </noscript>
+    <script src="../dist/bundle.js"></script>
+  </body>
 </html>
 ```
 
 There are a few things happening here:
-* We're setting a few default meta tags, as well as a title for our website
-* We specified a `root` div, which we'll use to render our App (this is essentially the starting point from which the inner HTML will be dynamically-generated by React)
-* We added a message for those that have JavaScript disabled, as our app won't work for them
-* We imported our finished Webpack bundle, which we haven't actually generated yet
-    * This will contain all the code we write in a single file
+
+- We're setting a few default meta tags, as well as a title for our website
+- We specified a `root` div, which we'll use to render our App (this is essentially the starting point from which the inner HTML will be dynamically-generated by React)
+- We added a message for those that have JavaScript disabled, as our app won't work for them
+- We imported our finished Webpack bundle, which we haven't actually generated yet
+  - This will contain all the code we write in a single file
 
 ### The entry point
 
-Remember the mention to entry point from earlier? Well now we've gotten to it. Go into the `src/` subdir and make a new file called `index.tsx`. 
+Remember the mention to entry point from earlier? Well now we've gotten to it. Go into the `src/` subdir and make a new file called `index.tsx`.
 
 Here's what I have in mine:
 
 ```js
-import React from 'react'
-import ReactDOM from 'react-dom' 
-import { Provider } from 'react-redux'
-import { getContext, resetContext } from 'kea'
-import { App } from './App'
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { getContext, resetContext } from "kea";
+import { App } from "./App";
 
 resetContext({
-    createStore: {},
-    plugins: [],
-})
+  createStore: {},
+  plugins: [],
+});
 
 ReactDOM.render(
-    <Provider store={getContext().store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
-)
+  <Provider store={getContext().store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
 ```
 
 There are 3 key things happening here:
+
 1. We're setting up Kea, which, like Redux, uses `Provider` to make the store available to any nested components (in this case, our entire app)
-    - The `resetContext` call is not actually needed here, since we're not passing anything to it. However, I've left it here so you know where to add, for example, your Kea plugins, since you'll likely use those
+   - The `resetContext` call is not actually needed here, since we're not passing anything to it. However, I've left it here so you know where to add, for example, your Kea plugins, since you'll likely use those
 2. We're importing and rendering our `App` component (which we haven't built yet)
 3. We're telling React to render our app using our `root` div from `index.html` as the "binding point"
 
@@ -357,35 +365,36 @@ There are 3 key things happening here:
 Now, create a file called `App.tsx`, also inside `src/`, with the following:
 
 ```js
-import React from 'react'
-import { hot } from 'react-hot-loader/root'
-import { MyJSComponent } from './components/MyJSComponent'
-import { Counter } from './components/Counter'
+import React from "react";
+import { hot } from "react-hot-loader/root";
+import { MyJSComponent } from "./components/MyJSComponent";
+import { Counter } from "./components/Counter";
 
-export const App = hot(_App)
+export const App = hot(_App);
 export function _App(): JSX.Element | null {
-    return (
-        <div>
-            <h1>Hello world!</h1>
-            <MyJSComponent />
-            <Counter />
-        </div>
-    )
+  return (
+    <div>
+      <h1>Hello world!</h1>
+      <MyJSComponent />
+      <Counter />
+    </div>
+  );
 }
 ```
 
 If you just want to see your app working at this point, you can remove the imports and references to `MyJSComponent` and `Counter` and run `yarn start`. This will start your server and you should be able to access your React app at `localhost:3000`, receiving your 'Hello world!' greeting from it.
 
 The reason I've included these two extra components is to test that we have a few things working:
+
 1. We can write JavaScript alongside TypeScript
 2. Our state management is working fine
 3. Our bundler processes `.css` files with no problem (`Counter` has some minimal styling)
 
 Hence, you could stop here if you wanted to. But if you want to see these 3 things in action, read on.
 
- ### Writing JS and TS side-by-side
+### Writing JS and TS side-by-side
 
-As you saw in our `App.tsx` file, we have a TypeScript file importing a JavaScript file with no problems. 
+As you saw in our `App.tsx` file, we have a TypeScript file importing a JavaScript file with no problems.
 
 The reason this works is because of this rule we have in `webpack.config.js`:
 
@@ -404,14 +413,14 @@ To test that everything is working fine, I simply created a tiny JS component an
 I created it in a new directory called `components/`, and here's what it contains:
 
 ```js
-import React from 'react'
+import React from "react";
 
-export const MyJSComponent = () => <h2>Try out the counter below!</h2>
+export const MyJSComponent = () => <h2>Try out the counter below!</h2>;
 ```
 
 ### Counter
 
-The last thing I added to this project, while still keeping it minimal, is the traditional React counter component. 
+The last thing I added to this project, while still keeping it minimal, is the traditional React counter component.
 
 The goal here is to test that our Kea setup works, as well as that importing CSS files works too.
 
@@ -421,34 +430,38 @@ So, I first created a subdir inside `components/` called `Counter`. Here I added
 
 Includes the actual component. Here it is:
 
-
 ```js
-import React, { useState } from 'react'
-import { useValues, useActions } from 'kea'
-import { counterLogic } from './counterLogic'
-import './style.css'
+import React, { useState } from "react";
+import { useValues, useActions } from "kea";
+import { counterLogic } from "./counterLogic";
+import "./style.css";
 
 export const Counter = () => {
-    const { count } = useValues(counterLogic)
-    const { incrementCounter, decrementCounter, updateCounter } = useActions(counterLogic)
+  const { count } = useValues(counterLogic);
+  const { incrementCounter, decrementCounter, updateCounter } =
+    useActions(counterLogic);
 
-    const [inputValue, setInputValue] = useState(0)
+  const [inputValue, setInputValue] = useState(0);
 
-    return (
-        <div>
-            <h3>{count}</h3>
-            <div>
-                <button onClick={incrementCounter}>+</button>
-                <button onClick={decrementCounter}>-</button>
-            </div>
-            <br />
-            <div>
-                <input type="number" value={inputValue} onChange={(e) => setInputValue(Number(e.target.value))} />
-                <button onClick={() => updateCounter(inputValue)}>Update Value</button>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <h3>{count}</h3>
+      <div>
+        <button onClick={incrementCounter}>+</button>
+        <button onClick={decrementCounter}>-</button>
+      </div>
+      <br />
+      <div>
+        <input
+          type="number"
+          value={inputValue}
+          onChange={(e) => setInputValue(Number(e.target.value))}
+        />
+        <button onClick={() => updateCounter(inputValue)}>Update Value</button>
+      </div>
+    </div>
+  );
+};
 ```
 
 Pretty simple stuff. Click `+` and the count goes up, `-` and the count goes down. Set any number using the input and count will be updated too.
@@ -460,26 +473,29 @@ Also notice the `style.css` import.
 `counterLogic.ts` hosts the logic for manipulating the state that our `Counter` component uses. I won't explain how Kea works here, but the following is pretty self-explanatory:
 
 ```js
-import { kea } from 'kea'
-import { counterLogicType } from './counterLogicType'
+import { kea } from "kea";
+import { counterLogicType } from "./counterLogicType";
 
-export const counterLogic = kea<counterLogicType>({
+export const counterLogic =
+  kea <
+  counterLogicType >
+  {
     actions: {
-        incrementCounter: true, // https://kea.js.org/docs/guide/concepts#actions
-        decrementCounter: true, // true is shorthand for a function that doesn't take any arguments
-        updateCounter: (newValue: number) => ({ newValue }),
+      incrementCounter: true, // https://kea.js.org/docs/guide/concepts#actions
+      decrementCounter: true, // true is shorthand for a function that doesn't take any arguments
+      updateCounter: (newValue: number) => ({ newValue }),
     },
     reducers: {
-        count: [
-            0, // default value
-            {
-                incrementCounter: (state) => state + 1,
-                decrementCounter: (state) => state - 1,
-                updateCounter: (_, { newValue }) => newValue, // ignore the state, set new value
-            },
-        ],
+      count: [
+        0, // default value
+        {
+          incrementCounter: (state) => state + 1,
+          decrementCounter: (state) => state - 1,
+          updateCounter: (_, { newValue }) => newValue, // ignore the state, set new value
+        },
+      ],
     },
-})
+  };
 ```
 
 #### style.css
@@ -488,7 +504,7 @@ Here I just have the most minimal styling I could think of, just to test that CS
 
 ```css
 h3 {
-    color: blue;
+  color: blue;
 }
 ```
 
@@ -496,10 +512,10 @@ h3 {
 
 Good question. If you explore the code in this repo you will see a `counterLogicType.ts` file inside the `Counter` directory.
 
-This file is automatically generated by `kea-typegen` and contains the types for the `counterLogic`. It was generated by running `yarn typegen`, leveraging the command we added to `package.json` earlier. Usually, one shouldn't commit these files, since they're only useful in development, but I've left this one here so you can see what it looks like. 
+This file is automatically generated by `kea-typegen` and contains the types for the `counterLogic`. It was generated by running `yarn typegen`, leveraging the command we added to `package.json` earlier. Usually, one shouldn't commit these files, since they're only useful in development, but I've left this one here so you can see what it looks like.
 
 ## That's it!
 
 If you've gotten all the way down here, hopefully you've come out of it with a shiny new React app, a modern boilerplate, and some additional knowledge. Honestly, this is just me documenting a bit of my learning process, but hopefully you got something out of it too!
 
-If you have any feedback or suggestions, feel free to open an issue for it. 
+If you have any feedback or suggestions, feel free to open an issue for it.

@@ -11,13 +11,13 @@ About a month ago I ticked off the top item on my "European Countries I'd Still 
 
 The little mountainous country squeezed between Spain and France was staring at me every time I opened a map of Europe, so when a work trip took me back to the Iberian Peninsula, I wasn't going to waste the opportunity.
 
-Having wrapped up the work week in Portugal, I packed my bags and set off for Andorra, with the goal of walking around it in 5 days. 
+Having wrapped up the work week in Portugal, I packed my bags and set off for Andorra, with the goal of walking around it in 5 days.
 
 Here's how that went.
 
-## The Trail 
+## The Trail
 
-While reading up on Andorra online, I stumbled upon a trail called _Coronallacs_. 
+While reading up on Andorra online, I stumbled upon a trail called _Coronallacs_.
 
 Coronallacs is a new trail (2017) that goes around the 4 existing staffed shelters in Andorra. These are aptly placed in the "corners" of the country, meaning if you visit all of them, starting and finishing around Andorra la Vella, you essentially complete a loop around Andorra (somewhat).
 
@@ -29,25 +29,25 @@ _[Image source](https://www.theguardian.com/travel/2019/sep/23/andorra-pyrenees-
 
 </small>
 
-Most - if not all - of trails connecting the shelters are not new. A variety of routes pass by them, most notably some [GRs](https://en.wikipedia.org/wiki/GR_footpath), the [HRP](https://www.mountainbug.com/trekking-holidays/hrp-hautes-route-pyrenees/) (a crossing of the Pyrenees from the Atlantic to the Mediterranean), and the GRP (a longer loop around Andorra). 
+Most - if not all - of trails connecting the shelters are not new. A variety of routes pass by them, most notably some [GRs](https://en.wikipedia.org/wiki/GR_footpath), the [HRP](https://www.mountainbug.com/trekking-holidays/hrp-hautes-route-pyrenees/) (a crossing of the Pyrenees from the Atlantic to the Mediterranean), and the GRP (a longer loop around Andorra).
 
 However, the particular combination of paths that make up the Coronallacs has only been listed as its own trail for fewer than 5 years, and, from the information provided to me by the tourist office, the number of people who have completed the trail is still in the three digits.
 
-The trail is listed at a length of 92km, a number that isn't particularly impressive for a 5-day journey. 
+The trail is listed at a length of 92km, a number that isn't particularly impressive for a 5-day journey.
 
 However, the key number for the trail is 6,868. 6,868m is the total altitude gain and loss over the trail, which [people online](https://www.theguardian.com/travel/2019/sep/23/andorra-pyrenees-hiking-coronallacs-walking-trail) will point out is the equivalent (only on paper :D) of ascending (and descending) [Aconcagua](https://en.wikipedia.org/wiki/Aconcagua) from sea level.
 
 ## Planning
 
-Compared to a lot of other trails, there's a good amount of information about the Coronallacs online. 
+Compared to a lot of other trails, there's a good amount of information about the Coronallacs online.
 
 That is, an official website for the trail exists ([coronallacs.com](https://coronallacs.com/)), providing a good idea of what to expect, but beyond that it's hard to really be certain of the details. That's partly why I wanted to write this article.
 
-I planned to do the entire trail alone, so I wanted to get a better sense of what was ahead of me than the information I could find online. 
+I planned to do the entire trail alone, so I wanted to get a better sense of what was ahead of me than the information I could find online.
 
 I spent some time at the tourism office going over some of my questions, but as I'd later find out, you need to take any information gathered there with a pinch of salt.
 
-Given I was setting out to walk alone in the Pyrenees for 5 days, I wanted to make sure I kept some people updated about my whereabouts. I bought an Andorran SIM card, and asked the guy at the tourist office if I'd find cell reception at all the shelters. I would have been fine with a "no", but he confidently asserted that this was indeed the case, no problem. 
+Given I was setting out to walk alone in the Pyrenees for 5 days, I wanted to make sure I kept some people updated about my whereabouts. I bought an Andorran SIM card, and asked the guy at the tourist office if I'd find cell reception at all the shelters. I would have been fine with a "no", but he confidently asserted that this was indeed the case, no problem.
 
 This led me to promise my family I'd send a checkpoint every evening, which turned out to be a minor hassle.
 
@@ -55,9 +55,9 @@ Two people also told me they were informed the trail would not pass by any villa
 
 Speaking of maps, my best friend throughout the trip was a 1:50000 map of Andorra I bought from the tourist office. I spent quite a bit of time familiarizing myself with the trail on the days leading up to it, as well as constantly referred to it on a daily basis.
 
-This proved very valuable, since I was able to make decisions like carrying less water with me on specific days, as well as was able to help a man safely exit the trail, given he was unaware of any "exit routes". 
+This proved very valuable, since I was able to make decisions like carrying less water with me on specific days, as well as was able to help a man safely exit the trail, given he was unaware of any "exit routes".
 
-I had a few days in Andorra before starting the trail, and mostly used those to handle the logistics of the trip. 
+I had a few days in Andorra before starting the trail, and mostly used those to handle the logistics of the trip.
 
 Here go a few tips if you're interested.
 
@@ -67,13 +67,13 @@ Here go a few tips if you're interested.
 
 <br />
 
-I came to Andorra from a work trip, so I had a bunch of things with me that I certainly wasn't going to take up to the mountains. 
+I came to Andorra from a work trip, so I had a bunch of things with me that I certainly wasn't going to take up to the mountains.
 
 The bus station has some lockers, but I opted for using [GuardaTot](https://guardatot.com/). There are a few locations in Escaldes and Andorra la Vella, making it pretty convenient to access.
 
 It was slightly annoying to set this up, given they are geared towards longer-term storage, so I had a lot of back-and-forth with their agents on WhatsApp. They did generally answer pretty quickly though.
 
-I had to put up a 50 euro deposit, but ultimately my total bill for a week came out to 6 euros, and I felt very safe leaving my stuff in their storage area. 
+I had to put up a 50 euro deposit, but ultimately my total bill for a week came out to 6 euros, and I felt very safe leaving my stuff in their storage area.
 
 Just note that if you don't have an Andorran bank account, they can only refund you the deposit in cash. This is generally done at one specific office, but they were nice enough to actually leave an envelope with the cash inside my storage box so I didn't have to go all the way to the office.
 
@@ -87,7 +87,7 @@ Just note that if you don't have an Andorran bank account, they can only refund 
 
 Very few international companies include Andorra in their roaming-exempt list. As a result, I saw people hit with massive bills for just a few minutes using their data plan from other European countries just to call someone.
 
-After a bit of research, I decided to just buy a local SIM. This set me back 19 euros but was completely worth it. 
+After a bit of research, I decided to just buy a local SIM. This set me back 19 euros but was completely worth it.
 
 I managed to use it on the trail, and it was of course very useful in the city. I was also made quite a lot of calls to places like the GuardaTot office (see the "Storage" section), the hotel, the tourist office, and pharmacies (to book a COVID test), so this was no-brainer to me.
 
@@ -96,7 +96,6 @@ Andorra only has one telecom provider, and that's [Andorra Telecom](https://www.
 </details>
 
 ## Day 1
-
 
 <details open>
 
@@ -113,9 +112,9 @@ Andorra only has one telecom provider, and that's [Andorra Telecom](https://www.
 
 </details>
 
-From my perspective, Day 1 was "a walk in the park", quite literally. 
+From my perspective, Day 1 was "a walk in the park", quite literally.
 
-During this walk through the _Vall del Madriu-Perafita-Claror_ national park, the weather was great (not too cold, not too warm), the path was well-marked, and the views were spectacular. 
+During this walk through the _Vall del Madriu-Perafita-Claror_ national park, the weather was great (not too cold, not too warm), the path was well-marked, and the views were spectacular.
 
 I found myself going at a very fast pace early on and kept telling myself to slow down and save my knees for the days to come. With the weather as it was, there wasn't a lot of rush to arrive.
 
@@ -123,27 +122,27 @@ Despite really forcing myself to go slower, I completed this stage in around 5h,
 
 > **Note:** Do not let this fool you! Stage 1 is still a 1,500m ascent with a 5-day backpack. You should never take trails like these lightly.
 
-I set off on this trip by myself, and didn't bump into anyone going up during this stage. I only crossed paths with a few people who were coming down from having spent the night at the I'lla shelter. 
+I set off on this trip by myself, and didn't bump into anyone going up during this stage. I only crossed paths with a few people who were coming down from having spent the night at the I'lla shelter.
 
 It was a mostly lonely walk, with the exception of some cows and horses. The absolute highlight was a valley I reached after walking for around 3h. The sun was shining, some horses were hanging around, and the river provided a nice opportunity to freshen up.
 
 ![Stage 1 highlight](../img/coronallacs/1.jpg)
 
-The first night is spent at Refugi de l'Illa, a reasonably modern shelter at located at an altitude of 2,488m. The refuge sits just under a dam, and I highly recommend going up to the lake for a dip. 
+The first night is spent at Refugi de l'Illa, a reasonably modern shelter at located at an altitude of 2,488m. The refuge sits just under a dam, and I highly recommend going up to the lake for a dip.
 
 It's worth noting that there's no internet access here - not for you at least. I had no cell reception via Andorra Telecom SIM card, and there was no Wi-Fi available.
 
-The only reason this mattered for me was that, as I mentioned earlier, having been told I'd have cell reception at every shelter, I promised my family to "check-in" every evening. 
+The only reason this mattered for me was that, as I mentioned earlier, having been told I'd have cell reception at every shelter, I promised my family to "check-in" every evening.
 
-However, the people working at the shelter did have an internet connection, so they offered to send an email on my behalf. 
+However, the people working at the shelter did have an internet connection, so they offered to send an email on my behalf.
 
 Dinner here was simple but tasty and with large portions. Wine was also served with the meal.
 
-As for the rest of the facilities, you can take a warm shower here, but you need to buy tokens that are worth for a minute each. Bunks have a mat, but no blankets or pillows were provided. Apparently shelters _do_ offer these, but stopped doing so during the pandemic. 
+As for the rest of the facilities, you can take a warm shower here, but you need to buy tokens that are worth for a minute each. Bunks have a mat, but no blankets or pillows were provided. Apparently shelters _do_ offer these, but stopped doing so during the pandemic.
 
 Blankets or not, you should probably always carry a sleeping bag with you, which would allow you to do an emergency bivouac if necessary.
 
-The shelter was quite empty, and the seven of us had dinner together. A German and a Spaniard were doing a 30+ day trail, whereas the others (2 Brazilians, 2 Basques) were also doing the Coronallacs. One Brazilian had already decided to quit, and the rest of us decided to start the next stage together. 
+The shelter was quite empty, and the seven of us had dinner together. A German and a Spaniard were doing a 30+ day trail, whereas the others (2 Brazilians, 2 Basques) were also doing the Coronallacs. One Brazilian had already decided to quit, and the rest of us decided to start the next stage together.
 
 ## Day 2
 
@@ -178,19 +177,19 @@ We walked around the lakes until we reached a little restaurant. This is one of 
 
 We continued on through a ski station and then descended quite a bit to reach a little ski town.
 
-They had a market where we bought some food and we had a lunch break sitting out on the street. 
+They had a market where we bought some food and we had a lunch break sitting out on the street.
 
 Here, with a tough ascent lurking, the Brazilian who had quit the day before quit once and for all, taking a bus back to Andorra la Vella. We were now four people.
 
 > **Note:** This is the best "exit route" until Day 4. The ski town is around the halfway mark of Stage 2, but, in reality, you still have a tough day ahead of you. If someone is already struggling at this point, this is a good opportunity to call it off.
 
-Having descended from one side of the valley, you now have to ascend the other. You'll be going up for a while. 
+Having descended from one side of the valley, you now have to ascend the other. You'll be going up for a while.
 
 We kept a good pace here, and the views were very nice, particularly once we left the town behind.
 
-Once more, as you gain altitude, the terrain becomes more and more rugged. As a result, the final stretch to the shelter was a bit tricky and even involved a bit of scrambling. From the time we could first see the refuge to the time the boots were off, we were walking for around an hour. 
+Once more, as you gain altitude, the terrain becomes more and more rugged. As a result, the final stretch to the shelter was a bit tricky and even involved a bit of scrambling. From the time we could first see the refuge to the time the boots were off, we were walking for around an hour.
 
-All in all, we took about 11h on this stage. We did "aim" for the time listed in the specs though, trying not to be too fast. We made sure to take good breaks and stretch, and arrived in a good shape at _Refugi de Juclar_. 
+All in all, we took about 11h on this stage. We did "aim" for the time listed in the specs though, trying not to be too fast. We made sure to take good breaks and stretch, and arrived in a good shape at _Refugi de Juclar_.
 
 Our trackers all showed that we walked around 22km, instead of the listed 19.4. The man at the shelter also said the walk is around 21km or so. Just FYI.
 
@@ -221,13 +220,13 @@ Here, my personal highlight was a 3am walk to the "ecological toilet", located o
 
 Having made a South to North (almost) traverse of Andorra the day before, we were now going East to West.
 
-Following a comparatively light Day 1, days 2, 3, and 4 are all good challenges, with **a lot** of ascending and descending. 
+Following a comparatively light Day 1, days 2, 3, and 4 are all good challenges, with **a lot** of ascending and descending.
 
-And that's what Day 3 was. For some reason, I don't remember a lot of details about this day. 
+And that's what Day 3 was. For some reason, I don't remember a lot of details about this day.
 
 This stage does not pass by any villages, and is done completely in the wilderness. There are a lot of streams along the way though, including one where you can reach its source. I had studied the area well and made a decision to carry less water than I normally would, refilling at the streams.
 
-> **Note:** Drinking water from lakes and rivers isn't always recommended in Andorra. I did carry water purification tablets with me and made sure to use them. 
+> **Note:** Drinking water from lakes and rivers isn't always recommended in Andorra. I did carry water purification tablets with me and made sure to use them.
 
 We passed by a few lakes and streams, and bumped into beautiful horses on the way.
 
@@ -279,9 +278,9 @@ Following a good night of sleep, we left early for the longest day of the trail.
 
 You first descend to some villages, where you might find a restaurant or two. You **will not**, however, find a shop or pharmacy. Someone in our group would have needed some bandages but we didn't manage to find a place to buy them.
 
-On this day, we also ran into a hiker's dilemma. It boiled down to: what's our goal with this trip? 
+On this day, we also ran into a hiker's dilemma. It boiled down to: what's our goal with this trip?
 
-The reason this came about is that we had two routes to choose from: the official listed route, and a route downloaded from a user on AllTrails. 
+The reason this came about is that we had two routes to choose from: the official listed route, and a route downloaded from a user on AllTrails.
 
 The AllTrails route followed down the valley for longer until it reached a larger village/town, from where it ascended to the shelter.
 
@@ -297,9 +296,9 @@ Ultimately, we went with the "official", more difficult route. It wasn't much of
 
 > **Note:** If you're worn down by Day 4 but would still like to make a push for finishing the trail, this alternative route is a good option. Instead of leaving the valley and ascending West from Llorts, you should continue down to Arans, cut over to Arinsal using the GR routes, and ascend from there to Comapedrosa.
 
-Day 4 was a day of rain. Sometimes a few drops with a cloudy sky, other times a full-on storm. We were wet all day. 
+Day 4 was a day of rain. Sometimes a few drops with a cloudy sky, other times a full-on storm. We were wet all day.
 
-We had lunch inside an unmanned shelter (you will go past two or three each day - they're just stone houses you can use for shelter), and not a lot of pictures were taken, we were all just focused on arriving. 
+We had lunch inside an unmanned shelter (you will go past two or three each day - they're just stone houses you can use for shelter), and not a lot of pictures were taken, we were all just focused on arriving.
 
 Particularly the final two hours of the trail were tough. We ascended to the shelter in pouring rain, not stopping a single time. The arrival selfie looked like this:
 
@@ -326,7 +325,7 @@ Nevertheless, it had everything we needed. Showers weren't great and also token-
 
 </details>
 
-Day 5 started like Day 4: wet. 
+Day 5 started like Day 4: wet.
 
 We left our clothes next to the fireplace in hopes they'd dry a bit, but ultimately we all set off with a little extra water weight to finish the trail.
 
@@ -336,11 +335,11 @@ Once again, we started in the rain. There was a bit of a steep ascent to start t
 
 Day 5 is mostly just about descending back to Escaldes, so one might think it's a chill day. Wrong! My knees were yearning for some ascents, yet you actually have to descend almost 2,000m of altitude on this day.
 
-Following our brief visit to Spain, we descended to a ski station. There were no signs of the rain stopping. Here, my group asked a driver what the forecast looked like, and he replied a storm was coming. 
+Following our brief visit to Spain, we descended to a ski station. There were no signs of the rain stopping. Here, my group asked a driver what the forecast looked like, and he replied a storm was coming.
 
 At this point, a bit over 2h into the last day, all my walking companions quit. They took a ride down to the cable car station and I finished the trail how I started: alone.
 
-From the moment they quit, I said to myself: "Well, it's just downhill from here". 
+From the moment they quit, I said to myself: "Well, it's just downhill from here".
 
 There were some pretty nasty descents for my knees in bad terrain, but after a few hours I was mostly walking on countryside roads with smoother slopes.
 

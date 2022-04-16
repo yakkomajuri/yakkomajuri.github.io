@@ -2,7 +2,6 @@
 template: index
 ---
 
-
 <details>
     <summary>What is this website?</summary>
     <p>
@@ -29,7 +28,7 @@ template: index
 
 ### Blog
 
-Raw pieces comprising what I'm thinking about at a given point in time. Barely edited, often written quickly in one go. 
+Raw pieces comprising what I'm thinking about at a given point in time. Barely edited, often written quickly in one go.
 
 - [Why I'm comfortable publishing foolishness](blog/publishing-foolishness)
 - [What's the world's most efficient language?](blog/language-efficiency)
@@ -55,7 +54,6 @@ As someone who does not have a social media presence, I'll be using this blog to
 ### Post ideas
 
 Ideas for posts that I may or may not write. It feels like having them here would make me more likely to write them at some point.
-
 
 <div>
 <details>
@@ -93,10 +91,10 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - Why I no longer keep books
 - No more audiobooks
 - Age analytics
-- Debugging writeups  
+- Debugging writeups
 - A skill I admire but don't want to develop
 - DD3: Disappearing persons
-- I have something to add 
+- I have something to add
 - Why I'm choosing to write for free
 - Why I'm (somewhat) comfortable publishing foolish posts
 

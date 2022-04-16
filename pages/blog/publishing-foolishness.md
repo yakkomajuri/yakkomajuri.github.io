@@ -20,7 +20,7 @@ And so it goes, I publish an article, it gains some traction, and I find myself 
 
 But ultimately, I publish that _thang_.
 
-I write about a lot of shit. Anything that interests me at at given moment, really. 
+I write about a lot of shit. Anything that interests me at at given moment, really.
 
 Often times the topic is something I have no proper knowledge in.
 
@@ -34,7 +34,7 @@ You see, I cannot just read a book to learn something. I must get my hands dirty
 
 Thus, when I write about an unfamiliar topic, I'm putting my assumptions to the test - both during the writing process, when I'm forced to learn more, and after publishing, when others inevitably teach me more about it.
 
-So when the comments pour in, I attain a lot of knowledge that's more likely to stick. My claims are debated and assumptions checked, and I come out of the endeavor with a greater understanding of a topic that I was interested in. 
+So when the comments pour in, I attain a lot of knowledge that's more likely to stick. My claims are debated and assumptions checked, and I come out of the endeavor with a greater understanding of a topic that I was interested in.
 
 Can't be afraid to be wrong.
 

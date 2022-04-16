@@ -6,12 +6,13 @@ template: blog
 
 _23/01/2022_
 
------
+---
+
 <br/>
 
 _**Edit:** This has now made it to the front page of HackerNews. I'm sure a lot of valid criticism will come from it. Do note that I'm more curious in the discussion than the experiment itself (I'm already learning from the comments). I consistently claim here to not be qualified for an analysis, having done this for fun. The "Deriving information" section ends with "...the only thing I'm really measuring is efficiency from the perspective of printer ink. But so be it, I'll measure that.". Also check out [Limitations](#limitations)._
 
------
+---
 
 A while ago I was sitting on a plane and in a moment of boredom picked up the in-flight magazine.
 
@@ -275,7 +276,8 @@ Maybe my whole approach to quantifying "information" is wrong?
 
 Either way, I'd be curious to explore this topic further, and would love to hear any thoughts others may have. Feel free to send those to `yakko [dot] majuri [at] protonmail [dot] com` if you like.
 
------
+---
+
 ## GitHub
 
 You can find my loose snippets of code used for this analysis on the [yakkomajuri/lang GitHub repo](https://github.com/yakkomajuri/lang).

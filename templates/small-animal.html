@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little dragon</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="js/bower_components/crypto-js/crypto-js.js"
+    ></script>
+
+    <script>
+      const cypher =
+        "U2FsdGVkX1/LS745plVGv6OI33yLVK0IJ4AMcsuhpWQImHMyELA2F1k3Akbym3NXNsRWhR37iMTMAmnfGGN1BSmO8Q72xskxxdXOs9qOpuLDGtQXrQ4/RsT/KrGvebPaXNuDSRNkeaKIYKbd6MZoSITiK+e77H8MSPqsXWN27TvXMRM2FoOBm4tHeRoT5EYak2PRYbVBz3DC9QryxkRRVFYBTrcRKmpKgjueuirRJLA6ZiMzUASSue9QqGrxQKE9uEFIe2uZue2DgNERQKiS9arGCZxmTy9byza7Ezs6FyoZ0qFcDlqW58M0ceA7OFoqNh2rwQkW4tJEuhonMgCCo3O4i6ba4z5WRmOj08blLCbGTLbn6HdEfzOnzZhkYvL0+Y7K+IoFBr0Fep7kkV+xKG+IRd+4DHr/2T3Wmts1/z2sJ6Dq7sy7dgrunvaAicy6iX25AQ+fkkmvRGy64JwJkZQRkMm2lLB/Tle9mY3J/K6uKltNwSY5Xe1VD/XrgjHVmODzFCcG2UORNn6vZFGXNoomswdXhjwoyx/wPsT1Wou8PD6Snj+Q586lUFocTCXkb1HHAg9U+saUeMZLuXTUICgdvEmgoHsMzPNRZVmWnz5j0hqq31bkwOwB5IQRJ8+qwhnmBNlwJ4WbEyoAl+R1T37aX9nD3c0oKopbtObzItWJEHaBF69vb9cLHu/iBEwwpk7fII+jAgiBZdLVYso0I9BF4bQOXoDf/YPV84NuMJ3N33ZbHSOeI5CdUKpQ17Qte1oASyrmocvMz9lxUQEkuDSg680659amRGehCs9lOZF6Pne5BG5c3jFw1PgVrz7UYMTKGdOdKOF+Qw6VJvSc8jEi6ltqEvCIQOp8Bxr4jMB7/GGfcqm7pscyzv4zgugZyPf90rH3K91hJ3S8MA1DWWthaQ+TwEVDZelnBSTnceY6D3N2FRzbsfiuQTcD1ZCRC1Pf/cFXd4luiFB6/txy/blFEWIR1HTeZi0t9nZaC5vNtwEWEH8GyZCKTb4nnaWL6oSEE4lxp5uV+wRArYft3uRvFL9UxDMJtG2tpRNA6z5PHIc3fA5AZbrFBvCDiJ0h6DU1VzPRwdJ8yS33+oqIUEiYx7p6f/SfeiLbM/pZ7baUI27fcuHgmaKGYt3Kqo3L1LPnRqX7eMFgkAJhz/7nyD95QTXsr3+rYI3SM+DLzKIxN5V7sh43yHVsq2pw1f1A3yNNrdl7Nmllxm0likZzlUrxBRwUJA+lDifXplGO8S6dBrgStIQ8Es7CokkL82/wmtYPx0FGiGSvXoBSojB1eV2blkP+U84Du8uzmrE1Gc7GNu/jfKaSN/aqwdJNDoVbXafcHjxIiRprV7Uxtxm7bbcDOUNC3/HL/H79F4ScuOQYjpN6uSEEt+NnG4NupRX2+2RgFOhEZo3Ltd1ctuju0BIahT37a2mW+1enZ8Qtkeq2G15SDnVHF5f8Iztz/a+nVDlKiAZD8uc0HhTX3K+RI2gwXSbqdhBNJ9dXkltDy9Yf0+CCfoVb59ibpNH90pgYkW0aRR4YRyRZsaAFlILALE4FrpbK2uo5VXiZGxv/nsJD8tLjl8OdSfS6pt5NF/2BxBdZZc5vxue+x9SbFvyBw2tyBfiOYh9QWkquX6AHMNY+/7wGtmx1oHhf9Lbr1fko5A+PxHQg19FOzvBFjmqp6XBs5dsrDRGqY8ZYL/UCnS9C1qsb6hnowY3ZkdRcv0gYXcg2WSURiFK7FZdSvwkvtLa8F+cWdAtYevVqMdKxUUiEfCol11Q3giWBAeoi2OUQ1654O3GlFudxaKenIFu+oVexX+5hRNb8cxWW1S1eo21aRxhbUNdN5Y5feKJadN0WsWvuVLG4Ev5f7kAYkpLdkC4Rh2chzO87YSFNONfHOB0R5ZdLKrSQFJ85IpJfOE0uOpvpsu5GvZhDxYOpxqD2+A0Clyhtl/+PQCkrX6diFXwWCWeNVfW1oqNFpS0SJUw/";
+    </script>
+    <link rel="stylesheet" href="main.css" />
+
+    <style>
+      details p {
+        margin-top: 25px;
+        font-size: 18px;
+      }
+
+      h1 {
+        margin-bottom: 2px;
+      }
+
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-bottom: 10px;
+      }
+
+      .container {
+        max-width: 800px;
+      }
+
+      a {
+        color: #94ceea;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <br />
+      <br />
+      <br />
+
+      <div id="content"></div>
+      <div id="btn-area"></div>
+    </main>
+
+    <script type="text/javascript" src="js/small-animal.js"></script>
+  </body>
+</html>
