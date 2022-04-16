@@ -8,17 +8,17 @@ Here's a short post of a recent occurence just to get kickback into the habit ab
 
 Just the other day I had a session booked in my calendar that was gearing up to be painful.
 
-A customer who deployed our software had found out an important piece of their instance had started having some issues _a while back_, so they hadn't ingested any events (data) for about a month. 
+A customer who deployed our software had found out an important piece of their instance had started having some issues _a while back_, so they hadn't ingested any events (data) for about a month.
 
 Leaving aside the details regarding why this happened and why it wasn't noticed earlier, what then happened is that we realized the customer still had a good amount of the data in Kafka (~10 days worth) and they wanted to restore it.
 
 Enter me. I was the one who would help them restore this data - meaning I'd jump on a call with an engineer from their side and figure this out.
 
-The reason this is painful is that you can't just move fast and run commands yourself to try things out. You have to convey to the person on the other side of the screen, accurately, what should be done next. 
+The reason this is painful is that you can't just move fast and run commands yourself to try things out. You have to convey to the person on the other side of the screen, accurately, what should be done next.
 
 "Now run '_cube control config use context_'. Oh sorry, that's '_use context_' with an underscore, I mean dash. Argh!"
 
-Anyway, we got started and the approach seemed clear. 
+Anyway, we got started and the approach seemed clear.
 
 For anyone else that is not future me reading this post, I'll provide just a bit of context.
 
@@ -61,7 +61,7 @@ We scale the plugins service pod down and up again, and it crashes once more.
 
 This is strange - the plugin server does a lot in worker threads, and an exception thrown in those wouldn't normally cause the server to crash. It also generally has pretty good error handling. Plus, why can't it even start up again?
 
-Making a short story shorter, turns out exactly _one_ of the JSON payloads was invalid, and the plugin server runs the Kafka consumer in the main thread, from where it distributes the ingestion work to the workers. 
+Making a short story shorter, turns out exactly _one_ of the JSON payloads was invalid, and the plugin server runs the Kafka consumer in the main thread, from where it distributes the ingestion work to the workers.
 
 And while this is a service that's reasonably resilient, it didn't handle the case where a payload from Kafka contained invalid JSON. This is usually fine because that topic is only produced to from the Django server, which _does do_ JSON validation. However, when one produces to the topic directly, that validation is bypassed.
 
@@ -69,17 +69,15 @@ So now the Kafka topic is poisoned, and the plugin server won't start back up, s
 
 Ultimately, we found the invalid payload with a little Python script, and exec'd into the Kafka pod to manually move the consumer group offset forward.
 
-With the offset now beyond the broken payload, the service got healthy again, and we were able to produce the data with no problems. 
+With the offset now beyond the broken payload, the service got healthy again, and we were able to produce the data with no problems.
 
 Any potential duplicates produced would be handled by the table engine and collapsed appropriately based on the payload UUIDs.
 
 That was that. The customer got their data back and we moved on with our days.
 
------
+---
 
 Lessons:
+
 - Get better at regex
 - Always add handling for invalid payloads
-
-
-

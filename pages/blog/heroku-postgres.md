@@ -22,6 +22,6 @@ So yeah, all these services out there to help you replicate a Postgres instance 
 
 The one way to bulk export data is the built-in [Heroku PGBackups feature](https://devcenter.heroku.com/articles/heroku-postgres-backups), but that can be pretty slow for a large DB, meaning it will probably be extremely out of sync by the time you load the data into your new instance.
 
-Ultimately, it's a hassle that can be overcome, but not without some annoyance and extra work on your end. 
+Ultimately, it's a hassle that can be overcome, but not without some annoyance and extra work on your end.
 
 So Heroku, please, just let me be a superuser on my database.

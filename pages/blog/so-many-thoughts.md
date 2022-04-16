@@ -14,7 +14,7 @@ Notes.
 
 Existentialism.
 
-Merge trees. 
+Merge trees.
 
 Jam.
 
@@ -25,6 +25,3 @@ Relationships.
 Too many thoughts.
 
 I wish I could somehow - write them all.
-
-
-

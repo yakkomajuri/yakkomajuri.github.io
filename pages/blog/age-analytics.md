@@ -20,11 +20,11 @@ They can do that because countless websites across the world use Google Analytic
 
 Google can then cross-reference all the data they get and spit out a reasonably accurate guess as to the age of the users that go to your website.
 
-Not only that - Google is not an analytics company. They're an ads company. 
+Not only that - Google is not an analytics company. They're an ads company.
 
 So the same model of your users from which they derive some of the information that appears on your dashboard is used to do very targeted advertising all across the web.
 
-And that's ultimately the problem with Google Analytics particularly. 
+And that's ultimately the problem with Google Analytics particularly.
 
 We can discuss the nuances of GDPR, sending data to servers in other countries, etc.
 
@@ -32,7 +32,7 @@ But at the end of the day, the biggest problem with Google Analytics is that it 
 
 So, from a user privacy perspective, you're probably better off with a company that provides analytics as their core product, however that's done.
 
-------
+---
 
 <br />
 

@@ -6,11 +6,11 @@ template: blog
 
 "You look like you've lived a lot", she said.
 
-We were around 2500m above sea level, and it was day 3 up in the Andorran Pyrenees. 
+We were around 2500m above sea level, and it was day 3 up in the Andorran Pyrenees.
 
 I started off this journey by myself (which, and this is relevant, is also how I'd end up finishing it), but since day 2 I'd been hiking with 3 others - a Brazilian guy, who was clearly the oldest of all of us, and 2 girls from the Basque Country, who, by my estimates, were somewhat the same age as me.
 
-Having walked together for about a day and a half at this point, the topic of age finally came up. 
+Having walked together for about a day and a half at this point, the topic of age finally came up.
 
 I approached it like I always do - "How old am I? How old do _you_ think I am?"
 
@@ -30,14 +30,14 @@ Back from the mountains, me and the girls met up for dinner, and the topic came 
 
 They had figured it out. Among all the debts I've accumulated, there's a clear winner: loneliness.
 
-And as much as I've told myself I've accepted it, just typing that word out took me a moment. 
+And as much as I've told myself I've accepted it, just typing that word out took me a moment.
 
-The sounds around me are fitting. Two clocks, slightly out of sync with each other, and some indistinguishable conversation coming from the upstairs TV. They are the sounds of my life. 
+The sounds around me are fitting. Two clocks, slightly out of sync with each other, and some indistinguishable conversation coming from the upstairs TV. They are the sounds of my life.
 
 The ears ring to make up for the silence.
 
 The phone doesn't buzz.
 
-The wind is loud. 
+The wind is loud.
 
 And I ask myself: was it worth it?
