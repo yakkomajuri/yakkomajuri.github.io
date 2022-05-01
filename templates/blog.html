@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
     />
+
+    <script type="text/javascript" src="js/newsletter.js"></script>
     <style>
       h1 {
         margin-top: 20px;
@@ -112,6 +114,7 @@
       })(document, window.posthog || []);
       posthog.init("phc_m8vWS24RZtbuGwKTYrVMA0B1wgKNrwKzsrqBwQsQUd9", {
         api_host: "https://p.yakkomajuri.com",
+        persistence: 'memory' 
       });
     </script>
   </head>
@@ -120,5 +123,27 @@
       <a href="/">← Home</a>
     </div>
     <main class="container" id="page-content"></main>
+
+    <div class="container">
+      <hr />
+      <br />
+      <div style="margin: auto; display: block; text-align: center">
+        <p>Subscribe to my newsletter:</p>
+        <input
+          id="newsletter-subscribe-input"
+          style="display: inline-block; width: 80%; margin: 0"
+          placeholder="foo@bar.com"
+        />
+        <button
+          id="newsletter-subscribe-btn"
+          style="display: inline-block; width: 40; margin-left: -52; padding: 5"
+          onclick="newsletterSubscribe()"
+        >
+          →
+        </button>
+      </div>
+    </div>
+
+    <br />
   </body>
 </html>
