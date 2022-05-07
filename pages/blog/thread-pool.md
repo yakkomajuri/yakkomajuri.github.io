@@ -72,7 +72,7 @@ Hm, what's `atomicsWaitLoop`?
 
 I went to the Piscina repo and there was the answer:
 
-```
+```js
 function atomicsWaitLoop (port : MessagePort, sharedBuffer : Int32Array) {
   if (!useAtomics) return;
 

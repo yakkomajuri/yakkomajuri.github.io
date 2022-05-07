@@ -20,7 +20,7 @@ template: index
     Sunday afternoons are often when I'm most contemplative, as well as
     when I generally have the most time to spare. They have
     traditionally been when I develop my best concepts for writing, so
-    the blog name felt appropriate. THe bulk of the writing for this
+    the blog name felt appropriate. The bulk of the writing for this
     blog will also probably happen on sunday afternoons.
     </p>
 </details>
@@ -90,13 +90,13 @@ Ideas for posts that I may or may not write. It feels like having them here woul
 - How free soloists die
 - Why I no longer keep books
 - No more audiobooks
-- Age analytics
+- <s>Age analytics</s>
 - Debugging writeups
 - A skill I admire but don't want to develop
 - DD3: Disappearing persons
 - I have something to add
 - Why I'm choosing to write for free
-- Why I'm (somewhat) comfortable publishing foolish posts
+- <s>Why I'm (somewhat) comfortable publishing foolish posts</s>
 
 <p>Note to self (17/01/2022): you should have been striking through ideas you wrote rather than deleting them.</p>
   
