@@ -1,13 +1,16 @@
-.progress-bar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 4px;
-	background: linear-gradient(to right, #04425f, #00b9d1);
-	width: 0%;
-	z-index: 100;
-	transition: width 0.2s ease-out;
+@media screen and (min-width: 800px) {
+	.progress-bar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 4px;
+		background: linear-gradient(to right, #04425f, #00b9d1);
+		width: 0%;
+		z-index: 100;
+		transition: width 0.2s ease-out;
+	}
 }
+
 ::-webkit-scrollbar {
 	width: 5px;
 	background: transparent;
