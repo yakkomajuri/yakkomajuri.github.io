@@ -26,6 +26,28 @@ template: index
 </details>
 </div>
 
+<br />
+
+<div>
+<details>
+    <summary>Contact</summary>
+    <p>
+    If you're a recruiter for a full-time role, the <b>one and only way</b> of getting a hold of me is through <a href="/recruit-me">here</a>. I ignore all LinkedIn messages and emails from recruiters.
+    </p>
+    <p>
+    For all other reasons, you can reach me at:
+    </p>
+    <div style="font-size:14px">
+        <code>yakko [dot] majuri [at] protonmail [dot] com</code>
+    </div>
+    <p>
+    If you'd like to work with me on a consultancy / freelance basis please make that known in the subject of the email so it doesn't risk being ignored like the messages about full-time roles.
+    </p>
+</details>
+</div>
+
+<br />
+
 ### Blog
 
 Raw pieces comprising what I'm thinking about at a given point in time. Barely edited, often written quickly in one go.
