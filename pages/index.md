@@ -52,6 +52,7 @@ template: index
 
 Raw pieces comprising what I'm thinking about at a given point in time. Barely edited, often written quickly in one go.
 
+- [This website is hacky AF](blog/hacky)
 - [Why I'm comfortable publishing foolishness](blog/publishing-foolishness)
 - [What's the world's most efficient language?](blog/language-efficiency)
 - [Can you tell me the age of my users?](blog/age-analytics)

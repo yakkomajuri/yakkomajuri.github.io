@@ -1,5 +1,5 @@
 ---
-template: index
+template: blog
 ---
 
 # This website is hacky AF
