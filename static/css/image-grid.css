@@ -1,7 +1,7 @@
 img {
   width: 100%;
   vertical-align: middle;
-  padding: 4px;
+  padding: 3%;
   box-sizing: border-box;
 }
 
@@ -17,6 +17,8 @@ img {
 .internal-pics {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .main {

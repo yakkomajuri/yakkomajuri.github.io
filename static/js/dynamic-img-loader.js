@@ -15,8 +15,9 @@ async function loadImageGridDynamically(parentElement, prefix, numberOfImages) {
   for (let i = 1; i <= numberOfImages; ++i) {
     const imgSrc = `${prefix}/${i}.jpg`;
     const img = document.createElement("img");
+    img.loading = 'lazy';
     img.src = imgSrc;
     cols[(i - 1) % 3].appendChild(img);
-    await sleep(100);
+    await sleep(50);
   }
 }
