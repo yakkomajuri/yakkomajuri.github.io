@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coronallacs</title>
     <link rel="stylesheet" href="../css/image-grid.css" />
+    <link rel="stylesheet" href="../modal/modal.css" />
 
     <script src="../js/dynamic-img-loader.js"></script>
 
@@ -29,7 +30,13 @@
   </head>
   <body>
     <div class="main" id='main'>
+        <div class='modal-wrapper'>
 
+    <div class="modal" id="img-popup-modal">
+        <div id="modal-content"></div>
+    </div>
+    
+</div>
 
     <div class="internal-pics" id='internal-pics'>
     </div>
@@ -109,6 +116,8 @@
      loadImageGridDynamically(document.getElementById('internal-pics'), '../img/yakko.pics', 68, pics)
     </script>
 
+    <script src="../modal/modal.js"></script>
 
   </body>
-</html>
+
+  </html>
