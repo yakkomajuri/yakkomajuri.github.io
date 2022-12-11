@@ -1,7 +1,17 @@
+const countryNameMappings = {
+  'hongkong': 'Hong Kong',
+  'unitedstates': 'United States'
+}
+
 async function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
   });
+}
+
+function formatCountryName(rawCountryName) {
+  return countryNameMappings[rawCountryName] ?? rawCountryName.charAt(0).toUpperCase() + rawCountryName.slice(1)
+
 }
 
 async function loadImageGridDynamically(parentElement, prefix, numberOfImages, imageFileNames = []) {
@@ -27,9 +37,17 @@ async function loadImageGridDynamically(parentElement, prefix, numberOfImages, i
       clonedImg.style['align'] = 'center'
       clonedImg.style['display'] = 'block'
       clonedImg.style['margin'] = 'auto'
+      
       const modalContent = document.getElementById('modal-content')
       modalContent.innerHTML = ''
       modalContent.appendChild(clonedImg)
+
+      const [year, rawCountryName] = imageFileName.split('_')
+      const country = formatCountryName(rawCountryName)
+      const label = document.createElement('p')
+      label.innerHTML = `${country}, ${year}`
+
+      modalContent.appendChild(label)
     }
     cols[(i - 1) % 3].appendChild(img);
     await sleep(50);
