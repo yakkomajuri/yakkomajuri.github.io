@@ -2,13 +2,13 @@
 template: blog
 ---
 
-_02/02/2023_
+_04/02/2023_
 
 # Goals for 2023
 
 I don't remember the last time I set goals for myself the new year. I generally operate day-to-day with some objectives in mind but have traditionally not been great at setting concrete goals, so I thought I'd give this a try this year.
 
-I also decided I'll post them publicly as a way to keep myself accountable and spark reflection. I'm sure it's not too uncommon of a practice but I personally got the idea from [Paul D'Ambra], who works with me.
+I also decided I'll post them publicly as a way to keep myself accountable and spark reflection. I'm sure it's not too uncommon of a practice but I personally got the idea from [Paul D'Ambra](https://pauldambra.dev/2023/01/year-notes.html), who works with me.
 
 Another thing I decided to do was group the goals into larger "objectives". These are lifelong and not things that can be "achieved", but rather things that I'd like to constantly strive for. One potential shortcoming of goals is how either failing to achieve them or achieving them can cause a sense of emptiness that takes away from the significance of the process itself. 
 
@@ -27,7 +27,7 @@ These will make more sense once I write the mental health article I've been punt
 
 ## The rest
 
-In the order they appeared on my notebook (i.e. random). A lot of fitness goals on here just because it feels like an area that's well-conditioned for goals like these. Other areas might take more time and be more important but don't necessarily have a lot of short-term goals that fit well.
+In the order they appeared on my notebook (i.e. random). A lot of fitness goals on here just because it feels like an area that's well-conditioned for goals like these. Other areas might take more time and be more important but don't necessarily have a lot of short-term goals that fit well. I've also omitted things that will just come naturally like "getting better at Python/Django" since I'll be working on that stack more.
 
 ### "Join" the 1000lb club
 
@@ -84,9 +84,7 @@ In the order they appeared on my notebook (i.e. random). A lot of fitness goals 
 **Overarching objectives:** Being a constant learner, professional development
 **Status:** Setting the bar real low here. I've managed to stay clear of machine learning through my software engineering career, but ah, might be time to just peek into the space a little bit. And yes, this was influenced by ChatGPT.
 
+### Rewrite [Teeny](/blog/teeny) in Rust
 
-- Systems programming?
-- Python?
-
-
-
+**Overarching objectives:** Being a constant learner, professional development
+**Status:** Been meaning to try out Rust and porting Teeny over to it is probably a good way to do so.
