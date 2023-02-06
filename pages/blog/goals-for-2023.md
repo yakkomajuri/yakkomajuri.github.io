@@ -56,7 +56,8 @@ In the order they appeared on my notebook (i.e. random). A lot of fitness goals 
 ### Deadlift 5 plates
 
 **Overarching objectives:** Being functionally fit
-**Status:** Currently at 185kg. Somewhat of a continuation post 1000lb club. 
+
+**Status:** Currently at 4 plates. Somewhat of a continuation post 1000lb club. 
 
 ### Hold a back lever for 5 seconds
 
