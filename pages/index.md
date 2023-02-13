@@ -52,6 +52,7 @@ template: index
 
 Raw pieces comprising what I'm thinking about at a given point in time. Barely edited, often written quickly in one go.
 
+- [Pepper spray your officers](blog/pepper-spray-your-officers)
 - [Retirement](blog/retirement)
 - [Goals for 2023](blog/goals-for-2023)
 - [This website is hacky AF](blog/hacky)
