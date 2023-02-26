@@ -78,6 +78,7 @@ Raw pieces comprising what I'm thinking about at a given point in time. Barely e
 
 As someone who does not have a social media presence, I'll be using this blog to display some of my favorite pictures. Currently work in progress - more albums coming soon.
 
+- [yakko.pics](pics)
 - [5 Days in the Andorran Mountains (2021)](/pics/coronallacs)
 - [Hong Kong Protests (2019)](/pics/hk)
 

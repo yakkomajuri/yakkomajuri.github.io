@@ -14,7 +14,7 @@ function formatCountryName(rawCountryName) {
 
 }
 
-async function loadImageGridDynamically(parentElement, prefix, numberOfImages, imageFileNames = []) {
+async function loadImageGridDynamically(parentElement, prefix, numberOfImages, imageFileNames = [], addCaption = true) {
   const cols = [];
   for (let i = 0; i < 3; ++i) {
     const col = document.createElement("div");
@@ -42,12 +42,15 @@ async function loadImageGridDynamically(parentElement, prefix, numberOfImages, i
       modalContent.innerHTML = ''
       modalContent.appendChild(clonedImg)
 
-      const [year, rawCountryName] = imageFileName.split('_')
-      const country = formatCountryName(rawCountryName)
-      const label = document.createElement('p')
-      label.innerHTML = `${country}, ${year}`
+      if (addCaption) {
+        const [year, rawCountryName] = imageFileName.split('_')
+        const country = formatCountryName(rawCountryName)
+        const label = document.createElement('p')
+        label.innerHTML = `${country}, ${year}`
+  
+        modalContent.appendChild(label)
+      }
 
-      modalContent.appendChild(label)
     }
     cols[(i - 1) % 3].appendChild(img);
     await sleep(50);
