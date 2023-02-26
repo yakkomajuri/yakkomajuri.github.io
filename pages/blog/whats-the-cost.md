@@ -2,6 +2,8 @@
 template: blog
 ---
 
+_23/09/2021_
+
 # What's the cost?
 
 "You look like you've lived a lot", she said.

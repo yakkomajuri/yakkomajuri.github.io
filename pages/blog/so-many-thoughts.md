@@ -2,6 +2,8 @@
 template: index
 ---
 
+_17/01/2022_
+
 # So many thoughts
 
 So many thoughts.

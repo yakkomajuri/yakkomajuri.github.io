@@ -2,6 +2,8 @@
 template: blog
 ---
 
+_12/10_2021_
+
 # YC owns the product analytics space
 
 I saw a tweet the other day that said YCombinator "dominates the product analytics category".

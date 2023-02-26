@@ -3,6 +3,8 @@ template: blog
 date: 10-10-2021
 ---
 
+_10/10/2021_
+
 # Why I built my own static site generator
 
 <details>

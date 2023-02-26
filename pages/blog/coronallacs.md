@@ -3,6 +3,7 @@ template: blog
 title: Hiking around Andorra in 5 days
 ---
 
+_17/10/2021_
 # Hiking around Andorra in 5 days
 
 > For photos of this trip, check out this [photo gallery](/pics/coronallacs).
