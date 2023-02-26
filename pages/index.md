@@ -70,6 +70,10 @@ Raw pieces comprising what I'm thinking about at a given point in time. Barely e
 - [What's the cost?](blog/whats-the-cost)
 - [So many thoughts](blog/so-many-thoughts)
 
+### Monthly notes
+
+- [February 2023](blog/february-2023-notes)
+
 ### Pictures
 
 As someone who does not have a social media presence, I'll be using this blog to display some of my favorite pictures. Currently work in progress - more albums coming soon.
