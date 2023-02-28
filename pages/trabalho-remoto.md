@@ -42,7 +42,7 @@ Posso ajudar com coisas como:
 
 Se isso te interessa, você pode ou entrar em contato por email (`yakko [.] majuri [at] protonmail [.] com`), no [LinkedIn](https://www.linkedin.com/in/yakko-majuri/) ou me encontrar em pessoa! Resolvi deixar liberado o horário das 16-17h toda quinta para quem quiser me encontrar no ['Labbing Cowork Sion'](https://goo.gl/maps/UsjZwrt9KVmn163R6), em Belo Horizonte. Fique à vontade de aparecer, só agradeceria um aviso prévio pra que eu deixe avisado na recepção.
 
-> Fica o aviso que por andar bem ocupado, posso demorar a responder no email e no LinkedIn, por isso resolvi marcar um horário específico pra cuidar disso. Vou também ver se faço um compilado de dicas para publicar como post, que aí não seria necessário entrar em contato para tirar certas dúvidas!
+> Fica o aviso que por andar bem ocupado posso demorar a responder no email e no LinkedIn, por isso resolvi marcar um horário específico pra cuidar disso. Vou também ver se faço um compilado de dicas para publicar como post, que aí não seria necessário entrar em contato para tirar certas dúvidas!
 
 
 
