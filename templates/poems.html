@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+
+    <script type="text/javascript" src="../js/newsletter.js"></script>
+
+    <link rel="stylesheet" href="../highlight/nord.min.css" />
+    <script type="text/javascript" src="../highlight/highlight.min.js"></script>
+
+    <style>
+      h1 {
+        margin-top: 20px;
+      }
+
+      .back-btn {
+        position: absolute;
+        left: 20;
+        top: 20;
+      }
+
+      blockquote {
+        padding: 0px 10px;
+      }
+
+      pre > code {
+        font-family: monospace;
+        font-size: 16px;
+      }
+
+      .container {
+        max-width: 800px;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 2 !important;
+        font-style: italic;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      li {
+        font-size: 18px;
+      }
+
+      img {
+        max-width: 400px;
+        text-align: center;
+        margin: auto;
+        display: block;
+      }
+
+      .column {
+        float: left;
+        padding: 5px;
+      }
+
+      .img-gallery-2 .column {
+        width: 50%;
+      }
+
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+    </style>
+
+    <script>
+      hljs.highlightAll();
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+          (e._i = []),
+          (e.init = function (i, s, a) {
+            function g(t, e) {
+              var o = e.split(".");
+              2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                (t[e] = function () {
+                  t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                });
+            }
+            ((p = t.createElement("script")).type = "text/javascript"),
+              (p.async = !0),
+              (p.src = s.api_host + "/static/array.js"),
+              (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(
+                p,
+                r
+              );
+            var u = e;
+            for (
+              void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return (
+                    "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                  );
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                  "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(
+                    " "
+                  ),
+                n = 0;
+              n < o.length;
+              n++
+            )
+              g(u, o[n]);
+            e._i.push([i, s, a]);
+          }),
+          (e.__SV = 1));
+      })(document, window.posthog || []);
+      posthog.init("Tom1k0Lh0sRN7EK8LIlU5mbbmAHMBSk37lc02ZQ__38", {
+        api_host: "https://p.yakkos.workers.dev",
+        persistence: "memory",
+      });
+    </script>
+  </head>
+  <body>
+    <div class="back-btn">
+      <a href="/">← Home</a>
+    </div>
+    <main class="container" >
+      <section class='blog-section'>
+        <div class="progress-bar"></div>
+        <div id="page-content"> </div>
+
+      </section>
+
+    </main>
+
+  </body>
+</html>
