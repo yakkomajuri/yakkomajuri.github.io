@@ -136,7 +136,7 @@ porém sou triste também
 
 pois meu amor lá mora
 
-mas lá não mora mais ninguém!
+mas lá não mora mais ninguém
 
 <br />
 
