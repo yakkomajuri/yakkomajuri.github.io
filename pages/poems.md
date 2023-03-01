@@ -110,8 +110,15 @@ pedaço do meu coração que dei pra ela
 
 buscando em troca receber um dela
 
+## Queria (2022)
 
+escrevi tantos poemas
 
+me perguntando se ela voltaria
+
+aí ela voltou
+
+e eu já não estava
 
 ## Só queria ser artista (2022)
 
@@ -344,16 +351,6 @@ ou não quero uma namorada
 minha resposta depende inteiramente
 
 de como passei a madrugada
-
-## Queria (2022)
-
-escrevi tantos poemas
-
-me perguntando se ela voltaria
-
-aí ela voltou
-
-e eu já não estava
 
 ## Que tal variar um pouco? (2023)
 
