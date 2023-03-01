@@ -256,7 +256,7 @@ com uma moça na estação.
 
 não era qualquer moça
 
-nos conhecemos muito bem
+nos conhecemos muito bem —
 
 bem por bem ou bem por mal
 
