@@ -26,6 +26,30 @@ não sei se o faço bem
 
 mas ao menos me faz bem!
 
+## Louco (2022)
+
+às vezes me pergunto
+
+se o louco sabe que é louco
+
+<br />
+
+na cidade todo mundo sabe
+
+dizem:
+
+"olha lá, lá vem o louco!"
+
+<br />
+
+mas será que o louco sabe?
+
+ou pelo menos desconfia um pouco?
+
+pergunto porque acho
+
+que estou ficando louco
+
 ## Uma história verdadeira (2022)
 
 eu tenho uma caixinha
@@ -280,30 +304,6 @@ então fico até sem jeito
 buscando um jeito
 
 de me expressar
-
-## Louco (2022)
-
-às vezes me pergunto
-
-se o louco sabe que é louco
-
-<br />
-
-na cidade todo mundo sabe
-
-dizem:
-
-"olha lá, lá vem o louco!"
-
-<br />
-
-mas será que o louco sabe?
-
-ou pelo menos desconfia um pouco?
-
-pergunto porque acho
-
-que estou ficando louco
 
 ## Nômade (2022)
 
