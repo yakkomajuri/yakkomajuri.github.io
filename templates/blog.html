@@ -447,6 +447,29 @@
                         p.style.fontWeight = fontWeight
                     }
                 })
+
+                var lists = document.querySelectorAll('#page-content li')
+                lists.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontSize) {
+                        p.style.fontSize = fontSize + 'px'
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+
+                var headings = document.querySelectorAll('#page-content h1, #page-content h2, #page-content h3, #page-content h4, #page-content h5, #page-content h6')
+                headings.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
                 document.getElementById('font-family').value = fontFamily || ''
                 document.getElementById('font-size').value = fontSize || ''
                 document.getElementById('font-weight').value = fontWeight || ''
