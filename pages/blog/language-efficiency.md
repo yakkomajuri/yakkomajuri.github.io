@@ -4,15 +4,13 @@ template: blog
 
 # What's the world's most efficient language?
 
-_23/01/2022_
-
----
-
 <br/>
 
-_**Edit:** This has now made it to the front page of HackerNews. I'm sure a lot of valid criticism will come from it. Do note that I'm more curious in the discussion than the experiment itself (I'm already learning from the comments). I consistently claim here to not be qualified for an analysis, having done this for fun. The "Deriving information" section ends with "...the only thing I'm really measuring is efficiency from the perspective of printer ink. But so be it, I'll measure that.". Also check out [Limitations](#limitations)._
+<div class="notice">
 
----
+<i><b>Edit:</b> This has now made it to the front page of HackerNews. I'm sure a lot of valid criticism will come from it. Do note that I'm more curious in the discussion than the experiment itself (I'm already learning from the comments). I consistently claim here to not be qualified for an analysis, having done this for fun. The "Deriving information" section ends with "...the only thing I'm really measuring is efficiency from the perspective of printer ink. But so be it, I'll measure that.". Also check out <a href="#Limitations">Limitations</a>.</i>
+
+</div>
 
 A while ago I was sitting on a plane and in a moment of boredom picked up the in-flight magazine.
 
@@ -280,4 +278,4 @@ Either way, I'd be curious to explore this topic further, and would love to hear
 
 ## GitHub
 
-You can find my loose snippets of code used for this analysis on the [yakkomajuri/lang GitHub repo](https://github.com/yakkomajuri/lang).
+You can find my loose snippets of code used for this analysis on the [yakkomajuri/lang](https://github.com/yakkomajuri/lang) GitHub repo.

@@ -12,7 +12,7 @@ I found out while writing these that despite doing everything else in English, p
 <br />
 
 
-## Intro (2022)
+## Intro
 
 precisava me expressar
 
@@ -26,7 +26,7 @@ não sei se o faço bem
 
 mas ao menos me faz bem!
 
-## Louco (2022)
+## Louco
 
 às vezes me pergunto
 
@@ -50,7 +50,7 @@ pergunto porque acho
 
 que estou ficando louco
 
-## Uma história verdadeira (2022)
+## Uma história verdadeira
 
 eu tenho uma caixinha
 
@@ -110,7 +110,7 @@ pedaço do meu coração que dei pra ela
 
 buscando em troca receber um dela
 
-## Queria (2022)
+## Queria
 
 escrevi tantos poemas
 
@@ -120,7 +120,7 @@ aí ela voltou
 
 e eu já não estava
 
-## Só queria ser artista (2022)
+## Só queria ser artista
 
 queria tanto ser artista
 
@@ -149,7 +149,7 @@ porque não quero esquecer
 só não quero lembrar demais
 
 
-## Distância (2022)
+## Distância
 
 meu amor mora na lua
 
@@ -203,7 +203,7 @@ até que um dia eles pararam
 
 será que ela ainda me ama?
 
-## Dificuldade (2022)
+## Dificuldade
 
 como se faz um poema sem rima?
 
@@ -213,7 +213,7 @@ talvez conseguiria
 
 se parasse por agora
 
-## Deixa pra lá (2022)
+## Deixa pra lá
 
 às vezes penso-me ridículo
 
@@ -233,7 +233,7 @@ mas que me fazem tão bem quanto a terapeuta
 
 com quem eu pago pra conversar
 
-## Quando a ficha cai (2022)
+## Quando a ficha cai
 
 quando vejo uma moça na rua
 
@@ -302,7 +302,7 @@ não sei por quem se arrumou
 só sei que não foi por mim
 
 
-## Mais um pedido de desculpas (2022)
+## Mais um pedido de desculpas
 
 pra arte não tenho jeito
 
@@ -312,7 +312,7 @@ buscando um jeito
 
 de me expressar
 
-## Nômade (2022)
+## Nômade
 
 fiquei um tempo longe de casa
 
@@ -342,7 +342,7 @@ o que aconteceu com essa gente?
 
 ou será que fui eu que mudei?
 
-## Toda boa piada tem um fundo de verdade (2022)
+## Toda boa piada tem um fundo de verdade
 
 não me pergunte se eu quero
 

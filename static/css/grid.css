@@ -1,0 +1,81 @@
+.grid {
+    column-count: 3;
+    column-gap: 20px;
+    margin-bottom: 50px;
+}
+
+.grid img {
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(255, 248, 241, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    height: 80%;
+}
+
+.modal-label {
+    text-align: center;
+    color: #222327;
+    font-weight: 300;
+}
+
+.dark-mode .modal-label {
+    color: #7e8086;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #583d2c;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 60%;
+}
+
+.dark-mode .modal {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.dark-mode .close {
+    color: #effffe;
+}
+
+@media only screen and (max-width: 800px) {
+    .grid {
+        column-count: 1;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .modal-content {
+        max-width: 100%;
+        height: auto;
+    }
+}

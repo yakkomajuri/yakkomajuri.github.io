@@ -6,8 +6,8 @@ JavaScript library of crypto standards.
 
 Requirements:
 
-- Node.js
-- npm (Node.js package manager)
+-   Node.js
+-   npm (Node.js package manager)
 
 ```bash
 npm install crypto-js
@@ -39,16 +39,16 @@ console.log(SHA256("Message"));
 Including all libraries, for access to extra methods:
 
 ```javascript
-var CryptoJS = require("crypto-js");
-console.log(CryptoJS.HmacSHA1("Message", "Key"));
+var CryptoJS = require('crypto-js')
+console.log(CryptoJS.HmacSHA1('Message', 'Key'))
 ```
 
 ## Client (browser)
 
 Requirements:
 
-- Node.js
-- Bower (package manager for frontend)
+-   Node.js
+-   Bower (package manager for frontend)
 
 ```bash
 bower install crypto-js
@@ -60,18 +60,18 @@ Modular include:
 
 ```javascript
 require.config({
-  packages: [
-    {
-      name: "crypto-js",
-      location: "path-to/bower_components/crypto-js",
-      main: "index",
-    },
-  ],
-});
+    packages: [
+        {
+            name: 'crypto-js',
+            location: 'path-to/bower_components/crypto-js',
+            main: 'index',
+        },
+    ],
+})
 
-require(["crypto-js/aes", "crypto-js/sha256"], function (AES, SHA256) {
-  console.log(SHA256("Message"));
-});
+require(['crypto-js/aes', 'crypto-js/sha256'], function (AES, SHA256) {
+    console.log(SHA256('Message'))
+})
 ```
 
 Including all libraries, for access to extra methods:
@@ -79,26 +79,23 @@ Including all libraries, for access to extra methods:
 ```javascript
 // Above-mentioned will work or use this simple form
 require.config({
-  paths: {
-    "crypto-js": "path-to/bower_components/crypto-js/crypto-js",
-  },
-});
+    paths: {
+        'crypto-js': 'path-to/bower_components/crypto-js/crypto-js',
+    },
+})
 
-require(["crypto-js"], function (CryptoJS) {
-  console.log(CryptoJS.HmacSHA1("Message", "Key"));
-});
+require(['crypto-js'], function (CryptoJS) {
+    console.log(CryptoJS.HmacSHA1('Message', 'Key'))
+})
 ```
 
 ### Usage without RequireJS
 
 ```html
-<script
-  type="text/javascript"
-  src="path-to/bower_components/crypto-js/crypto-js.js"
-></script>
+<script type="text/javascript" src="path-to/bower_components/crypto-js/crypto-js.js"></script>
 <script type="text/javascript">
-  var encrypted = CryptoJS.AES(...);
-  var encrypted = CryptoJS.SHA256(...);
+    var encrypted = CryptoJS.AES(...);
+    var encrypted = CryptoJS.SHA256(...);
 </script>
 ```
 
@@ -111,111 +108,105 @@ See: https://cryptojs.gitbook.io/docs/
 #### Plain text encryption
 
 ```javascript
-var CryptoJS = require("crypto-js");
+var CryptoJS = require('crypto-js')
 
 // Encrypt
-var ciphertext = CryptoJS.AES.encrypt(
-  "my message",
-  "secret key 123"
-).toString();
+var ciphertext = CryptoJS.AES.encrypt('my message', 'secret key 123').toString()
 
 // Decrypt
-var bytes = CryptoJS.AES.decrypt(ciphertext, "secret key 123");
-var originalText = bytes.toString(CryptoJS.enc.Utf8);
+var bytes = CryptoJS.AES.decrypt(ciphertext, 'secret key 123')
+var originalText = bytes.toString(CryptoJS.enc.Utf8)
 
-console.log(originalText); // 'my message'
+console.log(originalText) // 'my message'
 ```
 
 #### Object encryption
 
 ```javascript
-var CryptoJS = require("crypto-js");
+var CryptoJS = require('crypto-js')
 
-var data = [{ id: 1 }, { id: 2 }];
+var data = [{ id: 1 }, { id: 2 }]
 
 // Encrypt
-var ciphertext = CryptoJS.AES.encrypt(
-  JSON.stringify(data),
-  "secret key 123"
-).toString();
+var ciphertext = CryptoJS.AES.encrypt(JSON.stringify(data), 'secret key 123').toString()
 
 // Decrypt
-var bytes = CryptoJS.AES.decrypt(ciphertext, "secret key 123");
-var decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+var bytes = CryptoJS.AES.decrypt(ciphertext, 'secret key 123')
+var decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8))
 
-console.log(decryptedData); // [{id: 1}, {id: 2}]
+console.log(decryptedData) // [{id: 1}, {id: 2}]
 ```
 
 ### List of modules
 
-- `crypto-js/core`
-- `crypto-js/x64-core`
-- `crypto-js/lib-typedarrays`
+-   `crypto-js/core`
+-   `crypto-js/x64-core`
+-   `crypto-js/lib-typedarrays`
 
 ---
 
-- `crypto-js/md5`
-- `crypto-js/sha1`
-- `crypto-js/sha256`
-- `crypto-js/sha224`
-- `crypto-js/sha512`
-- `crypto-js/sha384`
-- `crypto-js/sha3`
-- `crypto-js/ripemd160`
+-   `crypto-js/md5`
+-   `crypto-js/sha1`
+-   `crypto-js/sha256`
+-   `crypto-js/sha224`
+-   `crypto-js/sha512`
+-   `crypto-js/sha384`
+-   `crypto-js/sha3`
+-   `crypto-js/ripemd160`
 
 ---
 
-- `crypto-js/hmac-md5`
-- `crypto-js/hmac-sha1`
-- `crypto-js/hmac-sha256`
-- `crypto-js/hmac-sha224`
-- `crypto-js/hmac-sha512`
-- `crypto-js/hmac-sha384`
-- `crypto-js/hmac-sha3`
-- `crypto-js/hmac-ripemd160`
+-   `crypto-js/hmac-md5`
+-   `crypto-js/hmac-sha1`
+-   `crypto-js/hmac-sha256`
+-   `crypto-js/hmac-sha224`
+-   `crypto-js/hmac-sha512`
+-   `crypto-js/hmac-sha384`
+-   `crypto-js/hmac-sha3`
+-   `crypto-js/hmac-ripemd160`
 
 ---
 
-- `crypto-js/pbkdf2`
+-   `crypto-js/pbkdf2`
 
 ---
 
-- `crypto-js/aes`
-- `crypto-js/tripledes`
-- `crypto-js/rc4`
-- `crypto-js/rabbit`
-- `crypto-js/rabbit-legacy`
-- `crypto-js/evpkdf`
+-   `crypto-js/aes`
+-   `crypto-js/tripledes`
+-   `crypto-js/rc4`
+-   `crypto-js/rabbit`
+-   `crypto-js/rabbit-legacy`
+-   `crypto-js/evpkdf`
 
 ---
 
-- `crypto-js/format-openssl`
-- `crypto-js/format-hex`
+-   `crypto-js/format-openssl`
+-   `crypto-js/format-hex`
 
 ---
 
-- `crypto-js/enc-latin1`
-- `crypto-js/enc-utf8`
-- `crypto-js/enc-hex`
-- `crypto-js/enc-utf16`
-- `crypto-js/enc-base64`
+-   `crypto-js/enc-latin1`
+-   `crypto-js/enc-utf8`
+-   `crypto-js/enc-hex`
+-   `crypto-js/enc-utf16`
+-   `crypto-js/enc-base64`
 
 ---
 
-- `crypto-js/mode-cfb`
-- `crypto-js/mode-ctr`
-- `crypto-js/mode-ctr-gladman`
-- `crypto-js/mode-ofb`
-- `crypto-js/mode-ecb`
+-   `crypto-js/mode-cfb`
+-   `crypto-js/mode-ctr`
+-   `crypto-js/mode-ctr-gladman`
+-   `crypto-js/mode-ofb`
+-   `crypto-js/mode-ecb`
 
 ---
 
-- `crypto-js/pad-pkcs7`
-- `crypto-js/pad-ansix923`
-- `crypto-js/pad-iso10126`
-- `crypto-js/pad-iso97971`
-- `crypto-js/pad-zeropadding`
-- `crypto-js/pad-nopadding`
+-   `crypto-js/pad-pkcs7`
+-   `crypto-js/pad-ansix923`
+-   `crypto-js/pad-iso10126`
+-   `crypto-js/pad-iso97971`
+-   `crypto-js/pad-zeropadding`
+-   `crypto-js/pad-nopadding`
 
 ## Release notes
 

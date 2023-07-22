@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>"
+        />
+        <link rel="stylesheet" href="../css/layout.css" />
+        <link rel="stylesheet" href="../css/grid.css" />
+
+        <style>
+            #page-content {
+                display: block;
+                margin: auto;
+                max-width: 600px;
+            }
+
+            h2 {
+                margin-top: 40px;
+                margin-bottom: 10px;
+                border-bottom: 0.5px solid rgb(121, 121, 121);
+                display: inline-block;
+            }
+
+            @media only screen and (max-width: 800px) {
+                #page-content {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+
+            #back-button {
+                position: absolute;
+                top: -10px; /* Adjust this value to move the button up or down */
+                left: 0;
+                text-decoration: none;
+                color: inherit;
+                opacity: 0.5;
+                font-size: 24px;
+                padding: 10px; /* Increase the clickable area */
+                margin: -10px; /* Offset the added padding */
+                z-index: 10;
+            }
+
+            #back-button:hover {
+                opacity: 0.8;
+            }
+
+            body.dark-mode #back-button {
+                color: #d3d3d3;
+            }
+            .page-content-wrapper {
+                width: 800px;
+                display: block;
+                margin: auto;
+            }
+            @media only screen and (max-width: 800px) {
+                .page-content-wrapper {
+                    width: 95%;
+                    display: block;
+                    margin: auto;
+                }
+            }
+        </style>
+
+        <script src="../modal/modal.js"></script>
+    </head>
+    <body>
+        <script src="../js/dark-mode.js"></script>
+
+        <nav>
+            <div style="font-weight: 300">
+                <a id="site-title" href="/">Yakko Majuri</a>
+            </div>
+            <ul id="navbar">
+                <li class="nav-item"><a href="/blog">blog</a></li>
+                <li class="nav-item"><a href="/albums">pics</a></li>
+                <li class="nav-item selected"><a href="/poems">poems</a></li>
+            </ul>
+            <div class="toggle-wrapper" onclick="toggleDarkMode()">
+                <button id="darkModeToggle" class="toggle-button">☀️</button>
+            </div>
+        </nav>
+
+        <hr />
+        <div class="page-content-wrapper">
+            <a href="/poems" id="back-button">↩</a>
+            <h1 style="text-align: center; font-weight: 100; margin-top: 30px; margin-bottom: 30px">
+                Fim e começo (2022)
+            </h1>
+            <br />
+
+            <div id="page-content"></div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Yakko Majuri</p>
+                <ul>
+                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/links">links</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../js/title.js"></script>
+    </body>
+</html>

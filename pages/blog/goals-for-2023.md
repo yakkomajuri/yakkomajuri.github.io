@@ -3,7 +3,6 @@ template: blog
 ---
 # Goals for 2023
 
-_04/02/2023_
 
 I don't remember the last time I set goals for myself the new year. I generally operate day-to-day with some objectives in mind but have traditionally not been great at setting concrete goals, so I thought I'd give this a try this year.
 

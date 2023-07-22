@@ -1,143 +1,183 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yakko Majuri | Sunday Afternoon</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
-    />
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script type="text/javascript" src="js/newsletter.js"></script>
-
-    <style>
-      details p {
-        margin-top: 25px;
-        font-size: 18px;
-      }
-
-      h1 {
-        margin-bottom: 2px;
-      }
-
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        margin-bottom: 10px;
-      }
-
-      .container {
-        max-width: 800px;
-      }
-
-      a {
-        color: #94ceea;
-      }
-    </style>
-    <script>
-      !(function (t, e) {
-        var o, n, p, r;
-        e.__SV ||
-          ((window.posthog = e),
-          (e._i = []),
-          (e.init = function (i, s, a) {
-            function g(t, e) {
-              var o = e.split(".");
-              2 == o.length && ((t = t[o[0]]), (e = o[1])),
-                (t[e] = function () {
-                  t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
-                });
-            }
-            ((p = t.createElement("script")).type = "text/javascript"),
-              (p.async = !0),
-              (p.src = s.api_host + "/static/array.js"),
-              (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(
-                p,
-                r
-              );
-            var u = e;
-            for (
-              void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
-                u.people = u.people || [],
-                u.toString = function (t) {
-                  var e = "posthog";
-                  return (
-                    "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
-                  );
-                },
-                u.people.toString = function () {
-                  return u.toString(1) + ".people (stub)";
-                },
-                o =
-                  "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(
-                    " "
-                  ),
-                n = 0;
-              n < o.length;
-              n++
-            )
-              g(u, o[n]);
-            e._i.push([i, s, a]);
-          }),
-          (e.__SV = 1));
-      })(document, window.posthog || []);
-      posthog.init("Tom1k0Lh0sRN7EK8LIlU5mbbmAHMBSk37lc02ZQ__38", {
-        api_host: "https://p.yakkos.workers.dev",
-        persistence: 'memory' 
-      });
-    </script>
-  </head>
-
-  <body>
-    <main class="container">
-      <h1>Sunday Afternoon</h1>
-      <small>
-        <i
-          >By
-          <a href="https://github.com/yakkomajuri" target="_blank"
-            >Yakko Majuri</a
-          ></i
-        >
-      </small>
-
-      <br />
-      <br />
-      <br />
-
-      <div id="page-content"></div>
-
-      <br />
-      <div style="margin: auto; display: block; text-align: center">
-        <p>Subscribe to my newsletter:</p>
-        <input
-          id="newsletter-subscribe-input"
-          style="display: inline-block; width: 80%; margin: 0"
-          placeholder="foo@bar.com"
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>"
         />
-        <button
-          id="newsletter-subscribe-btn"
-          style="display: inline-block; width: 40; margin-left: -52; padding: 5"
-          onclick="newsletterSubscribe()"
-        >
-          →
-        </button>
-      </div>
+        <link rel="stylesheet" href="../css/layout.css" />
+        <link rel="stylesheet" href="../css/grid.css" />
 
-      <br />
-      <div style="text-align: center">
-        <small
-          >Built with
-          <b
-            ><a href="https://github.com/yakkomajuri/teeny" target="_blank"
-              >Teeny</a
-            ></b
-          ></small
-        >
-      </div>
-    </main>
-  </body>
+        <title>Home</title>
+
+        <style>
+            :root {
+                --overlay-color: rgba(156, 128, 67, 0.3);
+                /* Light mode overlay color (wheat color with 30% opacity for an aged look) */
+            }
+
+            body.dark-mode {
+                --overlay-color: rgb(16 29 42 / 15%);
+                /* Dark mode overlay color */
+            }
+
+            .home-content {
+                display: flex;
+                align-items: flex-start;
+                /* align items at the start of the cross axis */
+                justify-content: center;
+                /* adjust as needed */
+                flex-direction: row;
+                /* default direction */
+            }
+
+            @media (max-width: 1000px) {
+                .home-content {
+                    flex-direction: column;
+                    /* change direction on small screens */
+                    height: auto;
+                }
+
+                .home-content .image-container img {
+                    height: 400px !important;
+                    margin: auto;
+                    display: block;
+                    /* Add this */
+                }
+
+                .text-container {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+
+                .image-container {
+                    margin: auto;
+                }
+            }
+
+            .home-content .image-container {
+                flex: 1;
+                text-align: center;
+                position: relative;
+                margin-top: 35px;
+            }
+
+            .home-content .image-container .image-wrapper {
+                position: relative;
+                display: inline-block;
+                /* Add this */
+            }
+
+            .home-content .image-container .image-wrapper::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: var(--overlay-color);
+            }
+
+            .home-content .image-container img {
+                height: 700px;
+                display: block;
+                /* Add this */
+            }
+
+            .home-content .text-container {
+                flex: 1;
+                text-align: left;
+                margin-bottom: 50px; /* adjust as needed */
+            }
+        </style>
+
+        <script src="../modal/modal.js"></script>
+    </head>
+
+    <body>
+        <script src="../js/dark-mode.js"></script>
+        <div class="content">
+            <nav>
+                <div style="font-weight: 400">
+                    <a id="site-title" href="/">Yakko Majuri</a>
+                </div>
+                <ul id="navbar">
+                    <li class="nav-item"><a href="/blog">blog</a></li>
+                    <li class="nav-item"><a href="/albums">pics</a></li>
+                    <li class="nav-item"><a href="/poems">poems</a></li>
+                </ul>
+                <div class="toggle-wrapper" onclick="toggleDarkMode()">
+                    <button id="darkModeToggle" class="toggle-button">☀️</button>
+                </div>
+            </nav>
+
+            <hr />
+            <div class="home-content">
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <img src="../img/main.jpg" alt="Description of image" />
+                    </div>
+                </div>
+                <div class="text-container">
+                    <h1>hey there</h1>
+                    <p>I'm Yakko, and I'm a... I'm not sure, actually, now.</p>
+                    <p>I'm a software developer by trade, and have been so for six or so years.</p>
+                    <p>
+                        but that's not all I want to be. and that's partly what this website is about - here you'll find
+                        bits and pieces that compose what I am and where I'm going.
+                    </p>
+                    <p>
+                        if you'd like me to be more practical and less philosophical, I've just recently left an awesome
+                        company called PostHog, which I joined early on, after three great years.
+                    </p>
+                    <p>
+                        in lighter terms, I'm currently on a sabbatical, but it's ok if you want to call me unemployed.
+                    </p>
+                    <p>during this period, I have three main areas I want to spend my time and energy on:</p>
+                    <ol style="list-style-type: lower-roman">
+                        <li>
+                            <u>various "intellectual pursuits":</u> dive into new knowledge areas (e.g. photography,
+                            history); build more projects from my software list (including improving existing ones like
+                            <a>HouseWatch</a> and this website); get back into learning languages (e.g. picking Mandarin
+                            back up).
+                        </li>
+                        <li>
+                            <u>writing:</u> I've had a lot of success as a technical writer (mostly focused on an
+                            audience of early-stage devs), and my articles (primarily on <a>Medium</a>, but also on this
+                            website and other places) have been viewed by around a million people. while I'm still
+                            interested in technical writing, although leaning more towards deeper content (e.g.
+                            <a>this</a>), I'd also like to dabble a lot more with non-technical writing, which you'll
+                            find here both on my <a>blog</a> and the <a>poems</a> section.
+                        </li>
+                        <li>
+                            <u>mountaineering:</u> being in nature is a non-negotiable aspect of my life, and mountains
+                            have held a grasp on me for a long time. I've gathered a solid amount of experience in this
+                            aspect over the years, but am currently working to develop my technical skills further in
+                            order to tackle bigger challenges.
+                        </li>
+                    </ol>
+                    <p>
+                        going forward, this website will be central to the above - I intend to document my thoughts and
+                        express myself in here, mostly for my own sake.
+                    </p>
+                    <p>but if you're keen, feel free to tag along.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Yakko Majuri</p>
+                <ul>
+                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/links">links</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../js/title.js"></script>
+    </body>
 </html>

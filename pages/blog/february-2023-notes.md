@@ -3,8 +3,6 @@ template: blog
 ---
 # February 2023 Notes
 
-_26/02/2023_
-
 Inspired yet again by [Paul](https://pauldambra.dev/2023/02/jan-month-notes.html), I've decided to try and do recaps of the month that went from the perspective of the yearly goals I set, so here's February.
 
 ## Takeaways

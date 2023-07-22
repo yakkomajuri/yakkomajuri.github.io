@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="../css/layout.css" />
+        <link rel="stylesheet" href="../css/grid.css" />
+        <style>
+            h2 {
+                font-size: 24px;
+            }
+
+            .album-grid {
+                column-count: 3;
+                column-gap: 40px;
+                margin: auto;
+                margin-bottom: 50px;
+                width: 90%;
+            }
+
+            :root {
+                --overlay-color: rgba(
+                    156,
+                    128,
+                    67,
+                    0.3
+                ); /* Light mode overlay color (wheat color with 30% opacity for an aged look) */
+            }
+
+            body.dark-mode {
+                --overlay-color: rgb(16 29 42 / 15%); /* Dark mode overlay color */
+            }
+
+            .album::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: var(--overlay-color);
+            }
+
+            .album img {
+                width: 100%;
+                height: auto;
+                transition: transform 0s ease;
+            }
+
+            .album:hover img {
+                transform: scale(1);
+            }
+
+            .album {
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                color: inherit;
+                position: relative;
+            }
+
+            .album img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                transition: transform 0s ease;
+            }
+
+            .album-title {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                margin: 0;
+                color: white;
+                font-weight: 150;
+            }
+
+            /* On mobile devices */
+            @media (max-width: 768px) {
+                .album-grid {
+                    column-count: 1;
+                    margin: auto;
+                    width: 90%;
+                }
+
+                .album img {
+                    margin-bottom: 20px;
+                }
+
+                .album-title {
+                    bottom: 30px;
+                }
+
+                .album::before {
+                    bottom: 20;
+                }
+            }
+
+            .grid-container {
+                display: block;
+                margin: auto;
+            }
+        </style>
+
+        <script src="../modal/modal.js"></script>
+    </head>
+    <body>
+        <script src="../js/dark-mode.js"></script>
+
+        <nav>
+            <div style="font-weight: 300">
+                <a id="site-title" href="/">Yakko Majuri</a>
+            </div>
+            <ul id="navbar">
+                <li class="nav-item"><a href="/blog">blog</a></li>
+                <li class="nav-item selected"><a href="/albums">pics</a></li>
+                <li class="nav-item"><a href="/poems">poems</a></li>
+            </ul>
+            <div class="toggle-wrapper" onclick="toggleDarkMode()">
+                <button id="darkModeToggle" class="toggle-button">☀️</button>
+            </div>
+        </nav>
+
+        <hr />
+
+        <h1 style="text-align: center; font-weight: 100; margin-top: 30px; margin-bottom: 30px">Albums</h1>
+
+        <div class="grid-container">
+            <div class="album-grid">
+                <div>
+                    <a href="/pics/coronallacs" class="album">
+                        <img src="../img/coronallacs/2.jpg" alt="Album 1" />
+                        <h2 class="album-title">Coronallacs</h2>
+                    </a>
+                </div>
+                <div>
+                    <a href="/pics/hk" class="album">
+                        <img src="../img/hk/2.jpg" alt="Album 2" />
+                        <h2 class="album-title">Hong Kong Protests</h2>
+                    </a>
+                </div>
+                <div>
+                    <a href="/pics" class="album">
+                        <img src="../img/yakko.pics/2022_iceland_east_valley2.jpg" alt="Album 2" />
+                        <h2 class="album-title">yakko.pics</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage" />
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Yakko Majuri</p>
+                <ul>
+                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/links">links</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../js/title.js"></script>
+    </body>
+</html>

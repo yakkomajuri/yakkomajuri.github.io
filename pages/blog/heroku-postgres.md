@@ -1,9 +1,6 @@
 ---
 template: blog
 ---
-
-_24/10/2021_
-
 # Be careful with Heroku Postgres
 
 This will be a short one. Just a quick _lil'_ rant.

@@ -2,7 +2,6 @@
 template: blog
 ---
 
-_16/01/2022_
 
 # Finding your true self
 

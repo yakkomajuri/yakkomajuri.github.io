@@ -2,8 +2,6 @@
 template: blog
 ---
 
-_23/10/2022_
-
 # The hiker's goal
 
 Some time ago, on a reasonably challenging [5-day trail in the Pyrenees](blog/coronallacs), my group encountered a dilemma.
