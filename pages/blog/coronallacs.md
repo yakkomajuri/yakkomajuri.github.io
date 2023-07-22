@@ -3,7 +3,6 @@ template: blog
 title: Hiking around Andorra in 5 days
 ---
 
-_17/10/2021_
 # Hiking around Andorra in 5 days
 
 > For photos of this trip, check out this [photo gallery](/pics/coronallacs).
@@ -66,7 +65,6 @@ Here go a few tips if you're interested.
 
 <summary><b>Storage</b></summary>
 
-<br />
 
 I came to Andorra from a work trip, so I had a bunch of things with me that I certainly wasn't going to take up to the mountains.
 
@@ -84,7 +82,6 @@ Just note that if you don't have an Andorran bank account, they can only refund 
 
 <summary><b>Mobile data</b></summary>
 
-<br />
 
 Very few international companies include Andorra in their roaming-exempt list. As a result, I saw people hit with massive bills for just a few minutes using their data plan from other European countries just to call someone.
 
@@ -102,7 +99,6 @@ Andorra only has one telecom provider, and that's [Andorra Telecom](https://www.
 
 <summary><b>Listed specs</b></summary>
 
-<br />
 
 - **Length:** 12.6km
 - **Altitude difference:** 1.473/-40m
@@ -150,8 +146,6 @@ The shelter was quite empty, and the seven of us had dinner together. A German a
 <details open>
 
 <summary><b>Listed specs</b></summary>
-
-<br />
 
 - **Length:** 19.4km
 - **Altitude difference:** 1,350/-1,527m
@@ -208,8 +202,6 @@ Here, my personal highlight was a 3am walk to the "ecological toilet", located o
 
 <summary><b>Listed specs</b></summary>
 
-<br />
-
 - **Length:** 16.9km
 - **Altitude difference:** 1,425/-1,771m
 - **Duration:** 10h18
@@ -233,13 +225,13 @@ We passed by a few lakes and streams, and bumped into beautiful horses on the wa
 
 Our lunch break was at a phenomenal spot, with views like this:
 
-<div class='img-gallery-2'>
+<div class='grid'>
 <div class="row">
   <div class="column">
-    <img src="../img/coronallacs/6.jpg" alt="Stage 3 lunch spot horses" style="width:100%">
+    <img src="../img/coronallacs/6.jpg" alt="Stage 3 lunch spot horses" style="width: 350px">
   </div>
   <div class="column">
-    <img src="../img/coronallacs/7.jpg" alt="Stage 3 lunch spot lake" style="width:100%">
+    <img src="../img/coronallacs/7.jpg" alt="Stage 3 lunch spot lake" style="width: 350px">
   </div>
 </div>
 </div>
@@ -263,8 +255,6 @@ If you bump into Marisa here, say hello from me.
 <details open>
 
 <summary><b>Listed specs</b></summary>
-
-<br />
 
 - **Length:** 21.9km
 - **Altitude difference:** 1,904/-1,608m
@@ -314,8 +304,6 @@ Nevertheless, it had everything we needed. Showers weren't great and also token-
 <details open>
 
 <summary><b>Listed specs</b></summary>
-
-<br />
 
 - **Length:** 21.4km
 - **Altitude difference:** 716/-1,922m

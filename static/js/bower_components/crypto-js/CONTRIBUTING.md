@@ -15,14 +15,14 @@ Target your pull request on `develop` branch. Other pull request won't be accept
 
 2. Run
 
-   ```sh
-   npm install
-   ```
+    ```sh
+    npm install
+    ```
 
 3. Run
 
-   ```sh
-   npm run build
-   ```
+    ```sh
+    npm run build
+    ```
 
 4. Check `build` folder

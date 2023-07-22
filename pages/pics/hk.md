@@ -1,3 +1,3 @@
 ---
-template: hk
+template: hk2
 ---

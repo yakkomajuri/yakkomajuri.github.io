@@ -2,8 +2,6 @@
 template: blog
 ---
 
-_16/01/2022_
-
 # Can you tell me the age of my users?
 
 I once had an onboarding call with a client where I was asked:

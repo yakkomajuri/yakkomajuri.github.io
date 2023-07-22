@@ -2,7 +2,6 @@
 template: blog
 ---
 
-_16/01/2022_
 
 # Deep diving into the thread pool: a debugging story
 

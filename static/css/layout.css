@@ -1,0 +1,682 @@
+body {
+    max-width: 1200px;
+    margin: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+    background: rgb(248, 247, 244);
+    color: #32241a;
+}
+
+.content {
+    min-height: 80vh;
+}
+
+body.dark-mode {
+    background-color: #11191f;
+    color: #d3d3d3;
+}
+
+.dark-mode hr {
+    border: 0.5px solid #37383c;
+}
+
+.dark-mode .nav-item {
+    color: #c7c4c4;
+}
+
+.dark-mode .nav-item.selected,
+.dark-mode .nav-item:hover {
+    color: rgb(0 204 204);
+}
+
+.toggle-wrapper {
+    width: 50px;
+    height: 20px;
+    background: #e6dfd9;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.toggle-button {
+    font-size: 10px;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fffbf5;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dark-mode .toggle-wrapper {
+    background: #666;
+}
+
+.dark-mode .toggle-button {
+    transform: translateX(30px);
+    background-color: #000;
+    color: #fff;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Center the items */
+    gap: 20px;
+    padding: 0;
+}
+
+.nav-item,
+footer a {
+    cursor: pointer;
+    font-weight: 150;
+    color: #352619;
+    text-decoration: none;
+}
+
+.nav-item:hover,
+.nav-item.selected,
+footer a:hover {
+    font-weight: 250;
+}
+
+/* Position the title and toggle */
+nav > div:first-child {
+    position: absolute;
+    left: 20px;
+}
+
+.toggle-wrapper {
+    position: absolute;
+    right: 20px;
+}
+
+hr {
+    max-width: 800px;
+    border: 0.5px solid #e1e1e1;
+}
+
+li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 100;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 100;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 100;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+summary {
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 0.5px solid rgb(70, 24, 7);
+}
+
+.dark-mode footer {
+    border-top: 0.5px solid rgb(55 122 137 / 30%);
+}
+
+#site-title {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+p,
+li {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: black;
+}
+
+p strong,
+p b,
+li strong,
+li b {
+    font-weight: 400;
+}
+
+.dark-mode p,
+.dark-mode li {
+    color: inherit;
+}
+
+@media only screen and (max-width: 800px) {
+    footer {
+        padding: 0;
+    }
+
+    footer p,
+    footer a {
+        font-size: 14px;
+    }
+
+    .footer-content p {
+        margin-left: 10px;
+    }
+
+    .footer-content ul {
+        margin-right: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 0.5em;
+}
+
+th {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td {
+    border: 1px solid #37383c;
+}
+
+body.dark-mode th {
+    background-color: #1a2935;
+    color: #d3d3d3;
+}
+
+body.dark-mode tr:nth-child(even) {
+    background-color: #1a2935;
+}
+
+body.dark-mode td,
+body.dark-mode th {
+    color: #d3d3d3;
+}
+
+blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 1em;
+    margin: 1em 0;
+    color: #666;
+    font-style: italic;
+}
+
+body.dark-mode blockquote {
+    border-left: 4px solid #37383c;
+    color: #d3d3d3;
+}
+
+.notice {
+    background: #54290912;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.notice p {
+    font-size: 16px !important;
+}
+
+body.dark-mode .notice {
+    background: #25262b;
+    color: #d3d3d3;
+}
+
+body.dark-mode .notice p {
+    color: #d3d3d3;
+}
+
+code {
+    background-color: #f7f2f0;
+    padding: 2px 4px;
+    font-size: 90%;
+    border-radius: 3px;
+    color: #333;
+}
+
+body.dark-mode code {
+    background-color: #37383c;
+    color: #d3d3d3;
+}
+
+#page-content {
+    position: relative;
+}
+
+.page-content-wrapper {
+    position: relative;
+}
+
+details summary {
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+details {
+    border-bottom: 0.5px solid inherit;
+}
+/* From Pico.css */
+
+form {
+    display: flex;
+    flex-flow: column;
+}
+
+label {
+    font-size: 0.875rem;
+    margin: 1rem 0 0.5rem;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+textarea,
+select {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type='text']:focus,
+input[type='number']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='date']:focus,
+input[type='month']:focus,
+input[type='week']:focus,
+input[type='time']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.25rem;
+    transition: background-color 0.25s;
+}
+
+input[type='submit']:hover,
+input[type='reset']:hover,
+input[type='button']:hover,
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type='submit']:active,
+input[type='reset']:active,
+input[type='button']:active,
+button:active {
+    background-color: #004085;
+}
+
+input[type='submit']:disabled,
+input[type='reset']:disabled,
+input[type='button']:disabled,
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+input[type='submit']:focus,
+input[type='reset']:focus,
+input[type='button']:focus,
+button:focus {
+    outline: none;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    vertical-align: middle;
+    margin: -0.25rem 0 0;
+    margin-right: 0.5rem;
+}
+
+input[type='file'] {
+    padding: 0.5rem;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 0 0 1rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-size: 0.875rem;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+option {
+    padding: 0.5rem 1rem;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+input[type='range']:hover {
+    opacity: 1;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5em;
+}
+
+.row > * {
+    padding: 0.5em;
+}
+
+.col {
+    flex: 1;
+}
+
+.col-1 {
+    flex: none;
+    width: calc(100% / 12);
+}
+
+.col-2 {
+    flex: none;
+    width: calc(100% / 6);
+}
+
+.col-3 {
+    flex: none;
+    width: calc(100% / 4);
+}
+
+.col-4 {
+    flex: none;
+    width: calc(100% / 3);
+}
+
+.col-6 {
+    flex: none;
+    width: calc(100% / 2);
+}
+
+.col-8 {
+    flex: none;
+    width: calc(100% * 2 / 3);
+}
+
+.col-9 {
+    flex: none;
+    width: calc(100% * 3 / 4);
+}
+
+.col-10 {
+    flex: none;
+    width: calc(100% * 5 / 6);
+}
+
+.col-12 {
+    flex: none;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .row > * {
+        width: 100% !important;
+    }
+}
+
+/* pico.css overrides */
+
+/* Light Mode */
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='color'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+textarea,
+select {
+    background-color: #f7f2f0; /* Light brown background */
+    color: #32241a; /* Dark brown text */
+    border: 1px solid #ddd; /* Light grey border */
+}
+
+input[type='text']:focus,
+input[type='number']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='color']:focus,
+input[type='date']:focus,
+input[type='month']:focus,
+input[type='week']:focus,
+input[type='time']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+textarea:focus,
+select:focus {
+    border-color: #48290c; /* Darker brown border when focused */
+    outline: none;
+}
+
+/* Dark Mode */
+body.dark-mode input[type='text'],
+body.dark-mode input[type='number'],
+body.dark-mode input[type='email'],
+body.dark-mode input[type='url'],
+body.dark-mode input[type='password'],
+body.dark-mode input[type='search'],
+body.dark-mode input[type='color'],
+body.dark-mode input[type='date'],
+body.dark-mode input[type='month'],
+body.dark-mode input[type='week'],
+body.dark-mode input[type='time'],
+body.dark-mode input[type='datetime'],
+body.dark-mode input[type='datetime-local'],
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #25262b; /* Dark grey background */
+    color: #d3d3d3; /* Light grey text */
+    border: 1px solid #37383c; /* Dark grey border */
+}
+
+body.dark-mode input[type='text']:focus,
+body.dark-mode input[type='number']:focus,
+body.dark-mode input[type='email']:focus,
+body.dark-mode input[type='url']:focus,
+body.dark-mode input[type='password']:focus,
+body.dark-mode input[type='search']:focus,
+body.dark-mode input[type='color']:focus,
+body.dark-mode input[type='date']:focus,
+body.dark-mode input[type='month']:focus,
+body.dark-mode input[type='week']:focus,
+body.dark-mode input[type='time']:focus,
+body.dark-mode input[type='datetime']:focus,
+body.dark-mode input[type='datetime-local']:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+    border-color: rgb(2, 167, 167); /* Cyan border when focused */
+    outline: none;
+}
+
+button,
+label,
+input,
+select {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}

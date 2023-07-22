@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>"
+        />
+
+        <link rel="stylesheet" href="../css/layout.css" />
+        <link rel="stylesheet" href="../css/grid.css" />
+
+        <title>Blog - Yakko Majuri</title>
+
+        <style>
+            .blog-container {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .blog-post {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                border-left: 1px solid #ddd;
+                padding-left: 1rem;
+                padding-bottom: 10px;
+            }
+
+            .blog-post:hover {
+                background: rgb(165 105 42 / 5%);
+                cursor: pointer;
+            }
+
+            .blog-post h2 {
+                font-size: 1.25rem;
+                font-weight: 200;
+                margin-bottom: 5px;
+            }
+
+            .blog-post h2 a {
+                text-decoration: none;
+            }
+
+            .blog-post time {
+                font-size: 0.875rem;
+                color: #777;
+            }
+
+            p {
+                margin-top: 5px;
+                margin-bottom: 0px;
+                font-weight: 200;
+            }
+
+            .tags {
+                display: flex;
+                gap: 0.5rem;
+            }
+
+            .tag {
+                background-color: rgb(148 106 60 / 75%);
+                border-radius: 15px;
+                padding: 0.25rem 0.5rem;
+                font-size: 0.75rem;
+                color: #fff;
+                margin-top: 10px;
+            }
+
+            .read-more {
+                color: #008080;
+                text-decoration: none;
+                font-size: 0.875rem;
+            }
+
+            .tag-selector {
+                display: flex;
+                gap: 0.5rem;
+            }
+
+            .selector-tag {
+                background-color: #eee;
+                border-radius: 15px;
+                padding: 0.25rem 0.5rem;
+                font-size: 0.75rem;
+                color: #555;
+                cursor: pointer;
+            }
+
+            .selector-tag.selected {
+                background-color: #946a3c;
+                color: #fff;
+            }
+
+            .dark-mode .blog-post {
+                border-color: #31494d;
+            }
+
+            .dark-mode .blog-post h2 a,
+            .dark-mode .read-more {
+                color: #fff;
+            }
+
+            .dark-mode .blog-post time {
+                color: #ddd;
+            }
+
+            .dark-mode .tag {
+                background-color: rgb(0 204 204 / 65%);
+                color: #fff;
+            }
+
+            .dark-mode .selector-tag {
+                background-color: #444;
+                color: #ddd;
+            }
+
+            .dark-mode .selector-tag.selected {
+                background-color: #03b7b7;
+                color: #fff;
+            }
+
+            .dark-mode .blog-post:hover {
+                background-color: rgb(67 129 155 / 5%);
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            @media only screen and (max-width: 800px) {
+                .tag-selector {
+                    margin-left: 10px;
+                }
+                .selector-tag {
+                    font-size: 10px;
+                }
+            }
+        </style>
+
+        <script src="../modal/modal.js"></script>
+    </head>
+    <body>
+        <script src="../js/dark-mode.js"></script>
+        <div class="content">
+            <nav>
+                <div style="font-weight: 300">
+                    <a id="site-title" href="/">Yakko Majuri</a>
+                </div>
+                <ul id="navbar">
+                    <li class="nav-item selected"><a href="/blog">blog</a></li>
+                    <li class="nav-item"><a href="/albums">pics</a></li>
+                    <li class="nav-item"><a href="/poems">poems</a></li>
+                </ul>
+                <div class="toggle-wrapper" onclick="toggleDarkMode()">
+                    <button id="darkModeToggle" class="toggle-button">☀️</button>
+                </div>
+            </nav>
+
+            <hr />
+
+            <h1 style="text-align: center; font-weight: 100; margin-top: 30px; margin-bottom: 30px">Blog</h1>
+            <div class="blog-container">
+                <div class="tag-selector">
+                    <span class="selector-tag selected" onclick="selectTag(this)">All</span>
+                    <span class="selector-tag" onclick="selectTag(this)">Software</span>
+                    <span class="selector-tag" onclick="selectTag(this)">Writing</span>
+                    <span class="selector-tag" onclick="selectTag(this)">Introspection</span>
+                    <span class="selector-tag" onclick="selectTag(this)">Travel</span>
+                    <span class="selector-tag" onclick="selectTag(this)">Rambles</span>
+                </div>
+                <a class="blog-post" href="/blog/pepper-spray-your-officers">
+                    <article data-tags="Rambles">
+                        <h2>Pepper spray your officers</h2>
+                        <time datetime="2023-02-13">February 13th, 2023</time>
+                        <p>
+                            Yesterday I was at a carnival event near the center of Belo Horizonte, my hometown. The
+                            event had a city permit, and so a key avenue was closed for the event to take place...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Rambles</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/retirement">
+                    <article data-tags="Rambles">
+                        <h2>Retirement</h2>
+                        <time datetime="2023-02-07">February 7th, 2023</time>
+                        <p>
+                            I was speaking to a gardener yesterday and he said: "I've sent my papers in for retirement.
+                            Man, I told my wife, if I retire, I'll start working 4-day weeks...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Rambles</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/goals-for-2023">
+                    <article data-tags="Rambles">
+                        <h2>Goals for 2023</h2>
+                        <time datetime="2023-02-04">February 4th, 2023</time>
+                        <p>
+                            I don't remember the last time I set goals for myself the new year. I generally operate
+                            day-to-day with some objectives in mind but have traditionally not been great at setting
+                            concrete goals...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Rambles</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/hacky">
+                    <article data-tags="Software">
+                        <h2>This website is hacky AF</h2>
+                        <time datetime="2023-07-03">July 3rd, 2022</time>
+                        <p>
+                            The website you currently find yourself on is really hacky. Here's a quick summary of the
+                            hacky things you might find on it...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Software</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/publishing-foolishness">
+                    <article data-tags="Rambles,Writing">
+                        <h2>Why I'm comfortable publishing foolishness</h2>
+                        <time datetime="2022-01-23">January 23rd, 2022</time>
+                        <p>
+                            When I started, I was very insecure. Well, still am. You'll find disclaimers, apologies,
+                            explanations, and the like all over my writing. As much as I'd prefer not to, I, like most,
+                            care about others think...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Rambles</span>
+                            <span class="tag">Writing</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/language-efficiency">
+                    <article data-tags="Software">
+                        <h2>What's the world's most efficient language?</h2>
+                        <time datetime="2022-01-23">January 23rd, 2022</time>
+                        <p>
+                            A while ago I was sitting on a plane and in a moment of boredom picked up the in-flight
+                            magazine. The magazine had a little travel article, and it was written in English on one
+                            page and Thai on the other...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Software</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/age-analytics">
+                    <article data-tags="Software">
+                        <h2>Can you tell me the age of my users?</h2>
+                        <time datetime="2022-01-16">January 16th, 2022</time>
+                        <p>
+                            I once had an onboarding call with a client where I was asked: "Can you tell me the age of
+                            my users?" - I'm an engineer at an analytics company, and upon getting asked that question I
+                            was immediately taken aback...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Software</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/thread-pool">
+                    <article data-tags="Software">
+                        <h2>Deep diving into the thread pool: a debugging story</h2>
+                        <time datetime="2022-01-16">January 14th, 2022</time>
+                        <p>
+                            Some months ago I found myself with the following issue in my sprint priorities: "BigQuery
+                            is very flakey on local / self-hosted" - Keeping context to a minimum, we run an open source
+                            analytics platform that you can self-host, and there are plugins to help you send data out
+                            of the platform...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Software</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/true-self">
+                    <article data-tags="Introspection">
+                        <h2>Finding your true self</h2>
+                        <time datetime="2023-07-20">January 12th, 2022</time>
+                        <p>
+                            Many years ago I received a letter that, among other things, provided me with some advice.
+                            Part of that advice was: "Drink less coffee [...] and read some fiction" - The writer was
+                            someone acutely aware of my approach to life, and my constant struggle to "turn off"...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Introspection</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/recovering-events">
+                    <article data-tags="Software">
+                        <h2>Recovering a customer's events</h2>
+                        <time datetime="2021-08-11">August 11th, 2021</time>
+                        <p>
+                            Here's a short post of a recent occurence just to get kickback into the habit about
+                            documenting debugging sessions and writing about software in general. Hopefully I'll cover
+                            some nastier stuff in upcoming pieces...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Software</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/heroku-postgres">
+                    <article data-tags="Rambles">
+                        <h2>Be careful with Heroku Postgres</h2>
+                        <time datetime="2021-10-24">October 10th, 2021</time>
+                        <p>
+                            This will be a short one. Just a quick lil' rant. Heroku is a great platform for starting
+                            out a project. You can get up and running quickly, and it's extremely easy to add in
+                            valuable services (via Heroku add-ons) as well as scaling up and down...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Rambles</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/the-hikers-goal">
+                    <article data-tags="Travel,Rambles">
+                        <h2>The hiker's goal</h2>
+                        <time datetime="2021-10-23">October 23rd, 2021</time>
+                        <p>
+                            Some time ago, on a reasonably challenging 5-day trail in the Pyrenees, my group encountered
+                            a dilemma. During the first 3 days of walking, our GPS devices and maps had all been showing
+                            the same way to the day's destination...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Travel</span>
+                            <span class="tag">Rambles</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/coronallacs">
+                    <article data-tags="Travel">
+                        <h2>Hiking around Andorra in 5 days</h2>
+                        <time datetime="2021-10-17">October 17th, 2021</time>
+                        <p>
+                            About a month ago I ticked off the top item on my "European Countries I'd Still Like To
+                            Visit" list: Andorra. The little mountainous country squeezed between Spain and France was
+                            staring at me every time I opened a map of Europe, so when a work trip took me back to the
+                            Iberian Peninsula, I wasn't going to waste the opportunity...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Travel</span>
+                        </div>
+                    </article>
+                </a>
+                <a class="blog-post" href="/blog/yc-product-analytics">
+                    <article data-tags="Software,Rambles">
+                        <h2>YC owns the product analytics space</h2>
+                        <time datetime="2021-10-12">October 12th, 2021</time>
+                        <p>
+                            I saw a tweet the other day that said YCombinator "dominates the product analytics
+                            category". This is indeed true. YC has invested in all the top players in the product
+                            analytics space: Mixpanel (S09), Amplitude (W12), and Heap (W13).
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Software</span>
+                            <span class="tag">Rambles</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/teeny">
+                    <article data-tags="Software">
+                        <h2>Why I built my own static site generator</h2>
+                        <time datetime="2021-10-10">October 10th, 2021</time>
+                        <p>
+                            The website you're currently on was built using a static site generator called Teeny. Until
+                            yesterday, Teeny wasn't even an idea. It didn't exist at all, not even in my mind. You see,
+                            for a long time I've been wanting to launch a personal blog...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Software</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/whats-the-cost">
+                    <article data-tags="Introspection,Rambles">
+                        <h2>What's the cost?</h2>
+                        <time datetime="2021-09-22">September 23, 2021</time>
+                        <p>
+                            "You look like you've lived a lot", she said. We were around 2500m above sea level, and it
+                            was day 3 up in the Andorran Pyrenees. I started off this journey by myself (which, and this
+                            is relevant, is also how I'd end up finishing it), but since day 2 I'd been hiking with 3
+                            others...
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Introspection</span>
+                            <span class="tag">Rambles</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a class="blog-post" href="/blog/so-many-thoughts">
+                    <article data-tags="Rambles">
+                        <h2>So many thoughts</h2>
+                        <time datetime="2021-01-17">January 17th, 2021</time>
+                        <p>So many thoughts...</p>
+                        <div class="tags">
+                            <span class="tag">Rambles</span>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Yakko Majuri</p>
+                <ul>
+                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/links">links</a></li>
+                </ul>
+            </div>
+        </footer>
+        <script src="../js/title.js"></script>
+        <script>
+            function selectTag(selectedTag) {
+                var tags = document.getElementsByClassName('selector-tag')
+                for (var i = 0; i < tags.length; i++) {
+                    tags[i].classList.remove('selected')
+                }
+                selectedTag.classList.add('selected')
+
+                var selectedTagName = selectedTag.textContent
+                var posts = document.getElementsByClassName('blog-post')
+                for (var i = 0; i < posts.length; i++) {
+                    var postTags = posts[i].firstElementChild.getAttribute('data-tags').split(',')
+                    if (selectedTagName === 'All' || postTags.includes(selectedTagName)) {
+                        posts[i].style.display = 'flex'
+                    } else {
+                        posts[i].style.display = 'none'
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

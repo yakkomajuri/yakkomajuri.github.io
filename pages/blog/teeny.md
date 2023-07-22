@@ -3,15 +3,12 @@ template: blog
 date: 10-10-2021
 ---
 
-_10/10/2021_
 
 # Why I built my own static site generator
 
 <details>
 
 <summary><b>TL;DR</b></summary>
-
-<br />
 
 I really wanted to get a personal blog up quickly, but the most popular static site generators either didn't fit my needs or did way too much.
 
@@ -29,8 +26,6 @@ teeny init && teeny develop
 <details open>
 
 <summary><b>The backstory</b></summary>
-
-<br />
 
 The website you're currently on was built using a static site generator called [Teeny](https://github.com/yakkomajuri/teeny).
 
@@ -88,8 +83,6 @@ You already know what happened.
 
 <details open>
 <summary><b>Introducing Teeny</b></summary>
-
-<br />
 
 Teeny is a super simple static site generator built to suit my needs and my needs only.
 
@@ -172,8 +165,6 @@ It listens for changes to the files and updates the static files on the fly (nai
 
 <summary><b>The final touches</b></summary>
 
-<br />
-
 Once I finished building Teeny, it took me very little time to get this blog up and running.
 
 I slapped [Pico.css](https://picocss.com/docs/) on my templates, making the site instantly look 100x better (big shoutout to them, I love it), and to deploy a new version I just run:
@@ -191,8 +182,6 @@ And that's all - that's how I got this blog all sorted out in about half a day.
 <details>
 
 <summary><b>Footnotes</b></summary>
-
-<br />
 
 **[1]:** This has since changed. Teeny now uses a frontmatter to specify page templates. Check out [Teeny's README](https://github.com/yakkomajuri/teeny#readme) for more details. And shoutout to HackerNews user [franciscop](https://news.ycombinator.com/user?id=franciscop) for the suggestion.
 

@@ -1,39 +1,39 @@
 img {
-  width: 100%;
-  vertical-align: middle;
-  padding: 3%;
-  box-sizing: border-box;
+    width: 100%;
+    vertical-align: middle;
+    padding: 3%;
+    box-sizing: border-box;
 }
 
 .modal-content > img {
-  text-align: center;
-  margin: auto;
-  max-height: 85vh;
-  max-width: 75vw;
-  width: auto;
-  height: auto;
+    text-align: center;
+    margin: auto;
+    max-height: 85vh;
+    max-width: 75vw;
+    width: auto;
+    height: auto;
 }
 
 .internal-pics {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .main {
-  padding: 20px;
+    padding: 20px;
 }
 
 .col {
-  flex: 33%;
+    flex: 33%;
 }
 
 h1,
 p {
-  text-align: center;
+    text-align: center;
 }
 
 p {
-  margin-top: -10px;
+    margin-top: -10px;
 }
