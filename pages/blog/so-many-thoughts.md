@@ -1,5 +1,5 @@
 ---
-template: index
+template: blog
 ---
 
 # So many thoughts
