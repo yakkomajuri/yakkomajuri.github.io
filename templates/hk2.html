@@ -12,6 +12,30 @@
         <link rel="stylesheet" href="../css/layout.css" />
         <link rel="stylesheet" href="../css/grid.css" />
 
+        <style>
+            .subtitle {
+                opacity: 80%;
+                text-align: center;
+                display: block;
+                font-size: 12px;
+                margin-top: -20px;
+                margin-bottom: 10px;
+                color: inherit;
+                text-decoration: none;
+            }
+
+            .subtitle a {
+                text-decoration: none;
+                color: inherit;
+                border-bottom: 1px dotted #48290c;
+            }
+
+            .subtitle a:hover {
+                opacity: 70%;
+            }
+        </style>
+
+
         <script src="../modal/modal.js"></script>
     </head>
     <body>
@@ -36,7 +60,9 @@
             <h1 style="text-align: center; font-weight: 100; margin-top: 30px; margin-bottom: 30px">
                 Hong Kong Protests, 2019
             </h1>
+            <p class="subtitle">you will find some of these pictures in the wild, on an <a target="_blank" href="https://www.mbl.is/frettir/burdargrein/2019/12/01/a_flakki_eftir_ad_skolinn_i_hong_kong_lokadi/">article published by Icelandic news outlet MBL</a> 
 
+            <br />
             <div class="main" id="main">
                 <div class="grid" id="grid">
                     <img loading="lazy" src="../img/hk/1.jpg" onclick="openModal(this)" />
