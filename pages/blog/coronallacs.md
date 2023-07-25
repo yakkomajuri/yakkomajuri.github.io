@@ -123,7 +123,7 @@ I set off on this trip by myself, and didn't bump into anyone going up during th
 
 It was a mostly lonely walk, with the exception of some cows and horses. The absolute highlight was a valley I reached after walking for around 3h. The sun was shining, some horses were hanging around, and the river provided a nice opportunity to freshen up.
 
-![Stage 1 highlight](../img/coronallacs/1.jpg)
+![Stage 1 highlight](../img/coronallacs/1.png)
 
 The first night is spent at Refugi de l'Illa, a reasonably modern shelter at located at an altitude of 2,488m. The refuge sits just under a dam, and I highly recommend going up to the lake for a dip.
 
@@ -164,7 +164,7 @@ The day started with around 350m of ascent in pretty rugged terrain. We soon rea
 
 From here we could see the lakes we'd be walking past for the coming hours.
 
-![Stage 2 lakes](../img/coronallacs/3.jpg)
+![Stage 2 lakes](../img/coronallacs/3.png)
 
 The turn to go down the mountain was an easy-to-miss one, and the descent was both steep and slippery, setting the tone for the rest of the day.
 
@@ -228,10 +228,10 @@ Our lunch break was at a phenomenal spot, with views like this:
 <div class='grid'>
 <div class="row">
   <div class="column">
-    <img src="../img/coronallacs/6.jpg" alt="Stage 3 lunch spot horses" style="width: 350px">
+    <img src="../img/coronallacs/6.png" alt="Stage 3 lunch spot horses" style="width: 350px">
   </div>
   <div class="column">
-    <img src="../img/coronallacs/7.jpg" alt="Stage 3 lunch spot lake" style="width: 350px">
+    <img src="../img/coronallacs/7.png" alt="Stage 3 lunch spot lake" style="width: 350px">
   </div>
 </div>
 </div>
