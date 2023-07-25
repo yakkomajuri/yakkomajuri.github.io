@@ -1,0 +1,3 @@
+---
+template: black-and-white
+---
