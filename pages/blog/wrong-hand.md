@@ -24,7 +24,7 @@ I wrote and wrote and nothing came out and it was this weird experience - I felt
 
 And then it hit me that I was writing in the wrong language.
 
-I was born in Brazil and lived here until I was 13, but then moved away and since then English has been my primary language. I write in English, I dream in English, I take notes in English, and so on. When I speak Portuguese, I have to fill in gaps with English words because I think in English. A Brazilian friend of mine once said: "I think only bilingual people can talk to you".
+I was born in Brazil and lived here until I was thirteen, but then moved away and since then English has been my primary language. I write in English, I dream in English, I take notes in English, and so on. When I speak Portuguese, I have to fill in gaps with English words because I think in English. A Brazilian friend of mine once said: "I think only bilingual people can talk to you".
 
 But poems only come to me in Portuguese. Or at least so far that's been the case. I can actually think of some logical explanations to this, such as the fact that for years my only contact with poetry was through Brazilian poems recited by my grandmother at Christmas. I also was uninterested in poems throughout most of my life, making it so that the bulk of the poetry reading I did was as a kid while I still lived in Brazil.
 
