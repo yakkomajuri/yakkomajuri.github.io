@@ -24,10 +24,10 @@ I wrote and wrote and nothing came out and it was this weird experience - I felt
 
 And then it hit me that I was writing in the wrong language.
 
-I was born in Brazil and lived here until I was 13, but then moved away and since then English has been my primary language. I write in English, I dream in English, I take notes in English, and so on. When I speak Portuguese, I have to fill in gaps with English words because I think in English. A Brazilian friend of mine once said: "only bilingual people can talk to you".
+I was born in Brazil and lived here until I was 13, but then moved away and since then English has been my primary language. I write in English, I dream in English, I take notes in English, and so on. When I speak Portuguese, I have to fill in gaps with English words because I think in English. A Brazilian friend of mine once said: "I think only bilingual people can talk to you".
 
 But poems only come to me in Portuguese. Or at least so far that's been the case. I can actually think of some logical explanations to this, such as the fact that for years my only contact with poetry was through Brazilian poems recited by my grandmother at Christmas. I also was uninterested in poems throughout most of my life, making it so that the bulk of the poetry reading I did was as a kid while I still lived in Brazil.
 
-Nevertheless, whatever the reason, it's an interesting concept. It makes me wonder what other things we're doing with the wrong hand because "that's how things have always been". 
+Nevertheless, whatever the reason, it's an interesting concept. It makes me wonder what other things we're doing with the wrong hand because "that's how things have always been".
 
 And on the topic of writing, I know for a fact that my technical writing needs to be done in English - I simply lack vocabulary to write anything technical in another language. But as I'm looking to branch out into other types of writing (like this very piece), taking multiple steps back, I wonder: am even I writing in the right language?
