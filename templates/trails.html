@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>"
+        />
+        <link rel="stylesheet" href="../css/layout.css" />
+        <link rel="stylesheet" href="../css/grid.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <style>
+            #map {
+                height: 680px;
+                width: auto;
+            }
+
+            .highlights-selector {
+                text-align: center;
+                margin-bottom: 5px;
+
+            }
+
+            .subtitle {
+                opacity: 80%;
+                text-align: center;
+                display: block;
+                font-size: 14px;
+                margin: auto;
+                margin-top: -20px;
+                margin-bottom: 10px;
+                color: inherit;
+                text-decoration: none;
+                max-width: 600px;
+            }
+        </style>
+
+        <script src="../modal/modal.js"></script>
+    </head>
+    <body>
+        <script src="../js/dark-mode.js"></script>
+        <div class="content">
+            <nav>
+                <div style="font-weight: 300">
+                    <a id="site-title" href="/">Yakko Majuri</a>
+                </div>
+                <ul id="navbar">
+                    <li class="nav-item"><a href="/blog">blog</a></li>
+                    <li class="nav-item"><a href="/albums">pics</a></li>
+                    <li class="nav-item"><a href="/poems">poems</a></li>
+                </ul>
+                <div class="toggle-wrapper" onclick="toggleDarkMode()">
+                    <button id="darkModeToggle" class="toggle-button">☀️</button>
+                </div>
+            </nav>
+
+            <hr />
+
+            <h1 style="text-align: center; font-weight: 100; margin-top: 30px; margin-bottom: 30px">Trails</h1>
+            <p class="subtitle">I've started an effort to document as many as possible of the trails I've done. A lot of the trails here will have very little information but the goal is that by kickstarting this process I'll make a habit out of it. Yellow pins mark the highlights.</p>
+  
+            <div class="highlights-selector">
+                <input type="checkbox" id="showHighlightsOnly" name="showHighlightsOnly">
+                <label for="showHighlightsOnly">Show highlights only</label>
+            </div>
+            <div id="map"></div>
+
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+            <script>
+                const map = L.map('map', {
+                    minZoom: 2,
+                    maxBounds: [
+                        [-90, -180],
+                        [90, 180]
+                    ]
+                }).setView([45.00, -0.09], 2);
+                
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+                const goldIcon = new L.Icon({
+                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                    iconSize: [15, 25],
+                    iconAnchor: [7, 25],
+                    popupAnchor: [1, -20],
+                    shadowSize: [25, 25]
+                  });
+
+                  const blueIcon = new L.Icon({
+                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                    iconSize: [15, 25],
+                    iconAnchor: [7, 25],
+                    popupAnchor: [1, -20],
+                    shadowSize: [25, 25]
+                  });
+                  
+        
+                const pins = [
+                    { name: 'Cachoeira Farofa de Cima, Serra do Cipó', href: '/trails/farofa-de-cima', coords: [-19.3300, -43.6111], highlight: true },
+                    { name: 'Travessia dos Lençóis Maranhenses', href: '/trails/travessia-lencois', coords: [-2.5297, -43.0356], highlight: true },
+                    { name: 'Coronallacs, Andorra', href: '/blog/coronallacs', coords: [42.5063, 1.5218], highlight: true },
+
+                    { name: 'Travessia Lapinha - Tabuleiro', coords: [-19.4549, -43.8042], highlight: true },
+                    
+                    { name: 'Fagradalsfjall', coords: [63.8833, -22.2667], highlight: true },
+                    { name: 'Fimmvörðuháls', coords: [63.6333, -19.5167], highlight: true },
+                    { name: 'Pico do Itacolomi', coords: [-20.4339, -43.5036], highlight: true },
+                    { name: 'Hvannadalshnúkur', coords: [64.0146, -16.6225], highlight: true },
+                    { name: 'Snæfellsjökull', coords: [64.8031, -23.7762], highlight: true },
+                    { name: 'Múlagljúfur Canyon', coords: [63.9667, -16.5833], highlight: true },
+                    { name: 'Mount Kinabalu', coords: [6.0753, 116.5583], highlight: true },
+                    { name: 'Mount Huashan', coords: [34.4879, 110.0806], highlight: true },
+                    { name: 'Morro da Baleia, Chapada dos Veadeiros', coords: [-14.1022, -47.6167], highlight: true },
+                    { name: 'Laugavegur Trail', coords: [63.9900, -19.0582], highlight: true },
+                    { name: 'Taroko Gorge, Taiwan', coords: [24.1517, 121.6253], highlight: true },
+                    { name: 'Skaftafell Loop', coords: [64.0167, -16.9667], highlight: true },
+                    { name: 'Cachoeira da Farofa, Serra do Cipó', coords: [-19.3559, -43.5892], description: '' },
+                    { name: 'Cânion das Bandeirinhas, Serra do Cipó', coords: [-19.3156, -43.5836], description: '' },
+                    { name: 'Pico da Lapinha', coords: [-19.4549, -43.8042], description: '' },
+                    { name: 'Cachoeira da Ostra, Brumadinho', coords: [-20.1435, -44.1997], description: '' },
+                    { name: 'Mirante Retiro das Pedras e Forte de Brumadinho', coords: [-20.1386, -44.2011], description: '' },
+                    { name: 'Mount Esja', coords: [64.4146, -21.3582], description: '' },
+                    { name: 'Helgafell', coords: [64.9629, -22.7142], description: '' },
+                    { name: 'Stuðlagil Canyon', coords: [65.0833, -15.4167], description: '' },
+                    { name: 'Akrafjall', coords: [64.3833, -22.0833], description: '' },
+                    { name: 'Blue Mountains, Australia', coords: [-33.6500, 150.3000], description: '' },
+                    { name: 'Zhangjiajie National Park', coords: [29.1171, 110.4792], description: '' },
+                    { name: 'Nuuksio National Park', coords: [60.3119, 24.4667], description: '' },
+                    { name: 'Trilha dos Saltos e Corredeiras, Chapada dos Veadeiros', coords: [-14.1022, -47.6167], description: '' },
+                    { name: 'Trilha do Canion I e Cachoeira Cariocas, Chapada dos Veadeiros', coords: [-14.1022, -47.6167], description: '' },
+                    { name: 'Setor de Boulder, Chapada dos Veadeiros', coords: [-14.1022, -47.6167], description: '' },
+                    { name: 'Mirante Serra do Curral, Belo Horizonte', coords: [-19.9208, -43.9125], description: '' },
+                    { name: 'Reykjadalur', coords: [64.0667, -21.1333], description: '' },
+                    { name: 'Pedra do Baú', coords: [-22.6833, -45.6500], description: '' },
+                    { name: 'Prateleiras, Parque do Itatiaia', coords: [-22.4500, -44.6167], description: '' },
+                    { name: 'Parc Natural de la Serra d\'Irta', coords: [40.3500, 0.4000], description: '' },
+                    { name: 'Unnamed mountain, Akkerhaugen', coords: [59.3833, 9.2500], description: '' },
+                    { name: 'Kenting, Taiwan', coords: [21.9487, 120.7805], description: '' },
+                    { name: 'Cape Fugui, Taiwan', coords: [25.2986, 121.5550], description: '' },
+                    { name: 'Victoria Peak, Hong Kong', coords: [22.2759, 114.1455], description: '' },
+                    { name: 'Dragon\'s Back, Hong Kong', coords: [22.2447, 114.2451], description: '' },
+                    { name: 'Lake Lochmond, Scotland', coords: [56.1114, -4.6286], description: '' },
+                    { name: 'La Chorrera, Colombia', coords: [4.6167, -74.0333], description: '' },
+                    { name: 'Matarredonda Ecological Park, Colombia', coords: [4.6167, -74.0333], description: '' },
+                    { name: 'Monserrate, Bogotá', coords: [4.6050, -74.0553], description: '' },
+                    { name: 'Parque Arví, Colombia', coords: [6.2500, -75.5000], description: '' },
+                    { name: 'Cachoeira 27 Voltas, Nova Lima', coords: [-20.1266, -43.8467], description: '' },
+                    { name: 'Drangajökull Glacier', coords: [66.0833, -22.3333], description: '' },
+                    { name: 'Kerhólakambur - Kambshorn', coords: [64.3833, -22.0833], description: '' },
+                    { name: 'Corumbau - Caraíva', coords: [-16.4333, -39.1333], description: '' },
+                    { name: 'Sant Jeroni Summit, Montserrat', coords: [41.5912, 1.8375], description: '' },
+                    { name: 'Arikok National Park, Aruba', coords: [12.5000, -69.9667], description: '' },
+                    { name: 'Hnífsdalur Valley', coords: [66.0833, -23.1333], description: '' },
+                    { name: 'Fosslaug', coords: [65.6833, -19.5667], description: '' },
+                    { name: 'Krafla', coords: [65.7333, -16.7833], description: '' },
+                    { name: 'Móskarðshnúkar', coords: [64.0667, -21.9333], description: '' },
+                    { name: 'Dettifoss', coords: [65.8167, -16.4000], description: '' },
+                    { name: 'Phi Phi Islands Viewpoint', coords: [7.7461, 98.7784], description: '' },
+                    { name: 'Keilir', coords: [63.9833, -22.5667], description: '' },
+                    { name: 'Ásbyrgi', coords: [66.0167, -16.9667], description: '' },
+                    { name: 'Hehuanshan', coords: [24.1667, 121.2833], description: '' },
+                    { name: 'Kattartjarnaleið', coords: [64.1333, -21.9333], description: '' },
+                    { name: 'Thingvellir', coords: [64.2551, -21.1305], description: '', highlight: false },
+            ];
+            
+
+            let markers = [];
+
+            function updateMarkers() {
+                // Remove all markers from the map
+                markers.forEach(function(marker) {
+                    map.removeLayer(marker);
+                });
+    
+                // Clear the markers array
+                markers = [];
+    
+                // Add the pins to the map
+                pins.forEach(function(pin) {
+                    if (document.getElementById('showHighlightsOnly').checked && !pin.highlight) {
+                        // Skip this pin if the checkbox is checked and the pin is not a highlight
+                        return;
+                    }
+    
+                    const marker = L.marker(pin.coords, { icon: pin.highlight ? goldIcon : blueIcon }).addTo(map);
+    
+                    const popupContent = `<p><b>${pin.name}</b></p><a href='${pin.href}'>Read trip report</a>`
+                    
+                    marker.bindPopup(popupContent);
+    
+                    markers.push(marker);
+                });
+            }
+    
+            // Update the markers when the checkbox is checked or unchecked
+            document.getElementById('showHighlightsOnly').addEventListener('change', updateMarkers);
+    
+            // Update the markers initially
+            updateMarkers();
+              
+            </script>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Yakko Majuri</p>
+                <ul>
+                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/links">links</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../js/title.js"></script>
+
+        <script>
+            !(function (t, e) {
+                var o, n, p, r
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split('.')
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                                })
+                        }
+                        ;((p = t.createElement('script')).type = 'text/javascript'),
+                            (p.async = !0),
+                            (p.src = s.api_host + '/static/array.js'),
+                            (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r)
+                        var u = e
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = 'posthog'
+                                    return 'posthog' !== a && (e += '.' + a), t || (e += ' (stub)'), e
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + '.people (stub)'
+                                },
+                                o =
+                                    'capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags'.split(
+                                        ' '
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n])
+                        e._i.push([i, s, a])
+                    }),
+                    (e.__SV = 1))
+            })(document, window.posthog || [])
+            posthog.init('Tom1k0Lh0sRN7EK8LIlU5mbbmAHMBSk37lc02ZQ__38', {
+                api_host: 'https://p.yakkos.workers.dev',
+                persistence: 'memory',
+            })
+        </script>
+    </body>
+</html>
