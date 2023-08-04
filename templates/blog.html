@@ -291,6 +291,8 @@
                 <ul id="navbar">
                     <li class="nav-item selected"><a href="/blog">blog</a></li>
                     <li class="nav-item"><a href="/albums">pics</a></li>
+                    <li class="nav-item"><a href="/trails">trails</a></li>
+                    
                     <li class="nav-item"><a href="/poems">poems</a></li>
                 </ul>
                 <div class="toggle-wrapper" onclick="toggleDarkMode()">
@@ -488,6 +490,9 @@
                     closeModal()
                 }
             }
+
+            // dynamic back button depending on path
+            document.getElementById('back-button').href = '/' + window.location.pathname.split('/')[1]
         </script>
         <script>
             !(function (t, e) {

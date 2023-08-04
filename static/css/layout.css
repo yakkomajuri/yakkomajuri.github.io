@@ -251,6 +251,19 @@ li b {
     h6 {
         font-size: 18px;
     }
+
+    .toggle-wrapper {
+        width: 40px;
+        height: 16px;
+    }
+
+    .nav-item {
+        font-size: 16px;
+    }
+
+    #navbar {
+        gap: 12px;
+    }
 }
 
 table {
