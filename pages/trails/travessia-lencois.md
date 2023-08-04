@@ -6,6 +6,8 @@ template: blog
 
 (this trip deserves a better report, but this is a start)
 
+**Location:** Maranhão, Brazil
+
 **Number of times I've done this trail:** Once, in 2022.
 
 Absolutely one of the best trails in the world. I can't provide exact information on length and elevation because these things aren't very accurate given you're walking over dunes. The numbers floated around most often are between 30-40km, but honestly I don't know. There are also a few different options for doing this in three or four days with different starting points.

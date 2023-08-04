@@ -6,6 +6,8 @@ template: blog
 
 [Trail link](https://www.alltrails.com/trail/brazil/minas-gerais/cachoeira-farofa-de-cima)
 
+**Location:** Serra do Cipó, Brazil
+
 **Length:** 14.5km
 
 **Elevation gain:** 570m
