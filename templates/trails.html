@@ -36,6 +36,10 @@
                 text-decoration: none;
                 max-width: 600px;
             }
+
+            .gold-icon {
+                z-index: 1000 !important;
+            }
         </style>
 
         <script src="../modal/modal.js"></script>
@@ -90,7 +94,9 @@
                     iconSize: [15, 25],
                     iconAnchor: [7, 25],
                     popupAnchor: [1, -20],
-                    shadowSize: [25, 25]
+                    shadowSize: [25, 25],
+                    className: 'gold-icon'
+                    
                   });
 
                   const blueIcon = new L.Icon({
@@ -104,23 +110,6 @@
                   
         
                 const pins = [
-                    { name: 'Cachoeira Farofa de Cima, Serra do Cipó', href: '/trails/farofa-de-cima', coords: [-19.3300, -43.6111], highlight: true },
-                    { name: 'Travessia dos Lençóis Maranhenses', href: '/trails/travessia-lencois', coords: [-2.5297, -43.0356], highlight: true },
-                    { name: 'Coronallacs, Andorra', href: '/blog/coronallacs', coords: [42.5063, 1.5218], highlight: true },
-                    { name: 'Travessia Lapinha - Tabuleiro', href: '/trails/travessia-lapinha-tabuleiro', coords: [-19.4549, -43.8042], highlight: true },
-                    { name: 'Pico do Itacolomi', href: '/trails/pico-do-itacolomi', coords: [-20.4339, -43.5036], highlight: true },
-                    { name: 'Mount Kinabalu', href: '/trails/mount-kinabalu', coords: [6.0753, 116.5583], highlight: true },
-                    { name: 'Hvannadalshnúkur', href: '/trails/hvannadalsnjukur', coords: [64.0146, -16.6225], highlight: true },
-
-
-                    { name: 'Snæfellsjökull', coords: [64.8031, -23.7762], highlight: true },
-                    { name: 'Múlagljúfur Canyon', coords: [63.9667, -16.5833], highlight: true },
-                    { name: 'Fagradalsfjall', coords: [63.8833, -22.2667], highlight: true },
-                    { name: 'Mount Huashan', coords: [34.4879, 110.0806], highlight: true },
-                    { name: 'Morro da Baleia, Chapada dos Veadeiros', coords: [-14.1022, -47.6167], highlight: true },
-                    { name: 'Laugavegur Trail', coords: [63.9900, -19.0582], highlight: true },
-                    { name: 'Taroko Gorge, Taiwan', coords: [24.1517, 121.6253], highlight: true },
-                    { name: 'Skaftafell Loop', coords: [64.0167, -16.9667], highlight: true },
                     { name: 'Fimmvörðuháls', coords: [63.6333, -19.5167] },
                     { name: 'Cachoeira da Farofa, Serra do Cipó', coords: [-19.3559, -43.5892], description: '' },
                     { name: 'Cânion das Bandeirinhas, Serra do Cipó', coords: [-19.3156, -43.5836], description: '' },
@@ -169,6 +158,24 @@
                     { name: 'Hehuanshan', coords: [24.1667, 121.2833], description: '' },
                     { name: 'Kattartjarnaleið', coords: [64.1333, -21.9333], description: '' },
                     { name: 'Thingvellir', coords: [64.2551, -21.1305], description: '', highlight: false },
+
+                    { name: 'Cachoeira Farofa de Cima, Serra do Cipó', href: '/trails/farofa-de-cima', coords: [-19.3300, -43.6111], highlight: true },
+                    { name: 'Travessia dos Lençóis Maranhenses', href: '/trails/travessia-lencois', coords: [-2.5297, -43.0356], highlight: true },
+                    { name: 'Coronallacs, Andorra', href: '/blog/coronallacs', coords: [42.5063, 1.5218], highlight: true },
+                    { name: 'Travessia Lapinha - Tabuleiro', href: '/trails/travessia-lapinha-tabuleiro', coords: [-19.4549, -43.8042], highlight: true },
+                    { name: 'Pico do Itacolomi', href: '/trails/pico-do-itacolomi', coords: [-20.4339, -43.5036], highlight: true },
+                    { name: 'Mount Kinabalu', href: '/trails/mount-kinabalu', coords: [6.0753, 116.5583], highlight: true },
+                    { name: 'Hvannadalshnúkur', href: '/trails/hvannadalsnjukur', coords: [64.0146, -16.6225], highlight: true },
+                    { name: 'Morro da Baleia, Chapada dos Veadeiros', href: '/trails/morro-da-baleia', coords: [-14.1022, -47.6167], highlight: true },
+                    { name: 'Snæfellsjökull',  href: '/trails/snaefellsjokull', coords: [64.8031, -23.7762], highlight: true },
+
+                    { name: 'Múlagljúfur Canyon', coords: [63.9667, -16.5833], highlight: true },
+                    
+                    { name: 'Fagradalsfjall', coords: [63.8833, -22.2667], highlight: true },
+                    { name: 'Mount Huashan', coords: [34.4879, 110.0806], highlight: true },
+                    { name: 'Laugavegur Trail', coords: [63.9900, -19.0582], highlight: true },
+                    { name: 'Taroko Gorge, Taiwan', coords: [24.1517, 121.6253], highlight: true },
+                    { name: 'Skaftafell Loop', coords: [64.0167, -16.9667], highlight: true },
             ];
             
 
