@@ -6,7 +6,7 @@ template: blog
 
 [Trail link](https://www.wikiloc.com/hiking-trails/morro-da-baleia-alto-paraiso-de-goias-pelo-camping-do-valdomiro-87156920) 
 
-**Location:** Goiás, Brasil
+**Location:** Goiás, Brazil
 
 **Peak height:** 1500m
 
