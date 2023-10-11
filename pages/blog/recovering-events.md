@@ -4,6 +4,8 @@ template: blog
 
 # Recovering a customer's events
 
+_August 11th, 2021_
+
 Here's a short post of a recent occurence just to get kickback into the habit about documenting debugging sessions and writing about software in general. Hopefully I'll cover some nastier stuff in upcoming pieces.
 
 Just the other day I had a session booked in my calendar that was gearing up to be painful.

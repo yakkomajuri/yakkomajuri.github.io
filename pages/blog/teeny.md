@@ -6,6 +6,8 @@ date: 10-10-2021
 
 # Why I built my own static site generator
 
+_October 10th, 2021_
+
 <details>
 
 <summary><b>TL;DR</b></summary>

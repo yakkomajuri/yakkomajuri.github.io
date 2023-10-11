@@ -5,6 +5,8 @@ title: Hiking around Andorra in 5 days
 
 # Hiking around Andorra in 5 days
 
+_October 17th, 2021_
+
 > For photos of this trip, check out this [photo gallery](/pics/coronallacs).
 
 About a month ago I ticked off the top item on my "European Countries I'd Still Like To Visit" list: Andorra.

@@ -4,6 +4,8 @@ template: blog
 
 # So many thoughts
 
+_January 17th, 2021_
+
 So many thoughts.
 
 Ideas.

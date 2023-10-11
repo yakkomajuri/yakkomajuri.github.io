@@ -5,6 +5,8 @@ template: blog
 
 # What's the cost?
 
+_September 23, 2021_
+
 "You look like you've lived a lot", she said.
 
 We were around 2500m above sea level, and it was day 3 up in the Andorran Pyrenees.

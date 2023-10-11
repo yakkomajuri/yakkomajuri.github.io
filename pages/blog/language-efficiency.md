@@ -4,6 +4,8 @@ template: blog
 
 # What's the world's most efficient language?
 
+_January 23rd, 2022_
+
 <br/>
 
 <div class="notice">

@@ -3,6 +3,8 @@ template: blog
 ---
 # Be careful with Heroku Postgres
 
+_October 10th, 2021_
+
 This will be a short one. Just a quick _lil'_ rant.
 
 Heroku is a great platform for starting out a project. You can get up and running quickly, and it's extremely easy to add in valuable services (via Heroku add-ons) as well as scaling up and down.

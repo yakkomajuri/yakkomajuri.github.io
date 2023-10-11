@@ -2,8 +2,9 @@
 template: blog
 ---
 
-
 # Deep diving into the thread pool: a debugging story
+
+_January 14th, 2022_
 
 Some months ago I found myself with the following issue in my sprint priorities:
 

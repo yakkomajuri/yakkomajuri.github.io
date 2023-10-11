@@ -4,6 +4,8 @@ template: blog
 
 # This website is hacky AF
 
+_July 3rd, 2022_
+
 The website you currently find yourself on is **really** hacky.
 
 Here's a quick summary of the hacky things you might find on it. 

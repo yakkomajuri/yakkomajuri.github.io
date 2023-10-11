@@ -6,6 +6,8 @@ template: blog
 
 > _...duly flagged as such, of course._
 
+_January 23rd, 2022_
+
 When I started, I was very insecure.
 
 Well, still am.

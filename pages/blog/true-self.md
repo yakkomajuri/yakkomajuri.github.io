@@ -2,8 +2,9 @@
 template: blog
 ---
 
-
 # Finding your true self
+
+_January 12th, 2022_
 
 Many years ago I received a letter that, among other things, provided me with some advice. Part of that advice was:
 

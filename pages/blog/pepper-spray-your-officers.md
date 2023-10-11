@@ -4,6 +4,8 @@ template: blog
 
 # Pepper spray your officers
 
+_February 13th, 2023_
+
 Yesterday I was at a carnival event near the center of Belo Horizonte, my hometown. The event had a city permit, and so a key avenue was closed for the event to take place.
 
 There were thousands of people there, but as the rain intensified most people left and a couple hundred or so of us or so remained on one end of the avenue.

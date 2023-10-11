@@ -4,6 +4,8 @@ template: blog
 
 # Can you tell me the age of my users?
 
+_January 16th, 2022_
+
 I once had an onboarding call with a client where I was asked:
 
 > _"Can you tell me the age of my users?"_

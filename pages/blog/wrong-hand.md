@@ -4,6 +4,8 @@ template: blog
 
 # Writing in the wrong language
 
+_July 28th, 2023_
+
 Perhaps one of the most criticized basketball players in recent times is this guy called Ben Simmons.
 
 He was named an NBA All-Star (one of the best players in the league) and then his play began to decline significantly, with a lot of criticism surrounding his shot.

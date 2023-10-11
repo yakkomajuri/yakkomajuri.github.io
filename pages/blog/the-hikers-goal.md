@@ -4,6 +4,8 @@ template: blog
 
 # The hiker's goal
 
+_October 23rd, 2021_
+
 Some time ago, on a reasonably challenging [5-day trail in the Pyrenees](blog/coronallacs), my group encountered a dilemma.
 
 During the first 3 days of walking, our GPS devices and maps had all been showing the same way to the day's destination.

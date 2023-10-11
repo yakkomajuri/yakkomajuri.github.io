@@ -3,6 +3,8 @@ template: blog
 ---
 # YC owns the product analytics space
 
+_October 12th, 2021_
+
 I saw a tweet the other day that said YCombinator "dominates the product analytics category".
 
 This is indeed true. YC has invested in all the top players in the product analytics space: Mixpanel (S09), Amplitude (W12), and Heap (W13).
