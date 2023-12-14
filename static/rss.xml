@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+    <title>Memoirs and Rambles Blog</title>
+    <link>https://memoirsandrambles.substack.com</link>
+    <description>A collection of travel and ramble stories</description>
+    <lastBuildDate>Thu, 14 Dec 2023 15:30:26 GMT</lastBuildDate>
+
+    <item>
+        <title>An (un)lucky hitchhike in Taiwan</title>
+        <link>https://memoirsandrambles.substack.com/p/an-unlucky-hitchhike-in-taiwan</link>
+        <pubDate>2023-12-12</pubDate>
+        <description>It's a small world</description>
+    </item>
+    <item>
+        <title>Salsa at the Brothel</title>
+        <link>https://memoirsandrambles.substack.com/p/dancing-salsa-at-a-brothel-in-medellin</link>
+        <pubDate>2023-12-12</pubDate>
+        <description>Exploring the Medellín locals told me not to visit</description>
+    </item>
+    <item>
+        <title>Twin in Berlin</title>
+        <link>https://memoirsandrambles.substack.com/p/twin-in-berlin</link>
+        <pubDate>2023-12-12</pubDate>
+        <description>Finding love in a Scottish dorm kitchen</description>
+    </item>
+    <item>
+        <title>Riding Strangers’ Cars From Zinal To Chamonix</title>
+        <link>https://memoirsandrambles.substack.com/p/riding-strangers-cars-from-zinal</link>
+        <pubDate>2023-12-12</pubDate>
+        <description>On mountains and roads in the Alps — and what really matters</description>
+    </item>
+    <item>
+        <title>Reflecting on my 2023 goals</title>
+        <link>https://yakkomajuri.com/blog/reflecting-on-my-2023-goals</link>
+        <pubDate>2023-10-11</pubDate>
+        <description>A late update on the progress of my goals for 2023.</description>
+    </item>
+    <item>
+        <title>Os bons são a maioria (minha versão)</title>
+        <link>https://yakkomajuri.com/blog/os-bons-sao-a-maioria</link>
+        <pubDate>2023-10-11</pubDate>
+        <description>A temperatura marca 35 graus, e estou caminhando há mais ou menos 8 horas. Nesse período me perdi, minha água acabou, corri de cachorros, quase pisei em uma cobra, e perdi minha camisa, tendo colocado-a por cima do ombro por causa de tanto suor...</description>
+    </item>
+    <item>
+        <title>Writing in the wrong language</title>
+        <link>https://yakkomajuri.com/blog/wrong-hand</link>
+        <pubDate>2023-02-13</pubDate>
+        <description>Perhaps one of the most criticized basketball players in recent times is this guy called Ben Simmons. He was named an NBA All-Star (one of the best players in the league) and then his play began to decline significantly, with a lot of criticism surrounding his shot...</description>
+    </item>
+    <item>
+        <title>February 2023 Notes</title>
+        <link>https://yakkomajuri.com/blog/goals-for-2023</link>
+        <pubDate>2023-03-03</pubDate>
+        <description>February recap of my yearly goals</description>
+    </item>
+    <item>
+        <title>Pepper spray your officers</title>
+        <link>https://yakkomajuri.com/blog/pepper-spray-your-officers</link>
+        <pubDate>2023-02-13</pubDate>
+        <description>Yesterday I was at a carnival event near the center of Belo Horizonte, my hometown. The
+                            event had a city permit, and so a key avenue was closed for the event to take place...</description>
+    </item>
+    <item>
+        <title>Retirement</title>
+        <link>https://yakkomajuri.com/blog/retirement</link>
+        <pubDate>2023-02-07</pubDate>
+        <description>I was speaking to a gardener yesterday and he said: "I've sent my papers in for retirement.
+                            Man, I told my wife, if I retire, I'll start working 4-day weeks...</description>
+    </item>
+    <item>
+        <title>Goals for 2023</title>
+        <link>https://yakkomajuri.com/blog/goals-for-2023</link>
+        <pubDate>2023-02-04</pubDate>
+        <description>I don't remember the last time I set goals for myself the new year. I generally operate
+                            day-to-day with some objectives in mind but have traditionally not been great at setting
+                            concrete goals...</description>
+    </item>
+    <item>
+        <title>This website is hacky AF</title>
+        <link>https://yakkomajuri.com/blog/hacky</link>
+        <pubDate>2023-07-03</pubDate>
+        <description>The website you currently find yourself on is really hacky. Here's a quick summary of the
+                            hacky things you might find on it...</description>
+    </item>
+    <item>
+        <title>Why I'm comfortable publishing foolishness</title>
+        <link>https://yakkomajuri.com/blog/publishing-foolishness</link>
+        <pubDate>2022-01-23</pubDate>
+        <description>When I started, I was very insecure. Well, still am. You'll find disclaimers, apologies,
+                            explanations, and the like all over my writing. As much as I'd prefer not to, I, like most,
+                            care about others think...</description>
+    </item>
+    <item>
+        <title>What's the world's most efficient language?</title>
+        <link>https://yakkomajuri.com/blog/language-efficiency</link>
+        <pubDate>2022-01-23</pubDate>
+        <description>A while ago I was sitting on a plane and in a moment of boredom picked up the in-flight
+                            magazine. The magazine had a little travel article, and it was written in English on one
+                            page and Thai on the other...</description>
+    </item>
+    <item>
+        <title>Can you tell me the age of my users?</title>
+        <link>https://yakkomajuri.com/blog/age-analytics</link>
+        <pubDate>2022-01-16</pubDate>
+        <description>I once had an onboarding call with a client where I was asked: "Can you tell me the age of
+                            my users?" - I'm an engineer at an analytics company, and upon getting asked that question I
+                            was immediately taken aback...</description>
+    </item>
+    <item>
+        <title>Deep diving into the thread pool: a debugging story</title>
+        <link>https://yakkomajuri.com/blog/thread-pool</link>
+        <pubDate>2022-01-16</pubDate>
+        <description>Some months ago I found myself with the following issue in my sprint priorities: "BigQuery
+                            is very flakey on local / self-hosted" - Keeping context to a minimum, we run an open source
+                            analytics platform that you can self-host, and there are plugins to help you send data out
+                            of the platform...</description>
+    </item>
+    <item>
+        <title>Finding your true self</title>
+        <link>https://yakkomajuri.com/blog/true-self</link>
+        <pubDate>2023-07-20</pubDate>
+        <description>Many years ago I received a letter that, among other things, provided me with some advice.
+                            Part of that advice was: "Drink less coffee [...] and read some fiction" - The writer was
+                            someone acutely aware of my approach to life, and my constant struggle to "turn off"...</description>
+    </item>
+    <item>
+        <title>Recovering a customer's events</title>
+        <link>https://yakkomajuri.com/blog/recovering-events</link>
+        <pubDate>2021-08-11</pubDate>
+        <description>Here's a short post of a recent occurence just to get kickback into the habit about
+                            documenting debugging sessions and writing about software in general. Hopefully I'll cover
+                            some nastier stuff in upcoming pieces...</description>
+    </item>
+    <item>
+        <title>Be careful with Heroku Postgres</title>
+        <link>https://yakkomajuri.com/blog/heroku-postgres</link>
+        <pubDate>2021-10-24</pubDate>
+        <description>This will be a short one. Just a quick lil' rant. Heroku is a great platform for starting
+                            out a project. You can get up and running quickly, and it's extremely easy to add in
+                            valuable services (via Heroku add-ons) as well as scaling up and down...</description>
+    </item>
+    <item>
+        <title>The hiker's goal</title>
+        <link>https://yakkomajuri.com/blog/the-hikers-goal</link>
+        <pubDate>2021-10-23</pubDate>
+        <description>Some time ago, on a reasonably challenging 5-day trail in the Pyrenees, my group encountered
+                            a dilemma. During the first 3 days of walking, our GPS devices and maps had all been showing
+                            the same way to the day's destination...</description>
+    </item>
+    <item>
+        <title>Hiking around Andorra in 5 days</title>
+        <link>https://yakkomajuri.com/blog/coronallacs</link>
+        <pubDate>2021-10-17</pubDate>
+        <description>About a month ago I ticked off the top item on my "European Countries I'd Still Like To
+                            Visit" list: Andorra. The little mountainous country squeezed between Spain and France was
+                            staring at me every time I opened a map of Europe, so when a work trip took me back to the
+                            Iberian Peninsula, I wasn't going to waste the opportunity...</description>
+    </item>
+    <item>
+        <title>YC owns the product analytics space</title>
+        <link>https://yakkomajuri.com/blog/yc-product-analytics</link>
+        <pubDate>2021-10-12</pubDate>
+        <description>I saw a tweet the other day that said YCombinator "dominates the product analytics
+                            category". This is indeed true. YC has invested in all the top players in the product
+                            analytics space: Mixpanel (S09), Amplitude (W12), and Heap (W13).</description>
+    </item>
+    <item>
+        <title>Why I built my own static site generator</title>
+        <link>https://yakkomajuri.com/blog/teeny</link>
+        <pubDate>2021-10-10</pubDate>
+        <description>The website you're currently on was built using a static site generator called Teeny. Until
+                            yesterday, Teeny wasn't even an idea. It didn't exist at all, not even in my mind. You see,
+                            for a long time I've been wanting to launch a personal blog...</description>
+    </item>
+    <item>
+        <title>What's the cost?</title>
+        <link>https://yakkomajuri.com/blog/whats-the-cost</link>
+        <pubDate>2021-09-22</pubDate>
+        <description>"You look like you've lived a lot", she said. We were around 2500m above sea level, and it
+                            was day 3 up in the Andorran Pyrenees. I started off this journey by myself (which, and this
+                            is relevant, is also how I'd end up finishing it), but since day 2 I'd been hiking with 3
+                            others...</description>
+    </item>
+    <item>
+        <title>Building a modern react app from scratch</title>
+        <link>https://yakkomajuri.com/blog/react-from-scratch</link>
+        <pubDate>2021-02-24</pubDate>
+        <description>The main objective of this tutorial for me was to get myself to better understand the multiple moving parts that make a React app work, rather than just accepting the "magic" of the many templates/boilerplates out there...</description>
+    </item>
+    <item>
+        <title>So many thoughts</title>
+        <link>https://yakkomajuri.com/blog/so-many-thoughts</link>
+        <pubDate>2021-01-17</pubDate>
+        <description>So many thoughts...</description>
+    </item>
+</channel>
+</rss>
