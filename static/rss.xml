@@ -1,10 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-    <title>Memoirs and Rambles Blog</title>
-    <link>https://memoirsandrambles.substack.com</link>
-    <description>A collection of travel and ramble stories</description>
-    <lastBuildDate>Thu, 14 Dec 2023 15:30:26 GMT</lastBuildDate>
+    <title>Yakko Majuri</title>
+    <link>https://yakkomajuri.com</link>
+    <description>Yakko's personal website</description>
+    <lastBuildDate>Wed, 6 Mar 2024 12:00:00 GMT</lastBuildDate>
+
+    <item>
+        <title>I'll probably be (relatively) poor soon</title>
+        <link>https://memoirsandrambles.substack.com/p/patagonia-diaries</link>
+        <pubDate>2024-03-04</pubDate>
+        <description>Also known as: my friends will get rich</description>
+    </item>
+
+    <item>
+        <title>The B Circuit</title>
+        <link>https://memoirsandrambles.substack.com/p/the-b-circuit</link>
+        <pubDate>2024-02-28</pubDate>
+        <description>Patagonia Diaries #2</description>
+    </item>
+
+    <item>
+        <title>What the fuck is going on in Argentina?</title>
+        <link>https://memoirsandrambles.substack.com/p/what-the-fuck-is-going-on-in-argentina</link>
+        <pubDate>2024-02-21</pubDate>
+        <description>Patagonia Diaries #1</description>
+    </item>
+
+    <item>
+        <title>Patagonia Diaries</title>
+        <link>https://memoirsandrambles.substack.com/p/patagonia-diaries</link>
+        <pubDate>2024-02-14</pubDate>
+        <description>Reflections from a long roadtrip</description>
+    </item>
+
+    <item>
+        <title>Eiger Dreams</title>
+        <link>https://memoirsandrambles.substack.com/p/eiger-dreams</link>
+        <pubDate>2024-02-07</pubDate>
+        <description>On the importance of seeing</description>
+    </item>
+
+    <item>
+        <title>Hitchhiking around all of Taiwan</title>
+        <link>https://memoirsandrambles.substack.com/p/hitchhiking-around-all-of-taiwan</link>
+        <pubDate>2024-01-31</pubDate>
+        <description>Three weeks, dozens of amazing strangers, and endless stories</description>
+    </item>
+
+    <item>
+        <title>Northern lights</title>
+        <link>https://memoirsandrambles.substack.com/p/northern-lights</link>
+        <pubDate>2024-01-24</pubDate>
+        <description>On beauty and complacency</description>
+    </item>
+
+    <item>
+        <title>My scary first hitchhike</title>
+        <link>https://memoirsandrambles.substack.com/p/my-scary-first-hitchhike</link>
+        <pubDate>2024-01-17</pubDate>
+        <description>Eighteen, shirtless, and alone in middle of nowhere Spain — what could go wrong?</description>
+    </item>
+
+    <item>
+        <title>Tides and the fight against the sand in the Brazilian Northeast</title>
+        <link>https://memoirsandrambles.substack.com/p/a-fight-against-the-sand</link>
+        <pubDate>2024-01-10</pubDate>
+        <description>On tides, sand, winters, and how certain rough lives might be more natural than mine</description>
+    </item>
+
+    <item>
+        <title>Everything will be alright in Iceland</title>
+        <link>https://memoirsandrambles.substack.com/p/late-for-biology-class</link>
+        <pubDate>2024-01-03</pubDate>
+        <description>On volcanoes, crises, and what we can learn from Icelanders</description>
+    </item>
 
     <item>
         <title>Late for biology class</title>
@@ -13,7 +83,7 @@
         <description>Treasure hunt gone wrong</description>
     </item>
 
-        <item>
+    <item>
         <title>Trust me, I lived in Sydney</title>
         <link>https://memoirsandrambles.substack.com/p/trust-me-i-lived-in-sydney</link>
         <pubDate>2023-12-20</pubDate>
