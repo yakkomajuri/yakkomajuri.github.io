@@ -275,8 +275,6 @@
                     max-width: 300px;
                 }
             }
-
-            
         </style>
 
         <script src="../modal/modal.js"></script>
@@ -375,6 +373,7 @@
             <div class="footer-content">
                 <p>© 2023 Yakko Majuri</p>
                 <ul>
+                    <li><a href="https://github.com/yakkomajuri" rel="me">github</a></li>
                     <li><a href="/contact">contact</a></li>
                     <li><a href="/links">links</a></li>
                 </ul>
@@ -468,7 +467,9 @@
                     }
                 })
 
-                var headings = document.querySelectorAll('#page-content h1, #page-content h2, #page-content h3, #page-content h4, #page-content h5, #page-content h6')
+                var headings = document.querySelectorAll(
+                    '#page-content h1, #page-content h2, #page-content h3, #page-content h4, #page-content h5, #page-content h6'
+                )
                 headings.forEach(function (p) {
                     if (fontFamily) {
                         p.style.fontFamily = fontFamily
