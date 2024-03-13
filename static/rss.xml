@@ -4,12 +4,19 @@
     <title>Yakko Majuri</title>
     <link>https://yakkomajuri.com</link>
     <description>Yakko's personal website</description>
-    <lastBuildDate>Wed, 6 Mar 2024 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2024 12:00:00 GMT</lastBuildDate>
+
+    <item>
+        <title>There are many ways to say I love you</title>
+        <link>https://memoirsandrambles.substack.com/p/there-are-many-ways-to-say-i-love</link>
+        <pubDate>2024-03-13</pubDate>
+        <description></description>
+    </item>
 
     <item>
         <title>I'll probably be (relatively) poor soon</title>
         <link>https://memoirsandrambles.substack.com/p/patagonia-diaries</link>
-        <pubDate>2024-03-04</pubDate>
+        <pubDate>2024-03-06</pubDate>
         <description>Also known as: my friends will get rich</description>
     </item>
 
