@@ -1,0 +1,631 @@
+<html><head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+
+        <link rel="stylesheet" href="../css/layout.css">
+
+        <link rel="stylesheet" href="../highlight/nord.min.css">
+        <script type="text/javascript" src="../highlight/highlight.min.js"></script>
+
+        <title>Deep diving into the thread pool: a debugging story</title>
+
+        <style>
+            h1 {
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .page-content-wrapper {
+                width: 800px;
+                display: block;
+                margin: auto;
+            }
+
+            #page-content a {
+                text-decoration: none;
+                color: #48290c;
+                font-weight: 400;
+                border-bottom: 1px dotted #48290c;
+            }
+
+            #page-content a:hover {
+                opacity: 0.8;
+            }
+
+            .dark-mode #page-content a {
+                color: rgb(2, 167, 167);
+                border-bottom: 1px dotted rgb(2, 167, 167);
+            }
+
+            blockquote {
+                padding: 0px 10px;
+            }
+
+            pre > code {
+                font-family: monospace;
+                font-size: 16px;
+            }
+
+            img {
+                max-width: 400px;
+                text-align: center;
+                margin: auto;
+                display: block;
+            }
+
+            .column {
+                float: left;
+                padding: 5px;
+            }
+
+            .img-gallery-2 .column {
+                width: 50%;
+            }
+
+            .row::after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+
+            #back-button {
+                position: absolute;
+                top: -10px; /* Adjust this value to move the button up or down */
+                left: 0;
+                text-decoration: none;
+                color: inherit;
+                opacity: 0.5;
+                font-size: 24px;
+                padding: 10px; /* Increase the clickable area */
+                margin: -10px; /* Offset the added padding */
+                z-index: 10;
+            }
+
+            #back-button:hover {
+                opacity: 0.8;
+            }
+
+            body.dark-mode #back-button {
+                color: #d3d3d3;
+            }
+            #settings-button {
+                position: absolute;
+                top: -10px;
+                right: 0;
+                text-decoration: none;
+                color: inherit;
+                opacity: 0.5;
+                font-size: 24px;
+                padding: 10px;
+                margin: -10px;
+                z-index: 10;
+            }
+
+            #settings-button:hover {
+                opacity: 0.8;
+            }
+
+            body.dark-mode #settings-button {
+                color: #d3d3d3;
+            }
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            #settings-form label {
+                display: block;
+                margin-top: 10px;
+            }
+
+            .modal {
+                display: none;
+                position: absolute; /* Change from fixed to absolute */
+                z-index: 20;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 30%; /* Make the modal smaller */
+                max-width: 400px; /* Make the modal smaller */
+                border-radius: 5px;
+            }
+
+            /* Add dark mode styles for the modal */
+            body.dark-mode .modal-content {
+                background-color: #11191f;
+                color: #d3d3d3;
+                border-color: #37383c;
+            }
+
+            /* Add styles for the "Reset to defaults" button */
+            #reset-button {
+                margin-left: 10px;
+            }
+
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .form-group {
+                flex: 1;
+                padding: 0 10px; /* Optional: add some space between the inputs */
+            }
+
+            .button-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .button-row input[type='submit'],
+            .button-row input[type='button'] {
+                flex: 1;
+                margin-right: 10px;
+                height: 40px; /* Set a specific height */
+                vertical-align: middle; /* Align the text in the middle */
+            }
+
+            /* Light Mode */
+            .button-row input[type='submit'] {
+                background-color: #8c562d; /* Primary button color */
+                color: #f7f2f0; /* Primary button text color */
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .button-row input[type='button'] {
+                background-color: transparent; /* Secondary button color */
+                color: #8c562d; /* Secondary button text color */
+                border: 1px solid #8c562d;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .button-row input[type='submit']:hover {
+                background-color: #6b4a36; /* Darken primary button color on hover */
+            }
+
+            .button-row input[type='button']:hover {
+                background-color: #8c562d; /* Change secondary button color on hover */
+                color: #f7f2f0; /* Change secondary button text color on hover */
+            }
+
+            /* Dark Mode */
+            body.dark-mode .button-row input[type='submit'] {
+                background-color: rgb(2, 167, 167); /* Primary button color */
+                color: #11191f; /* Primary button text color */
+            }
+
+            body.dark-mode .button-row input[type='button'] {
+                background-color: transparent; /* Secondary button color */
+                color: rgb(2, 167, 167); /* Secondary button text color */
+                border: 1px solid rgb(2, 167, 167);
+            }
+
+            body.dark-mode .button-row input[type='submit']:hover {
+                background-color: rgb(0, 140, 140); /* Darken primary button color on hover */
+            }
+
+            body.dark-mode .button-row input[type='button']:hover {
+                background-color: rgb(2, 167, 167); /* Change secondary button color on hover */
+                color: #11191f; /* Change secondary button text color on hover */
+            }
+
+            .dark-mode .modal {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+            @media only screen and (max-width: 800px) {
+                .page-content-wrapper {
+                    width: 95%;
+                    display: block;
+                    margin: auto;
+                }
+
+                .modal-content {
+                    background-color: #fefefe;
+                    margin: 10% auto;
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%; /* Make the modal smaller */
+                    max-width: 400px; /* Make the modal smaller */
+                    border-radius: 5px;
+                    overflow: auto;
+                }
+
+                h1 {
+                    padding: 20px;
+                }
+
+                img {
+                    max-width: 300px;
+                }
+            }
+        </style>
+
+        <script>
+            !function(){var e="";var t="\n        .recess-comment-container {\n            display: flex !important;\n            gap: 16px !important;\n            padding: 8px !important;\n            border-bottom: 1px solid #eaeaea !important;\n            background: white !important;\n            border-radius: 8px !important;\n            margin-bottom: 12px !important;\n\n        }\n\n        .recess-comment-avatar img {\n            width: 50px !important;\n            height: 50px !important;\n            border-radius: 25px !important;\n        }\n\n        .recess-comment-body {\n            display: flex !important;\n            flex-direction: column !important;\n            width: 100% !important;\n        }\n\n        .recess-comment-header {\n            display: flex !important;\n            justify-content: space-between !important;\n            margin-bottom: 8px !important;\n        }\n\n        .recess-comment-author, .recess-comment-date {\n            cursor: pointer !important;\n        }\n\n        .recess-comment-date {\n            color: #999 !important;\n            font-size: 12px !important;\n        }\n\n        .recess-comment-content {\n            font-size: 14px !important;\n        }\n\n        .recess-main-text {\n            font-size: 16px !important;\n            margin: auto !important;\n            text-align: center !important;\n            margin-bottom: 8px !important;\n        }\n\n        .recess-comment-input-container {\n            margin-top: 20px !important;\n            background-color: #ffffff !important;\n            padding: 16px !important;\n            border-radius: 8px !important;\n            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;\n            border: 1px solid #eaeaea !important;\n            display: flex !important;\n            flex-direction: column !important;\n            gap: 10px !important;\n            margin-bottom: 12px !important;\n        }\n\n        .recess-comment-textarea {\n            width: 100% !important;\n            padding: 8px !important;\n            border-radius: 8px !important;\n            border: 1px solid #eaeaea !important;\n            resize: vertical !important;\n            box-sizing: border-box !important;\n            background-color: #efefef !important;\n            font-family: inherit !important;\n        }\n\n        .recess-comment-textarea:focus {\n            border: 1px solid gray !important;\n        }\n\n        .submit-recess-comment-button {\n            align-self: flex-end !important;\n            padding: 8px 16px !important;\n            border-radius: 8px !important;\n            border: none !important;\n            color: white !important;\n            background-color: #1890ff !important;\n            cursor: pointer !important;\n        }\n\n        .submit-recess-comment-button:disabled {\n            background-color: #a0a0a0 !important;\n            cursor: not-allowed !important;\n        }\n    ",n=document.createElement("style");function o(e){const t=document.getElementById("recess");if(!t)return void console.error('"recess" div not found. Please ensure your page includes a div with id="recess".');e.forEach((e=>{const n=document.createElement("div");n.className="recess-comment-container";const o=document.createElement("div");o.className="recess-comment-avatar",o.style.cursor="pointer";const a=document.createElement("img");a.src=`https://www.gravatar.com/avatar/${e.comment_user_email_hash}?s=64&d=mp`,a.alt=e.comment_username,o.appendChild(a);const r=document.createElement("div");r.className="recess-comment-body";const m=document.createElement("div");m.className="recess-comment-header";const s=document.createElement("span");s.className="recess-comment-author",s.style.cursor="pointer",s.textContent=e.comment_username;const c=document.createElement("span");c.className="recess-comment-date",c.textContent=function(e){const t=new Date,n=new Date(e),o=Math.round((t.getTime()-n.getTime())/1e3),a=Math.round(o/60),r=Math.round(a/60),m=Math.round(r/24);return a<60?`${a} minutes ago`:r<24?`${r} hours ago`:1===m?"yesterday":m<7?`${m} days ago`:`${n.getDate().toString().padStart(2,"0")}/${(n.getMonth()+1).toString().padStart(2,"0")}/${n.getFullYear()}`}(new Date(e.comment_timestamp)),m.appendChild(s),m.appendChild(c);const i=document.createElement("div");i.className="recess-comment-content",i.textContent=e.comment_content,r.appendChild(m),r.appendChild(i),n.appendChild(o),n.appendChild(r),t.appendChild(n)}));const n=document.createElement("div"),o=document.createElement("p");o.className="recess-main-text",o.innerHTML='Comments powered by <a href="https://app.recessfeed.com" target="_blank">Recess</a>.',n.appendChild(o),t.appendChild(n)}n.styleSheet?n.styleSheet.cssText=t:n.appendChild(document.createTextNode(t)),document.getElementsByTagName("head")[0].appendChild(n),fetch(`https://us.recessfeed.com/api/posts?post_url=${encodeURIComponent(`${window.location.origin}${window.location.pathname}`)}`).then((e=>e.json())).then((t=>{t.length>0&&(e=t[0].post_uuid,function(){const t=document.getElementById("recess");if(t){t.innerHTML="";var n=document.createElement("div");n.innerHTML='\n            <div class="recess-comment-input-container">\n                <textarea rows="4" class="recess-comment-textarea" id="post-recess-comment-textarea" placeholder="Write a comment..." maxLength="1000"></textarea>\n                <button onclick="handleSubmitComment()" class="submit-recess-comment-button">Add Comment</button>\n            </div>\n        ',window.handleSubmitComment=function(){const t=document.getElementById("post-recess-comment-textarea").value;window.location=`https://app.recessfeed.com/post/${e}?comment_text=${encodeURIComponent(t)}`},t.appendChild(n)}else console.error('"recess" div not found. Please ensure your page includes a div with id="recess".')}(),fetch(`https://us.recessfeed.com/api/post_comments?post_url=${encodeURIComponent(`${window.location.origin}${window.location.pathname}`)}`).then((e=>e.json())).then((t=>{t.length>0&&(e=t[0].post,o(t))})).catch((e=>console.error("Error fetching comments:",e))))})).catch((e=>console.error("Error fetching comments:",e)))}();
+        </script>
+        <script src="../modal/modal.js"></script>
+    </head>
+    <body>
+        <script src="../js/dark-mode.js"></script>
+        <div class="content">
+            <nav>
+                <div style="font-weight: 300">
+                    <a id="site-title" href="/">Yakko Majuri</a>
+                </div>
+                <ul id="navbar">
+                    <li class="nav-item selected"><a href="/blog">blog</a></li>
+                    <li class="nav-item"><a href="/albums">pics</a></li>
+                    <li class="nav-item"><a href="/poems">poems</a></li>
+                </ul>
+                <div class="toggle-wrapper" onclick="toggleDarkMode()">
+                    <button id="darkModeToggle" class="toggle-button">☀️</button>
+                </div>
+            </nav>
+
+            <hr>
+
+            <div class="page-content-wrapper">
+                <a href="/blog" id="back-button">↩</a>
+                <a id="settings-button" href="#">⚙</a>
+                <div id="page-content"><h1 id="deep-diving-into-the-thread-pool-a-debugging-story">Deep diving into the thread pool: a debugging story</h1>
+<p><em>January 14th, 2022</em></p>
+<p>Some months ago I found myself with the following issue in my sprint priorities:</p>
+<p><a href="https://github.com/PostHog/bigquery-plugin/issues/10">"BigQuery is very flakey on local / self-hosted"</a></p>
+<p>Keeping context to a minimum, we run an open source analytics platform that you can self-host, and there are plugins to help you send data out of the platform and into other tools, of which BigQuery is one of them.</p>
+<p>Now, two weeks or so before the sprint at hand, a customer who was using the BigQuery plugin on their self-hosted instance reported seeing a lot of errors on the plugin's logs, saying something about execution having timed out.</p>
+<p>Plugins can run tasks that last up to 30 seconds at a time, and it seemed inserts to BigQuery were taking more than that to complete.</p>
+<p>Even worse, it seemed that somehow some inserts were succeeding despite throwing the error, which caused us to export duplicates as our retry logic was triggered.</p>
+<p>Plus, to top it off, this was reportedly happening on local Postgres-backed deployments and self-hosted ClickHouse-backed instances, but not on our ClickHouse-backed Cloud instance. What?</p>
+<p>And so, back to my sprint goals. Having read all the context I could find, it seemed the consensus until now was that BigQuery was at fault here.</p>
+<p>However, I was a bit skeptical. I had been working on building plugins, and just the week before I had encountered similar cryptic errors while working on another plugin.</p>
+<p>I originally shrugged them off, but the light bulb went on as soon as I read the issue about the BigQuery plugin.</p>
+<p>Something deeper was going on.</p>
+<h2 id="the-util-shuffle">The util shuffle</h2>
+<p>While the BigQuery plugin didn't seem to be the only one affected, it could potentially give me some insight into what's happening.</p>
+<p>I started running it while inspecting the code, and something quickly became clear: we'd regularly throw errors on the first insert attempt, but never on retries.</p>
+<p>What could be different here?</p>
+<p>Bingo! The buffer.</p>
+<p>Our plugins have a few options when it comes to asynchronous processing, primarily the jobs API and the buffer util.</p>
+<p>The BigQuery plugin used the buffer on the first insert attempt, but leveraged jobs (another API) to process retries.</p>
+<p>Given that the problem seemed to only occur on the first run, it seemed that the buffer was to blame.</p>
+<h2 id="beyond-a-reasonable-doubt">Beyond a reasonable doubt</h2>
+<p>Ok, so the buffer seemed to be the problem, but this needed to be confirmed.</p>
+<p>As such, I setup a plugin that used both a buffer and a job to call the same async function that made a request to an endpoint that'd always wait 5s before responding, and timed the performance of the two.</p>
+<p>The job always executed in around the same amount of time, but the buffer would vary a lot:</p>
+<p><img src="https://user-images.githubusercontent.com/38760734/123464398-1efa6f00-d5c3-11eb-86a4-612fd36d0d3a.png" alt="logs"></p>
+<p>I went through thousands of runs, and the job was always consistent. The buffer would vary from 5s to 29s and then came the timeouts.</p>
+<p>So the buffer was the problem. But finding out why was where my beard hairs started to come out.</p>
+<p>I started to notice connection reset, socket hang up, and other sorts of errors. I knew the request would only take 5s, so there were 25s to spare. This made no sense, and so my hunch was that this a problem lower down.</p>
+<h2 id="🔥">🔥</h2>
+<p>At this point I spent hours looking a Node.js and Piscina (our thread pool) docs and testing out different config options, but I wasn't going anywhere.</p>
+<p>So finally I decided to run the plugin server with a flamegraph tool called <a href="https://github.com/davidmarkclements/0x">0x</a>.</p>
+<p>And <em>that</em> looked like <em>this</em>:</p>
+<p><img src="https://user-images.githubusercontent.com/38760734/123465219-3a19ae80-d5c4-11eb-857c-588c31a33262.png" alt="flamegraph"></p>
+<p>Hm, what's <code>atomicsWaitLoop</code>?</p>
+<p>I went to the Piscina repo and there was the answer:</p>
+<pre><code class="language-js">function atomicsWaitLoop (port : MessagePort, sharedBuffer : Int32Array) {
+  if (!useAtomics) return;
+
+  // This function is entered either after receiving the startup message, or
+  // when we are done with a task. In those situations, the *only* thing we
+  // expect to happen next is a 'message' on `port`.
+  // That call would come with the overhead of a C++ → JS boundary crossing,
+  // including async tracking. So, instead, if there is no task currently
+  // running, we wait for a signal from the parent thread using Atomics.wait(),
+  // and read the message from the port instead of generating an event,
+  // in order to avoid that overhead.
+  // The one catch is that this stops asynchronous operations that are still
+  // running from proceeding. Generally, tasks should not spawn asynchronous
+  // operations without waiting for them to finish, though.
+
+  ...
+}
+</code></pre>
+<p>Oh.</p>
+<blockquote>
+<p>"Generally, tasks should not spawn asynchronous operations without waiting for them to finish, though."</p>
+</blockquote>
+<p>That's exactly what the buffer does!</p>
+<p>So we were doing something our thread pool recommended against. That probably was it. But we did this across the board! How come this error didn't happen on Cloud but happened on self-hosted instances?</p>
+<p>As it turns out, the error <em>did</em> happen on Cloud, but very infrequently. It was also merged in with other legitimate timeouts on Sentry, which made it hard to spot.</p>
+<p>But that still wasn't it. What is <em>really</em> happening and how can we fix it?</p>
+<h2 id="never-block-the-event-loop">Never block the event loop</h2>
+<p>The golden rule in the JavaScript ecosystem is <a href="https://nodejs.org/en/docs/guides/dont-block-the-event-loop/">"don't block the event loop"</a>.</p>
+<p>The event loop is JavaScript's approach to asynchronous operations in a single-threaded environment.</p>
+<p>It is much better explained by <a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/">others</a>, so I'll refrain from covering it here.</p>
+<p>As it turns out, in order to improve performance around the communication between the main thread and the worker threads, Piscina defaults to running a (potentially infinite) while loop that proactively looks for new tasks for the worker on a specified port, rather than waiting for the callback triggered by listening for new messages.</p>
+<p>As a result, while Piscina is checking for new messages, it blocks the event loop, so nothing else gets done.</p>
+<p>And, given we have set timeouts for our tasks to execute, if a worker is blocking for more than 30 seconds, once it is free again for other processing, it goes to handle the callbacks from our task, but at this point we force the timeout.</p>
+<p>Now, this only happens with <em>voided promises</em>. Promises that are explicitly voided (i.e. not awaited) in order to be processed "in the background", where the result is not important. If a promise is awaited, the task is not marked as complete as long as the promise is not done, and thus the worker doesn't get into the blocked state to look for new tasks.</p>
+<p>Concretely, here's an example scenario:</p>
+<ol>
+<li>PostHog receives an event</li>
+<li>This event is passed to a plugin for processing</li>
+<li>This plugin voids a promise sending a POST request to BigQuery with the event</li>
+<li>The worker marks the task as complete and goes on to look for new tasks</li>
+<li>The event loop is blocked for 45 seconds</li>
+<li>A new event comes in, and a new task is picked up</li>
+<li>When it gets a chance, the event loop tries to handle the callback from the voided promise</li>
+<li>As it goes to handle the callback from the request, our wrapper forces a timeout and the plugin errors (despite the request having completed successfully)</li>
+<li>Our retry logic was triggered and the event was exported twice</li>
+</ol>
+<h2 id="when-the-lack-of-load-is-the-problem">When the lack of load is the problem</h2>
+<p>Now, the reason this affected our clients' instances more than our Cloud instance is because the Piscina worker will only block the event loop when it is looking for new tasks. If it is processing a task, it will be able to handle the background callbacks and such normally.</p>
+<p>So, while on Cloud we process hundreds of thousands of events per minute, with each event potentially triggering multiple tasks, some of our clients could feasibly go 30 seconds without a worker receiving a task, thus triggering this issue.</p>
+<p>This is tricky, because upon seeing something like a timeout error, you might think you should scale <em>up</em>, as is the solution for other similar issues we have faced that cause timeouts.</p>
+<p>However, if you scale vertically, we'll add more threads to the plugin server - the default setting is <code>n(threads) == n(cpus)</code> - and if you scale horizontally, we'll also be running more worker threads.</p>
+<p>As such, you're increasing the chance that a given worker will have to wait 30 or more seconds for a task.</p>
+<p>The (temporary) answer here would actually be to scale <em>down</em>.</p>
+<h2 id="the-solution">The solution</h2>
+<p>So, the client could scale down to potentially mitigate this problem, but that's certainly not a good solution.</p>
+<p>But how did we <em>fix</em> this?</p>
+<p>Well, one thing we could have done was get rid of voided promises altogether. However, the benefit they bring us in performance is significant.</p>
+<p>As such, we started to brainstorm on approaches that would allow us to keep the voided promises.</p>
+<p>The first attempt was very straightforward. Piscina provides a <code>useAtomics</code> flag that can be used to disable the blocking mechanism instead of the slower approach of waiting for the signal denoting a new message.</p>
+<p>Upon benchmarking this with our system, however, I found that our event ingestion rate <a href="https://github.com/PostHog/plugin-server/issues/487#issuecomment-870509629">slowed down by around 27%</a> when <code>useAtomics</code> was set to <code>false</code>. This is an unacceptable performance drop, so we scrapped the idea.</p>
+<p>Thus, after toying with a few other ideas, we landed on the following (note that we were already running a <em>fork</em> of Piscina):</p>
+<p><strong>Introduce a setting denoting a maximum amount of time a worker should block the event loop while looking for tasks before falling back into the slower mechanism. (<a href="https://github.com/PostHog/piscina/pull/4">Implementation</a>)</strong></p>
+<p>Sensible defaults were then set for our Cloud and self-hosted instances (originally 1s and 5s respectively).</p>
+<blockquote>
+<p><em>Note that we've forked Piscina in order to tailor it to our very specific needs. This isn't a general solution but was a good fit for us.</em></p>
+</blockquote>
+<p>The reason this works is because on our Cloud instance, where performance is paramount, most of the time workers will get a new task in fractions of a second, so the absolute vast majority of tasks will be picked up using the fast mechanism.</p>
+<p>However, on self-hosted instances processing low volumes, if workers are already taking e.g. 5 seconds to get a new task, the load on the instance is so little that the performance hit won't be problematic, since it is unlikely it will lead to a long backlog of tasks.</p>
+<p>And so, that's how we kept our performance intact without touching the voided promises.</p>
+<hr>
+<p><em><a href="https://github.com/PostHog/plugin-server/issues/487">Here's the original ticket</a> where this was explained and a discussion about possibilities took place</em>.</p>
+</div>
+                <script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('buy me a coffee', '#bfa16d', 'R5R7W88CQ');kofiwidget2.draw();</script> 
+                <div id="recess"></div>
+            </div>
+        </div>
+
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">×</span>
+                <form id="settings-form">
+                    <div class="form-group">
+                        <label for="font-family">Font Family:</label>
+                        <select id="font-family" name="font-family">
+                            <option value="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                                System UI
+                            </option>
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="'MS Serif', 'New York', sans-serif">MS Serif</option>
+                            <option value="'Lucida Sans Unicode', sans-serif">Lucida Sans Unicode</option>
+                            <option value="'Times New Roman', Times, serif">Times New Roman</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Impact, sans-serif">Impact</option>
+                            <option value="'Lucida Console', monospace">Lucida Console</option>
+                            <option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">
+                                Palatino Linotype
+                            </option>
+                            <option value="Tahoma, Geneva, sans-serif">Tahoma</option>
+                            <option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet MS</option>
+                            <option value="Verdana, Geneva, sans-serif">Verdana</option>
+                            <option value="'MS Sans Serif', Geneva, sans-serif">MS Sans Serif</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="font-size">Font Size:</label>
+                            <input type="number" id="font-size" name="font-size" min="10" max="24" step="1" placeholder="18">
+                        </div>
+                        <div class="form-group">
+                            <label for="font-weight">Font Weight:</label>
+                            <input type="number" id="font-weight" name="font-weight" min="100" max="600" step="100" placeholder="200">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="button-row">
+                        <input type="button" id="reset-button" value="Reset to defaults">
+                        <input type="submit" value="Apply">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Yakko Majuri</p>
+                <ul>
+                    <li><a href="https://github.com/yakkomajuri" rel="me">github</a></li>
+                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/links">links</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../js/title.js"></script>
+        <script>
+            hljs.highlightAll()
+
+            if (!localStorage.getItem('fontFamily')) {
+                localStorage.setItem(
+                    'fontFamily',
+                    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+                )
+            }
+
+            if (!localStorage.getItem('fontSize')) {
+                localStorage.setItem('fontSize', '18')
+            }
+
+            if (!localStorage.getItem('fontWeight')) {
+                localStorage.setItem('fontWeight', '200')
+            }
+
+            document.getElementById('settings-button').addEventListener('click', function (event) {
+                event.preventDefault()
+                document.getElementById('settings-modal').style.display = 'block'
+                document.body.style.overflow = 'hidden' // Prevent scrolling
+            })
+
+            document.getElementById('settings-form').addEventListener('submit', function (event) {
+                event.preventDefault()
+                var fontFamily = document.getElementById('font-family').value
+                var fontSize = document.getElementById('font-size').value
+                var fontWeight = document.getElementById('font-weight').value
+                localStorage.setItem('fontFamily', fontFamily)
+                localStorage.setItem('fontSize', fontSize)
+                localStorage.setItem('fontWeight', fontWeight)
+                applyFontSettings()
+                closeModal()
+            })
+
+            document.getElementById('reset-button').addEventListener('click', function () {
+                localStorage.setItem(
+                    'fontFamily',
+                    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+                )
+                localStorage.setItem('fontSize', '18')
+                localStorage.setItem('fontWeight', '200')
+                applyFontSettings()
+                closeModal()
+            })
+
+            function closeModal() {
+                document.getElementById('settings-modal').style.display = 'none'
+                document.body.style.overflow = 'auto' // Allow scrolling
+            }
+
+            window.onload = function () {
+                applyFontSettings()
+            }
+
+            function applyFontSettings() {
+                var fontFamily = localStorage.getItem('fontFamily')
+                var fontSize = localStorage.getItem('fontSize')
+                var fontWeight = localStorage.getItem('fontWeight')
+                var paragraphs = document.querySelectorAll('#page-content p')
+                paragraphs.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontSize) {
+                        p.style.fontSize = fontSize + 'px'
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+
+                var lists = document.querySelectorAll('#page-content li')
+                lists.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontSize) {
+                        p.style.fontSize = fontSize + 'px'
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+
+                var headings = document.querySelectorAll(
+                    '#page-content h1, #page-content h2, #page-content h3, #page-content h4, #page-content h5, #page-content h6'
+                )
+                headings.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+                document.getElementById('font-family').value = fontFamily || ''
+                document.getElementById('font-size').value = fontSize || ''
+                document.getElementById('font-weight').value = fontWeight || ''
+            }
+
+            // Close the modal when the user clicks outside of the modal content
+            window.onclick = function (event) {
+                if (event.target == document.getElementById('settings-modal')) {
+                    closeModal()
+                }
+            }
+        </script>
+        <script>
+            !(function (t, e) {
+                var o, n, p, r
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split('.')
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                                })
+                        }
+                        ;((p = t.createElement('script')).type = 'text/javascript'),
+                            (p.async = !0),
+                            (p.src = s.api_host + '/static/array.js'),
+                            (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r)
+                        var u = e
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = 'posthog'
+                                    return 'posthog' !== a && (e += '.' + a), t || (e += ' (stub)'), e
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + '.people (stub)'
+                                },
+                                o =
+                                    'capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags'.split(
+                                        ' '
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n])
+                        e._i.push([i, s, a])
+                    }),
+                    (e.__SV = 1))
+            })(document, window.posthog || [])
+            posthog.init('Tom1k0Lh0sRN7EK8LIlU5mbbmAHMBSk37lc02ZQ__38', {
+                api_host: 'https://p.yakkos.workers.dev',
+                persistence: 'memory',
+            })
+        </script>
+    
+
+</body></html>

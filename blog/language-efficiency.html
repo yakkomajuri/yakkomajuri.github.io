@@ -1,0 +1,1135 @@
+<html><head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+
+        <link rel="stylesheet" href="../css/layout.css">
+
+        <link rel="stylesheet" href="../highlight/nord.min.css">
+        <script type="text/javascript" src="../highlight/highlight.min.js"></script>
+
+        <title>What's the world's most efficient language?</title>
+
+        <style>
+            h1 {
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .page-content-wrapper {
+                width: 800px;
+                display: block;
+                margin: auto;
+            }
+
+            #page-content a {
+                text-decoration: none;
+                color: #48290c;
+                font-weight: 400;
+                border-bottom: 1px dotted #48290c;
+            }
+
+            #page-content a:hover {
+                opacity: 0.8;
+            }
+
+            .dark-mode #page-content a {
+                color: rgb(2, 167, 167);
+                border-bottom: 1px dotted rgb(2, 167, 167);
+            }
+
+            blockquote {
+                padding: 0px 10px;
+            }
+
+            pre > code {
+                font-family: monospace;
+                font-size: 16px;
+            }
+
+            img {
+                max-width: 400px;
+                text-align: center;
+                margin: auto;
+                display: block;
+            }
+
+            .column {
+                float: left;
+                padding: 5px;
+            }
+
+            .img-gallery-2 .column {
+                width: 50%;
+            }
+
+            .row::after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+
+            #back-button {
+                position: absolute;
+                top: -10px; /* Adjust this value to move the button up or down */
+                left: 0;
+                text-decoration: none;
+                color: inherit;
+                opacity: 0.5;
+                font-size: 24px;
+                padding: 10px; /* Increase the clickable area */
+                margin: -10px; /* Offset the added padding */
+                z-index: 10;
+            }
+
+            #back-button:hover {
+                opacity: 0.8;
+            }
+
+            body.dark-mode #back-button {
+                color: #d3d3d3;
+            }
+            #settings-button {
+                position: absolute;
+                top: -10px;
+                right: 0;
+                text-decoration: none;
+                color: inherit;
+                opacity: 0.5;
+                font-size: 24px;
+                padding: 10px;
+                margin: -10px;
+                z-index: 10;
+            }
+
+            #settings-button:hover {
+                opacity: 0.8;
+            }
+
+            body.dark-mode #settings-button {
+                color: #d3d3d3;
+            }
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            #settings-form label {
+                display: block;
+                margin-top: 10px;
+            }
+
+            .modal {
+                display: none;
+                position: absolute; /* Change from fixed to absolute */
+                z-index: 20;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 30%; /* Make the modal smaller */
+                max-width: 400px; /* Make the modal smaller */
+                border-radius: 5px;
+            }
+
+            /* Add dark mode styles for the modal */
+            body.dark-mode .modal-content {
+                background-color: #11191f;
+                color: #d3d3d3;
+                border-color: #37383c;
+            }
+
+            /* Add styles for the "Reset to defaults" button */
+            #reset-button {
+                margin-left: 10px;
+            }
+
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .form-group {
+                flex: 1;
+                padding: 0 10px; /* Optional: add some space between the inputs */
+            }
+
+            .button-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .button-row input[type='submit'],
+            .button-row input[type='button'] {
+                flex: 1;
+                margin-right: 10px;
+                height: 40px; /* Set a specific height */
+                vertical-align: middle; /* Align the text in the middle */
+            }
+
+            /* Light Mode */
+            .button-row input[type='submit'] {
+                background-color: #8c562d; /* Primary button color */
+                color: #f7f2f0; /* Primary button text color */
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .button-row input[type='button'] {
+                background-color: transparent; /* Secondary button color */
+                color: #8c562d; /* Secondary button text color */
+                border: 1px solid #8c562d;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .button-row input[type='submit']:hover {
+                background-color: #6b4a36; /* Darken primary button color on hover */
+            }
+
+            .button-row input[type='button']:hover {
+                background-color: #8c562d; /* Change secondary button color on hover */
+                color: #f7f2f0; /* Change secondary button text color on hover */
+            }
+
+            /* Dark Mode */
+            body.dark-mode .button-row input[type='submit'] {
+                background-color: rgb(2, 167, 167); /* Primary button color */
+                color: #11191f; /* Primary button text color */
+            }
+
+            body.dark-mode .button-row input[type='button'] {
+                background-color: transparent; /* Secondary button color */
+                color: rgb(2, 167, 167); /* Secondary button text color */
+                border: 1px solid rgb(2, 167, 167);
+            }
+
+            body.dark-mode .button-row input[type='submit']:hover {
+                background-color: rgb(0, 140, 140); /* Darken primary button color on hover */
+            }
+
+            body.dark-mode .button-row input[type='button']:hover {
+                background-color: rgb(2, 167, 167); /* Change secondary button color on hover */
+                color: #11191f; /* Change secondary button text color on hover */
+            }
+
+            .dark-mode .modal {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+            @media only screen and (max-width: 800px) {
+                .page-content-wrapper {
+                    width: 95%;
+                    display: block;
+                    margin: auto;
+                }
+
+                .modal-content {
+                    background-color: #fefefe;
+                    margin: 10% auto;
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%; /* Make the modal smaller */
+                    max-width: 400px; /* Make the modal smaller */
+                    border-radius: 5px;
+                    overflow: auto;
+                }
+
+                h1 {
+                    padding: 20px;
+                }
+
+                img {
+                    max-width: 300px;
+                }
+            }
+        </style>
+
+        <script>
+            !function(){var e="";var t="\n        .recess-comment-container {\n            display: flex !important;\n            gap: 16px !important;\n            padding: 8px !important;\n            border-bottom: 1px solid #eaeaea !important;\n            background: white !important;\n            border-radius: 8px !important;\n            margin-bottom: 12px !important;\n\n        }\n\n        .recess-comment-avatar img {\n            width: 50px !important;\n            height: 50px !important;\n            border-radius: 25px !important;\n        }\n\n        .recess-comment-body {\n            display: flex !important;\n            flex-direction: column !important;\n            width: 100% !important;\n        }\n\n        .recess-comment-header {\n            display: flex !important;\n            justify-content: space-between !important;\n            margin-bottom: 8px !important;\n        }\n\n        .recess-comment-author, .recess-comment-date {\n            cursor: pointer !important;\n        }\n\n        .recess-comment-date {\n            color: #999 !important;\n            font-size: 12px !important;\n        }\n\n        .recess-comment-content {\n            font-size: 14px !important;\n        }\n\n        .recess-main-text {\n            font-size: 16px !important;\n            margin: auto !important;\n            text-align: center !important;\n            margin-bottom: 8px !important;\n        }\n\n        .recess-comment-input-container {\n            margin-top: 20px !important;\n            background-color: #ffffff !important;\n            padding: 16px !important;\n            border-radius: 8px !important;\n            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;\n            border: 1px solid #eaeaea !important;\n            display: flex !important;\n            flex-direction: column !important;\n            gap: 10px !important;\n            margin-bottom: 12px !important;\n        }\n\n        .recess-comment-textarea {\n            width: 100% !important;\n            padding: 8px !important;\n            border-radius: 8px !important;\n            border: 1px solid #eaeaea !important;\n            resize: vertical !important;\n            box-sizing: border-box !important;\n            background-color: #efefef !important;\n            font-family: inherit !important;\n        }\n\n        .recess-comment-textarea:focus {\n            border: 1px solid gray !important;\n        }\n\n        .submit-recess-comment-button {\n            align-self: flex-end !important;\n            padding: 8px 16px !important;\n            border-radius: 8px !important;\n            border: none !important;\n            color: white !important;\n            background-color: #1890ff !important;\n            cursor: pointer !important;\n        }\n\n        .submit-recess-comment-button:disabled {\n            background-color: #a0a0a0 !important;\n            cursor: not-allowed !important;\n        }\n    ",n=document.createElement("style");function o(e){const t=document.getElementById("recess");if(!t)return void console.error('"recess" div not found. Please ensure your page includes a div with id="recess".');e.forEach((e=>{const n=document.createElement("div");n.className="recess-comment-container";const o=document.createElement("div");o.className="recess-comment-avatar",o.style.cursor="pointer";const a=document.createElement("img");a.src=`https://www.gravatar.com/avatar/${e.comment_user_email_hash}?s=64&d=mp`,a.alt=e.comment_username,o.appendChild(a);const r=document.createElement("div");r.className="recess-comment-body";const m=document.createElement("div");m.className="recess-comment-header";const s=document.createElement("span");s.className="recess-comment-author",s.style.cursor="pointer",s.textContent=e.comment_username;const c=document.createElement("span");c.className="recess-comment-date",c.textContent=function(e){const t=new Date,n=new Date(e),o=Math.round((t.getTime()-n.getTime())/1e3),a=Math.round(o/60),r=Math.round(a/60),m=Math.round(r/24);return a<60?`${a} minutes ago`:r<24?`${r} hours ago`:1===m?"yesterday":m<7?`${m} days ago`:`${n.getDate().toString().padStart(2,"0")}/${(n.getMonth()+1).toString().padStart(2,"0")}/${n.getFullYear()}`}(new Date(e.comment_timestamp)),m.appendChild(s),m.appendChild(c);const i=document.createElement("div");i.className="recess-comment-content",i.textContent=e.comment_content,r.appendChild(m),r.appendChild(i),n.appendChild(o),n.appendChild(r),t.appendChild(n)}));const n=document.createElement("div"),o=document.createElement("p");o.className="recess-main-text",o.innerHTML='Comments powered by <a href="https://app.recessfeed.com" target="_blank">Recess</a>.',n.appendChild(o),t.appendChild(n)}n.styleSheet?n.styleSheet.cssText=t:n.appendChild(document.createTextNode(t)),document.getElementsByTagName("head")[0].appendChild(n),fetch(`https://us.recessfeed.com/api/posts?post_url=${encodeURIComponent(`${window.location.origin}${window.location.pathname}`)}`).then((e=>e.json())).then((t=>{t.length>0&&(e=t[0].post_uuid,function(){const t=document.getElementById("recess");if(t){t.innerHTML="";var n=document.createElement("div");n.innerHTML='\n            <div class="recess-comment-input-container">\n                <textarea rows="4" class="recess-comment-textarea" id="post-recess-comment-textarea" placeholder="Write a comment..." maxLength="1000"></textarea>\n                <button onclick="handleSubmitComment()" class="submit-recess-comment-button">Add Comment</button>\n            </div>\n        ',window.handleSubmitComment=function(){const t=document.getElementById("post-recess-comment-textarea").value;window.location=`https://app.recessfeed.com/post/${e}?comment_text=${encodeURIComponent(t)}`},t.appendChild(n)}else console.error('"recess" div not found. Please ensure your page includes a div with id="recess".')}(),fetch(`https://us.recessfeed.com/api/post_comments?post_url=${encodeURIComponent(`${window.location.origin}${window.location.pathname}`)}`).then((e=>e.json())).then((t=>{t.length>0&&(e=t[0].post,o(t))})).catch((e=>console.error("Error fetching comments:",e))))})).catch((e=>console.error("Error fetching comments:",e)))}();
+        </script>
+        <script src="../modal/modal.js"></script>
+    </head>
+    <body>
+        <script src="../js/dark-mode.js"></script>
+        <div class="content">
+            <nav>
+                <div style="font-weight: 300">
+                    <a id="site-title" href="/">Yakko Majuri</a>
+                </div>
+                <ul id="navbar">
+                    <li class="nav-item selected"><a href="/blog">blog</a></li>
+                    <li class="nav-item"><a href="/albums">pics</a></li>
+                    <li class="nav-item"><a href="/poems">poems</a></li>
+                </ul>
+                <div class="toggle-wrapper" onclick="toggleDarkMode()">
+                    <button id="darkModeToggle" class="toggle-button">☀️</button>
+                </div>
+            </nav>
+
+            <hr>
+
+            <div class="page-content-wrapper">
+                <a href="/blog" id="back-button">↩</a>
+                <a id="settings-button" href="#">⚙</a>
+                <div id="page-content"><h1 id="whats-the-worlds-most-efficient-language">What's the world's most efficient language?</h1>
+<p><em>January 23rd, 2022</em></p>
+<br>
+
+<div class="notice">
+
+<p><i><b>Edit:</b> This has now made it to the front page of HackerNews. I'm sure a lot of valid criticism will come from it. Do note that I'm more curious in the discussion than the experiment itself (I'm already learning from the comments). I consistently claim here to not be qualified for an analysis, having done this for fun. The "Deriving information" section ends with "...the only thing I'm really measuring is efficiency from the perspective of printer ink. But so be it, I'll measure that.". Also check out <a href="#Limitations">Limitations</a>.</i></p>
+</div>
+
+<p>A while ago I was sitting on a plane and in a moment of boredom picked up the in-flight magazine.</p>
+<p>The magazine had a little travel article, and it was written in English on one page and Thai on the other.</p>
+<p>The Thai version was so much shorter that I started to wonder if it was more <em>efficient</em>. In other words, was it able to convey the same exact meaning to the reader with fewer "resources" than the English version?</p>
+<p>The topic came up again when I was speaking to a Japanese man at a language exchange meetup. He said:</p>
+<blockquote>
+<p><em>"You can technically write Japanese without Kanji, but it is a lot less efficient."</em></p>
+</blockquote>
+<p>So what is language efficiency? And how can we measure it?</p>
+<h2 id="thoughts-from-a-nobody">Thoughts from a nobody</h2>
+<p>One can't find a lot resources about "language efficiency" very easily, and the majority of my findings related to spoken language. Here are two good reads on this topic for those interested:</p>
+<ul>
+<li><a href="https://www.theatlantic.com/international/archive/2016/06/complex-languages/489389/">The World’s Most Efficient Languages</a></li>
+<li><a href="https://www.economist.com/graphic-detail/2019/09/28/why-are-some-languages-spoken-faster-than-others">Why are some languages spoken faster than others?</a></li>
+</ul>
+<p>But I was interested in <em>written language</em>, simply because something in me told me I could quantify it, without any formal linguistics knowledge.</p>
+<p>As you'd imagine, quantifying the efficiency of a language is a complicated task, one that I'm not at all qualified to explore in a scientifically significant way.</p>
+<p>But I thought I'd do a little experiment.</p>
+<p>Could I gather the same text in various languages that I'm certain (as certain as you can be) conveys the exact the meaning, and then calculate from the language snippets how much information they contain?</p>
+<p>If I could do that, I could arrive at the following measure of efficiency: <code>meaning / amount of information</code>.</p>
+<p>Meaning is supposed to be a constant, thus the more information the body of text contains, the lower its "meaning per piece of information" ratio, making the language less efficient.</p>
+<p>In essence, if we take information to be <code>information = noise + signal</code>, we're looking for the signal density of languages, or, conversely, the noise ratio - how much stuff is in there that doesn't need to be?</p>
+<p>So how could I derive that information value?</p>
+<h2 id="deriving-information">Deriving information</h2>
+<p>When brainstorming about this, a few immediate indicators might come to mind, like total number of characters.</p>
+<p>Characters, however, are not very uniform - they vary widely within and across languages. Consider:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Mandarin (Simplified)</th>
+<th align="center">Finnish</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">我爱咖啡</td>
+<td align="center">Minä rakastan kahvia</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><em>Both sentences say "I love coffee".</em></p>
+</blockquote>
+<p>If we're counting characters, Mandarin blows Finnish out of the water in efficiency.</p>
+<p>But most people looking at this will immediately notice that Mandarin characters are much more condensed. They make up for in "complexity" what they sentence is missing in length.</p>
+<p>And that "complexity" is what we're looking to measure.</p>
+<p>Imagine I gave you a task to try and find a pattern in the following 2 different images. The task is "done" when you either find a pattern or decide you can't come up with one.</p>
+<p>Which would take your brain <em>more</em> time to conclude - A or B?</p>
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="./img/language/low-info.png" alt="Low info"></td>
+<td align="center"><img src="./img/language/high-info.png" alt="High info"></td>
+</tr>
+</tbody></table>
+<p>I believe the answer would be B for most of us.</p>
+<p>B has more information, more data - in this case, non-background colored "pixels" - that our brain needs to process before it makes sense of what it is seeing.</p>
+<p>The same should hold true of characters. When reading, in order for our brain to determine the meaning of the character it is seeing (if it even knows it), it needs to take in all the pixels making up that character and run them across its "database" of known patterns to try and find a hit.</p>
+<p>So there's my information metric: pixels.</p>
+<p>To derive the amount of information present in a snippet of text, we can count the total "used" pixels i.e. on a black-on-white representation, count the black pixels.</p>
+<p>Now, at this point I will mention once again that a true analysis of efficiency should be much more nuanced, and it's not something I'd be able to undertake.</p>
+<p>In fact, a friend, upon hearing about this idea, said the only thing I'm really measuring is efficiency from the perspective of printer ink. But so be it, I'll measure that.</p>
+<h2 id="approach">Approach</h2>
+<p>This post is bound to be long, so I'll spare many of the details here. But essentially, in order to test this out, I did the following:</p>
+<p><strong>1: Selected a snippet of text that I would be likely to find good translations for in various languages</strong></p>
+<p>For this I landed on the Google Privacy Policy. And not the whole thing either. A tiny piece. So tiny that a real scientist would laugh at the idea of this whole thing even being called "an experiment".</p>
+<p>But you must keep in mind the name of this blog: "Sunday Afternoon". Stuff contained here is often done over a single weekend just for the fun of it, as was the case with this, so I needed to keep things simple.</p>
+<p>Nevertheless, I picked the Google Privacy Policy because:</p>
+<ol>
+<li>I could easily scrape it in hundreds of languages</li>
+<li>It needs to convey the exact same meaning in all languages</li>
+<li>It has legal implications, meaning if Google puts it up online in a language, it must have been thoroughly checked</li>
+<li>Google probably knows a thing or two about translations</li>
+</ol>
+<p>The exact snippet I picked was:</p>
+<blockquote>
+<p><em>"When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control. This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information."</em></p>
+</blockquote>
+<p>And I verified it said exactly this in English, Portuguese, Spanish, Finnish, German, and Icelandic (the last 2 with external help). That is, by actually reading it, other languages checked out on Google Translate.</p>
+<p><strong>2: Pull and parse the data</strong></p>
+<p>For this I got a list of all existing locales, and pulled all the HTML from each language's privacy policy from <code>https://policies.google.com/privacy?hl=&lt;locale&gt;</code>.</p>
+<p>I then found the desired paragraph and extracted it into a separate file for each language.</p>
+<p>For the more technical readers, the paragraph's CSS selector was consistent across all languages, which is how I managed to extract it. It's easy to confirm you extracted the right thing by popping the snippet into a translator.</p>
+<p><strong>3: Map out how many pixels each character takes</strong></p>
+<p>Once I had all the clean data, I iterated over every character in the dataset and drew an image for each using Python's <a href="https://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html">Pillow</a> library.</p>
+<p>From that image I could then count the total number of black pixels and generate a map of the results.</p>
+<p>Here are the basics of how this works:</p>
+<pre><code class="language-py"># Python
+
+arial_unicode = ImageFont.truetype('/Library/Fonts/Arial Unicode.ttf', 60)
+img = Image.new('RGB', (200, 200), 'white')
+
+draw = ImageDraw.Draw(img)
+draw.text((75,0), letter, font=arial_unicode, fill='#000000')
+
+pixels = list(img.getdata())
+total_black_pixels = len(list(filter(lambda rgb: sum(rgb) == 0, pixels)))
+</code></pre>
+<p><strong>4: Build up the results</strong></p>
+<p>Having determined the black pixel value (information) for each character, I could then derive how much information (again, in my limited definition), each language's written representation was using to convey the same meaning.</p>
+<blockquote>
+<p>Some manual intervention here was needed, and I ended up looking through <strong>every picture</strong> of a character that the script generated to make sure it was valid. Two key things here were removing from the results the languages for which generic squares drawn when the font didn't some or all of its characters (e.g. Amharic), as well as making sure the drawings were containing the full character.</p>
+</blockquote>
+<h2 id="results">Results</h2>
+<p>The most efficient language prize in my little child experiment was Gujarati, followed by Hebrew, and then Arabic. Gujarati and Hebrew also had some of the lowest mean pixel/character ratio in the dataset.</p>
+<p>The least efficient ones were Japanese, Malay, and Canadian French. You heard that right. Out of all the French dialects included in the dataset, Canadian was the only one with different wording. I'd be curious to hear from someone who speaks French about whether the Canadian version has words that are actually not used elsewhere or if it's just a matter of choice of words.</p>
+<p>English, by the way, was eighth on the list.</p>
+<p>Particularly interesting to me was comparing results from language/dialects in the same language group, such as the French from France vs. France from Canada comparison mentioned above. Here are a few takeaways from the results:</p>
+<p><strong>American English &gt; British English</strong></p>
+<p>American English performed slightly better than British English, and this one actually makes intuitive sense to me.</p>
+<p>In most cases when there's a variation between the two, British English tends to be the one with additional letters. Think "color" vs. "colour", "traveled" vs. "travelled", etc.</p>
+<p>These additional letters are almost decidedly redundant, inefficient. Given that there is a variation of the language without these extra letters, one can infer that they are not very important if the objective is to convey meaning efficiently.</p>
+<p>Consider the <code>r</code> in ca<strong>r</strong>t for instance. Without that <code>r</code> the word would clash with an existing word - cat, so the letter is significant in establishing meaning. The <code>u</code> in color is not, however.</p>
+<p><strong>The Chinese Language Group</strong></p>
+<p>This was a surprising one to me. Simplified Mandarin Chinese was expectedly more efficient than Traditional Mandarin Chinese, but both were beaten out by Cantonese using traditional characters.</p>
+<p>Also, if you ever wanted to put a number to the complexity of Chinese characters, they are around 3x more "complex" (pixels/char ratio) than the average of the dataset.</p>
+<p><strong>Portuguese from Brazil &gt; Portuguese from Portugal (to my utter delight)</strong></p>
+<p>When reading both sentences one can indeed notice inherent language differences, like the lack of the word "você" in Portuguese from Portugal. However, in some cases the differences were merely a word choice thing (e.g. "Entendemos" vs. "Compreendemos").</p>
+<p><strong>Spanish from Spain &gt; Spanish from Latin America</strong></p>
+<p>The biggest disparity within a language group happened with Spanish, with Spanish from Spain ranking at 14 and Latin American Spanish landing at 32. The vast majority of differences are purely arbitrary word selections, though.</p>
+<details>
+
+<summary><b>Simplified Results</b></summary>
+
+<br>
+
+<p><small>Dialects were collapsed if they used the same exact sentence.</small></p>
+<table>
+<thead>
+<tr>
+<th>Position</th>
+<th>Language</th>
+<th>Total pixels</th>
+<th>Total chars</th>
+<th>Mean pixels/char</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Gujarati</td>
+<td>62814</td>
+<td>418</td>
+<td>150.27</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hebrew</td>
+<td>63533</td>
+<td>313</td>
+<td>202.98</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Arabic</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kannada</td>
+<td>73659</td>
+<td>507</td>
+<td>145.28</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Lithuanian</td>
+<td>78828</td>
+<td>311</td>
+<td>253.47</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Thai</td>
+<td>80055</td>
+<td>333</td>
+<td>240.41</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Swedish</td>
+<td>81817</td>
+<td>343</td>
+<td>238.53</td>
+</tr>
+<tr>
+<td>8</td>
+<td>English (United States)</td>
+<td>82897</td>
+<td>345</td>
+<td>240.28</td>
+</tr>
+<tr>
+<td>9</td>
+<td>English (United Kingdom)</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Croatian/Bosnian</td>
+<td>85245</td>
+<td>344</td>
+<td>247.81</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Slovenian</td>
+<td>87038</td>
+<td>343</td>
+<td>253.76</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Czech</td>
+<td>88275</td>
+<td>338</td>
+<td>261.17</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Afrikaans</td>
+<td>88286</td>
+<td>364</td>
+<td>242.54</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Spanish (Spain)</td>
+<td>88551</td>
+<td>354</td>
+<td>250.14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Bengali</td>
+<td>88585</td>
+<td>382</td>
+<td>231.9</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Slovak</td>
+<td>88887</td>
+<td>344</td>
+<td>258.39</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Polish</td>
+<td>88961</td>
+<td>346</td>
+<td>257.11</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Persian</td>
+<td>89931</td>
+<td>388</td>
+<td>231.78</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Tamil</td>
+<td>90312</td>
+<td>409</td>
+<td>220.81</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Italian</td>
+<td>91061</td>
+<td>381</td>
+<td>239.01</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Catalan</td>
+<td>91401</td>
+<td>378</td>
+<td>241.8</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Serbian</td>
+<td>91404</td>
+<td>372</td>
+<td>245.71</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Telugu</td>
+<td>92619</td>
+<td>459</td>
+<td>201.78</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Cantonese</td>
+<td>92751</td>
+<td>101</td>
+<td>918.33</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Danish</td>
+<td>92778</td>
+<td>382</td>
+<td>242.87</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Faroese</td>
+<td>92778</td>
+<td>382</td>
+<td>242.87</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Danish</td>
+<td>92778</td>
+<td>382</td>
+<td>242.87</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Estonian</td>
+<td>92868</td>
+<td>350</td>
+<td>265.34</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Urdu</td>
+<td>93788</td>
+<td>406</td>
+<td>231.0</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Punjabi</td>
+<td>93788</td>
+<td>406</td>
+<td>231.0</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Urdu</td>
+<td>93788</td>
+<td>406</td>
+<td>231.0</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Spanish (Latin America)</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Galician</td>
+<td>95886</td>
+<td>371</td>
+<td>258.45</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Zulu</td>
+<td>95935</td>
+<td>355</td>
+<td>270.24</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Swahili</td>
+<td>96728</td>
+<td>355</td>
+<td>272.47</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Basque</td>
+<td>97208</td>
+<td>368</td>
+<td>264.15</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Hungarian</td>
+<td>97570</td>
+<td>375</td>
+<td>260.19</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Latvian</td>
+<td>98572</td>
+<td>382</td>
+<td>258.04</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Finnish</td>
+<td>99466</td>
+<td>375</td>
+<td>265.24</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Norwegian</td>
+<td>99588</td>
+<td>415</td>
+<td>239.97</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Greek</td>
+<td>99795</td>
+<td>410</td>
+<td>243.4</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vietnamese</td>
+<td>100035</td>
+<td>403</td>
+<td>248.23</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Portuguese (Brazil)</td>
+<td>100543</td>
+<td>391</td>
+<td>257.14</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Chinese (Simplified)</td>
+<td>100774</td>
+<td>124</td>
+<td>812.69</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Ukrainian</td>
+<td>101512</td>
+<td>357</td>
+<td>284.35</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Dutch</td>
+<td>102685</td>
+<td>399</td>
+<td>257.36</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Marathi</td>
+<td>105126</td>
+<td>394</td>
+<td>266.82</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Portuguese (Portugal)</td>
+<td>105385</td>
+<td>412</td>
+<td>255.79</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Serbian</td>
+<td>106028</td>
+<td>365</td>
+<td>290.49</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Icelandic</td>
+<td>106357</td>
+<td>417</td>
+<td>255.05</td>
+</tr>
+<tr>
+<td>51</td>
+<td>Russian</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+</tr>
+<tr>
+<td>52</td>
+<td>German</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+</tr>
+<tr>
+<td>53</td>
+<td>Turkish</td>
+<td>111808</td>
+<td>444</td>
+<td>251.82</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Malagasy</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+</tr>
+<tr>
+<td>55</td>
+<td>French</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Bulgarian</td>
+<td>115494</td>
+<td>397</td>
+<td>290.92</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Hindi</td>
+<td>118592</td>
+<td>500</td>
+<td>237.18</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Indonesian</td>
+<td>118687</td>
+<td>418</td>
+<td>283.94</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Chinese (Traditional)</td>
+<td>120295</td>
+<td>138</td>
+<td>871.7</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Filipino</td>
+<td>123179</td>
+<td>456</td>
+<td>270.13</td>
+</tr>
+<tr>
+<td>61</td>
+<td>Korean</td>
+<td>124819</td>
+<td>231</td>
+<td>540.34</td>
+</tr>
+<tr>
+<td>62</td>
+<td>French (Canada)</td>
+<td>126583</td>
+<td>503</td>
+<td>251.66</td>
+</tr>
+<tr>
+<td>63</td>
+<td>Malay</td>
+<td>128355</td>
+<td>448</td>
+<td>286.51</td>
+</tr>
+<tr>
+<td>64</td>
+<td>Japanese</td>
+<td>136036</td>
+<td>215</td>
+<td>632.73</td>
+</tr>
+</tbody></table>
+</details>
+
+<p>You can find the full results in a table format on this website <a href="/blog/language-efficiency-results">here</a> and the CSV results <a href="https://github.com/yakkomajuri/lang/blob/main/results.csv">here</a>. These results also include the sentence in each language.</p>
+<h2 id="limitations">Limitations</h2>
+<p>The limitations of this little Sunday experiment are many. From the size of the snippet, the lack of extensive validation, to the lack of consideration for variations in writing, the use of only one font that may bias towards certain language families, etc.</p>
+<p>But perhaps the most interesting discussions regard how counting pixels may be limited as an approach to measuring efficiency and how we could measure it instead.</p>
+<p>Maybe (probably) the sheer amount of "information" is not the only factor contributing to our ability to read text efficiently?</p>
+<p>Maybe the fact that Chinese characters were originally representative drawings helps association in the brain despite the extra strokes?</p>
+<p>Maybe spaces also play a role and are thus are also a form of information?</p>
+<p>Maybe my whole approach to quantifying "information" is wrong?</p>
+<p>Either way, I'd be curious to explore this topic further, and would love to hear any thoughts others may have. Feel free to send those to <code>yakko [dot] majuri [at] protonmail [dot] com</code> if you like.</p>
+<hr>
+<h2 id="github">GitHub</h2>
+<p>You can find my loose snippets of code used for this analysis on the <a href="https://github.com/yakkomajuri/lang">yakkomajuri/lang</a> GitHub repo.</p>
+</div>
+                <script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('buy me a coffee', '#bfa16d', 'R5R7W88CQ');kofiwidget2.draw();</script> 
+                <div id="recess"></div>
+            </div>
+        </div>
+
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">×</span>
+                <form id="settings-form">
+                    <div class="form-group">
+                        <label for="font-family">Font Family:</label>
+                        <select id="font-family" name="font-family">
+                            <option value="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                                System UI
+                            </option>
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="'MS Serif', 'New York', sans-serif">MS Serif</option>
+                            <option value="'Lucida Sans Unicode', sans-serif">Lucida Sans Unicode</option>
+                            <option value="'Times New Roman', Times, serif">Times New Roman</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Impact, sans-serif">Impact</option>
+                            <option value="'Lucida Console', monospace">Lucida Console</option>
+                            <option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">
+                                Palatino Linotype
+                            </option>
+                            <option value="Tahoma, Geneva, sans-serif">Tahoma</option>
+                            <option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet MS</option>
+                            <option value="Verdana, Geneva, sans-serif">Verdana</option>
+                            <option value="'MS Sans Serif', Geneva, sans-serif">MS Sans Serif</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="font-size">Font Size:</label>
+                            <input type="number" id="font-size" name="font-size" min="10" max="24" step="1" placeholder="18">
+                        </div>
+                        <div class="form-group">
+                            <label for="font-weight">Font Weight:</label>
+                            <input type="number" id="font-weight" name="font-weight" min="100" max="600" step="100" placeholder="200">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="button-row">
+                        <input type="button" id="reset-button" value="Reset to defaults">
+                        <input type="submit" value="Apply">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Yakko Majuri</p>
+                <ul>
+                    <li><a href="https://github.com/yakkomajuri" rel="me">github</a></li>
+                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/links">links</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../js/title.js"></script>
+        <script>
+            hljs.highlightAll()
+
+            if (!localStorage.getItem('fontFamily')) {
+                localStorage.setItem(
+                    'fontFamily',
+                    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+                )
+            }
+
+            if (!localStorage.getItem('fontSize')) {
+                localStorage.setItem('fontSize', '18')
+            }
+
+            if (!localStorage.getItem('fontWeight')) {
+                localStorage.setItem('fontWeight', '200')
+            }
+
+            document.getElementById('settings-button').addEventListener('click', function (event) {
+                event.preventDefault()
+                document.getElementById('settings-modal').style.display = 'block'
+                document.body.style.overflow = 'hidden' // Prevent scrolling
+            })
+
+            document.getElementById('settings-form').addEventListener('submit', function (event) {
+                event.preventDefault()
+                var fontFamily = document.getElementById('font-family').value
+                var fontSize = document.getElementById('font-size').value
+                var fontWeight = document.getElementById('font-weight').value
+                localStorage.setItem('fontFamily', fontFamily)
+                localStorage.setItem('fontSize', fontSize)
+                localStorage.setItem('fontWeight', fontWeight)
+                applyFontSettings()
+                closeModal()
+            })
+
+            document.getElementById('reset-button').addEventListener('click', function () {
+                localStorage.setItem(
+                    'fontFamily',
+                    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+                )
+                localStorage.setItem('fontSize', '18')
+                localStorage.setItem('fontWeight', '200')
+                applyFontSettings()
+                closeModal()
+            })
+
+            function closeModal() {
+                document.getElementById('settings-modal').style.display = 'none'
+                document.body.style.overflow = 'auto' // Allow scrolling
+            }
+
+            window.onload = function () {
+                applyFontSettings()
+            }
+
+            function applyFontSettings() {
+                var fontFamily = localStorage.getItem('fontFamily')
+                var fontSize = localStorage.getItem('fontSize')
+                var fontWeight = localStorage.getItem('fontWeight')
+                var paragraphs = document.querySelectorAll('#page-content p')
+                paragraphs.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontSize) {
+                        p.style.fontSize = fontSize + 'px'
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+
+                var lists = document.querySelectorAll('#page-content li')
+                lists.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontSize) {
+                        p.style.fontSize = fontSize + 'px'
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+
+                var headings = document.querySelectorAll(
+                    '#page-content h1, #page-content h2, #page-content h3, #page-content h4, #page-content h5, #page-content h6'
+                )
+                headings.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+                document.getElementById('font-family').value = fontFamily || ''
+                document.getElementById('font-size').value = fontSize || ''
+                document.getElementById('font-weight').value = fontWeight || ''
+            }
+
+            // Close the modal when the user clicks outside of the modal content
+            window.onclick = function (event) {
+                if (event.target == document.getElementById('settings-modal')) {
+                    closeModal()
+                }
+            }
+        </script>
+        <script>
+            !(function (t, e) {
+                var o, n, p, r
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split('.')
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                                })
+                        }
+                        ;((p = t.createElement('script')).type = 'text/javascript'),
+                            (p.async = !0),
+                            (p.src = s.api_host + '/static/array.js'),
+                            (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r)
+                        var u = e
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = 'posthog'
+                                    return 'posthog' !== a && (e += '.' + a), t || (e += ' (stub)'), e
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + '.people (stub)'
+                                },
+                                o =
+                                    'capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags'.split(
+                                        ' '
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n])
+                        e._i.push([i, s, a])
+                    }),
+                    (e.__SV = 1))
+            })(document, window.posthog || [])
+            posthog.init('Tom1k0Lh0sRN7EK8LIlU5mbbmAHMBSk37lc02ZQ__38', {
+                api_host: 'https://p.yakkos.workers.dev',
+                persistence: 'memory',
+            })
+        </script>
+    
+
+</body></html>

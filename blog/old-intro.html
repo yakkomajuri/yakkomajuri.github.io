@@ -1,0 +1,539 @@
+<html><head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+
+        <link rel="stylesheet" href="../css/layout.css">
+
+        <link rel="stylesheet" href="../highlight/nord.min.css">
+        <script type="text/javascript" src="../highlight/highlight.min.js"></script>
+
+        <title>The old intro</title>
+
+        <style>
+            h1 {
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .page-content-wrapper {
+                width: 800px;
+                display: block;
+                margin: auto;
+            }
+
+            #page-content a {
+                text-decoration: none;
+                color: #48290c;
+                font-weight: 400;
+                border-bottom: 1px dotted #48290c;
+            }
+
+            #page-content a:hover {
+                opacity: 0.8;
+            }
+
+            .dark-mode #page-content a {
+                color: rgb(2, 167, 167);
+                border-bottom: 1px dotted rgb(2, 167, 167);
+            }
+
+            blockquote {
+                padding: 0px 10px;
+            }
+
+            pre > code {
+                font-family: monospace;
+                font-size: 16px;
+            }
+
+            img {
+                max-width: 400px;
+                text-align: center;
+                margin: auto;
+                display: block;
+            }
+
+            .column {
+                float: left;
+                padding: 5px;
+            }
+
+            .img-gallery-2 .column {
+                width: 50%;
+            }
+
+            .row::after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+
+            #back-button {
+                position: absolute;
+                top: -10px; /* Adjust this value to move the button up or down */
+                left: 0;
+                text-decoration: none;
+                color: inherit;
+                opacity: 0.5;
+                font-size: 24px;
+                padding: 10px; /* Increase the clickable area */
+                margin: -10px; /* Offset the added padding */
+                z-index: 10;
+            }
+
+            #back-button:hover {
+                opacity: 0.8;
+            }
+
+            body.dark-mode #back-button {
+                color: #d3d3d3;
+            }
+            #settings-button {
+                position: absolute;
+                top: -10px;
+                right: 0;
+                text-decoration: none;
+                color: inherit;
+                opacity: 0.5;
+                font-size: 24px;
+                padding: 10px;
+                margin: -10px;
+                z-index: 10;
+            }
+
+            #settings-button:hover {
+                opacity: 0.8;
+            }
+
+            body.dark-mode #settings-button {
+                color: #d3d3d3;
+            }
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            #settings-form label {
+                display: block;
+                margin-top: 10px;
+            }
+
+            .modal {
+                display: none;
+                position: absolute; /* Change from fixed to absolute */
+                z-index: 20;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 30%; /* Make the modal smaller */
+                max-width: 400px; /* Make the modal smaller */
+                border-radius: 5px;
+            }
+
+            /* Add dark mode styles for the modal */
+            body.dark-mode .modal-content {
+                background-color: #11191f;
+                color: #d3d3d3;
+                border-color: #37383c;
+            }
+
+            /* Add styles for the "Reset to defaults" button */
+            #reset-button {
+                margin-left: 10px;
+            }
+
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .form-group {
+                flex: 1;
+                padding: 0 10px; /* Optional: add some space between the inputs */
+            }
+
+            .button-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .button-row input[type='submit'],
+            .button-row input[type='button'] {
+                flex: 1;
+                margin-right: 10px;
+                height: 40px; /* Set a specific height */
+                vertical-align: middle; /* Align the text in the middle */
+            }
+
+            /* Light Mode */
+            .button-row input[type='submit'] {
+                background-color: #8c562d; /* Primary button color */
+                color: #f7f2f0; /* Primary button text color */
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .button-row input[type='button'] {
+                background-color: transparent; /* Secondary button color */
+                color: #8c562d; /* Secondary button text color */
+                border: 1px solid #8c562d;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .button-row input[type='submit']:hover {
+                background-color: #6b4a36; /* Darken primary button color on hover */
+            }
+
+            .button-row input[type='button']:hover {
+                background-color: #8c562d; /* Change secondary button color on hover */
+                color: #f7f2f0; /* Change secondary button text color on hover */
+            }
+
+            /* Dark Mode */
+            body.dark-mode .button-row input[type='submit'] {
+                background-color: rgb(2, 167, 167); /* Primary button color */
+                color: #11191f; /* Primary button text color */
+            }
+
+            body.dark-mode .button-row input[type='button'] {
+                background-color: transparent; /* Secondary button color */
+                color: rgb(2, 167, 167); /* Secondary button text color */
+                border: 1px solid rgb(2, 167, 167);
+            }
+
+            body.dark-mode .button-row input[type='submit']:hover {
+                background-color: rgb(0, 140, 140); /* Darken primary button color on hover */
+            }
+
+            body.dark-mode .button-row input[type='button']:hover {
+                background-color: rgb(2, 167, 167); /* Change secondary button color on hover */
+                color: #11191f; /* Change secondary button text color on hover */
+            }
+
+            .dark-mode .modal {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+            @media only screen and (max-width: 800px) {
+                .page-content-wrapper {
+                    width: 95%;
+                    display: block;
+                    margin: auto;
+                }
+
+                .modal-content {
+                    background-color: #fefefe;
+                    margin: 10% auto;
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%; /* Make the modal smaller */
+                    max-width: 400px; /* Make the modal smaller */
+                    border-radius: 5px;
+                    overflow: auto;
+                }
+
+                h1 {
+                    padding: 20px;
+                }
+
+                img {
+                    max-width: 300px;
+                }
+            }
+        </style>
+
+        <script>
+            !function(){var e="";var t="\n        .recess-comment-container {\n            display: flex !important;\n            gap: 16px !important;\n            padding: 8px !important;\n            border-bottom: 1px solid #eaeaea !important;\n            background: white !important;\n            border-radius: 8px !important;\n            margin-bottom: 12px !important;\n\n        }\n\n        .recess-comment-avatar img {\n            width: 50px !important;\n            height: 50px !important;\n            border-radius: 25px !important;\n        }\n\n        .recess-comment-body {\n            display: flex !important;\n            flex-direction: column !important;\n            width: 100% !important;\n        }\n\n        .recess-comment-header {\n            display: flex !important;\n            justify-content: space-between !important;\n            margin-bottom: 8px !important;\n        }\n\n        .recess-comment-author, .recess-comment-date {\n            cursor: pointer !important;\n        }\n\n        .recess-comment-date {\n            color: #999 !important;\n            font-size: 12px !important;\n        }\n\n        .recess-comment-content {\n            font-size: 14px !important;\n        }\n\n        .recess-main-text {\n            font-size: 16px !important;\n            margin: auto !important;\n            text-align: center !important;\n            margin-bottom: 8px !important;\n        }\n\n        .recess-comment-input-container {\n            margin-top: 20px !important;\n            background-color: #ffffff !important;\n            padding: 16px !important;\n            border-radius: 8px !important;\n            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;\n            border: 1px solid #eaeaea !important;\n            display: flex !important;\n            flex-direction: column !important;\n            gap: 10px !important;\n            margin-bottom: 12px !important;\n        }\n\n        .recess-comment-textarea {\n            width: 100% !important;\n            padding: 8px !important;\n            border-radius: 8px !important;\n            border: 1px solid #eaeaea !important;\n            resize: vertical !important;\n            box-sizing: border-box !important;\n            background-color: #efefef !important;\n            font-family: inherit !important;\n        }\n\n        .recess-comment-textarea:focus {\n            border: 1px solid gray !important;\n        }\n\n        .submit-recess-comment-button {\n            align-self: flex-end !important;\n            padding: 8px 16px !important;\n            border-radius: 8px !important;\n            border: none !important;\n            color: white !important;\n            background-color: #1890ff !important;\n            cursor: pointer !important;\n        }\n\n        .submit-recess-comment-button:disabled {\n            background-color: #a0a0a0 !important;\n            cursor: not-allowed !important;\n        }\n    ",n=document.createElement("style");function o(e){const t=document.getElementById("recess");if(!t)return void console.error('"recess" div not found. Please ensure your page includes a div with id="recess".');e.forEach((e=>{const n=document.createElement("div");n.className="recess-comment-container";const o=document.createElement("div");o.className="recess-comment-avatar",o.style.cursor="pointer";const a=document.createElement("img");a.src=`https://www.gravatar.com/avatar/${e.comment_user_email_hash}?s=64&d=mp`,a.alt=e.comment_username,o.appendChild(a);const r=document.createElement("div");r.className="recess-comment-body";const m=document.createElement("div");m.className="recess-comment-header";const s=document.createElement("span");s.className="recess-comment-author",s.style.cursor="pointer",s.textContent=e.comment_username;const c=document.createElement("span");c.className="recess-comment-date",c.textContent=function(e){const t=new Date,n=new Date(e),o=Math.round((t.getTime()-n.getTime())/1e3),a=Math.round(o/60),r=Math.round(a/60),m=Math.round(r/24);return a<60?`${a} minutes ago`:r<24?`${r} hours ago`:1===m?"yesterday":m<7?`${m} days ago`:`${n.getDate().toString().padStart(2,"0")}/${(n.getMonth()+1).toString().padStart(2,"0")}/${n.getFullYear()}`}(new Date(e.comment_timestamp)),m.appendChild(s),m.appendChild(c);const i=document.createElement("div");i.className="recess-comment-content",i.textContent=e.comment_content,r.appendChild(m),r.appendChild(i),n.appendChild(o),n.appendChild(r),t.appendChild(n)}));const n=document.createElement("div"),o=document.createElement("p");o.className="recess-main-text",o.innerHTML='Comments powered by <a href="https://app.recessfeed.com" target="_blank">Recess</a>.',n.appendChild(o),t.appendChild(n)}n.styleSheet?n.styleSheet.cssText=t:n.appendChild(document.createTextNode(t)),document.getElementsByTagName("head")[0].appendChild(n),fetch(`https://us.recessfeed.com/api/posts?post_url=${encodeURIComponent(`${window.location.origin}${window.location.pathname}`)}`).then((e=>e.json())).then((t=>{t.length>0&&(e=t[0].post_uuid,function(){const t=document.getElementById("recess");if(t){t.innerHTML="";var n=document.createElement("div");n.innerHTML='\n            <div class="recess-comment-input-container">\n                <textarea rows="4" class="recess-comment-textarea" id="post-recess-comment-textarea" placeholder="Write a comment..." maxLength="1000"></textarea>\n                <button onclick="handleSubmitComment()" class="submit-recess-comment-button">Add Comment</button>\n            </div>\n        ',window.handleSubmitComment=function(){const t=document.getElementById("post-recess-comment-textarea").value;window.location=`https://app.recessfeed.com/post/${e}?comment_text=${encodeURIComponent(t)}`},t.appendChild(n)}else console.error('"recess" div not found. Please ensure your page includes a div with id="recess".')}(),fetch(`https://us.recessfeed.com/api/post_comments?post_url=${encodeURIComponent(`${window.location.origin}${window.location.pathname}`)}`).then((e=>e.json())).then((t=>{t.length>0&&(e=t[0].post,o(t))})).catch((e=>console.error("Error fetching comments:",e))))})).catch((e=>console.error("Error fetching comments:",e)))}();
+        </script>
+        <script src="../modal/modal.js"></script>
+    </head>
+    <body>
+        <script src="../js/dark-mode.js"></script>
+        <div class="content">
+            <nav>
+                <div style="font-weight: 300">
+                    <a id="site-title" href="/">Yakko Majuri</a>
+                </div>
+                <ul id="navbar">
+                    <li class="nav-item selected"><a href="/blog">blog</a></li>
+                    <li class="nav-item"><a href="/albums">pics</a></li>
+                    <li class="nav-item"><a href="/poems">poems</a></li>
+                </ul>
+                <div class="toggle-wrapper" onclick="toggleDarkMode()">
+                    <button id="darkModeToggle" class="toggle-button">☀️</button>
+                </div>
+            </nav>
+
+            <hr>
+
+            <div class="page-content-wrapper">
+                <a href="/blog" id="back-button">↩</a>
+                <a id="settings-button" href="#">⚙</a>
+                <div id="page-content"><h1 id="the-old-intro">The old intro</h1>
+<p><em>July 22nd, 2023</em></p>
+<p>I'm Yakko, and I'm a... I'm not sure, actually, now.</p>
+<p>I'm a software developer by trade, and have been so for six or so years.</p>
+<p>but that's not all I want to be. and that's partly what this website is about - here you'll find bits and pieces that compose what I am and where I'm going.</p>
+<p>if you'd like me to be more practical and less philosophical, I've just recently left an awesome company called PostHog, which I joined early on, after three great years.</p>
+<p>in lighter terms, I'm currently on a sabbatical, but it's ok if you want to call me unemployed.</p>
+<p>during this period, I have three main areas I want to spend my time and energy on:</p>
+<ul>
+<li><strong>various "intellectual pursuits"</strong>: dive into new knowledge areas (e.g. photography, history); build more projects from my software list (including improving existing ones like <a href="https://github.com/PostHog/HouseWatch">HouseWatch</a> and this website); get back into learning languages (e.g. picking Mandarin back up).</li>
+<li><strong>writing</strong>: I've had a lot of success as a technical writer (mostly focused on an audience of early-stage devs), and my articles (primarily on <a href="https://medium.com/@yakkomajuri">Medium</a>, but also on this website and other places) have been viewed by around a million people. while I'm still interested in technical writing, although leaning more towards deeper content (e.g. <a href="/blog/thread-pool">this</a>), I'd also like to dabble a lot more with non-technical writing, which you'll find here both on my <a href="/blog">blog</a> and the <a href="/poems">poems</a> section.</li>
+<li><strong>mountaineering</strong>: being in nature is a non-negotiable aspect of my life, and mountains have held a grasp on me for a long time. I've gathered a solid amount of experience in this aspect over the years, but am currently working to develop my technical skills further in order to tackle bigger challenges.</li>
+</ul>
+<p>going forward, this website will be central to the above - I intend to document my thoughts and express myself in here, mostly for my own sake.</p>
+<p>but if you're keen, feel free to tag along.</p>
+</div>
+                <script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('buy me a coffee', '#bfa16d', 'R5R7W88CQ');kofiwidget2.draw();</script> 
+                <div id="recess"></div>
+            </div>
+        </div>
+
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">×</span>
+                <form id="settings-form">
+                    <div class="form-group">
+                        <label for="font-family">Font Family:</label>
+                        <select id="font-family" name="font-family">
+                            <option value="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                                System UI
+                            </option>
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="'MS Serif', 'New York', sans-serif">MS Serif</option>
+                            <option value="'Lucida Sans Unicode', sans-serif">Lucida Sans Unicode</option>
+                            <option value="'Times New Roman', Times, serif">Times New Roman</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Impact, sans-serif">Impact</option>
+                            <option value="'Lucida Console', monospace">Lucida Console</option>
+                            <option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">
+                                Palatino Linotype
+                            </option>
+                            <option value="Tahoma, Geneva, sans-serif">Tahoma</option>
+                            <option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet MS</option>
+                            <option value="Verdana, Geneva, sans-serif">Verdana</option>
+                            <option value="'MS Sans Serif', Geneva, sans-serif">MS Sans Serif</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="font-size">Font Size:</label>
+                            <input type="number" id="font-size" name="font-size" min="10" max="24" step="1" placeholder="18">
+                        </div>
+                        <div class="form-group">
+                            <label for="font-weight">Font Weight:</label>
+                            <input type="number" id="font-weight" name="font-weight" min="100" max="600" step="100" placeholder="200">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="button-row">
+                        <input type="button" id="reset-button" value="Reset to defaults">
+                        <input type="submit" value="Apply">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Yakko Majuri</p>
+                <ul>
+                    <li><a href="https://github.com/yakkomajuri" rel="me">github</a></li>
+                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/links">links</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../js/title.js"></script>
+        <script>
+            hljs.highlightAll()
+
+            if (!localStorage.getItem('fontFamily')) {
+                localStorage.setItem(
+                    'fontFamily',
+                    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+                )
+            }
+
+            if (!localStorage.getItem('fontSize')) {
+                localStorage.setItem('fontSize', '18')
+            }
+
+            if (!localStorage.getItem('fontWeight')) {
+                localStorage.setItem('fontWeight', '200')
+            }
+
+            document.getElementById('settings-button').addEventListener('click', function (event) {
+                event.preventDefault()
+                document.getElementById('settings-modal').style.display = 'block'
+                document.body.style.overflow = 'hidden' // Prevent scrolling
+            })
+
+            document.getElementById('settings-form').addEventListener('submit', function (event) {
+                event.preventDefault()
+                var fontFamily = document.getElementById('font-family').value
+                var fontSize = document.getElementById('font-size').value
+                var fontWeight = document.getElementById('font-weight').value
+                localStorage.setItem('fontFamily', fontFamily)
+                localStorage.setItem('fontSize', fontSize)
+                localStorage.setItem('fontWeight', fontWeight)
+                applyFontSettings()
+                closeModal()
+            })
+
+            document.getElementById('reset-button').addEventListener('click', function () {
+                localStorage.setItem(
+                    'fontFamily',
+                    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+                )
+                localStorage.setItem('fontSize', '18')
+                localStorage.setItem('fontWeight', '200')
+                applyFontSettings()
+                closeModal()
+            })
+
+            function closeModal() {
+                document.getElementById('settings-modal').style.display = 'none'
+                document.body.style.overflow = 'auto' // Allow scrolling
+            }
+
+            window.onload = function () {
+                applyFontSettings()
+            }
+
+            function applyFontSettings() {
+                var fontFamily = localStorage.getItem('fontFamily')
+                var fontSize = localStorage.getItem('fontSize')
+                var fontWeight = localStorage.getItem('fontWeight')
+                var paragraphs = document.querySelectorAll('#page-content p')
+                paragraphs.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontSize) {
+                        p.style.fontSize = fontSize + 'px'
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+
+                var lists = document.querySelectorAll('#page-content li')
+                lists.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontSize) {
+                        p.style.fontSize = fontSize + 'px'
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+
+                var headings = document.querySelectorAll(
+                    '#page-content h1, #page-content h2, #page-content h3, #page-content h4, #page-content h5, #page-content h6'
+                )
+                headings.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+                document.getElementById('font-family').value = fontFamily || ''
+                document.getElementById('font-size').value = fontSize || ''
+                document.getElementById('font-weight').value = fontWeight || ''
+            }
+
+            // Close the modal when the user clicks outside of the modal content
+            window.onclick = function (event) {
+                if (event.target == document.getElementById('settings-modal')) {
+                    closeModal()
+                }
+            }
+        </script>
+        <script>
+            !(function (t, e) {
+                var o, n, p, r
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split('.')
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                                })
+                        }
+                        ;((p = t.createElement('script')).type = 'text/javascript'),
+                            (p.async = !0),
+                            (p.src = s.api_host + '/static/array.js'),
+                            (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r)
+                        var u = e
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = 'posthog'
+                                    return 'posthog' !== a && (e += '.' + a), t || (e += ' (stub)'), e
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + '.people (stub)'
+                                },
+                                o =
+                                    'capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags'.split(
+                                        ' '
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n])
+                        e._i.push([i, s, a])
+                    }),
+                    (e.__SV = 1))
+            })(document, window.posthog || [])
+            posthog.init('Tom1k0Lh0sRN7EK8LIlU5mbbmAHMBSk37lc02ZQ__38', {
+                api_host: 'https://p.yakkos.workers.dev',
+                persistence: 'memory',
+            })
+        </script>
+    
+
+</body></html>

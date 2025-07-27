@@ -1,0 +1,130 @@
+<html><head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+        <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/grid.css">
+        <style>
+            .subtitle {
+                opacity: 50%;
+                text-align: center;
+                display: block;
+                font-size: 12px;
+                margin-top: -20px;
+                margin-bottom: 10px;
+                color: inherit;
+                text-decoration: none;
+            }
+
+            .subtitle:hover {
+                opacity: 70%;
+            }
+        </style>
+
+        <script>
+            !(function (t, e) {
+                var o, n, p, r
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split('.')
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                                })
+                        }
+                        ;((p = t.createElement('script')).type = 'text/javascript'),
+                            (p.async = !0),
+                            (p.src = s.api_host + '/static/array.js'),
+                            (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r)
+                        var u = e
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = 'posthog'
+                                    return 'posthog' !== a && (e += '.' + a), t || (e += ' (stub)'), e
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + '.people (stub)'
+                                },
+                                o =
+                                    'capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags'.split(
+                                        ' '
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n])
+                        e._i.push([i, s, a])
+                    }),
+                    (e.__SV = 1))
+            })(document, window.posthog || [])
+            posthog.init('Tom1k0Lh0sRN7EK8LIlU5mbbmAHMBSk37lc02ZQ__38', {
+                api_host: 'https://p.yakkos.workers.dev',
+                persistence: 'memory',
+            })
+        </script>
+
+        <script src="../modal/modal.js"></script>
+        <script src="../js/dark-mode.js"></script>
+    <title>Patagonia</title></head>
+    <body>
+        <nav>
+            <div style="font-weight: 300">
+                <a id="site-title" href="/">Yakko Majuri</a>
+            </div>
+            <ul id="navbar">
+                <li class="nav-item"><a href="/blog">blog</a></li>
+                <li class="nav-item selected"><a href="/albums">pics</a></li>
+                <li class="nav-item"><a href="/poems">poems</a></li>
+            </ul>
+            <div class="toggle-wrapper" onclick="toggleDarkMode()">
+                <button id="darkModeToggle" class="toggle-button">☀️</button>
+            </div>
+        </nav>
+
+        <hr>
+
+        <h1 style="text-align: center; font-weight: 100; margin-top: 30px; margin-bottom: 30px">Patagonia</h1>
+        <div class="main" id="main">
+            <div class="grid" id="grid">
+                <img loading="eager" src="../img/patagonia/1.jpeg" onclick="openModal(this)">
+                <img loading="eager" src="../img/patagonia/6.png" onclick="openModal(this)">
+                <img loading="eager" src="../img/patagonia/3.png" onclick="openModal(this)">
+                <img loading="lazy" src="../img/patagonia/4.png" onclick="openModal(this)">
+                <img loading="lazy" src="../img/patagonia/5.png" onclick="openModal(this)">
+                <img loading="lazy" src="../img/patagonia/2.jpeg" onclick="openModal(this)">
+                <img loading="lazy" src="../img/patagonia/7.jpg" onclick="openModal(this)">
+                <img loading="lazy" src="../img/patagonia/11.jpeg" onclick="openModal(this)">
+                <img loading="lazy" src="../img/patagonia/8.jpg" onclick="openModal(this)">
+                <img loading="lazy" src="../img/patagonia/9.jpg" onclick="openModal(this)">
+                <img loading="lazy" src="../img/patagonia/10.jpg" onclick="openModal(this)">
+
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">×</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Yakko Majuri</p>
+                <ul>
+                    <li><a href="https://github.com/yakkomajuri" rel="me">github</a></li>
+                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/links">links</a></li>
+                </ul>
+            </div>
+        </footer>
+        <script src="../js/title.js"></script>
+    
+
+</body></html>

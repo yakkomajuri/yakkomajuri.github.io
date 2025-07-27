@@ -1,0 +1,2998 @@
+<html><head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+
+        <link rel="stylesheet" href="../css/layout.css">
+
+        <link rel="stylesheet" href="../highlight/nord.min.css">
+        <script type="text/javascript" src="../highlight/highlight.min.js"></script>
+
+        <title>Full Results: What's the world's least efficient language?</title>
+
+        <style>
+            h1 {
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .page-content-wrapper {
+                width: 800px;
+                display: block;
+                margin: auto;
+            }
+
+            #page-content a {
+                text-decoration: none;
+                color: #48290c;
+                font-weight: 400;
+                border-bottom: 1px dotted #48290c;
+            }
+
+            #page-content a:hover {
+                opacity: 0.8;
+            }
+
+            .dark-mode #page-content a {
+                color: rgb(2, 167, 167);
+                border-bottom: 1px dotted rgb(2, 167, 167);
+            }
+
+            blockquote {
+                padding: 0px 10px;
+            }
+
+            pre > code {
+                font-family: monospace;
+                font-size: 16px;
+            }
+
+            img {
+                max-width: 400px;
+                text-align: center;
+                margin: auto;
+                display: block;
+            }
+
+            .column {
+                float: left;
+                padding: 5px;
+            }
+
+            .img-gallery-2 .column {
+                width: 50%;
+            }
+
+            .row::after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+
+            #back-button {
+                position: absolute;
+                top: -10px; /* Adjust this value to move the button up or down */
+                left: 0;
+                text-decoration: none;
+                color: inherit;
+                opacity: 0.5;
+                font-size: 24px;
+                padding: 10px; /* Increase the clickable area */
+                margin: -10px; /* Offset the added padding */
+                z-index: 10;
+            }
+
+            #back-button:hover {
+                opacity: 0.8;
+            }
+
+            body.dark-mode #back-button {
+                color: #d3d3d3;
+            }
+            #settings-button {
+                position: absolute;
+                top: -10px;
+                right: 0;
+                text-decoration: none;
+                color: inherit;
+                opacity: 0.5;
+                font-size: 24px;
+                padding: 10px;
+                margin: -10px;
+                z-index: 10;
+            }
+
+            #settings-button:hover {
+                opacity: 0.8;
+            }
+
+            body.dark-mode #settings-button {
+                color: #d3d3d3;
+            }
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            #settings-form label {
+                display: block;
+                margin-top: 10px;
+            }
+
+            .modal {
+                display: none;
+                position: absolute; /* Change from fixed to absolute */
+                z-index: 20;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 30%; /* Make the modal smaller */
+                max-width: 400px; /* Make the modal smaller */
+                border-radius: 5px;
+            }
+
+            /* Add dark mode styles for the modal */
+            body.dark-mode .modal-content {
+                background-color: #11191f;
+                color: #d3d3d3;
+                border-color: #37383c;
+            }
+
+            /* Add styles for the "Reset to defaults" button */
+            #reset-button {
+                margin-left: 10px;
+            }
+
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .form-group {
+                flex: 1;
+                padding: 0 10px; /* Optional: add some space between the inputs */
+            }
+
+            .button-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .button-row input[type='submit'],
+            .button-row input[type='button'] {
+                flex: 1;
+                margin-right: 10px;
+                height: 40px; /* Set a specific height */
+                vertical-align: middle; /* Align the text in the middle */
+            }
+
+            /* Light Mode */
+            .button-row input[type='submit'] {
+                background-color: #8c562d; /* Primary button color */
+                color: #f7f2f0; /* Primary button text color */
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .button-row input[type='button'] {
+                background-color: transparent; /* Secondary button color */
+                color: #8c562d; /* Secondary button text color */
+                border: 1px solid #8c562d;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .button-row input[type='submit']:hover {
+                background-color: #6b4a36; /* Darken primary button color on hover */
+            }
+
+            .button-row input[type='button']:hover {
+                background-color: #8c562d; /* Change secondary button color on hover */
+                color: #f7f2f0; /* Change secondary button text color on hover */
+            }
+
+            /* Dark Mode */
+            body.dark-mode .button-row input[type='submit'] {
+                background-color: rgb(2, 167, 167); /* Primary button color */
+                color: #11191f; /* Primary button text color */
+            }
+
+            body.dark-mode .button-row input[type='button'] {
+                background-color: transparent; /* Secondary button color */
+                color: rgb(2, 167, 167); /* Secondary button text color */
+                border: 1px solid rgb(2, 167, 167);
+            }
+
+            body.dark-mode .button-row input[type='submit']:hover {
+                background-color: rgb(0, 140, 140); /* Darken primary button color on hover */
+            }
+
+            body.dark-mode .button-row input[type='button']:hover {
+                background-color: rgb(2, 167, 167); /* Change secondary button color on hover */
+                color: #11191f; /* Change secondary button text color on hover */
+            }
+
+            .dark-mode .modal {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+            @media only screen and (max-width: 800px) {
+                .page-content-wrapper {
+                    width: 95%;
+                    display: block;
+                    margin: auto;
+                }
+
+                .modal-content {
+                    background-color: #fefefe;
+                    margin: 10% auto;
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%; /* Make the modal smaller */
+                    max-width: 400px; /* Make the modal smaller */
+                    border-radius: 5px;
+                    overflow: auto;
+                }
+
+                h1 {
+                    padding: 20px;
+                }
+
+                img {
+                    max-width: 300px;
+                }
+            }
+        </style>
+
+        <script>
+            !function(){var e="";var t="\n        .recess-comment-container {\n            display: flex !important;\n            gap: 16px !important;\n            padding: 8px !important;\n            border-bottom: 1px solid #eaeaea !important;\n            background: white !important;\n            border-radius: 8px !important;\n            margin-bottom: 12px !important;\n\n        }\n\n        .recess-comment-avatar img {\n            width: 50px !important;\n            height: 50px !important;\n            border-radius: 25px !important;\n        }\n\n        .recess-comment-body {\n            display: flex !important;\n            flex-direction: column !important;\n            width: 100% !important;\n        }\n\n        .recess-comment-header {\n            display: flex !important;\n            justify-content: space-between !important;\n            margin-bottom: 8px !important;\n        }\n\n        .recess-comment-author, .recess-comment-date {\n            cursor: pointer !important;\n        }\n\n        .recess-comment-date {\n            color: #999 !important;\n            font-size: 12px !important;\n        }\n\n        .recess-comment-content {\n            font-size: 14px !important;\n        }\n\n        .recess-main-text {\n            font-size: 16px !important;\n            margin: auto !important;\n            text-align: center !important;\n            margin-bottom: 8px !important;\n        }\n\n        .recess-comment-input-container {\n            margin-top: 20px !important;\n            background-color: #ffffff !important;\n            padding: 16px !important;\n            border-radius: 8px !important;\n            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;\n            border: 1px solid #eaeaea !important;\n            display: flex !important;\n            flex-direction: column !important;\n            gap: 10px !important;\n            margin-bottom: 12px !important;\n        }\n\n        .recess-comment-textarea {\n            width: 100% !important;\n            padding: 8px !important;\n            border-radius: 8px !important;\n            border: 1px solid #eaeaea !important;\n            resize: vertical !important;\n            box-sizing: border-box !important;\n            background-color: #efefef !important;\n            font-family: inherit !important;\n        }\n\n        .recess-comment-textarea:focus {\n            border: 1px solid gray !important;\n        }\n\n        .submit-recess-comment-button {\n            align-self: flex-end !important;\n            padding: 8px 16px !important;\n            border-radius: 8px !important;\n            border: none !important;\n            color: white !important;\n            background-color: #1890ff !important;\n            cursor: pointer !important;\n        }\n\n        .submit-recess-comment-button:disabled {\n            background-color: #a0a0a0 !important;\n            cursor: not-allowed !important;\n        }\n    ",n=document.createElement("style");function o(e){const t=document.getElementById("recess");if(!t)return void console.error('"recess" div not found. Please ensure your page includes a div with id="recess".');e.forEach((e=>{const n=document.createElement("div");n.className="recess-comment-container";const o=document.createElement("div");o.className="recess-comment-avatar",o.style.cursor="pointer";const a=document.createElement("img");a.src=`https://www.gravatar.com/avatar/${e.comment_user_email_hash}?s=64&d=mp`,a.alt=e.comment_username,o.appendChild(a);const r=document.createElement("div");r.className="recess-comment-body";const m=document.createElement("div");m.className="recess-comment-header";const s=document.createElement("span");s.className="recess-comment-author",s.style.cursor="pointer",s.textContent=e.comment_username;const c=document.createElement("span");c.className="recess-comment-date",c.textContent=function(e){const t=new Date,n=new Date(e),o=Math.round((t.getTime()-n.getTime())/1e3),a=Math.round(o/60),r=Math.round(a/60),m=Math.round(r/24);return a<60?`${a} minutes ago`:r<24?`${r} hours ago`:1===m?"yesterday":m<7?`${m} days ago`:`${n.getDate().toString().padStart(2,"0")}/${(n.getMonth()+1).toString().padStart(2,"0")}/${n.getFullYear()}`}(new Date(e.comment_timestamp)),m.appendChild(s),m.appendChild(c);const i=document.createElement("div");i.className="recess-comment-content",i.textContent=e.comment_content,r.appendChild(m),r.appendChild(i),n.appendChild(o),n.appendChild(r),t.appendChild(n)}));const n=document.createElement("div"),o=document.createElement("p");o.className="recess-main-text",o.innerHTML='Comments powered by <a href="https://app.recessfeed.com" target="_blank">Recess</a>.',n.appendChild(o),t.appendChild(n)}n.styleSheet?n.styleSheet.cssText=t:n.appendChild(document.createTextNode(t)),document.getElementsByTagName("head")[0].appendChild(n),fetch(`https://us.recessfeed.com/api/posts?post_url=${encodeURIComponent(`${window.location.origin}${window.location.pathname}`)}`).then((e=>e.json())).then((t=>{t.length>0&&(e=t[0].post_uuid,function(){const t=document.getElementById("recess");if(t){t.innerHTML="";var n=document.createElement("div");n.innerHTML='\n            <div class="recess-comment-input-container">\n                <textarea rows="4" class="recess-comment-textarea" id="post-recess-comment-textarea" placeholder="Write a comment..." maxLength="1000"></textarea>\n                <button onclick="handleSubmitComment()" class="submit-recess-comment-button">Add Comment</button>\n            </div>\n        ',window.handleSubmitComment=function(){const t=document.getElementById("post-recess-comment-textarea").value;window.location=`https://app.recessfeed.com/post/${e}?comment_text=${encodeURIComponent(t)}`},t.appendChild(n)}else console.error('"recess" div not found. Please ensure your page includes a div with id="recess".')}(),fetch(`https://us.recessfeed.com/api/post_comments?post_url=${encodeURIComponent(`${window.location.origin}${window.location.pathname}`)}`).then((e=>e.json())).then((t=>{t.length>0&&(e=t[0].post,o(t))})).catch((e=>console.error("Error fetching comments:",e))))})).catch((e=>console.error("Error fetching comments:",e)))}();
+        </script>
+        <script src="../modal/modal.js"></script>
+    </head>
+    <body>
+        <script src="../js/dark-mode.js"></script>
+        <div class="content">
+            <nav>
+                <div style="font-weight: 300">
+                    <a id="site-title" href="/">Yakko Majuri</a>
+                </div>
+                <ul id="navbar">
+                    <li class="nav-item selected"><a href="/blog">blog</a></li>
+                    <li class="nav-item"><a href="/albums">pics</a></li>
+                    <li class="nav-item"><a href="/poems">poems</a></li>
+                </ul>
+                <div class="toggle-wrapper" onclick="toggleDarkMode()">
+                    <button id="darkModeToggle" class="toggle-button">☀️</button>
+                </div>
+            </nav>
+
+            <hr>
+
+            <div class="page-content-wrapper">
+                <a href="/blog" id="back-button">↩</a>
+                <a id="settings-button" href="#">⚙</a>
+                <div id="page-content"><h1 id="full-results-whats-the-worlds-least-efficient-language">Full Results: What's the world's least efficient language?</h1>
+<blockquote>
+<p><strong>Note:</strong> Language names are determined by the locales list</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Locale</th>
+<th>Total Pixels</th>
+<th>Total Chars</th>
+<th>Avg. (Mean) Pixels Per Char</th>
+<th>Total Spaces</th>
+<th>Text</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>"Gujarati"</td>
+<td>"gu"</td>
+<td>62814</td>
+<td>418</td>
+<td>150.27</td>
+<td>76</td>
+<td>"જ્યારે તમે અમારી સેવાઓનો ઉપયોગ કરો છો, ત્યારે તમે તમારી માહિતી માટે અમારા પર વિશ્વાસ કરતા હોવ છો. અમે સમજીએ છીએ કે આ એક મોટી જવાબદારી છે. અમે તમારી માહિતીનું રક્ષણ કરવા માટે સખત મહેનત કરીએ છીએ અને તમારા નિયંત્રણમાં મૂકીએ છીએ.આ ગોપનીયતા નીતિનો હેતુ અમે કઈ માહિતી એકત્રિત કરીએ છીએ, અમે તે શા માટે એકત્રિત કરીએ છીએ અને તમે તમારી માહિતીને કેવી રીતે અપડેટ, સંચાલિત, નિકાસ અને ડિલીટ કરી શકો તે સમજવામાં તમારી સહાય કરવાનો છે."</td>
+</tr>
+<tr>
+<td>"Gujarati (India)"</td>
+<td>"gu_IN"</td>
+<td>62814</td>
+<td>418</td>
+<td>150.27</td>
+<td>76</td>
+<td>"જ્યારે તમે અમારી સેવાઓનો ઉપયોગ કરો છો, ત્યારે તમે તમારી માહિતી માટે અમારા પર વિશ્વાસ કરતા હોવ છો. અમે સમજીએ છીએ કે આ એક મોટી જવાબદારી છે. અમે તમારી માહિતીનું રક્ષણ કરવા માટે સખત મહેનત કરીએ છીએ અને તમારા નિયંત્રણમાં મૂકીએ છીએ.આ ગોપનીયતા નીતિનો હેતુ અમે કઈ માહિતી એકત્રિત કરીએ છીએ, અમે તે શા માટે એકત્રિત કરીએ છીએ અને તમે તમારી માહિતીને કેવી રીતે અપડેટ, સંચાલિત, નિકાસ અને ડિલીટ કરી શકો તે સમજવામાં તમારી સહાય કરવાનો છે."</td>
+</tr>
+<tr>
+<td>"Hebrew"</td>
+<td>"he"</td>
+<td>63533</td>
+<td>313</td>
+<td>202.98</td>
+<td>54</td>
+<td>"אם בחרת להשתמש בשירותים שלנו, המשמעות היא שנתת בנו אמון לטפל באופן הולם במידע שמסרת לנו. אנחנו מבינים שמדובר באחריות גדולה ואנחנו עושים מאמצים רבים כדי להגן על המידע שלך ולתת לך שליטה.מדיניות הפרטיות הזו נועדה לעזור לך להבין איזה מידע אנו אוספים, מדוע אחנונ אוספים אותו, כמו גם איך לעדכן, לנהל, לייצא ולמחוק אותו."</td>
+</tr>
+<tr>
+<td>"Hebrew (Israel)"</td>
+<td>"he_IL"</td>
+<td>63533</td>
+<td>313</td>
+<td>202.98</td>
+<td>54</td>
+<td>"אם בחרת להשתמש בשירותים שלנו, המשמעות היא שנתת בנו אמון לטפל באופן הולם במידע שמסרת לנו. אנחנו מבינים שמדובר באחריות גדולה ואנחנו עושים מאמצים רבים כדי להגן על המידע שלך ולתת לך שליטה.מדיניות הפרטיות הזו נועדה לעזור לך להבין איזה מידע אנו אוספים, מדוע אחנונ אוספים אותו, כמו גם איך לעדכן, לנהל, לייצא ולמחוק אותו."</td>
+</tr>
+<tr>
+<td>"Arabic (Sudan)"</td>
+<td>"ar_SD"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Syria)"</td>
+<td>"ar_SY"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Yemen)"</td>
+<td>"ar_YE"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (United Arab Emirates)"</td>
+<td>"ar_AE"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Kuwait)"</td>
+<td>"ar_KW"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Algeria)"</td>
+<td>"ar_DZ"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Morocco)"</td>
+<td>"ar_MA"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Oman)"</td>
+<td>"ar_OM"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Lebanon)"</td>
+<td>"ar_LB"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Libya)"</td>
+<td>"ar_LY"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Jordan)"</td>
+<td>"ar_JO"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Qatar)"</td>
+<td>"ar_QA"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Saudi Arabia)"</td>
+<td>"ar_SA"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic"</td>
+<td>"ar"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Bahrain)"</td>
+<td>"ar_BH"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Egypt)"</td>
+<td>"ar_EG"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Iraq)"</td>
+<td>"ar_IQ"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Arabic (Tunisia)"</td>
+<td>"ar_TN"</td>
+<td>66116</td>
+<td>257</td>
+<td>257.26</td>
+<td>39</td>
+<td>"عند استخدام خدماتنا، فإنك تأتمننا على معلوماتك. نحن ندرك أن هذه مسؤولية كبيرة ونعمل بجدية لحماية معلوماتك ونمنحك التحكم فيها.تهدف سياسةُ الخصوصية هذه إلى مساعدتك على فهم ماهية المعلومات التي نجمعها وسبب جمعنا لها، وكذلك طريقة تحديث معلوماتك وتصديرها وحذفها."</td>
+</tr>
+<tr>
+<td>"Kannada (India)"</td>
+<td>"kn_IN"</td>
+<td>73659</td>
+<td>507</td>
+<td>145.28</td>
+<td>59</td>
+<td>"ನಮ್ಮ ಸೇವೆಗಳನ್ನು ನೀವು ಬಳಸುವಾಗ, ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ನಾವು ಸುರಕ್ಷಿತವಾಗಿರಿಸುತ್ತೇವೆ ಎಂದು ನೀವು ನಮ್ಮ ಮೇಲೆ ವಿಶ್ವಾಸವಿರಿಸುತ್ತೀರಿ. ನಮಗೆ ಇದು ದೊಡ್ಡ ಜವಾಬ್ದಾರಿ ಎಂದು ಅರಿವಿದೆ ಮತ್ತು ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ಸಂರಕ್ಷಿಸಲು ಹಾಗೂ ಅದರ ನಿಯಂತ್ರಣವನ್ನು ನಿಮಗೆ ಕೊಡಲು ನಾವು ಶ್ರಮವಹಿಸಿ ಕೆಲಸ ಮಾಡುತ್ತೇವೆ.ನಾವು ಯಾವ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸುತ್ತೇವೆ, ಅದನ್ನು ನಾವು ಏಕೆ ಸಂಗ್ರಹಿಸುತ್ತೇವೆ ಮತ್ತು ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ನೀವು ಹೇಗೆ ಅಪ್‌ಡೇಟ್ ಮಾಡಬಹುದು, ನಿರ್ವಹಿಸಬಹುದು, ರಫ್ತು ಮಾಡಬಹುದು ಮತ್ತು ಅಳಿಸಬಹುದು ಎನ್ನುವುದನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವಲ್ಲಿ ನಿಮಗೆ ಸಹಾಯ ಮಾಡುವುದು ಈ ಗೌಪ್ಯತೆ ನೀತಿಯ ಉದ್ದೇಶವಾಗಿದೆ."</td>
+</tr>
+<tr>
+<td>"Kannada"</td>
+<td>"kn"</td>
+<td>73659</td>
+<td>507</td>
+<td>145.28</td>
+<td>59</td>
+<td>"ನಮ್ಮ ಸೇವೆಗಳನ್ನು ನೀವು ಬಳಸುವಾಗ, ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ನಾವು ಸುರಕ್ಷಿತವಾಗಿರಿಸುತ್ತೇವೆ ಎಂದು ನೀವು ನಮ್ಮ ಮೇಲೆ ವಿಶ್ವಾಸವಿರಿಸುತ್ತೀರಿ. ನಮಗೆ ಇದು ದೊಡ್ಡ ಜವಾಬ್ದಾರಿ ಎಂದು ಅರಿವಿದೆ ಮತ್ತು ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ಸಂರಕ್ಷಿಸಲು ಹಾಗೂ ಅದರ ನಿಯಂತ್ರಣವನ್ನು ನಿಮಗೆ ಕೊಡಲು ನಾವು ಶ್ರಮವಹಿಸಿ ಕೆಲಸ ಮಾಡುತ್ತೇವೆ.ನಾವು ಯಾವ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸುತ್ತೇವೆ, ಅದನ್ನು ನಾವು ಏಕೆ ಸಂಗ್ರಹಿಸುತ್ತೇವೆ ಮತ್ತು ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ನೀವು ಹೇಗೆ ಅಪ್‌ಡೇಟ್ ಮಾಡಬಹುದು, ನಿರ್ವಹಿಸಬಹುದು, ರಫ್ತು ಮಾಡಬಹುದು ಮತ್ತು ಅಳಿಸಬಹುದು ಎನ್ನುವುದನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವಲ್ಲಿ ನಿಮಗೆ ಸಹಾಯ ಮಾಡುವುದು ಈ ಗೌಪ್ಯತೆ ನೀತಿಯ ಉದ್ದೇಶವಾಗಿದೆ."</td>
+</tr>
+<tr>
+<td>"Lithuanian"</td>
+<td>"lt"</td>
+<td>78828</td>
+<td>311</td>
+<td>253.47</td>
+<td>40</td>
+<td>"Naudodami mūsų paslaugas patikite mums savo informaciją. Suprantame, kad tai didelė atsakomybė, ir labai stengiamės apsaugoti informaciją bei leisti jums ją valdyti.Ši privatumo politika padės suprasti, kokią informaciją renkame, kodėl ją renkame ir kaip ją galite atnaujinti, tvarkyti, eksportuoti ir ištrinti."</td>
+</tr>
+<tr>
+<td>"Lithuanian (Lithuania)"</td>
+<td>"lt_LT"</td>
+<td>78828</td>
+<td>311</td>
+<td>253.47</td>
+<td>40</td>
+<td>"Naudodami mūsų paslaugas patikite mums savo informaciją. Suprantame, kad tai didelė atsakomybė, ir labai stengiamės apsaugoti informaciją bei leisti jums ją valdyti.Ši privatumo politika padės suprasti, kokią informaciją renkame, kodėl ją renkame ir kaip ją galite atnaujinti, tvarkyti, eksportuoti ir ištrinti."</td>
+</tr>
+<tr>
+<td>"Thai (Thailand)"</td>
+<td>"th_TH"</td>
+<td>80055</td>
+<td>333</td>
+<td>240.41</td>
+<td>8</td>
+<td>"เมื่อคุณใช้บริการของเรา คุณไว้วางใจให้เรารักษาข้อมูลของคุณ เราเข้าใจว่านี่คือความรับผิดชอบที่ยิ่งใหญ่และพยายามอย่างยิ่งที่จะปกป้องข้อมูลของคุณ รวมถึงมอบอำนาจในการควบคุมข้อมูลให้แก่คุณนโยบายความเป็นส่วนตัวนี้มีไว้เพื่อช่วยให้คุณทราบประเภทข้อมูลที่เรารวบรวม เหตุผลที่เรารวบรวม รวมถึงวิธีที่คุณจะอัปเดต จัดการ ส่งออก และลบข้อมูลดังกล่าว"</td>
+</tr>
+<tr>
+<td>"Thai"</td>
+<td>"th"</td>
+<td>80055</td>
+<td>333</td>
+<td>240.41</td>
+<td>8</td>
+<td>"เมื่อคุณใช้บริการของเรา คุณไว้วางใจให้เรารักษาข้อมูลของคุณ เราเข้าใจว่านี่คือความรับผิดชอบที่ยิ่งใหญ่และพยายามอย่างยิ่งที่จะปกป้องข้อมูลของคุณ รวมถึงมอบอำนาจในการควบคุมข้อมูลให้แก่คุณนโยบายความเป็นส่วนตัวนี้มีไว้เพื่อช่วยให้คุณทราบประเภทข้อมูลที่เรารวบรวม เหตุผลที่เรารวบรวม รวมถึงวิธีที่คุณจะอัปเดต จัดการ ส่งออก และลบข้อมูลดังกล่าว"</td>
+</tr>
+<tr>
+<td>"Swedish"</td>
+<td>"sv"</td>
+<td>81817</td>
+<td>343</td>
+<td>238.53</td>
+<td>56</td>
+<td>"När du använder våra tjänster anförtror du oss dina uppgifter. Vi förstår att det är ett stort ansvar och arbetar hårt för att skydda dina uppgifter och ge dig kontrollen över dem.I den här integritetspolicyn förklarar vi vilken data vi samlar in, varför vi samlar in den och hur du uppdaterar, hanterar, exporterar och raderar dina uppgifter."</td>
+</tr>
+<tr>
+<td>"Swedish (Sweden)"</td>
+<td>"sv_SE"</td>
+<td>81817</td>
+<td>343</td>
+<td>238.53</td>
+<td>56</td>
+<td>"När du använder våra tjänster anförtror du oss dina uppgifter. Vi förstår att det är ett stort ansvar och arbetar hårt för att skydda dina uppgifter och ge dig kontrollen över dem.I den här integritetspolicyn förklarar vi vilken data vi samlar in, varför vi samlar in den och hur du uppdaterar, hanterar, exporterar och raderar dina uppgifter."</td>
+</tr>
+<tr>
+<td>"Swedish (Finland)"</td>
+<td>"sv_FI"</td>
+<td>81817</td>
+<td>343</td>
+<td>238.53</td>
+<td>56</td>
+<td>"När du använder våra tjänster anförtror du oss dina uppgifter. Vi förstår att det är ett stort ansvar och arbetar hårt för att skydda dina uppgifter och ge dig kontrollen över dem.I den här integritetspolicyn förklarar vi vilken data vi samlar in, varför vi samlar in den och hur du uppdaterar, hanterar, exporterar och raderar dina uppgifter."</td>
+</tr>
+<tr>
+<td>"English (Guam)"</td>
+<td>"en_GU"</td>
+<td>82897</td>
+<td>345</td>
+<td>240.28</td>
+<td>56</td>
+<td>"When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Marshall Islands)"</td>
+<td>"en_MH"</td>
+<td>82897</td>
+<td>345</td>
+<td>240.28</td>
+<td>56</td>
+<td>"When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information."</td>
+</tr>
+<tr>
+<td>"English (United States)"</td>
+<td>"en_US"</td>
+<td>82897</td>
+<td>345</td>
+<td>240.28</td>
+<td>56</td>
+<td>"When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information."</td>
+</tr>
+<tr>
+<td>"English (U.S. Virgin Islands)"</td>
+<td>"en_VI"</td>
+<td>82897</td>
+<td>345</td>
+<td>240.28</td>
+<td>56</td>
+<td>"When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information."</td>
+</tr>
+<tr>
+<td>"English (American Samoa)"</td>
+<td>"en_AS"</td>
+<td>82897</td>
+<td>345</td>
+<td>240.28</td>
+<td>56</td>
+<td>"When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Northern Mariana Islands)"</td>
+<td>"en_MP"</td>
+<td>82897</td>
+<td>345</td>
+<td>240.28</td>
+<td>56</td>
+<td>"When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information."</td>
+</tr>
+<tr>
+<td>"English (U.S. Minor Outlying Islands)"</td>
+<td>"en_UM"</td>
+<td>82897</td>
+<td>345</td>
+<td>240.28</td>
+<td>56</td>
+<td>"When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information."</td>
+</tr>
+<tr>
+<td>"English"</td>
+<td>"en"</td>
+<td>82897</td>
+<td>345</td>
+<td>240.28</td>
+<td>56</td>
+<td>"When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information."</td>
+</tr>
+<tr>
+<td>"English (New Zealand)"</td>
+<td>"en_NZ"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Mauritius)"</td>
+<td>"en_MU"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Namibia)"</td>
+<td>"en_NA"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Hong Kong SAR China)"</td>
+<td>"en_HK"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Malta)"</td>
+<td>"en_MT"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Botswana)"</td>
+<td>"en_BW"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Belgium)"</td>
+<td>"en_BE"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Zimbabwe)"</td>
+<td>"en_ZW"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Pakistan)"</td>
+<td>"en_PK"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Canada)"</td>
+<td>"en_CA"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (India)"</td>
+<td>"en_IN"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Belize)"</td>
+<td>"en_BZ"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Australia)"</td>
+<td>"en_AU"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (United Kingdom)"</td>
+<td>"en_GB"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (South Africa)"</td>
+<td>"en_ZA"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Singapore)"</td>
+<td>"en_SG"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Philippines)"</td>
+<td>"en_PH"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Trinidad and Tobago)"</td>
+<td>"en_TT"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Israel)"</td>
+<td>"en_IL"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Jamaica)"</td>
+<td>"en_JM"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"English (Ireland)"</td>
+<td>"en_IE"</td>
+<td>84774</td>
+<td>351</td>
+<td>241.52</td>
+<td>58</td>
+<td>"When you use our services, you’re trusting us with your information. We understand that this is a big responsibility and we work hard to protect your information and put you in control.This Privacy Policy is meant to help you understand what information we collect, why we collect it and how you can update, manage, export and delete your information."</td>
+</tr>
+<tr>
+<td>"Croatian (Croatia)"</td>
+<td>"hr_HR"</td>
+<td>85245</td>
+<td>344</td>
+<td>247.81</td>
+<td>49</td>
+<td>"Prilikom upotrebe naših usluga povjeravate nam svoje podatke. Znamo koliko je to velika odgovornost i naporno radimo kako bismo zaštitili vaše podatke i omogućili vam nadzor nad njima.Pravila o privatnosti imaju svrhu objasniti koje podatke prikupljamo, zašto ih prikupljamo i kako ih možete ažurirati, upravljati njima, izvesti ih i izbrisati."</td>
+</tr>
+<tr>
+<td>"Bosnian (Bosnia and Herzegovina)"</td>
+<td>"bs_BA"</td>
+<td>85245</td>
+<td>344</td>
+<td>247.81</td>
+<td>49</td>
+<td>"Prilikom upotrebe naših usluga povjeravate nam svoje podatke. Znamo koliko je to velika odgovornost i naporno radimo kako bismo zaštitili vaše podatke i omogućili vam nadzor nad njima.Pravila o privatnosti imaju svrhu objasniti koje podatke prikupljamo, zašto ih prikupljamo i kako ih možete ažurirati, upravljati njima, izvesti ih i izbrisati."</td>
+</tr>
+<tr>
+<td>"Bosnian"</td>
+<td>"bs"</td>
+<td>85245</td>
+<td>344</td>
+<td>247.81</td>
+<td>49</td>
+<td>"Prilikom upotrebe naših usluga povjeravate nam svoje podatke. Znamo koliko je to velika odgovornost i naporno radimo kako bismo zaštitili vaše podatke i omogućili vam nadzor nad njima.Pravila o privatnosti imaju svrhu objasniti koje podatke prikupljamo, zašto ih prikupljamo i kako ih možete ažurirati, upravljati njima, izvesti ih i izbrisati."</td>
+</tr>
+<tr>
+<td>"Croatian"</td>
+<td>"hr"</td>
+<td>85245</td>
+<td>344</td>
+<td>247.81</td>
+<td>49</td>
+<td>"Prilikom upotrebe naših usluga povjeravate nam svoje podatke. Znamo koliko je to velika odgovornost i naporno radimo kako bismo zaštitili vaše podatke i omogućili vam nadzor nad njima.Pravila o privatnosti imaju svrhu objasniti koje podatke prikupljamo, zašto ih prikupljamo i kako ih možete ažurirati, upravljati njima, izvesti ih i izbrisati."</td>
+</tr>
+<tr>
+<td>"Slovenian"</td>
+<td>"sl"</td>
+<td>87038</td>
+<td>343</td>
+<td>253.76</td>
+<td>50</td>
+<td>"Ko uporabljate naše storitve, nam zaupate svoje podatke. Zavedamo se, da je to velika odgovornost, in zelo skrbimo za zaščito vaših podatkov ter vam omogočamo nadzor nad njimi.S tem pravilnikom o zasebnosti vam želimo pomagati razumeti, katere podatke zbiramo, zakaj jih zbiramo in kako jih lahko posodobite, upravljate, izvozite in izbrišete."</td>
+</tr>
+<tr>
+<td>"Slovenian (Slovenia)"</td>
+<td>"sl_SI"</td>
+<td>87038</td>
+<td>343</td>
+<td>253.76</td>
+<td>50</td>
+<td>"Ko uporabljate naše storitve, nam zaupate svoje podatke. Zavedamo se, da je to velika odgovornost, in zelo skrbimo za zaščito vaših podatkov ter vam omogočamo nadzor nad njimi.S tem pravilnikom o zasebnosti vam želimo pomagati razumeti, katere podatke zbiramo, zakaj jih zbiramo in kako jih lahko posodobite, upravljate, izvozite in izbrišete."</td>
+</tr>
+<tr>
+<td>"Czech"</td>
+<td>"cs"</td>
+<td>88275</td>
+<td>338</td>
+<td>261.17</td>
+<td>48</td>
+<td>"Když používáte naše služby, svěřujete nám své údaje. Chápeme, že se jedná o velkou zodpovědnost, a usilovně pracujeme na tom, abychom vaše údaje ochránili a umožnili vám je spravovat.V těchto zásadách ochrany soukromí zjistíte, jaké údaje shromažďujeme, proč je shromažďujeme a jak je můžete aktualizovat, spravovat, exportovat a vymazat."</td>
+</tr>
+<tr>
+<td>"Czech (Czech Republic)"</td>
+<td>"cs_CZ"</td>
+<td>88275</td>
+<td>338</td>
+<td>261.17</td>
+<td>48</td>
+<td>"Když používáte naše služby, svěřujete nám své údaje. Chápeme, že se jedná o velkou zodpovědnost, a usilovně pracujeme na tom, abychom vaše údaje ochránili a umožnili vám je spravovat.V těchto zásadách ochrany soukromí zjistíte, jaké údaje shromažďujeme, proč je shromažďujeme a jak je můžete aktualizovat, spravovat, exportovat a vymazat."</td>
+</tr>
+<tr>
+<td>"Afrikaans (South Africa)"</td>
+<td>"af_ZA"</td>
+<td>88286</td>
+<td>364</td>
+<td>242.54</td>
+<td>59</td>
+<td>"Wanneer jy ons dienste gebruik, vertrou jy ons met jou inligting. Ons verstaan dat dit 'n groot verantwoordelikheid is en werk hard om jou inligting te beskerm en jou in beheer te stel.Hierdie privaatheidsbeleid is bedoel om jou te help verstaan watter inligting ons insamel, hoekom ons dit insamel en hoe jy jou inligting kan opdateer, bestuur, uitvoer en uitvee."</td>
+</tr>
+<tr>
+<td>"Afrikaans (Namibia)"</td>
+<td>"af_NA"</td>
+<td>88286</td>
+<td>364</td>
+<td>242.54</td>
+<td>59</td>
+<td>"Wanneer jy ons dienste gebruik, vertrou jy ons met jou inligting. Ons verstaan dat dit 'n groot verantwoordelikheid is en werk hard om jou inligting te beskerm en jou in beheer te stel.Hierdie privaatheidsbeleid is bedoel om jou te help verstaan watter inligting ons insamel, hoekom ons dit insamel en hoe jy jou inligting kan opdateer, bestuur, uitvoer en uitvee."</td>
+</tr>
+<tr>
+<td>"Afrikaans"</td>
+<td>"af"</td>
+<td>88286</td>
+<td>364</td>
+<td>242.54</td>
+<td>59</td>
+<td>"Wanneer jy ons dienste gebruik, vertrou jy ons met jou inligting. Ons verstaan dat dit 'n groot verantwoordelikheid is en werk hard om jou inligting te beskerm en jou in beheer te stel.Hierdie privaatheidsbeleid is bedoel om jou te help verstaan watter inligting ons insamel, hoekom ons dit insamel en hoe jy jou inligting kan opdateer, bestuur, uitvoer en uitvee."</td>
+</tr>
+<tr>
+<td>"Spanish (Equatorial Guinea)"</td>
+<td>"es_GQ"</td>
+<td>88551</td>
+<td>354</td>
+<td>250.14</td>
+<td>49</td>
+<td>"Al utilizar nuestros servicios, nos confías tus datos. Entendemos que es una gran responsabilidad y nos esforzamos al máximo para proteger tu información y permitirte controlarla.El objetivo de esta Política de Privacidad es informarte sobre qué datos recogemos, por qué los recogemos y cómo puedes actualizarlos, gestionarlos, exportarlos y eliminarlos."</td>
+</tr>
+<tr>
+<td>"Spanish"</td>
+<td>"es"</td>
+<td>88551</td>
+<td>354</td>
+<td>250.14</td>
+<td>49</td>
+<td>"Al utilizar nuestros servicios, nos confías tus datos. Entendemos que es una gran responsabilidad y nos esforzamos al máximo para proteger tu información y permitirte controlarla.El objetivo de esta Política de Privacidad es informarte sobre qué datos recogemos, por qué los recogemos y cómo puedes actualizarlos, gestionarlos, exportarlos y eliminarlos."</td>
+</tr>
+<tr>
+<td>"Spanish (Spain)"</td>
+<td>"es_ES"</td>
+<td>88551</td>
+<td>354</td>
+<td>250.14</td>
+<td>49</td>
+<td>"Al utilizar nuestros servicios, nos confías tus datos. Entendemos que es una gran responsabilidad y nos esforzamos al máximo para proteger tu información y permitirte controlarla.El objetivo de esta Política de Privacidad es informarte sobre qué datos recogemos, por qué los recogemos y cómo puedes actualizarlos, gestionarlos, exportarlos y eliminarlos."</td>
+</tr>
+<tr>
+<td>"Bengali (Bangladesh)"</td>
+<td>"bn_BD"</td>
+<td>88585</td>
+<td>382</td>
+<td>231.9</td>
+<td>64</td>
+<td>"আপনি যখন আমাদের পরিষেবাগুলি ব্যবহার করেন, তখন আপনি আপনার তথ্য সম্পর্কে আমাদের বিশ্বাস করেন। আমরা বুঝি এটি একটি বড় দায়িত্ব এবং আপনার তথ্য রক্ষা করা ও সবকিছু আপনার নিয়ন্ত্রণে রাখার জন্য কঠোর পরিশ্রম করি।এই গোপনীয়তা নীতির উদ্দেশ্য হল আমরা কোন তথ্য সংগ্রহ করি, এটি কেন সংগ্রহ করি এবং আপনি কীভাবে আপনার তথ্য আপডেট, পরিচালনা ও রপ্তানি করতে এবং মুছতে পারবেন তা বুঝতে আপনাকে সাহায্য করা।"</td>
+</tr>
+<tr>
+<td>"Bengali (India)"</td>
+<td>"bn_IN"</td>
+<td>88585</td>
+<td>382</td>
+<td>231.9</td>
+<td>64</td>
+<td>"আপনি যখন আমাদের পরিষেবাগুলি ব্যবহার করেন, তখন আপনি আপনার তথ্য সম্পর্কে আমাদের বিশ্বাস করেন। আমরা বুঝি এটি একটি বড় দায়িত্ব এবং আপনার তথ্য রক্ষা করা ও সবকিছু আপনার নিয়ন্ত্রণে রাখার জন্য কঠোর পরিশ্রম করি।এই গোপনীয়তা নীতির উদ্দেশ্য হল আমরা কোন তথ্য সংগ্রহ করি, এটি কেন সংগ্রহ করি এবং আপনি কীভাবে আপনার তথ্য আপডেট, পরিচালনা ও রপ্তানি করতে এবং মুছতে পারবেন তা বুঝতে আপনাকে সাহায্য করা।"</td>
+</tr>
+<tr>
+<td>"Bengali"</td>
+<td>"bn"</td>
+<td>88585</td>
+<td>382</td>
+<td>231.9</td>
+<td>64</td>
+<td>"আপনি যখন আমাদের পরিষেবাগুলি ব্যবহার করেন, তখন আপনি আপনার তথ্য সম্পর্কে আমাদের বিশ্বাস করেন। আমরা বুঝি এটি একটি বড় দায়িত্ব এবং আপনার তথ্য রক্ষা করা ও সবকিছু আপনার নিয়ন্ত্রণে রাখার জন্য কঠোর পরিশ্রম করি।এই গোপনীয়তা নীতির উদ্দেশ্য হল আমরা কোন তথ্য সংগ্রহ করি, এটি কেন সংগ্রহ করি এবং আপনি কীভাবে আপনার তথ্য আপডেট, পরিচালনা ও রপ্তানি করতে এবং মুছতে পারবেন তা বুঝতে আপনাকে সাহায্য করা।"</td>
+</tr>
+<tr>
+<td>"Slovak"</td>
+<td>"sk"</td>
+<td>88887</td>
+<td>344</td>
+<td>258.39</td>
+<td>48</td>
+<td>"Keď používate naše služby, zverujete nám svoje údaje. Rozumieme, že ide o veľkú zodpovednosť a usilovne pracujeme na tom, aby sme vaše údaje ochránili a umožnili vám ich spravovať.V týchto pravidlách ochrany súkromia zistíte, aké informácie zhromažďujeme, prečo ich zhromažďujeme a ako ich môžete upraviť, spravovať, exportovať alebo odstrániť."</td>
+</tr>
+<tr>
+<td>"Slovak (Slovakia)"</td>
+<td>"sk_SK"</td>
+<td>88887</td>
+<td>344</td>
+<td>258.39</td>
+<td>48</td>
+<td>"Keď používate naše služby, zverujete nám svoje údaje. Rozumieme, že ide o veľkú zodpovednosť a usilovne pracujeme na tom, aby sme vaše údaje ochránili a umožnili vám ich spravovať.V týchto pravidlách ochrany súkromia zistíte, aké informácie zhromažďujeme, prečo ich zhromažďujeme a ako ich môžete upraviť, spravovať, exportovať alebo odstrániť."</td>
+</tr>
+<tr>
+<td>"Polish"</td>
+<td>"pl"</td>
+<td>88961</td>
+<td>346</td>
+<td>257.11</td>
+<td>51</td>
+<td>"Korzystając z naszych usług, powierzasz nam swoje dane. Zdajemy sobie sprawę, że to wielka odpowiedzialność i bardzo się staramy zapewnić ich bezpieczeństwo oraz umożliwić Ci kontrolę nad nimi.Z tej Polityki prywatności dowiesz się, jakie dane zbieramy i w jakim celu, a także jak możesz je aktualizować, eksportować i usuwać oraz nimi zarządzać."</td>
+</tr>
+<tr>
+<td>"Polish (Poland)"</td>
+<td>"pl_PL"</td>
+<td>88961</td>
+<td>346</td>
+<td>257.11</td>
+<td>51</td>
+<td>"Korzystając z naszych usług, powierzasz nam swoje dane. Zdajemy sobie sprawę, że to wielka odpowiedzialność i bardzo się staramy zapewnić ich bezpieczeństwo oraz umożliwić Ci kontrolę nad nimi.Z tej Polityki prywatności dowiesz się, jakie dane zbieramy i w jakim celu, a także jak możesz je aktualizować, eksportować i usuwać oraz nimi zarządzać."</td>
+</tr>
+<tr>
+<td>"Persian (Iran)"</td>
+<td>"fa_IR"</td>
+<td>89931</td>
+<td>388</td>
+<td>231.78</td>
+<td>69</td>
+<td>"وقتی از سرویس‌های ما استفاده می‌کنید، با ارائه اطلاعاتتان به ما اطمینان می‌کنید. می‌دانیم که این مسئولیتی بزرگ است و سخت در تلاش هستیم تا از اطلاعات شما محافظت کنیم و کنترل آن‌ها را در دست شما قرار دهیم.هدف از این «خط‌مشی رازداری» این است که به شما کمک کنیم بدانید چه اطلاعاتی را جمع‌آوری می‌کنیم، چرا جمع‌آوری می‌کنیم و چگونه می‌توانید اطلاعاتتان را به‌روزرسانی، مدیریت، صادر و حذف کنید."</td>
+</tr>
+<tr>
+<td>"Persian"</td>
+<td>"fa"</td>
+<td>89931</td>
+<td>388</td>
+<td>231.78</td>
+<td>69</td>
+<td>"وقتی از سرویس‌های ما استفاده می‌کنید، با ارائه اطلاعاتتان به ما اطمینان می‌کنید. می‌دانیم که این مسئولیتی بزرگ است و سخت در تلاش هستیم تا از اطلاعات شما محافظت کنیم و کنترل آن‌ها را در دست شما قرار دهیم.هدف از این «خط‌مشی رازداری» این است که به شما کمک کنیم بدانید چه اطلاعاتی را جمع‌آوری می‌کنیم، چرا جمع‌آوری می‌کنیم و چگونه می‌توانید اطلاعاتتان را به‌روزرسانی، مدیریت، صادر و حذف کنید."</td>
+</tr>
+<tr>
+<td>"Persian (Afghanistan)"</td>
+<td>"fa_AF"</td>
+<td>89931</td>
+<td>388</td>
+<td>231.78</td>
+<td>69</td>
+<td>"وقتی از سرویس‌های ما استفاده می‌کنید، با ارائه اطلاعاتتان به ما اطمینان می‌کنید. می‌دانیم که این مسئولیتی بزرگ است و سخت در تلاش هستیم تا از اطلاعات شما محافظت کنیم و کنترل آن‌ها را در دست شما قرار دهیم.هدف از این «خط‌مشی رازداری» این است که به شما کمک کنیم بدانید چه اطلاعاتی را جمع‌آوری می‌کنیم، چرا جمع‌آوری می‌کنیم و چگونه می‌توانید اطلاعاتتان را به‌روزرسانی، مدیریت، صادر و حذف کنید."</td>
+</tr>
+<tr>
+<td>"Tamil (Sri Lanka)"</td>
+<td>"ta_LK"</td>
+<td>90312</td>
+<td>409</td>
+<td>220.81</td>
+<td>41</td>
+<td>"எங்கள் சேவைகளைப் பயன்படுத்தும் போது, எங்களை நம்பி, உங்கள் தகவலை அளிக்கிறீர்கள். இது மிகப்பெரிய பொறுப்பு என்பதை உணர்கிறோம். உங்கள் தகவலைப் பாதுகாக்கவும், அதை நீங்கள் கட்டுப்படுத்துவதற்கும் நாங்கள் உழைக்கிறோம்.இந்தத் தனியுரிமைக் கொள்கை நாங்கள் சேகரிக்கும் தகவல், சேகரிப்பதற்கான காரணம் மற்றும் உங்கள் தகவலை நீங்கள் எவ்வாறு புதுப்பிக்கலாம், நிர்வகிக்கலாம், ஏற்றலாம் மற்றும் நீக்கலாம் என்பது குறித்து விவரிக்கிறது."</td>
+</tr>
+<tr>
+<td>"Tamil (India)"</td>
+<td>"ta_IN"</td>
+<td>90312</td>
+<td>409</td>
+<td>220.81</td>
+<td>41</td>
+<td>"எங்கள் சேவைகளைப் பயன்படுத்தும் போது, எங்களை நம்பி, உங்கள் தகவலை அளிக்கிறீர்கள். இது மிகப்பெரிய பொறுப்பு என்பதை உணர்கிறோம். உங்கள் தகவலைப் பாதுகாக்கவும், அதை நீங்கள் கட்டுப்படுத்துவதற்கும் நாங்கள் உழைக்கிறோம்.இந்தத் தனியுரிமைக் கொள்கை நாங்கள் சேகரிக்கும் தகவல், சேகரிப்பதற்கான காரணம் மற்றும் உங்கள் தகவலை நீங்கள் எவ்வாறு புதுப்பிக்கலாம், நிர்வகிக்கலாம், ஏற்றலாம் மற்றும் நீக்கலாம் என்பது குறித்து விவரிக்கிறது."</td>
+</tr>
+<tr>
+<td>"Tamil"</td>
+<td>"ta"</td>
+<td>90312</td>
+<td>409</td>
+<td>220.81</td>
+<td>41</td>
+<td>"எங்கள் சேவைகளைப் பயன்படுத்தும் போது, எங்களை நம்பி, உங்கள் தகவலை அளிக்கிறீர்கள். இது மிகப்பெரிய பொறுப்பு என்பதை உணர்கிறோம். உங்கள் தகவலைப் பாதுகாக்கவும், அதை நீங்கள் கட்டுப்படுத்துவதற்கும் நாங்கள் உழைக்கிறோம்.இந்தத் தனியுரிமைக் கொள்கை நாங்கள் சேகரிக்கும் தகவல், சேகரிப்பதற்கான காரணம் மற்றும் உங்கள் தகவலை நீங்கள் எவ்வாறு புதுப்பிக்கலாம், நிர்வகிக்கலாம், ஏற்றலாம் மற்றும் நீக்கலாம் என்பது குறித்து விவரிக்கிறது."</td>
+</tr>
+<tr>
+<td>"Italian (Switzerland)"</td>
+<td>"it_CH"</td>
+<td>91061</td>
+<td>381</td>
+<td>239.01</td>
+<td>56</td>
+<td>"Quando utilizzi i nostri servizi, ci affidi le tue informazioni. Siamo consapevoli che si tratti di una grande responsabilità e ci adoperiamo per proteggere le tue informazioni lasciando a te il controllo.Le Norme sulla privacy ti consentono di capire meglio quali dati raccogliamo, perché li raccogliamo e come puoi aggiornare, gestire, esportare ed eliminare le tue informazioni."</td>
+</tr>
+<tr>
+<td>"Italian (Italy)"</td>
+<td>"it_IT"</td>
+<td>91061</td>
+<td>381</td>
+<td>239.01</td>
+<td>56</td>
+<td>"Quando utilizzi i nostri servizi, ci affidi le tue informazioni. Siamo consapevoli che si tratti di una grande responsabilità e ci adoperiamo per proteggere le tue informazioni lasciando a te il controllo.Le Norme sulla privacy ti consentono di capire meglio quali dati raccogliamo, perché li raccogliamo e come puoi aggiornare, gestire, esportare ed eliminare le tue informazioni."</td>
+</tr>
+<tr>
+<td>"Italian"</td>
+<td>"it"</td>
+<td>91061</td>
+<td>381</td>
+<td>239.01</td>
+<td>56</td>
+<td>"Quando utilizzi i nostri servizi, ci affidi le tue informazioni. Siamo consapevoli che si tratti di una grande responsabilità e ci adoperiamo per proteggere le tue informazioni lasciando a te il controllo.Le Norme sulla privacy ti consentono di capire meglio quali dati raccogliamo, perché li raccogliamo e come puoi aggiornare, gestire, esportare ed eliminare le tue informazioni."</td>
+</tr>
+<tr>
+<td>"Catalan"</td>
+<td>"ca"</td>
+<td>91401</td>
+<td>378</td>
+<td>241.8</td>
+<td>55</td>
+<td>"Quan utilitzeu els nostres serveis, ens confieu la vostra informació. Sabem que és una gran responsabilitat i, per això, treballem per protegir les vostres dades i perquè en tingueu el control.L'objectiu d'aquesta política de privadesa és informar-vos de quina informació recopilem, per què la recopilem i com podeu actualitzar, gestionar, exportar i suprimir les vostres dades."</td>
+</tr>
+<tr>
+<td>"Catalan (Spain)"</td>
+<td>"ca_ES"</td>
+<td>91401</td>
+<td>378</td>
+<td>241.8</td>
+<td>55</td>
+<td>"Quan utilitzeu els nostres serveis, ens confieu la vostra informació. Sabem que és una gran responsabilitat i, per això, treballem per protegir les vostres dades i perquè en tingueu el control.L'objectiu d'aquesta política de privadesa és informar-vos de quina informació recopilem, per què la recopilem i com podeu actualitzar, gestionar, exportar i suprimir les vostres dades."</td>
+</tr>
+<tr>
+<td>"Serbian (Latin, Montenegro)"</td>
+<td>"sr_Latn_ME"</td>
+<td>91404</td>
+<td>372</td>
+<td>245.71</td>
+<td>57</td>
+<td>"Kada koristite naše usluge, poveravate nam svoje informacije. Shvatamo da je to velika odgovornost i stvarno se trudimo da zaštitimo vaše informacije i omogućimo vam kontrolu nad njima.Ova politika privatnosti ima za cilj da vam objasni koje informacije prikupljamo, zašto ih prikupljamo i kako možete da ih ažurirate, da upravljate njima, da ih izvozite i da ih brišete."</td>
+</tr>
+<tr>
+<td>"Serbian (Latin, Bosnia and Herzegovina)"</td>
+<td>"sr_Latn_BA"</td>
+<td>91404</td>
+<td>372</td>
+<td>245.71</td>
+<td>57</td>
+<td>"Kada koristite naše usluge, poveravate nam svoje informacije. Shvatamo da je to velika odgovornost i stvarno se trudimo da zaštitimo vaše informacije i omogućimo vam kontrolu nad njima.Ova politika privatnosti ima za cilj da vam objasni koje informacije prikupljamo, zašto ih prikupljamo i kako možete da ih ažurirate, da upravljate njima, da ih izvozite i da ih brišete."</td>
+</tr>
+<tr>
+<td>"Serbian (Latin)"</td>
+<td>"sr_Latn"</td>
+<td>91404</td>
+<td>372</td>
+<td>245.71</td>
+<td>57</td>
+<td>"Kada koristite naše usluge, poveravate nam svoje informacije. Shvatamo da je to velika odgovornost i stvarno se trudimo da zaštitimo vaše informacije i omogućimo vam kontrolu nad njima.Ova politika privatnosti ima za cilj da vam objasni koje informacije prikupljamo, zašto ih prikupljamo i kako možete da ih ažurirate, da upravljate njima, da ih izvozite i da ih brišete."</td>
+</tr>
+<tr>
+<td>"Serbian (Latin, Serbia)"</td>
+<td>"sr_Latn_RS"</td>
+<td>91404</td>
+<td>372</td>
+<td>245.71</td>
+<td>57</td>
+<td>"Kada koristite naše usluge, poveravate nam svoje informacije. Shvatamo da je to velika odgovornost i stvarno se trudimo da zaštitimo vaše informacije i omogućimo vam kontrolu nad njima.Ova politika privatnosti ima za cilj da vam objasni koje informacije prikupljamo, zašto ih prikupljamo i kako možete da ih ažurirate, da upravljate njima, da ih izvozite i da ih brišete."</td>
+</tr>
+<tr>
+<td>"Telugu (India)"</td>
+<td>"te_IN"</td>
+<td>92619</td>
+<td>459</td>
+<td>201.78</td>
+<td>54</td>
+<td>"మా సేవలను ఉపయోగించడం ద్వారా, మీ సమాచారాన్ని అందించడానికి మీరు మమ్మల్ని విశ్వసిస్తున్నారు. ఇది ఒక పెద్ద బాధ్యత అని మేం అర్థం చేసుకున్నాం. మరియు మీ సమాచారాన్ని రక్షించడానికి మరియు మీకు నియంత్రణను అందించడానికి మేం తీవ్రంగా శ్రమిస్తున్నాం..మేం ఏ సమాచారాన్ని సేకరిస్తాం, ఎందుకు సేకరిస్తాం మరియు మీరు మీ సమాచారాన్ని ఎలా అప్డేట్ చేయవచ్చు, నిర్వహించవచ్చు, ఎగుమతి చేయవచ్చు మరియు తొలగించవచ్చు అనేవి అర్ధం చేసుకోవడంలో మీకు సహాయపడేవిధంగా ఈ గోప్యతా విధానం రూపొందించబడింది."</td>
+</tr>
+<tr>
+<td>"Telugu"</td>
+<td>"te"</td>
+<td>92619</td>
+<td>459</td>
+<td>201.78</td>
+<td>54</td>
+<td>"మా సేవలను ఉపయోగించడం ద్వారా, మీ సమాచారాన్ని అందించడానికి మీరు మమ్మల్ని విశ్వసిస్తున్నారు. ఇది ఒక పెద్ద బాధ్యత అని మేం అర్థం చేసుకున్నాం. మరియు మీ సమాచారాన్ని రక్షించడానికి మరియు మీకు నియంత్రణను అందించడానికి మేం తీవ్రంగా శ్రమిస్తున్నాం..మేం ఏ సమాచారాన్ని సేకరిస్తాం, ఎందుకు సేకరిస్తాం మరియు మీరు మీ సమాచారాన్ని ఎలా అప్డేట్ చేయవచ్చు, నిర్వహించవచ్చు, ఎగుమతి చేయవచ్చు మరియు తొలగించవచ్చు అనేవి అర్ధం చేసుకోవడంలో మీకు సహాయపడేవిధంగా ఈ గోప్యతా విధానం రూపొందించబడింది."</td>
+</tr>
+<tr>
+<td>"Cantonese (Traditional, Hong Kong SAR China)"</td>
+<td>"yue_Hant_HK"</td>
+<td>92751</td>
+<td>101</td>
+<td>918.33</td>
+<td>0</td>
+<td>"在您使用我們的服務時，您將個人資料托付給我們。我們明白這項責任重大，因此我們會盡力保護您資料，並確保一切由您做主。此《私隱權政策》旨在讓您瞭解我們收集的資料類型、原因和更新、管理匯出以及刪除資料的方法。"</td>
+</tr>
+<tr>
+<td>"Chinese (Traditional Han, Hong Kong SAR China)"</td>
+<td>"zh_Hant_HK"</td>
+<td>92751</td>
+<td>101</td>
+<td>918.33</td>
+<td>0</td>
+<td>"在您使用我們的服務時，您將個人資料托付給我們。我們明白這項責任重大，因此我們會盡力保護您資料，並確保一切由您做主。此《私隱權政策》旨在讓您瞭解我們收集的資料類型、原因和更新、管理匯出以及刪除資料的方法。"</td>
+</tr>
+<tr>
+<td>"Chinese (Traditional Han, Macau SAR China)"</td>
+<td>"zh_Hant_MO"</td>
+<td>92751</td>
+<td>101</td>
+<td>918.33</td>
+<td>0</td>
+<td>"在您使用我們的服務時，您將個人資料托付給我們。我們明白這項責任重大，因此我們會盡力保護您資料，並確保一切由您做主。此《私隱權政策》旨在讓您瞭解我們收集的資料類型、原因和更新、管理匯出以及刪除資料的方法。"</td>
+</tr>
+<tr>
+<td>"Danish"</td>
+<td>"da"</td>
+<td>92778</td>
+<td>382</td>
+<td>242.87</td>
+<td>59</td>
+<td>"Når du bruger vores tjenester, betror du os dine oplysninger. Vi forstår, at det er et stort ansvar og arbejder hårdt på at beskytte dine oplysninger og give dig kontrol over dem.Denne privatlivspolitik er beregnet som en hjælp til at forstå, hvilke oplysninger vi indsamler, hvorfor vi indsamler dem, og hvordan du kan opdatere, administrere, eksportere og slette dine oplysninger."</td>
+</tr>
+<tr>
+<td>"Faroese (Faroe Islands)"</td>
+<td>"fo_FO"</td>
+<td>92778</td>
+<td>382</td>
+<td>242.87</td>
+<td>59</td>
+<td>"Når du bruger vores tjenester, betror du os dine oplysninger. Vi forstår, at det er et stort ansvar og arbejder hårdt på at beskytte dine oplysninger og give dig kontrol over dem.Denne privatlivspolitik er beregnet som en hjælp til at forstå, hvilke oplysninger vi indsamler, hvorfor vi indsamler dem, og hvordan du kan opdatere, administrere, eksportere og slette dine oplysninger."</td>
+</tr>
+<tr>
+<td>"Faroese"</td>
+<td>"fo"</td>
+<td>92778</td>
+<td>382</td>
+<td>242.87</td>
+<td>59</td>
+<td>"Når du bruger vores tjenester, betror du os dine oplysninger. Vi forstår, at det er et stort ansvar og arbejder hårdt på at beskytte dine oplysninger og give dig kontrol over dem.Denne privatlivspolitik er beregnet som en hjælp til at forstå, hvilke oplysninger vi indsamler, hvorfor vi indsamler dem, og hvordan du kan opdatere, administrere, eksportere og slette dine oplysninger."</td>
+</tr>
+<tr>
+<td>"Danish (Denmark)"</td>
+<td>"da_DK"</td>
+<td>92778</td>
+<td>382</td>
+<td>242.87</td>
+<td>59</td>
+<td>"Når du bruger vores tjenester, betror du os dine oplysninger. Vi forstår, at det er et stort ansvar og arbejder hårdt på at beskytte dine oplysninger og give dig kontrol over dem.Denne privatlivspolitik er beregnet som en hjælp til at forstå, hvilke oplysninger vi indsamler, hvorfor vi indsamler dem, og hvordan du kan opdatere, administrere, eksportere og slette dine oplysninger."</td>
+</tr>
+<tr>
+<td>"Estonian (Estonia)"</td>
+<td>"et_EE"</td>
+<td>92868</td>
+<td>350</td>
+<td>265.34</td>
+<td>47</td>
+<td>"Kui kasutate meie teenuseid, usaldate enda andmed meie käsutusse. Mõistame, et see on suur vastutus, ja töötame selle nimel, et kaitsta teie teavet ja võimaldada teil seda hallata.Nende privaatsuseeskirjade eesmärk on selgitada, milliseid andmeid ja mis eesmärgil kogutakse ning kuidas saate oma andmeid värskendada, hallata, eksportida ja kustutada."</td>
+</tr>
+<tr>
+<td>"Estonian"</td>
+<td>"et"</td>
+<td>92868</td>
+<td>350</td>
+<td>265.34</td>
+<td>47</td>
+<td>"Kui kasutate meie teenuseid, usaldate enda andmed meie käsutusse. Mõistame, et see on suur vastutus, ja töötame selle nimel, et kaitsta teie teavet ja võimaldada teil seda hallata.Nende privaatsuseeskirjade eesmärk on selgitada, milliseid andmeid ja mis eesmärgil kogutakse ning kuidas saate oma andmeid värskendada, hallata, eksportida ja kustutada."</td>
+</tr>
+<tr>
+<td>"Urdu"</td>
+<td>"ur"</td>
+<td>93788</td>
+<td>406</td>
+<td>231.0</td>
+<td>91</td>
+<td>"جب آپ ہماری سروسز کا استعمال کرتے ہیں تو آپ اپنی معلومات کے حوالے سے ہم پر اعتماد کرتے ہیں۔ ہم سمجھتے ہیں کہ یہ ایک بڑی ذمہ داری ہے اور آپ کی معلومات کی حفاظت کے لئے سخت محنت کرتے ہیں اور آپ کو کنٹرول فراہم کرتے ہیں۔رازداری کی اس پالیسی کا مقصد ہے کہ آپ کو یہ سمجھنے میں مدد ملے کہ ہم کون سی معلومات جمع کرتے ہیں، ہم اسے کیوں جمع کرتے ہیں اور آپ کیسے اپنی معلومات کو اپ ڈیٹ، نظم، برآمد اور حذف کر سکتے ہیں۔"</td>
+</tr>
+<tr>
+<td>"Urdu (Pakistan)"</td>
+<td>"ur_PK"</td>
+<td>93788</td>
+<td>406</td>
+<td>231.0</td>
+<td>91</td>
+<td>"جب آپ ہماری سروسز کا استعمال کرتے ہیں تو آپ اپنی معلومات کے حوالے سے ہم پر اعتماد کرتے ہیں۔ ہم سمجھتے ہیں کہ یہ ایک بڑی ذمہ داری ہے اور آپ کی معلومات کی حفاظت کے لئے سخت محنت کرتے ہیں اور آپ کو کنٹرول فراہم کرتے ہیں۔رازداری کی اس پالیسی کا مقصد ہے کہ آپ کو یہ سمجھنے میں مدد ملے کہ ہم کون سی معلومات جمع کرتے ہیں، ہم اسے کیوں جمع کرتے ہیں اور آپ کیسے اپنی معلومات کو اپ ڈیٹ، نظم، برآمد اور حذف کر سکتے ہیں۔"</td>
+</tr>
+<tr>
+<td>"Punjabi (Arabic)"</td>
+<td>"pa_Arab"</td>
+<td>93788</td>
+<td>406</td>
+<td>231.0</td>
+<td>91</td>
+<td>"جب آپ ہماری سروسز کا استعمال کرتے ہیں تو آپ اپنی معلومات کے حوالے سے ہم پر اعتماد کرتے ہیں۔ ہم سمجھتے ہیں کہ یہ ایک بڑی ذمہ داری ہے اور آپ کی معلومات کی حفاظت کے لئے سخت محنت کرتے ہیں اور آپ کو کنٹرول فراہم کرتے ہیں۔رازداری کی اس پالیسی کا مقصد ہے کہ آپ کو یہ سمجھنے میں مدد ملے کہ ہم کون سی معلومات جمع کرتے ہیں، ہم اسے کیوں جمع کرتے ہیں اور آپ کیسے اپنی معلومات کو اپ ڈیٹ، نظم، برآمد اور حذف کر سکتے ہیں۔"</td>
+</tr>
+<tr>
+<td>"Urdu (India)"</td>
+<td>"ur_IN"</td>
+<td>93788</td>
+<td>406</td>
+<td>231.0</td>
+<td>91</td>
+<td>"جب آپ ہماری سروسز کا استعمال کرتے ہیں تو آپ اپنی معلومات کے حوالے سے ہم پر اعتماد کرتے ہیں۔ ہم سمجھتے ہیں کہ یہ ایک بڑی ذمہ داری ہے اور آپ کی معلومات کی حفاظت کے لئے سخت محنت کرتے ہیں اور آپ کو کنٹرول فراہم کرتے ہیں۔رازداری کی اس پالیسی کا مقصد ہے کہ آپ کو یہ سمجھنے میں مدد ملے کہ ہم کون سی معلومات جمع کرتے ہیں، ہم اسے کیوں جمع کرتے ہیں اور آپ کیسے اپنی معلومات کو اپ ڈیٹ، نظم، برآمد اور حذف کر سکتے ہیں۔"</td>
+</tr>
+<tr>
+<td>"Punjabi (Arabic, Pakistan)"</td>
+<td>"pa_Arab_PK"</td>
+<td>93788</td>
+<td>406</td>
+<td>231.0</td>
+<td>91</td>
+<td>"جب آپ ہماری سروسز کا استعمال کرتے ہیں تو آپ اپنی معلومات کے حوالے سے ہم پر اعتماد کرتے ہیں۔ ہم سمجھتے ہیں کہ یہ ایک بڑی ذمہ داری ہے اور آپ کی معلومات کی حفاظت کے لئے سخت محنت کرتے ہیں اور آپ کو کنٹرول فراہم کرتے ہیں۔رازداری کی اس پالیسی کا مقصد ہے کہ آپ کو یہ سمجھنے میں مدد ملے کہ ہم کون سی معلومات جمع کرتے ہیں، ہم اسے کیوں جمع کرتے ہیں اور آپ کیسے اپنی معلومات کو اپ ڈیٹ، نظم، برآمد اور حذف کر سکتے ہیں۔"</td>
+</tr>
+<tr>
+<td>"Spanish (El Salvador)"</td>
+<td>"es_SV"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Paraguay)"</td>
+<td>"es_PY"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Peru)"</td>
+<td>"es_PE"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (United States)"</td>
+<td>"es_US"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Dominican Republic)"</td>
+<td>"es_DO"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Nicaragua)"</td>
+<td>"es_NI"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Guatemala)"</td>
+<td>"es_GT"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Ecuador)"</td>
+<td>"es_EC"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Colombia)"</td>
+<td>"es_CO"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Costa Rica)"</td>
+<td>"es_CR"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Uruguay)"</td>
+<td>"es_UY"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Panama)"</td>
+<td>"es_PA"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Venezuela)"</td>
+<td>"es_VE"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Puerto Rico)"</td>
+<td>"es_PR"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Mexico)"</td>
+<td>"es_MX"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Honduras)"</td>
+<td>"es_HN"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Latin America)"</td>
+<td>"es_419"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Argentina)"</td>
+<td>"es_AR"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Bolivia)"</td>
+<td>"es_BO"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Spanish (Chile)"</td>
+<td>"es_CL"</td>
+<td>95226</td>
+<td>376</td>
+<td>253.26</td>
+<td>54</td>
+<td>"Cuando usa nuestros servicios, nos confía su información. Comprendemos que se trata de una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control de ella.Esta Política de Privacidad está destinada a ayudarlo a entender qué información recopilamos, por qué lo hacemos y cómo puede actualizar, administrar, exportar y borrar su información."</td>
+</tr>
+<tr>
+<td>"Galician (Spain)"</td>
+<td>"gl_ES"</td>
+<td>95886</td>
+<td>371</td>
+<td>258.45</td>
+<td>51</td>
+<td>"Cando usas os nosos servizos, confíasnos a túa información. Entendemos que esta é unha gran responsabilidade e traballamos arduamente para protexer a túa información e para que poidas controlala.Esta política de privacidade pretende axudarche a comprender a información que recompilamos, por que a recompilamos e como podes actualizala, xestionala, exportala e eliminala."</td>
+</tr>
+<tr>
+<td>"Galician"</td>
+<td>"gl"</td>
+<td>95886</td>
+<td>371</td>
+<td>258.45</td>
+<td>51</td>
+<td>"Cando usas os nosos servizos, confíasnos a túa información. Entendemos que esta é unha gran responsabilidade e traballamos arduamente para protexer a túa información e para que poidas controlala.Esta política de privacidade pretende axudarche a comprender a información que recompilamos, por que a recompilamos e como podes actualizala, xestionala, exportala e eliminala."</td>
+</tr>
+<tr>
+<td>"Zulu (South Africa)"</td>
+<td>"zu_ZA"</td>
+<td>95935</td>
+<td>355</td>
+<td>270.24</td>
+<td>41</td>
+<td>"Uma usebenzisa amasevisi wethu, usithemba ngolwazi lakho. Siyaqonda ukuthi lona umthwalo omkhulu futhi sisebenza kanzima ukuvikela ulwazi lwakho futhi sikwenze ukwazi ukulilawula.Le Inqubomgomo Yobumfihlo yenzelwe ukukusiza ukuthi uqonde ukuthi uluphi ulwazi esiluqoqayo, kungani siluqoqa, nokuthi ungabuyekeza kanjani, ukhiphe, futhi ususe ulwazi lwakho."</td>
+</tr>
+<tr>
+<td>"Zulu"</td>
+<td>"zu"</td>
+<td>95935</td>
+<td>355</td>
+<td>270.24</td>
+<td>41</td>
+<td>"Uma usebenzisa amasevisi wethu, usithemba ngolwazi lakho. Siyaqonda ukuthi lona umthwalo omkhulu futhi sisebenza kanzima ukuvikela ulwazi lwakho futhi sikwenze ukwazi ukulilawula.Le Inqubomgomo Yobumfihlo yenzelwe ukukusiza ukuthi uqonde ukuthi uluphi ulwazi esiluqoqayo, kungani siluqoqa, nokuthi ungabuyekeza kanjani, ukhiphe, futhi ususe ulwazi lwakho."</td>
+</tr>
+<tr>
+<td>"Swahili"</td>
+<td>"sw"</td>
+<td>96728</td>
+<td>355</td>
+<td>272.47</td>
+<td>46</td>
+<td>"Unapotumia huduma zetu, unaamini kuwa tutalinda maelezo yako. Tunaelewa kuwa hili ni jukumu kubwa na tunafanya tuwezalo ili kulinda maelezo yako na kuhakikisha kuwa unaweza kuyadhibiti.Sera hii ya Faragha imekusudiwa kukusaidia uelewe maelezo tunayokusanya, sababu za kuyakusanya na jinsi unavyoweza kusasisha, kudhibiti, kuhamisha na kufuta maelezo yako."</td>
+</tr>
+<tr>
+<td>"Swahili (Kenya)"</td>
+<td>"sw_KE"</td>
+<td>96728</td>
+<td>355</td>
+<td>272.47</td>
+<td>46</td>
+<td>"Unapotumia huduma zetu, unaamini kuwa tutalinda maelezo yako. Tunaelewa kuwa hili ni jukumu kubwa na tunafanya tuwezalo ili kulinda maelezo yako na kuhakikisha kuwa unaweza kuyadhibiti.Sera hii ya Faragha imekusudiwa kukusaidia uelewe maelezo tunayokusanya, sababu za kuyakusanya na jinsi unavyoweza kusasisha, kudhibiti, kuhamisha na kufuta maelezo yako."</td>
+</tr>
+<tr>
+<td>"Swahili (Tanzania)"</td>
+<td>"sw_TZ"</td>
+<td>96728</td>
+<td>355</td>
+<td>272.47</td>
+<td>46</td>
+<td>"Unapotumia huduma zetu, unaamini kuwa tutalinda maelezo yako. Tunaelewa kuwa hili ni jukumu kubwa na tunafanya tuwezalo ili kulinda maelezo yako na kuhakikisha kuwa unaweza kuyadhibiti.Sera hii ya Faragha imekusudiwa kukusaidia uelewe maelezo tunayokusanya, sababu za kuyakusanya na jinsi unavyoweza kusasisha, kudhibiti, kuhamisha na kufuta maelezo yako."</td>
+</tr>
+<tr>
+<td>"Basque (Spain)"</td>
+<td>"eu_ES"</td>
+<td>97208</td>
+<td>368</td>
+<td>264.15</td>
+<td>45</td>
+<td>"Gure zerbitzuak erabiltzen dituzunean, zure informazioa konfiantzaz ematen diguzu. Badakigu ardura handia dela eta gogor egiten dugu lan zure informazioa babesteko eta kontrola zure esku uzteko.Pribatutasun-gidalerro hauekin ulertuko duzu zer informazio biltzen dugun, zergatik biltzen dugun eta zure informazioa nola eguneratu, kudeatu, esportatu eta ezaba dezakezun."</td>
+</tr>
+<tr>
+<td>"Basque"</td>
+<td>"eu"</td>
+<td>97208</td>
+<td>368</td>
+<td>264.15</td>
+<td>45</td>
+<td>"Gure zerbitzuak erabiltzen dituzunean, zure informazioa konfiantzaz ematen diguzu. Badakigu ardura handia dela eta gogor egiten dugu lan zure informazioa babesteko eta kontrola zure esku uzteko.Pribatutasun-gidalerro hauekin ulertuko duzu zer informazio biltzen dugun, zergatik biltzen dugun eta zure informazioa nola eguneratu, kudeatu, esportatu eta ezaba dezakezun."</td>
+</tr>
+<tr>
+<td>"Hungarian (Hungary)"</td>
+<td>"hu_HU"</td>
+<td>97570</td>
+<td>375</td>
+<td>260.19</td>
+<td>48</td>
+<td>"Amikor a Google szolgáltatásait használja, ránk bízza adatait. Tudjuk, hogy ez óriási felelősség, ezért mindent megteszünk, hogy megóvjuk adatait, és hogy az Ön kezébe adjuk az irányítást.A jelen Adatvédelmi irányelvek tájékoztatást adnak arról, hogy milyen adatokat gyűjtünk, miért gyűjtünk őket, illetve Ön hogyan frissítheti, kezelheti, exportálhatja és törölheti adatait."</td>
+</tr>
+<tr>
+<td>"Hungarian"</td>
+<td>"hu"</td>
+<td>97570</td>
+<td>375</td>
+<td>260.19</td>
+<td>48</td>
+<td>"Amikor a Google szolgáltatásait használja, ránk bízza adatait. Tudjuk, hogy ez óriási felelősség, ezért mindent megteszünk, hogy megóvjuk adatait, és hogy az Ön kezébe adjuk az irányítást.A jelen Adatvédelmi irányelvek tájékoztatást adnak arról, hogy milyen adatokat gyűjtünk, miért gyűjtünk őket, illetve Ön hogyan frissítheti, kezelheti, exportálhatja és törölheti adatait."</td>
+</tr>
+<tr>
+<td>"Latvian"</td>
+<td>"lv"</td>
+<td>98572</td>
+<td>382</td>
+<td>258.04</td>
+<td>50</td>
+<td>"Kad izmantojat mūsu pakalpojumus, jūs uzticat mums savu informāciju. Mēs saprotam, ka tā ir liela atbildība, tādēļ aizsargājam jūsu informāciju, turklāt sniedzam jums kontroles iespējas.Šī konfidencialitātes politika ir izstrādāta, lai palīdzētu jums saprast, kādu informāciju mēs apkopojam, kāpēc mēs to darām un kā varat atjaunināt, pārvaldīt, eksportēt un dzēst savu informāciju."</td>
+</tr>
+<tr>
+<td>"Latvian (Latvia)"</td>
+<td>"lv_LV"</td>
+<td>98572</td>
+<td>382</td>
+<td>258.04</td>
+<td>50</td>
+<td>"Kad izmantojat mūsu pakalpojumus, jūs uzticat mums savu informāciju. Mēs saprotam, ka tā ir liela atbildība, tādēļ aizsargājam jūsu informāciju, turklāt sniedzam jums kontroles iespējas.Šī konfidencialitātes politika ir izstrādāta, lai palīdzētu jums saprast, kādu informāciju mēs apkopojam, kāpēc mēs to darām un kā varat atjaunināt, pārvaldīt, eksportēt un dzēst savu informāciju."</td>
+</tr>
+<tr>
+<td>"Finnish (Finland)"</td>
+<td>"fi_FI"</td>
+<td>99466</td>
+<td>375</td>
+<td>265.24</td>
+<td>43</td>
+<td>"Kun käytät palveluitamme, luotat että käsittelemme tietojasi asianmukaisesti. Ymmärrämme, että tämä on suuri vastuu ja työskentelemme kovasti suojellaksemme tietojasi ja pitääksemme ne sinun hallinnassasi.Tietosuojakäytännön tarkoituksena on auttaa sinua ymmärtämään, mitä tietoja keräämme, miksi keräämme niitä ja miten voit päivittää, hallinnoida, siirtää ja poistaa niitä."</td>
+</tr>
+<tr>
+<td>"Finnish"</td>
+<td>"fi"</td>
+<td>99466</td>
+<td>375</td>
+<td>265.24</td>
+<td>43</td>
+<td>"Kun käytät palveluitamme, luotat että käsittelemme tietojasi asianmukaisesti. Ymmärrämme, että tämä on suuri vastuu ja työskentelemme kovasti suojellaksemme tietojasi ja pitääksemme ne sinun hallinnassasi.Tietosuojakäytännön tarkoituksena on auttaa sinua ymmärtämään, mitä tietoja keräämme, miksi keräämme niitä ja miten voit päivittää, hallinnoida, siirtää ja poistaa niitä."</td>
+</tr>
+<tr>
+<td>"Norwegian Nynorsk"</td>
+<td>"nn"</td>
+<td>99588</td>
+<td>415</td>
+<td>239.97</td>
+<td>71</td>
+<td>"Når du bruker tjenester fra oss, gir du oss tilgang til informasjon om deg. Vi innser at dette er et stort ansvar, og vi jobber hardt for å beskytte informasjonen din og gi deg kontroll over den.Personvernreglene er laget for å hjelpe deg med å forstå hvilken informasjon vi samler inn, hvorfor vi samler den inn, og hvordan du kan oppdatere, administrere, eksportere og slette informasjon vi har samlet inn om deg."</td>
+</tr>
+<tr>
+<td>"Norwegian Bokmål (Norway)"</td>
+<td>"nb_NO"</td>
+<td>99588</td>
+<td>415</td>
+<td>239.97</td>
+<td>71</td>
+<td>"Når du bruker tjenester fra oss, gir du oss tilgang til informasjon om deg. Vi innser at dette er et stort ansvar, og vi jobber hardt for å beskytte informasjonen din og gi deg kontroll over den.Personvernreglene er laget for å hjelpe deg med å forstå hvilken informasjon vi samler inn, hvorfor vi samler den inn, og hvordan du kan oppdatere, administrere, eksportere og slette informasjon vi har samlet inn om deg."</td>
+</tr>
+<tr>
+<td>"Norwegian Bokmål"</td>
+<td>"nb"</td>
+<td>99588</td>
+<td>415</td>
+<td>239.97</td>
+<td>71</td>
+<td>"Når du bruker tjenester fra oss, gir du oss tilgang til informasjon om deg. Vi innser at dette er et stort ansvar, og vi jobber hardt for å beskytte informasjonen din og gi deg kontroll over den.Personvernreglene er laget for å hjelpe deg med å forstå hvilken informasjon vi samler inn, hvorfor vi samler den inn, og hvordan du kan oppdatere, administrere, eksportere og slette informasjon vi har samlet inn om deg."</td>
+</tr>
+<tr>
+<td>"Norwegian Nynorsk (Norway)"</td>
+<td>"nn_NO"</td>
+<td>99588</td>
+<td>415</td>
+<td>239.97</td>
+<td>71</td>
+<td>"Når du bruker tjenester fra oss, gir du oss tilgang til informasjon om deg. Vi innser at dette er et stort ansvar, og vi jobber hardt for å beskytte informasjonen din og gi deg kontroll over den.Personvernreglene er laget for å hjelpe deg med å forstå hvilken informasjon vi samler inn, hvorfor vi samler den inn, og hvordan du kan oppdatere, administrere, eksportere og slette informasjon vi har samlet inn om deg."</td>
+</tr>
+<tr>
+<td>"Greek (Cyprus)"</td>
+<td>"el_CY"</td>
+<td>99795</td>
+<td>410</td>
+<td>243.4</td>
+<td>59</td>
+<td>"Όταν χρησιμοποιείτε τις υπηρεσίες μας, μας εμπιστεύεστε τα στοιχεία σας. Αντιλαμβανόμαστε ότι αυτή είναι μεγάλη ευθύνη και εργαζόμαστε σκληρά για να προστατεύσουμε τα στοιχεία σας και να έχετε εσείς τον έλεγχο.Αυτή η Πολιτική Απορρήτου έχει ως στόχο να κατανοήσετε ποια στοιχεία συλλέγουμε, γιατί τα συλλέγουμε και πώς μπορείτε να ενημερώσετε, να διαχειριστείτε, να εξαγάγετε και να διαγράψετε τα στοιχεία σας."</td>
+</tr>
+<tr>
+<td>"Greek"</td>
+<td>"el"</td>
+<td>99795</td>
+<td>410</td>
+<td>243.4</td>
+<td>59</td>
+<td>"Όταν χρησιμοποιείτε τις υπηρεσίες μας, μας εμπιστεύεστε τα στοιχεία σας. Αντιλαμβανόμαστε ότι αυτή είναι μεγάλη ευθύνη και εργαζόμαστε σκληρά για να προστατεύσουμε τα στοιχεία σας και να έχετε εσείς τον έλεγχο.Αυτή η Πολιτική Απορρήτου έχει ως στόχο να κατανοήσετε ποια στοιχεία συλλέγουμε, γιατί τα συλλέγουμε και πώς μπορείτε να ενημερώσετε, να διαχειριστείτε, να εξαγάγετε και να διαγράψετε τα στοιχεία σας."</td>
+</tr>
+<tr>
+<td>"Greek (Greece)"</td>
+<td>"el_GR"</td>
+<td>99795</td>
+<td>410</td>
+<td>243.4</td>
+<td>59</td>
+<td>"Όταν χρησιμοποιείτε τις υπηρεσίες μας, μας εμπιστεύεστε τα στοιχεία σας. Αντιλαμβανόμαστε ότι αυτή είναι μεγάλη ευθύνη και εργαζόμαστε σκληρά για να προστατεύσουμε τα στοιχεία σας και να έχετε εσείς τον έλεγχο.Αυτή η Πολιτική Απορρήτου έχει ως στόχο να κατανοήσετε ποια στοιχεία συλλέγουμε, γιατί τα συλλέγουμε και πώς μπορείτε να ενημερώσετε, να διαχειριστείτε, να εξαγάγετε και να διαγράψετε τα στοιχεία σας."</td>
+</tr>
+<tr>
+<td>"Vietnamese"</td>
+<td>"vi"</td>
+<td>100035</td>
+<td>403</td>
+<td>248.23</td>
+<td>88</td>
+<td>"Khi sử dụng dịch vụ của chúng tôi, bạn tin tưởng cung cấp thông tin của bạn cho chúng tôi. Chúng tôi hiểu rằng đây là một trách nhiệm lớn và chúng tôi nỗ lực bảo vệ thông tin của bạn cũng như để bạn nắm quyền kiểm soát.Chính sách bảo mật này nhằm mục đích giúp bạn hiểu rõ những thông tin chúng tôi thu thập, lý do chúng tôi thu thập và cách bạn có thể cập nhật, quản lý, xuất và xóa thông tin của mình."</td>
+</tr>
+<tr>
+<td>"Vietnamese (Vietnam)"</td>
+<td>"vi_VN"</td>
+<td>100035</td>
+<td>403</td>
+<td>248.23</td>
+<td>88</td>
+<td>"Khi sử dụng dịch vụ của chúng tôi, bạn tin tưởng cung cấp thông tin của bạn cho chúng tôi. Chúng tôi hiểu rằng đây là một trách nhiệm lớn và chúng tôi nỗ lực bảo vệ thông tin của bạn cũng như để bạn nắm quyền kiểm soát.Chính sách bảo mật này nhằm mục đích giúp bạn hiểu rõ những thông tin chúng tôi thu thập, lý do chúng tôi thu thập và cách bạn có thể cập nhật, quản lý, xuất và xóa thông tin của mình."</td>
+</tr>
+<tr>
+<td>"Portuguese (Brazil)"</td>
+<td>"pt_BR"</td>
+<td>100543</td>
+<td>391</td>
+<td>257.14</td>
+<td>56</td>
+<td>"Quando você usa nossos serviços, está confiando a nós suas informações. Entendemos que isso é uma grande responsabilidade e trabalhamos duro para proteger essas informações e colocar você no controle.Esta Política de Privacidade destina-se a ajudar você a entender quais informações coletamos, por que as coletamos e como você pode atualizar, gerenciar, exportar e excluir essas informações."</td>
+</tr>
+<tr>
+<td>"Portuguese"</td>
+<td>"pt"</td>
+<td>100543</td>
+<td>391</td>
+<td>257.14</td>
+<td>56</td>
+<td>"Quando você usa nossos serviços, está confiando a nós suas informações. Entendemos que isso é uma grande responsabilidade e trabalhamos duro para proteger essas informações e colocar você no controle.Esta Política de Privacidade destina-se a ajudar você a entender quais informações coletamos, por que as coletamos e como você pode atualizar, gerenciar, exportar e excluir essas informações."</td>
+</tr>
+<tr>
+<td>"Chinese (Simplified Han, China)"</td>
+<td>"zh_Hans_CN"</td>
+<td>100774</td>
+<td>124</td>
+<td>812.69</td>
+<td>2</td>
+<td>"您使用 Google 服务，即表示您信赖我们对您的信息的处理方式。我们深知这项责任事关重大，因此一直致力于保护您的信息，并让您拥有控制权。本隐私权政策旨在协助您了解我们会收集哪些信息、为什么收集这些信息，以及您如何更新、管理、导出和删除自己的信息。"</td>
+</tr>
+<tr>
+<td>"Chinese (Simplified Han, Hong Kong SAR China)"</td>
+<td>"zh_Hans_HK"</td>
+<td>100774</td>
+<td>124</td>
+<td>812.69</td>
+<td>2</td>
+<td>"您使用 Google 服务，即表示您信赖我们对您的信息的处理方式。我们深知这项责任事关重大，因此一直致力于保护您的信息，并让您拥有控制权。本隐私权政策旨在协助您了解我们会收集哪些信息、为什么收集这些信息，以及您如何更新、管理、导出和删除自己的信息。"</td>
+</tr>
+<tr>
+<td>"Chinese (Simplified Han, Macau SAR China)"</td>
+<td>"zh_Hans_MO"</td>
+<td>100774</td>
+<td>124</td>
+<td>812.69</td>
+<td>2</td>
+<td>"您使用 Google 服务，即表示您信赖我们对您的信息的处理方式。我们深知这项责任事关重大，因此一直致力于保护您的信息，并让您拥有控制权。本隐私权政策旨在协助您了解我们会收集哪些信息、为什么收集这些信息，以及您如何更新、管理、导出和删除自己的信息。"</td>
+</tr>
+<tr>
+<td>"Chinese (Simplified Han)"</td>
+<td>"zh_Hans"</td>
+<td>100774</td>
+<td>124</td>
+<td>812.69</td>
+<td>2</td>
+<td>"您使用 Google 服务，即表示您信赖我们对您的信息的处理方式。我们深知这项责任事关重大，因此一直致力于保护您的信息，并让您拥有控制权。本隐私权政策旨在协助您了解我们会收集哪些信息、为什么收集这些信息，以及您如何更新、管理、导出和删除自己的信息。"</td>
+</tr>
+<tr>
+<td>"Chinese"</td>
+<td>"zh"</td>
+<td>100774</td>
+<td>124</td>
+<td>812.69</td>
+<td>2</td>
+<td>"您使用 Google 服务，即表示您信赖我们对您的信息的处理方式。我们深知这项责任事关重大，因此一直致力于保护您的信息，并让您拥有控制权。本隐私权政策旨在协助您了解我们会收集哪些信息、为什么收集这些信息，以及您如何更新、管理、导出和删除自己的信息。"</td>
+</tr>
+<tr>
+<td>"Chinese (Simplified Han, Singapore)"</td>
+<td>"zh_Hans_SG"</td>
+<td>100774</td>
+<td>124</td>
+<td>812.69</td>
+<td>2</td>
+<td>"您使用 Google 服务，即表示您信赖我们对您的信息的处理方式。我们深知这项责任事关重大，因此一直致力于保护您的信息，并让您拥有控制权。本隐私权政策旨在协助您了解我们会收集哪些信息、为什么收集这些信息，以及您如何更新、管理、导出和删除自己的信息。"</td>
+</tr>
+<tr>
+<td>"Ukrainian (Ukraine)"</td>
+<td>"uk_UA"</td>
+<td>101512</td>
+<td>357</td>
+<td>284.35</td>
+<td>51</td>
+<td>"Користуючись нашими сервісами, ви довіряєте нам свою інформацію. Ми розуміємо, що це велика відповідальність, і докладаємо всіх зусиль, щоб захистити ваші дані й дати вам змогу керувати ними.У цій Політиці конфіденційності описано, яку інформацію ми збираємо, навіщо ми це робимо та як ви можете оновлювати, експортувати, видаляти свої дані й керувати ними."</td>
+</tr>
+<tr>
+<td>"Ukrainian"</td>
+<td>"uk"</td>
+<td>101512</td>
+<td>357</td>
+<td>284.35</td>
+<td>51</td>
+<td>"Користуючись нашими сервісами, ви довіряєте нам свою інформацію. Ми розуміємо, що це велика відповідальність, і докладаємо всіх зусиль, щоб захистити ваші дані й дати вам змогу керувати ними.У цій Політиці конфіденційності описано, яку інформацію ми збираємо, навіщо ми це робимо та як ви можете оновлювати, експортувати, видаляти свої дані й керувати ними."</td>
+</tr>
+<tr>
+<td>"Dutch (Belgium)"</td>
+<td>"nl_BE"</td>
+<td>102685</td>
+<td>399</td>
+<td>257.36</td>
+<td>66</td>
+<td>"Wanneer u onze services gebruikt, vertrouwt u ons uw gegevens toe. We begrijpen dat dit een grote verantwoordelijkheid is en werken er hard aan om uw gegevens te beschermen en u er de controle over te geven.Dit privacybeleid is bedoeld om u inzicht te geven in de gegevens die we verzamelen, waarom we deze gegevens verzamelen en hoe u deze gegevens kunt updaten, beheren, exporteren en verwijderen."</td>
+</tr>
+<tr>
+<td>"Dutch (Netherlands)"</td>
+<td>"nl_NL"</td>
+<td>102685</td>
+<td>399</td>
+<td>257.36</td>
+<td>66</td>
+<td>"Wanneer u onze services gebruikt, vertrouwt u ons uw gegevens toe. We begrijpen dat dit een grote verantwoordelijkheid is en werken er hard aan om uw gegevens te beschermen en u er de controle over te geven.Dit privacybeleid is bedoeld om u inzicht te geven in de gegevens die we verzamelen, waarom we deze gegevens verzamelen en hoe u deze gegevens kunt updaten, beheren, exporteren en verwijderen."</td>
+</tr>
+<tr>
+<td>"Dutch"</td>
+<td>"nl"</td>
+<td>102685</td>
+<td>399</td>
+<td>257.36</td>
+<td>66</td>
+<td>"Wanneer u onze services gebruikt, vertrouwt u ons uw gegevens toe. We begrijpen dat dit een grote verantwoordelijkheid is en werken er hard aan om uw gegevens te beschermen en u er de controle over te geven.Dit privacybeleid is bedoeld om u inzicht te geven in de gegevens die we verzamelen, waarom we deze gegevens verzamelen en hoe u deze gegevens kunt updaten, beheren, exporteren en verwijderen."</td>
+</tr>
+<tr>
+<td>"Marathi"</td>
+<td>"mr"</td>
+<td>105126</td>
+<td>394</td>
+<td>266.82</td>
+<td>60</td>
+<td>"तुम्ही आमच्या सेवा वापरता तेव्हा, तुमच्या माहितीविषयी तुम्ही आमच्यावर विश्वास ठेवता. आम्हाला समजते की ही एक मोठी जबाबदारी आहे आणि तुमची माहिती संरक्षित करण्यासाठी कठोर परिश्रम करतो आणि नियंत्रण तुमच्याकडे ठेवतो.आम्ही कोणती माहिती गोळा करतो, आम्ही ती का गोळा करतो आणि तुम्ही तुमची माहिती कशी अपडेट, व्यवस्थापित, निर्यात करू आणि हटवू शकता हे तुम्हाला समजण्यात मदत होण्यासाठी हे गोपनीयता धोरण आहे."</td>
+</tr>
+<tr>
+<td>"Marathi (India)"</td>
+<td>"mr_IN"</td>
+<td>105126</td>
+<td>394</td>
+<td>266.82</td>
+<td>60</td>
+<td>"तुम्ही आमच्या सेवा वापरता तेव्हा, तुमच्या माहितीविषयी तुम्ही आमच्यावर विश्वास ठेवता. आम्हाला समजते की ही एक मोठी जबाबदारी आहे आणि तुमची माहिती संरक्षित करण्यासाठी कठोर परिश्रम करतो आणि नियंत्रण तुमच्याकडे ठेवतो.आम्ही कोणती माहिती गोळा करतो, आम्ही ती का गोळा करतो आणि तुम्ही तुमची माहिती कशी अपडेट, व्यवस्थापित, निर्यात करू आणि हटवू शकता हे तुम्हाला समजण्यात मदत होण्यासाठी हे गोपनीयता धोरण आहे."</td>
+</tr>
+<tr>
+<td>"Portuguese (Guinea-Bissau)"</td>
+<td>"pt_GW"</td>
+<td>105385</td>
+<td>412</td>
+<td>255.79</td>
+<td>59</td>
+<td>"Quando utiliza os nossos serviços, está a confiar-nos as suas informações. Compreendemos que é uma enorme responsabilidade e trabalhamos arduamente para proteger as suas informações e dar-lhe o controlo sobre elas.A presente Política de Privacidade destina-se a ajudá-lo a compreender as informações que recolhemos, o motivo para o fazermos, e como pode atualizar, gerir, exportar e eliminar as suas informações."</td>
+</tr>
+<tr>
+<td>"Portuguese (Portugal)"</td>
+<td>"pt_PT"</td>
+<td>105385</td>
+<td>412</td>
+<td>255.79</td>
+<td>59</td>
+<td>"Quando utiliza os nossos serviços, está a confiar-nos as suas informações. Compreendemos que é uma enorme responsabilidade e trabalhamos arduamente para proteger as suas informações e dar-lhe o controlo sobre elas.A presente Política de Privacidade destina-se a ajudá-lo a compreender as informações que recolhemos, o motivo para o fazermos, e como pode atualizar, gerir, exportar e eliminar as suas informações."</td>
+</tr>
+<tr>
+<td>"Portuguese (Mozambique)"</td>
+<td>"pt_MZ"</td>
+<td>105385</td>
+<td>412</td>
+<td>255.79</td>
+<td>59</td>
+<td>"Quando utiliza os nossos serviços, está a confiar-nos as suas informações. Compreendemos que é uma enorme responsabilidade e trabalhamos arduamente para proteger as suas informações e dar-lhe o controlo sobre elas.A presente Política de Privacidade destina-se a ajudá-lo a compreender as informações que recolhemos, o motivo para o fazermos, e como pode atualizar, gerir, exportar e eliminar as suas informações."</td>
+</tr>
+<tr>
+<td>"Serbian (Cyrillic, Bosnia and Herzegovina)"</td>
+<td>"sr_Cyrl_BA"</td>
+<td>106028</td>
+<td>365</td>
+<td>290.49</td>
+<td>57</td>
+<td>"Када користите наше услуге, поверавате нам своје информације. Схватамо да је то велика одговорност и стварно се трудимо да заштитимо ваше информације и омогућимо вам контролу над њима.Ова политика приватности има за циљ да вам објасни које информације прикупљамо, зашто их прикупљамо и како можете да их ажурирате, да управљате њима, да их извозите и да их бришете."</td>
+</tr>
+<tr>
+<td>"Serbian (Cyrillic, Montenegro)"</td>
+<td>"sr_Cyrl_ME"</td>
+<td>106028</td>
+<td>365</td>
+<td>290.49</td>
+<td>57</td>
+<td>"Када користите наше услуге, поверавате нам своје информације. Схватамо да је то велика одговорност и стварно се трудимо да заштитимо ваше информације и омогућимо вам контролу над њима.Ова политика приватности има за циљ да вам објасни које информације прикупљамо, зашто их прикупљамо и како можете да их ажурирате, да управљате њима, да их извозите и да их бришете."</td>
+</tr>
+<tr>
+<td>"Serbian (Cyrillic)"</td>
+<td>"sr_Cyrl"</td>
+<td>106028</td>
+<td>365</td>
+<td>290.49</td>
+<td>57</td>
+<td>"Када користите наше услуге, поверавате нам своје информације. Схватамо да је то велика одговорност и стварно се трудимо да заштитимо ваше информације и омогућимо вам контролу над њима.Ова политика приватности има за циљ да вам објасни које информације прикупљамо, зашто их прикупљамо и како можете да их ажурирате, да управљате њима, да их извозите и да их бришете."</td>
+</tr>
+<tr>
+<td>"Serbian (Cyrillic, Serbia)"</td>
+<td>"sr_Cyrl_RS"</td>
+<td>106028</td>
+<td>365</td>
+<td>290.49</td>
+<td>57</td>
+<td>"Када користите наше услуге, поверавате нам своје информације. Схватамо да је то велика одговорност и стварно се трудимо да заштитимо ваше информације и омогућимо вам контролу над њима.Ова политика приватности има за циљ да вам објасни које информације прикупљамо, зашто их прикупљамо и како можете да их ажурирате, да управљате њима, да их извозите и да их бришете."</td>
+</tr>
+<tr>
+<td>"Serbian"</td>
+<td>"sr"</td>
+<td>106028</td>
+<td>365</td>
+<td>290.49</td>
+<td>57</td>
+<td>"Када користите наше услуге, поверавате нам своје информације. Схватамо да је то велика одговорност и стварно се трудимо да заштитимо ваше информације и омогућимо вам контролу над њима.Ова политика приватности има за циљ да вам објасни које информације прикупљамо, зашто их прикупљамо и како можете да их ажурирате, да управљате њима, да их извозите и да их бришете."</td>
+</tr>
+<tr>
+<td>"Icelandic"</td>
+<td>"is"</td>
+<td>106357</td>
+<td>417</td>
+<td>255.05</td>
+<td>65</td>
+<td>"Þegar þú notar þjónustu okkar treystir þú okkur fyrir upplýsingunum þínum. Okkur er ljóst að slíku fylgir mikil ábyrgð og við leggjum mikið á okkur til að vernda upplýsingarnar þínar og setja þig við stjórnvölinn.Markmið þessarar persónuverndarstefnu er að hjálpa þér að glöggva þig á hvaða upplýsingum við söfnum, af hverju við söfnum þeim og hvernig þú getur uppfært, stjórnað, flutt út og eytt upplýsingunum þínum."</td>
+</tr>
+<tr>
+<td>"Icelandic (Iceland)"</td>
+<td>"is_IS"</td>
+<td>106357</td>
+<td>417</td>
+<td>255.05</td>
+<td>65</td>
+<td>"Þegar þú notar þjónustu okkar treystir þú okkur fyrir upplýsingunum þínum. Okkur er ljóst að slíku fylgir mikil ábyrgð og við leggjum mikið á okkur til að vernda upplýsingarnar þínar og setja þig við stjórnvölinn.Markmið þessarar persónuverndarstefnu er að hjálpa þér að glöggva þig á hvaða upplýsingum við söfnum, af hverju við söfnum þeim og hvernig þú getur uppfært, stjórnað, flutt út og eytt upplýsingunum þínum."</td>
+</tr>
+<tr>
+<td>"Uzbek (Arabic, Afghanistan)"</td>
+<td>"uz_Arab_AF"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Uzbek"</td>
+<td>"uz"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Azerbaijani (Cyrillic, Azerbaijan)"</td>
+<td>"az_Cyrl_AZ"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Armenian"</td>
+<td>"hy"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Uzbek (Cyrillic)"</td>
+<td>"uz_Cyrl"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Belarusian"</td>
+<td>"be"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Kazakh"</td>
+<td>"kk"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Azerbaijani (Latin, Azerbaijan)"</td>
+<td>"az_Latn_AZ"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Belarusian (Belarus)"</td>
+<td>"be_BY"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Russian"</td>
+<td>"ru"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Uzbek (Latin)"</td>
+<td>"uz_Latn"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Russian (Moldova)"</td>
+<td>"ru_MD"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Armenian (Armenia)"</td>
+<td>"hy_AM"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Azerbaijani (Cyrillic)"</td>
+<td>"az_Cyrl"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Uzbek (Cyrillic, Uzbekistan)"</td>
+<td>"uz_Cyrl_UZ"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Azerbaijani"</td>
+<td>"az"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Russian (Russia)"</td>
+<td>"ru_RU"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Russian (Ukraine)"</td>
+<td>"ru_UA"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Uzbek (Latin, Uzbekistan)"</td>
+<td>"uz_Latn_UZ"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Kazakh (Cyrillic)"</td>
+<td>"kk_Cyrl"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Azerbaijani (Latin)"</td>
+<td>"az_Latn"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Kazakh (Cyrillic, Kazakhstan)"</td>
+<td>"kk_Cyrl_KZ"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"Uzbek (Arabic)"</td>
+<td>"uz_Arab"</td>
+<td>108623</td>
+<td>365</td>
+<td>297.6</td>
+<td>50</td>
+<td>"Пользуясь сервисами Google, Вы доверяете нам свою личную информацию. Мы делаем все для обеспечения ее безопасности и в то же время предоставляем Вам возможность управлять своими данными.Внимательно изучите нашу Политику конфиденциальности, чтобы знать, какие сведения мы собираем, в каких целях их используем и как Вы можете их изменять, экспортировать или удалять."</td>
+</tr>
+<tr>
+<td>"German (Switzerland)"</td>
+<td>"de_CH"</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+<td>63</td>
+<td>"Wenn Sie unsere Dienste nutzen, vertrauen Sie uns Ihre Daten an. Wir sind uns bewusst, dass dies eine große Verantwortung ist und setzen alles daran, Ihre Daten zu schützen und zu gewährleisten, dass Sie die Kontrolle darüber behalten.In dieser Datenschutzerklärung erfahren Sie, welche Daten von uns erhoben werden, welche Zwecke wir damit verfolgen und wie Sie Ihre Daten aktualisieren, verwalten, exportieren und löschen können."</td>
+</tr>
+<tr>
+<td>"German (Belgium)"</td>
+<td>"de_BE"</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+<td>63</td>
+<td>"Wenn Sie unsere Dienste nutzen, vertrauen Sie uns Ihre Daten an. Wir sind uns bewusst, dass dies eine große Verantwortung ist und setzen alles daran, Ihre Daten zu schützen und zu gewährleisten, dass Sie die Kontrolle darüber behalten.In dieser Datenschutzerklärung erfahren Sie, welche Daten von uns erhoben werden, welche Zwecke wir damit verfolgen und wie Sie Ihre Daten aktualisieren, verwalten, exportieren und löschen können."</td>
+</tr>
+<tr>
+<td>"German (Liechtenstein)"</td>
+<td>"de_LI"</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+<td>63</td>
+<td>"Wenn Sie unsere Dienste nutzen, vertrauen Sie uns Ihre Daten an. Wir sind uns bewusst, dass dies eine große Verantwortung ist und setzen alles daran, Ihre Daten zu schützen und zu gewährleisten, dass Sie die Kontrolle darüber behalten.In dieser Datenschutzerklärung erfahren Sie, welche Daten von uns erhoben werden, welche Zwecke wir damit verfolgen und wie Sie Ihre Daten aktualisieren, verwalten, exportieren und löschen können."</td>
+</tr>
+<tr>
+<td>"Romansh (Switzerland)"</td>
+<td>"rm_CH"</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+<td>63</td>
+<td>"Wenn Sie unsere Dienste nutzen, vertrauen Sie uns Ihre Daten an. Wir sind uns bewusst, dass dies eine große Verantwortung ist und setzen alles daran, Ihre Daten zu schützen und zu gewährleisten, dass Sie die Kontrolle darüber behalten.In dieser Datenschutzerklärung erfahren Sie, welche Daten von uns erhoben werden, welche Zwecke wir damit verfolgen und wie Sie Ihre Daten aktualisieren, verwalten, exportieren und löschen können."</td>
+</tr>
+<tr>
+<td>"German (Luxembourg)"</td>
+<td>"de_LU"</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+<td>63</td>
+<td>"Wenn Sie unsere Dienste nutzen, vertrauen Sie uns Ihre Daten an. Wir sind uns bewusst, dass dies eine große Verantwortung ist und setzen alles daran, Ihre Daten zu schützen und zu gewährleisten, dass Sie die Kontrolle darüber behalten.In dieser Datenschutzerklärung erfahren Sie, welche Daten von uns erhoben werden, welche Zwecke wir damit verfolgen und wie Sie Ihre Daten aktualisieren, verwalten, exportieren und löschen können."</td>
+</tr>
+<tr>
+<td>"Swiss German"</td>
+<td>"gsw"</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+<td>63</td>
+<td>"Wenn Sie unsere Dienste nutzen, vertrauen Sie uns Ihre Daten an. Wir sind uns bewusst, dass dies eine große Verantwortung ist und setzen alles daran, Ihre Daten zu schützen und zu gewährleisten, dass Sie die Kontrolle darüber behalten.In dieser Datenschutzerklärung erfahren Sie, welche Daten von uns erhoben werden, welche Zwecke wir damit verfolgen und wie Sie Ihre Daten aktualisieren, verwalten, exportieren und löschen können."</td>
+</tr>
+<tr>
+<td>"German"</td>
+<td>"de"</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+<td>63</td>
+<td>"Wenn Sie unsere Dienste nutzen, vertrauen Sie uns Ihre Daten an. Wir sind uns bewusst, dass dies eine große Verantwortung ist und setzen alles daran, Ihre Daten zu schützen und zu gewährleisten, dass Sie die Kontrolle darüber behalten.In dieser Datenschutzerklärung erfahren Sie, welche Daten von uns erhoben werden, welche Zwecke wir damit verfolgen und wie Sie Ihre Daten aktualisieren, verwalten, exportieren und löschen können."</td>
+</tr>
+<tr>
+<td>"Romansh"</td>
+<td>"rm"</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+<td>63</td>
+<td>"Wenn Sie unsere Dienste nutzen, vertrauen Sie uns Ihre Daten an. Wir sind uns bewusst, dass dies eine große Verantwortung ist und setzen alles daran, Ihre Daten zu schützen und zu gewährleisten, dass Sie die Kontrolle darüber behalten.In dieser Datenschutzerklärung erfahren Sie, welche Daten von uns erhoben werden, welche Zwecke wir damit verfolgen und wie Sie Ihre Daten aktualisieren, verwalten, exportieren und löschen können."</td>
+</tr>
+<tr>
+<td>"German (Austria)"</td>
+<td>"de_AT"</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+<td>63</td>
+<td>"Wenn Sie unsere Dienste nutzen, vertrauen Sie uns Ihre Daten an. Wir sind uns bewusst, dass dies eine große Verantwortung ist und setzen alles daran, Ihre Daten zu schützen und zu gewährleisten, dass Sie die Kontrolle darüber behalten.In dieser Datenschutzerklärung erfahren Sie, welche Daten von uns erhoben werden, welche Zwecke wir damit verfolgen und wie Sie Ihre Daten aktualisieren, verwalten, exportieren und löschen können."</td>
+</tr>
+<tr>
+<td>"German (Germany)"</td>
+<td>"de_DE"</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+<td>63</td>
+<td>"Wenn Sie unsere Dienste nutzen, vertrauen Sie uns Ihre Daten an. Wir sind uns bewusst, dass dies eine große Verantwortung ist und setzen alles daran, Ihre Daten zu schützen und zu gewährleisten, dass Sie die Kontrolle darüber behalten.In dieser Datenschutzerklärung erfahren Sie, welche Daten von uns erhoben werden, welche Zwecke wir damit verfolgen und wie Sie Ihre Daten aktualisieren, verwalten, exportieren und löschen können."</td>
+</tr>
+<tr>
+<td>"Swiss German (Switzerland)"</td>
+<td>"gsw_CH"</td>
+<td>110538</td>
+<td>431</td>
+<td>256.47</td>
+<td>63</td>
+<td>"Wenn Sie unsere Dienste nutzen, vertrauen Sie uns Ihre Daten an. Wir sind uns bewusst, dass dies eine große Verantwortung ist und setzen alles daran, Ihre Daten zu schützen und zu gewährleisten, dass Sie die Kontrolle darüber behalten.In dieser Datenschutzerklärung erfahren Sie, welche Daten von uns erhoben werden, welche Zwecke wir damit verfolgen und wie Sie Ihre Daten aktualisieren, verwalten, exportieren und löschen können."</td>
+</tr>
+<tr>
+<td>"Turkish"</td>
+<td>"tr"</td>
+<td>111808</td>
+<td>444</td>
+<td>251.82</td>
+<td>43</td>
+<td>"Hizmetlerimizi kullandığınızda, bilgileriniz açısından bize güvenirsiniz. Bunun büyük bir sorumluluk olduğunu bildiğimizden bilgilerinizi korumak ve bilgilerinizin kontrolünün sizde olmasını sağlamak için büyük çaba harcarız.Bu Gizlilik Politikası ile hangi verileri neden topladığımızı ve bilgilerinizi nasıl güncelleyebileceğinizi, yönetebileceğinizi, başkalarına aktarabileceğinizi ve silebileceğinizi anlamanıza yardımcı olmayı amaçlıyoruz."</td>
+</tr>
+<tr>
+<td>"Turkish (Turkey)"</td>
+<td>"tr_TR"</td>
+<td>111808</td>
+<td>444</td>
+<td>251.82</td>
+<td>43</td>
+<td>"Hizmetlerimizi kullandığınızda, bilgileriniz açısından bize güvenirsiniz. Bunun büyük bir sorumluluk olduğunu bildiğimizden bilgilerinizi korumak ve bilgilerinizin kontrolünün sizde olmasını sağlamak için büyük çaba harcarız.Bu Gizlilik Politikası ile hangi verileri neden topladığımızı ve bilgilerinizi nasıl güncelleyebileceğinizi, yönetebileceğinizi, başkalarına aktarabileceğinizi ve silebileceğinizi anlamanıza yardımcı olmayı amaçlıyoruz."</td>
+</tr>
+<tr>
+<td>"French (Madagascar)"</td>
+<td>"fr_MG"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Benin)"</td>
+<td>"fr_BJ"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Guinea)"</td>
+<td>"fr_GN"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Saint Barthélemy)"</td>
+<td>"fr_BL"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Saint Martin)"</td>
+<td>"fr_MF"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Belgium)"</td>
+<td>"fr_BE"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Gabon)"</td>
+<td>"fr_GA"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Comoros)"</td>
+<td>"fr_KM"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"Malagasy"</td>
+<td>"mg"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Chad)"</td>
+<td>"fr_TD"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"Malagasy (Madagascar)"</td>
+<td>"mg_MG"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Switzerland)"</td>
+<td>"fr_CH"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Central African Republic)"</td>
+<td>"fr_CF"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Congo - Brazzaville)"</td>
+<td>"fr_CG"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Côte d’Ivoire)"</td>
+<td>"fr_CI"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Martinique)"</td>
+<td>"fr_MQ"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Equatorial Guinea)"</td>
+<td>"fr_GQ"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Monaco)"</td>
+<td>"fr_MC"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Niger)"</td>
+<td>"fr_NE"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Burundi)"</td>
+<td>"fr_BI"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Djibouti)"</td>
+<td>"fr_DJ"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Mali)"</td>
+<td>"fr_ML"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Guadeloupe)"</td>
+<td>"fr_GP"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Burkina Faso)"</td>
+<td>"fr_BF"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Senegal)"</td>
+<td>"fr_SN"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Rwanda)"</td>
+<td>"fr_RW"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Togo)"</td>
+<td>"fr_TG"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French"</td>
+<td>"fr"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Réunion)"</td>
+<td>"fr_RE"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Congo - Kinshasa)"</td>
+<td>"fr_CD"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (France)"</td>
+<td>"fr_FR"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"Kinyarwanda (Rwanda)"</td>
+<td>"rw_RW"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Cameroon)"</td>
+<td>"fr_CM"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"Kinyarwanda"</td>
+<td>"rw"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"French (Luxembourg)"</td>
+<td>"fr_LU"</td>
+<td>113242</td>
+<td>471</td>
+<td>240.43</td>
+<td>72</td>
+<td>"Lorsque vous utilisez nos services, vous nous faites confiance pour le traitement de vos informations. Nous savons qu'il s'agit d'une lourde responsabilité, c'est pourquoi nous nous efforçons de les protéger, tout en vous permettant d'en garder le contrôle.Les présentes Règles de confidentialité visent à vous indiquer quelles informations nous collectons et pour quelle raison, ainsi que la façon de les mettre à jour, de les gérer, de les exporter et de les supprimer."</td>
+</tr>
+<tr>
+<td>"Bulgarian (Bulgaria)"</td>
+<td>"bg_BG"</td>
+<td>115494</td>
+<td>397</td>
+<td>290.92</td>
+<td>56</td>
+<td>"Когато използвате услугите ни, вие ни доверявате информацията си. Разбираме, че това е голяма отговорност, и работим усилено, за да защитаваме информацията ви и да ви предоставим пълен контрол.Настоящата Политика за поверителност има за цел да ви помогне да разберете каква информация събираме, защо го правим и как можете да актуализирате, управлявате, експортирате и изтривате вашата информация."</td>
+</tr>
+<tr>
+<td>"Bulgarian"</td>
+<td>"bg"</td>
+<td>115494</td>
+<td>397</td>
+<td>290.92</td>
+<td>56</td>
+<td>"Когато използвате услугите ни, вие ни доверявате информацията си. Разбираме, че това е голяма отговорност, и работим усилено, за да защитаваме информацията ви и да ви предоставим пълен контрол.Настоящата Политика за поверителност има за цел да ви помогне да разберете каква информация събираме, защо го правим и как можете да актуализирате, управлявате, експортирате и изтривате вашата информация."</td>
+</tr>
+<tr>
+<td>"Hindi (India)"</td>
+<td>"hi_IN"</td>
+<td>118592</td>
+<td>500</td>
+<td>237.18</td>
+<td>103</td>
+<td>"जब आप हमारी सेवाओं का इस्तेमाल करते हैं, तो आप हमें भरोसे से अपनी जानकारी सौंपते हैं. हम समझते हैं कि यह एक बड़ी ज़िम्मेदारी है और इसलिए हम आपकी जानकारी की सुरक्षा के लिए कड़ी मेहनत करते हैं ताकि सब कुछ आपके नियंत्रण में रहे.यह निजता नीति आपको यह समझने में सहायता करती है कि हम किस तरह की जानकारी इकट्ठा करते हैं और क्यों इकट्ठा करते हैं. साथ ही, आप अपनी जानकारी को कैसे अपडेट कर सकते हैं, कैसे प्रबंधित कर सकते हैं, उसे कैसे मिटा सकते हैं और उसे दूसरी जगह भेज सकते हैं, यह समझने में भी मदद मिलती है."</td>
+</tr>
+<tr>
+<td>"Hindi"</td>
+<td>"hi"</td>
+<td>118592</td>
+<td>500</td>
+<td>237.18</td>
+<td>103</td>
+<td>"जब आप हमारी सेवाओं का इस्तेमाल करते हैं, तो आप हमें भरोसे से अपनी जानकारी सौंपते हैं. हम समझते हैं कि यह एक बड़ी ज़िम्मेदारी है और इसलिए हम आपकी जानकारी की सुरक्षा के लिए कड़ी मेहनत करते हैं ताकि सब कुछ आपके नियंत्रण में रहे.यह निजता नीति आपको यह समझने में सहायता करती है कि हम किस तरह की जानकारी इकट्ठा करते हैं और क्यों इकट्ठा करते हैं. साथ ही, आप अपनी जानकारी को कैसे अपडेट कर सकते हैं, कैसे प्रबंधित कर सकते हैं, उसे कैसे मिटा सकते हैं और उसे दूसरी जगह भेज सकते हैं, यह समझने में भी मदद मिलती है."</td>
+</tr>
+<tr>
+<td>"Indonesian (Indonesia)"</td>
+<td>"id_ID"</td>
+<td>118687</td>
+<td>418</td>
+<td>283.94</td>
+<td>53</td>
+<td>"Dengan menggunakan layanan kami, Anda memercayakan informasi Anda kepada kami. Kami paham bahwa melindungi informasi Anda dan memberikan kontrol kepada Anda adalah tanggung jawab yang besar dan memerlukan kerja keras.Kebijakan Privasi ini bertujuan untuk membantu Anda memahami informasi yang kami kumpulkan, alasan kami mengumpulkannya, dan cara untuk memperbarui, mengelola, mengekspor, dan menghapus informasi Anda."</td>
+</tr>
+<tr>
+<td>"Indonesian"</td>
+<td>"id"</td>
+<td>118687</td>
+<td>418</td>
+<td>283.94</td>
+<td>53</td>
+<td>"Dengan menggunakan layanan kami, Anda memercayakan informasi Anda kepada kami. Kami paham bahwa melindungi informasi Anda dan memberikan kontrol kepada Anda adalah tanggung jawab yang besar dan memerlukan kerja keras.Kebijakan Privasi ini bertujuan untuk membantu Anda memahami informasi yang kami kumpulkan, alasan kami mengumpulkannya, dan cara untuk memperbarui, mengelola, mengekspor, dan menghapus informasi Anda."</td>
+</tr>
+<tr>
+<td>"Tibetan (India)"</td>
+<td>"bo_IN"</td>
+<td>120295</td>
+<td>138</td>
+<td>871.7</td>
+<td>4</td>
+<td>"當您開始使用 Google 服務，即表示您信賴我們對您個人資訊的處理方式。我們深知這份責任重大，因此會盡力保護您的資訊，並為您提供相關的管理功能。本《隱私權政策》旨在協助您瞭解 Google 收集的資訊類型以及收集這些資訊的原因，也說明了您可以如何更新、管理、匯出與刪除資訊。"</td>
+</tr>
+<tr>
+<td>"Chinese (Traditional Han)"</td>
+<td>"zh_Hant"</td>
+<td>120295</td>
+<td>138</td>
+<td>871.7</td>
+<td>4</td>
+<td>"當您開始使用 Google 服務，即表示您信賴我們對您個人資訊的處理方式。我們深知這份責任重大，因此會盡力保護您的資訊，並為您提供相關的管理功能。本《隱私權政策》旨在協助您瞭解 Google 收集的資訊類型以及收集這些資訊的原因，也說明了您可以如何更新、管理、匯出與刪除資訊。"</td>
+</tr>
+<tr>
+<td>"Tibetan (China)"</td>
+<td>"bo_CN"</td>
+<td>120295</td>
+<td>138</td>
+<td>871.7</td>
+<td>4</td>
+<td>"當您開始使用 Google 服務，即表示您信賴我們對您個人資訊的處理方式。我們深知這份責任重大，因此會盡力保護您的資訊，並為您提供相關的管理功能。本《隱私權政策》旨在協助您瞭解 Google 收集的資訊類型以及收集這些資訊的原因，也說明了您可以如何更新、管理、匯出與刪除資訊。"</td>
+</tr>
+<tr>
+<td>"Tibetan"</td>
+<td>"bo"</td>
+<td>120295</td>
+<td>138</td>
+<td>871.7</td>
+<td>4</td>
+<td>"當您開始使用 Google 服務，即表示您信賴我們對您個人資訊的處理方式。我們深知這份責任重大，因此會盡力保護您的資訊，並為您提供相關的管理功能。本《隱私權政策》旨在協助您瞭解 Google 收集的資訊類型以及收集這些資訊的原因，也說明了您可以如何更新、管理、匯出與刪除資訊。"</td>
+</tr>
+<tr>
+<td>"Chinese (Traditional Han, Taiwan)"</td>
+<td>"zh_Hant_TW"</td>
+<td>120295</td>
+<td>138</td>
+<td>871.7</td>
+<td>4</td>
+<td>"當您開始使用 Google 服務，即表示您信賴我們對您個人資訊的處理方式。我們深知這份責任重大，因此會盡力保護您的資訊，並為您提供相關的管理功能。本《隱私權政策》旨在協助您瞭解 Google 收集的資訊類型以及收集這些資訊的原因，也說明了您可以如何更新、管理、匯出與刪除資訊。"</td>
+</tr>
+<tr>
+<td>"Filipino (Philippines)"</td>
+<td>"fil_PH"</td>
+<td>123179</td>
+<td>456</td>
+<td>270.13</td>
+<td>62</td>
+<td>"Kapag ginamit mo ang aming mga serbisyo, ipinagkakatiwala mo sa amin ang iyong impormasyon. Nauunawaan naming malaki itong responsibilidad at nagsisikap kaming protektahan ang iyong impormasyon at bigyan ka ng kontrol dito.Ang Patakaran sa Privacy ay naglalayong matulungan kang maunawaan kung anong impormasyon ang aming kinokolekta, bakit namin ito kinokolekta, at kung paano mo maaaring i-update, pamahalaan, i-export, at i-delete ang iyong impormasyon."</td>
+</tr>
+<tr>
+<td>"Filipino"</td>
+<td>"fil"</td>
+<td>123179</td>
+<td>456</td>
+<td>270.13</td>
+<td>62</td>
+<td>"Kapag ginamit mo ang aming mga serbisyo, ipinagkakatiwala mo sa amin ang iyong impormasyon. Nauunawaan naming malaki itong responsibilidad at nagsisikap kaming protektahan ang iyong impormasyon at bigyan ka ng kontrol dito.Ang Patakaran sa Privacy ay naglalayong matulungan kang maunawaan kung anong impormasyon ang aming kinokolekta, bakit namin ito kinokolekta, at kung paano mo maaaring i-update, pamahalaan, i-export, at i-delete ang iyong impormasyon."</td>
+</tr>
+<tr>
+<td>"Korean (South Korea)"</td>
+<td>"ko_KR"</td>
+<td>124819</td>
+<td>231</td>
+<td>540.34</td>
+<td>48</td>
+<td>"Google은 Google 서비스 사용자들이 신뢰를 바탕으로 정보를 제공한다는 것을 잘 알고 있습니다. Google은 사용자의 신뢰에 대한 막중한 책임을 인지하며 최선을 다해 개인정보를 보호하고 사용자가 직접 제어할 수 있도록 노력하고 있습니다.이 개인정보처리방침은 Google에서 수집하는 정보의 유형, 정보를 수집하는 이유, 정보를 업데이트, 관리, 내보내기, 삭제하는 방식에 대한 이해를 돕기 위한 것입니다."</td>
+</tr>
+<tr>
+<td>"Korean"</td>
+<td>"ko"</td>
+<td>124819</td>
+<td>231</td>
+<td>540.34</td>
+<td>48</td>
+<td>"Google은 Google 서비스 사용자들이 신뢰를 바탕으로 정보를 제공한다는 것을 잘 알고 있습니다. Google은 사용자의 신뢰에 대한 막중한 책임을 인지하며 최선을 다해 개인정보를 보호하고 사용자가 직접 제어할 수 있도록 노력하고 있습니다.이 개인정보처리방침은 Google에서 수집하는 정보의 유형, 정보를 수집하는 이유, 정보를 업데이트, 관리, 내보내기, 삭제하는 방식에 대한 이해를 돕기 위한 것입니다."</td>
+</tr>
+<tr>
+<td>"French (Canada)"</td>
+<td>"fr_CA"</td>
+<td>126583</td>
+<td>503</td>
+<td>251.66</td>
+<td>71</td>
+<td>"Lorsque vous utilisez nos services, vous nous confiez vos données personnelles. Nous comprenons que c'est une grande responsabilité et nous faisons tout notre possible pour protéger vos renseignements et pour vous permettre de les gérer.La présente politique de confidentialité a été conçue pour vous aider à comprendre quels renseignements nous collectons, pourquoi nous les collectons et pour également vous expliquer comment vous pouvez mettre à jour, gérer, exporter et supprimer vos renseignements."</td>
+</tr>
+<tr>
+<td>"Malay"</td>
+<td>"ms"</td>
+<td>128355</td>
+<td>448</td>
+<td>286.51</td>
+<td>60</td>
+<td>"Apabila anda menggunakan perkhidmatan kami, itu bermakna anda mengamanahkan maklumat anda kepada kami. Kami faham bahawa ini merupakan tanggungjawab yang besar dan kami bekerja keras untuk melindungi maklumat anda serta meletakkan kawalan di tangan anda.Dasar Privasi ini bertujuan untuk membantu anda memahami jenis maklumat yang kami kumpulkan dan tujuannya serta cara anda boleh mengemas kini, mengurus, mengeksport dan memadamkan maklumat anda."</td>
+</tr>
+<tr>
+<td>"Malay (Brunei)"</td>
+<td>"ms_BN"</td>
+<td>128355</td>
+<td>448</td>
+<td>286.51</td>
+<td>60</td>
+<td>"Apabila anda menggunakan perkhidmatan kami, itu bermakna anda mengamanahkan maklumat anda kepada kami. Kami faham bahawa ini merupakan tanggungjawab yang besar dan kami bekerja keras untuk melindungi maklumat anda serta meletakkan kawalan di tangan anda.Dasar Privasi ini bertujuan untuk membantu anda memahami jenis maklumat yang kami kumpulkan dan tujuannya serta cara anda boleh mengemas kini, mengurus, mengeksport dan memadamkan maklumat anda."</td>
+</tr>
+<tr>
+<td>"Malay (Malaysia)"</td>
+<td>"ms_MY"</td>
+<td>128355</td>
+<td>448</td>
+<td>286.51</td>
+<td>60</td>
+<td>"Apabila anda menggunakan perkhidmatan kami, itu bermakna anda mengamanahkan maklumat anda kepada kami. Kami faham bahawa ini merupakan tanggungjawab yang besar dan kami bekerja keras untuk melindungi maklumat anda serta meletakkan kawalan di tangan anda.Dasar Privasi ini bertujuan untuk membantu anda memahami jenis maklumat yang kami kumpulkan dan tujuannya serta cara anda boleh mengemas kini, mengurus, mengeksport dan memadamkan maklumat anda."</td>
+</tr>
+<tr>
+<td>"Japanese"</td>
+<td>"ja"</td>
+<td>136036</td>
+<td>215</td>
+<td>632.73</td>
+<td>5</td>
+<td>"お客様が Google のサービスをご利用になる際、Google は、お客様の情報を託していただくことになります。Google はこのことに伴う重大な責任を認識し、お客様の情報を保護し、お客様がご自身の情報を管理できるようにすべく尽力しています。このプライバシー ポリシーは、Google が収集する情報、情報を収集する理由、およびお客様がご自分の情報を更新、管理、書き出し、削除する方法について理解を深めていただくためのものです。"</td>
+</tr>
+<tr>
+<td>"Japanese (Japan)"</td>
+<td>"ja_JP"</td>
+<td>136036</td>
+<td>215</td>
+<td>632.73</td>
+<td>5</td>
+<td>"お客様が Google のサービスをご利用になる際、Google は、お客様の情報を託していただくことになります。Google はこのことに伴う重大な責任を認識し、お客様の情報を保護し、お客様がご自身の情報を管理できるようにすべく尽力しています。このプライバシー ポリシーは、Google が収集する情報、情報を収集する理由、およびお客様がご自分の情報を更新、管理、書き出し、削除する方法について理解を深めていただくためのものです。"</td>
+</tr>
+</tbody></table>
+</div>
+                <script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('buy me a coffee', '#bfa16d', 'R5R7W88CQ');kofiwidget2.draw();</script> 
+                <div id="recess"></div>
+            </div>
+        </div>
+
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">×</span>
+                <form id="settings-form">
+                    <div class="form-group">
+                        <label for="font-family">Font Family:</label>
+                        <select id="font-family" name="font-family">
+                            <option value="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                                System UI
+                            </option>
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="'MS Serif', 'New York', sans-serif">MS Serif</option>
+                            <option value="'Lucida Sans Unicode', sans-serif">Lucida Sans Unicode</option>
+                            <option value="'Times New Roman', Times, serif">Times New Roman</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Impact, sans-serif">Impact</option>
+                            <option value="'Lucida Console', monospace">Lucida Console</option>
+                            <option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">
+                                Palatino Linotype
+                            </option>
+                            <option value="Tahoma, Geneva, sans-serif">Tahoma</option>
+                            <option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet MS</option>
+                            <option value="Verdana, Geneva, sans-serif">Verdana</option>
+                            <option value="'MS Sans Serif', Geneva, sans-serif">MS Sans Serif</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="font-size">Font Size:</label>
+                            <input type="number" id="font-size" name="font-size" min="10" max="24" step="1" placeholder="18">
+                        </div>
+                        <div class="form-group">
+                            <label for="font-weight">Font Weight:</label>
+                            <input type="number" id="font-weight" name="font-weight" min="100" max="600" step="100" placeholder="200">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="button-row">
+                        <input type="button" id="reset-button" value="Reset to defaults">
+                        <input type="submit" value="Apply">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Yakko Majuri</p>
+                <ul>
+                    <li><a href="https://github.com/yakkomajuri" rel="me">github</a></li>
+                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/links">links</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../js/title.js"></script>
+        <script>
+            hljs.highlightAll()
+
+            if (!localStorage.getItem('fontFamily')) {
+                localStorage.setItem(
+                    'fontFamily',
+                    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+                )
+            }
+
+            if (!localStorage.getItem('fontSize')) {
+                localStorage.setItem('fontSize', '18')
+            }
+
+            if (!localStorage.getItem('fontWeight')) {
+                localStorage.setItem('fontWeight', '200')
+            }
+
+            document.getElementById('settings-button').addEventListener('click', function (event) {
+                event.preventDefault()
+                document.getElementById('settings-modal').style.display = 'block'
+                document.body.style.overflow = 'hidden' // Prevent scrolling
+            })
+
+            document.getElementById('settings-form').addEventListener('submit', function (event) {
+                event.preventDefault()
+                var fontFamily = document.getElementById('font-family').value
+                var fontSize = document.getElementById('font-size').value
+                var fontWeight = document.getElementById('font-weight').value
+                localStorage.setItem('fontFamily', fontFamily)
+                localStorage.setItem('fontSize', fontSize)
+                localStorage.setItem('fontWeight', fontWeight)
+                applyFontSettings()
+                closeModal()
+            })
+
+            document.getElementById('reset-button').addEventListener('click', function () {
+                localStorage.setItem(
+                    'fontFamily',
+                    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+                )
+                localStorage.setItem('fontSize', '18')
+                localStorage.setItem('fontWeight', '200')
+                applyFontSettings()
+                closeModal()
+            })
+
+            function closeModal() {
+                document.getElementById('settings-modal').style.display = 'none'
+                document.body.style.overflow = 'auto' // Allow scrolling
+            }
+
+            window.onload = function () {
+                applyFontSettings()
+            }
+
+            function applyFontSettings() {
+                var fontFamily = localStorage.getItem('fontFamily')
+                var fontSize = localStorage.getItem('fontSize')
+                var fontWeight = localStorage.getItem('fontWeight')
+                var paragraphs = document.querySelectorAll('#page-content p')
+                paragraphs.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontSize) {
+                        p.style.fontSize = fontSize + 'px'
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+
+                var lists = document.querySelectorAll('#page-content li')
+                lists.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontSize) {
+                        p.style.fontSize = fontSize + 'px'
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+
+                var headings = document.querySelectorAll(
+                    '#page-content h1, #page-content h2, #page-content h3, #page-content h4, #page-content h5, #page-content h6'
+                )
+                headings.forEach(function (p) {
+                    if (fontFamily) {
+                        p.style.fontFamily = fontFamily
+                    }
+                    if (fontWeight) {
+                        p.style.fontWeight = fontWeight
+                    }
+                })
+                document.getElementById('font-family').value = fontFamily || ''
+                document.getElementById('font-size').value = fontSize || ''
+                document.getElementById('font-weight').value = fontWeight || ''
+            }
+
+            // Close the modal when the user clicks outside of the modal content
+            window.onclick = function (event) {
+                if (event.target == document.getElementById('settings-modal')) {
+                    closeModal()
+                }
+            }
+        </script>
+        <script>
+            !(function (t, e) {
+                var o, n, p, r
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split('.')
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                                })
+                        }
+                        ;((p = t.createElement('script')).type = 'text/javascript'),
+                            (p.async = !0),
+                            (p.src = s.api_host + '/static/array.js'),
+                            (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r)
+                        var u = e
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = 'posthog'
+                                    return 'posthog' !== a && (e += '.' + a), t || (e += ' (stub)'), e
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + '.people (stub)'
+                                },
+                                o =
+                                    'capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags'.split(
+                                        ' '
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n])
+                        e._i.push([i, s, a])
+                    }),
+                    (e.__SV = 1))
+            })(document, window.posthog || [])
+            posthog.init('Tom1k0Lh0sRN7EK8LIlU5mbbmAHMBSk37lc02ZQ__38', {
+                api_host: 'https://p.yakkos.workers.dev',
+                persistence: 'memory',
+            })
+        </script>
+    
+
+</body></html>

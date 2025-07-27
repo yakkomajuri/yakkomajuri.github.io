@@ -1,0 +1,278 @@
+<html lang="en" data-theme="dark"><head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recruit me</title>
+        <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+
+        <script type="text/javascript" src="js/newsletter.js"></script>
+
+        <style>
+            details p {
+                margin-top: 25px;
+                font-size: 18px;
+            }
+
+            h1 {
+                margin-top: 20px;
+                margin-bottom: 2px;
+            }
+
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-bottom: 10px;
+            }
+
+            .container {
+                max-width: 800px;
+            }
+
+            a {
+                color: rgb(0 204 204);
+            }
+
+            .back-btn {
+                position: absolute;
+                left: 20;
+                top: 20;
+            }
+        </style>
+        <script>
+            !(function (t, e) {
+                var o, n, p, r
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split('.')
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                                })
+                        }
+                        ;((p = t.createElement('script')).type = 'text/javascript'),
+                            (p.async = !0),
+                            (p.src = s.api_host + '/static/array.js'),
+                            (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r)
+                        var u = e
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = 'posthog'
+                                    return 'posthog' !== a && (e += '.' + a), t || (e += ' (stub)'), e
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + '.people (stub)'
+                                },
+                                o =
+                                    'capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags'.split(
+                                        ' '
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n])
+                        e._i.push([i, s, a])
+                    }),
+                    (e.__SV = 1))
+            })(document, window.posthog || [])
+            posthog.init('Tom1k0Lh0sRN7EK8LIlU5mbbmAHMBSk37lc02ZQ__38', {
+                api_host: 'https://p.yakkos.workers.dev',
+                persistence: 'memory',
+            })
+        </script>
+    </head>
+
+    <body>
+        <div class="back-btn">
+            <a href="/">← Home</a>
+        </div>
+        <main class="container">
+            <h1>Recruit me</h1>
+
+            <br>
+
+            <div id="page-content"><p>If you believe I'm a great fit for an open role you have, filling out the form below is <strong>the only way</strong> to ensure there's actually a chance I'll get back to you.</p>
+<p>At the moment, I'm happy at my current job and not looking for a change. As a result, I noticed that I have not replied to a single recruiting message for a role for quite a while. </p>
+<p>Effectively, recruiters have had a 0% success rate in getting me to engage. </p>
+<p>However, while I am not looking for a change, I'd like to give recruiters a chance to make their case. </p>
+<p>It's entirely possible that there's a role out there that truly is "made for me" - and if you really believe that, it should be no problem to adhere to this stupid requirement of mine.</p>
+</div>
+
+            <div>
+                <form id="recruitMe" action="" method="post">
+                    <div>
+                        <b>Company website</b>
+                        <br>
+                        <br>
+                        <input id="company_website" name="company_website">
+                    </div>
+                    <div>
+                        <b>Role</b>
+                        <br>
+                        <br>
+                        <select id="role" name="role">
+                            <option value="Backend Engineer">Backend Engineer</option>
+                            <option value="Fullstack Engineer">Fullstack Engineer</option>
+                            <option value="Data Engineer">Data Engineer</option>
+                            <option value="Developer Relations">Developer Relations</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <b>If you selected 'Other' above, please specify the role</b>
+                        <br>
+                        <br>
+                        <input id="role_alt" name="role_alt">
+                    </div>
+
+                    <div>
+                        <b>Why do you think I'm a particularly great fit for this role?</b>
+                        <br>
+                        <br>
+                        <textarea id="fit_explanation" name="fit_explanation"></textarea>
+                    </div>
+                    <div>
+                        <b>Salary range (in USD)</b>
+                        <br>
+                        <br>
+                        <input id="salary_lower" name="salary_lower" style="display: inline-block; width: 40%" placeholder="Lower bound" type="number">
+                        <input id="salary_upper" name="salary_upper" style="display: inline-block; width: 40%" placeholder="Upper bound" type="number">
+                    </div>
+
+                    <div>
+                        <b>Check all that apply</b>
+                        <br>
+                        <br>
+                        <label for="remote">
+                            <input id="remote" name="remote" type="checkbox">
+                            Remote OK
+                        </label>
+                        <label for="equity">
+                            <input id="equity" name="equity" type="checkbox">
+                            Equity / options scheme
+                        </label>
+                        <label for="vacation">
+                            <input id="vacation" name="vacation" type="checkbox">
+                            25+ vacation days (holidays included)
+                        </label>
+                    </div>
+                    <br>
+                    <div>
+                        <b>Additional details / description / links</b>
+                        <br>
+                        <br>
+                        <textarea id="additional_details" name="additional_details"></textarea>
+                    </div>
+                    <div>
+                        <b>Contact email</b>
+                        <br>
+                        <br>
+                        <input id="contact_email" name="contact_email">
+                    </div>
+                    <div id="thank-you-message"></div>
+                    <button id="submit-form-btn">Submit</button>
+                </form>
+            </div>
+
+            <br>
+            <div>
+                <details>
+                    <summary>More about this form</summary>
+                    <p>Honestly, I think this form is a win-win. But of course I'd say that.</p>
+                    <p>
+                        It's definitely great for me to have recruiters fill out information in a layout that's most
+                        useful to me, but I'd argue that just seeing this form can save a bunch of recruiters some time.
+                    </p>
+                    <p>
+                        For example, I regularly get messages for roles that are not a fit (usually something I did in
+                        the past, but no longer work with), as well as generic messages that are far from enticing.
+                    </p>
+                    <p>
+                        Such occurences have led me to a general distaste for recruiting messages, to the point that I
+                        ignore even those that may have been targeted and carefully written for me.
+                    </p>
+                    <p>With this form, I hope to give the worthy proposals a chance, while filtering out the noise.</p>
+                    <p>
+                        On a technical note - form submissions here are actually going to a product analytics tool. This
+                        way, I'm able to filter through submissions based on role, benefits, salary, and other variables
+                        before digging deeper into the details.
+                    </p>
+                    <p>For instance, I can easily filter out all the proposals for technical writing roles :D</p>
+                    <p>
+                        Finally, I leave you with an adaptation of an anecdote that I'm sure was featured in some book
+                        but I can't remember which.
+                    </p>
+                    <p>
+                        <i>
+                            A heavily sought-after consultant found himself getting anxious and annoyed every time his
+                            phone rang. His services were in high demand so he was always getting calls from new
+                            potential clients.
+                        </i>
+                    </p>
+                    <p>
+                        <i>
+                            It was becoming too much, so he decided to double his hourly price. Suddenly, he barely got
+                            any calls anymore.
+                        </i>
+                    </p>
+                    <p>
+                        <i>
+                            Eventually, when asked about this decision - one that caused him to miss out on a lot of new
+                            business - he said "at least now when the phone rings I'm actually excited to answer".
+                        </i>
+                    </p>
+                    <p>
+                        With this arguably outrageous requirement of mine, I hope looking through the few submissions I
+                        get will be exciting, rather than dreadful. And that alone makes it worth it.
+                    </p>
+                </details>
+            </div>
+            <br>
+            <div style="text-align: center">
+                <small>Built with <b><a href="https://github.com/yakkomajuri/teeny" target="_blank">Teeny</a></b></small>
+            </div>
+        </main>
+        <script>
+            const recruitMeForm = document.forms.recruitMe
+            recruitMeForm.addEventListener('submit', (e) => {
+                e.preventDefault()
+                const formData = new FormData(recruitMeForm)
+                console.log({
+                    company_website: formData.get('company_website'),
+                    role: formData.get('role') === 'Other' ? formData.get('role_alt') : formData.get('role'),
+                    fit_explanation: formData.get('fit_explanation'),
+                    salary_lower: Number(formData.get('salary_lower')),
+                    salary_upper: Number(formData.get('salary_upper')),
+                    remote: !!formData.get('remote'),
+                    vacation: !!formData.get('vacation'),
+                    equity: !!formData.get('equity'),
+                    additional_details: formData.get('additional_details'),
+                    contact_email: formData.get('contact_email'),
+                })
+                posthog.capture('new_recruitment_proposal', {
+                    company_website: formData.get('company_website'),
+                    role: formData.get('role') === 'Other' ? formData.get('role_alt') : formData.get('role'),
+                    fit_explanation: formData.get('fit_explanation'),
+                    salary_lower: Number(formData.get('salary_lower')),
+                    salary_upper: Number(formData.get('salary_upper')),
+                    remote: !!formData.get('remote'),
+                    vacation: !!formData.get('vacation'),
+                    equity: !!formData.get('equity'),
+                    additional_details: formData.get('additional_details'),
+                    contact_email: formData.get('contact_email'),
+                })
+                document.getElementById('submit-form-btn').remove()
+                document.getElementById('thank-you-message').innerHTML =
+                    "<h4 style='text-align: center'>Thank you!</h4>"
+            })
+        </script>
+    
+
+</body></html>
